@@ -170,6 +170,21 @@ pagination:
 
 {% if post.thumbnail %}
 
+  <script src="https://giscus.app/client.js"
+        data-repo="eigenlucy/eigenlucy.github.io"
+        data-repo-id="R_kgDOLtBmBg"
+        data-category-id="DIC_kwDOLtBmBs4Ceoj7"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
+
 </div>
 
   <div class="col-sm-3">

@@ -142,21 +142,7 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  <script src="https://giscus.app/client.js"
-        data-repo="eigenlucy/eigenlucy.github.io"
-        data-repo-id="R_kgDOLtBmBg"
-        data-category-id="DIC_kwDOLtBmBs4Ceoj7"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-  </script>
-  repo: <eigenlucy>/<eigenlucy.github.io> # <your-github-user-name>/<your-github-repo-name>
+  repo: eigenlucy/eigenlucy.github.io # <your-github-user-name>/<your-github-repo-name>
   repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
   category: Comments # name of the category under which discussions will be created
   category_id: # leave empty or specify your category_id (see https://giscus.app/)
