@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am interested in how systems work and how they fail. Electrical engineering is my abiding interest in systems theory meeting a concrete desire to design and build systems. At Kyocera-AVX I have been rPresenter at <a href='https://opensauce.com/'>OpenSaue 2024</a>.everse engineering products to discover novel use cases and problems our products might suit, assessing the viability of production and prototype components in a variety of existing systems, and investigating application areas of interest on behalf of scientists developing products in those spaces.
+I am interested in how systems work and how they fail. Electrical engineering is my abiding interest in systems theory meeting a concrete desire to design and build systems. At Kyocera-AVX I have been reverse engineering products to discover novel use cases and problems our products might suit, assessing the viability of production and prototype components in a variety of existing systems, and investigating application areas of interest on behalf of scientists developing products in those spaces.
 
 Affiliations include:
 Research engineering at <a href='https://www.kyocera-avx.com/'>Kyocera-AVX</a>.
