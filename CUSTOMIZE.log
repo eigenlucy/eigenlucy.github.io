@@ -1,0 +1,3 @@
+Fatal Error: Trouble converting to curly brace notation:
+ Mismatched single quotes in
+  "- `dimensions`: Adds a [Dimensions](https://www.dimensions.ai/) badge (Note: if DOI or PMID is provided just use `true`, otherwise only add the Dimensions{ identifier here - the link is generated automatically)"
