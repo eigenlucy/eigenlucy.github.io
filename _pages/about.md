@@ -16,7 +16,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am interested in how systems work and how they fail. Electrical engineering is my number one proficiency, following from an abiding interest in systems theory/control theory meeting a passion for building machines. At Kyocera-AVX I have been reverse engineering systems to identify and investigate use cases for our products, assessing our components in a variety of existing systems, and investigating application areas of interest on behalf of scientists developing products in those spaces.
+I am interested in how systems work and how they fail. Electrical engineering is my number one proficiency, following from an abiding interest in systems theory/control theory meeting a passion for building machines. At Kyocera-AVX I have been reverse engineering systems to identify and investigate use cases for our products, assessing our components in a variety of existing systems, and investigating application areas of interest on behalf of product development and R&D teams.
 
 Affiliations include:
 Research engineering at <a href='https://www.kyocera-avx.com/'>Kyocera-AVX</a>.
