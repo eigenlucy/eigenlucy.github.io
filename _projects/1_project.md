@@ -4,7 +4,7 @@ title: Panellus Stipticus
 description: Panellus Stipticus Bioluminescent Mushroom Cultures. pictures, notes, cultivation guide
 img: assets/img/PS2.jpg
 importance: 1
-category: work
+category: mycology
 related_publications: false
 ---
 
