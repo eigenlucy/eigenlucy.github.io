@@ -1,35 +1,24 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Panellus Stipticus Bioluminescent Mushroom Cultures
+description: pictures, notes, cultivation guide
+img: assets/img/PS2.jpg
 importance: 1
-category: work
+category: mycology
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Panellus Stipticus (bitter oyster) is a species of fungus which exists across Asia, Australia, Europe and North America. They glow in the dark! The fruited mushrooms glow brightest at the gills supposedly, but I haven’t gotten any fruiting yet to see for myself. I wasn’t exactly sure how bright to expect them to be, but I am quite happy with the results. They require dark conditions to be visible, but one they are well established they can definitely be seen glowing across the room casting a glow on the wall on at night in my bedroom. As far as cultivation goes, these grow similarly to many other oyster species, but seem to be more sensitive to temperature changes. Agar plate and grain spawn (rye berry + rice) teks are detailed below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/PS8.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/PS6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/PS4.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
