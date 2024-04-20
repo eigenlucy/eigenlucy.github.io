@@ -9,7 +9,7 @@ display_categories: [electrical engineering]
 ---
 
 <!-- _pages/publications.md -->
-<div class="publications">
+<div class="gallery">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
