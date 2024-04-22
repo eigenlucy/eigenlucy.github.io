@@ -21,7 +21,6 @@ nav_order: 1
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                 </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
