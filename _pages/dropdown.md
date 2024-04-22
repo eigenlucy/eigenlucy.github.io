@@ -14,4 +14,6 @@ children:
   - title: gallery
     permalink: /gallery/
   - title: divider
+  - title: projects
+  permalink: /projects/
 ---
