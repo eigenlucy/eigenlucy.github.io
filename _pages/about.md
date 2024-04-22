@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='www.linkedin.com/in/lucy-chambers-46b257303</a>. Research Engineering. Liberty, SC. lucycchambers12@gmail.com.
+subtitle: <a href='https://www.linkedin.com/in/lucy-chambers-46b257303/'>LinkedIn</a>. Research Engineering. Liberty, SC. lucycchambers12@gmail.com.
 
 profile:
   align: right
@@ -24,6 +24,6 @@ Organizer at <a href='https://www.cleobailey.org/'>The Cleo Bailey Experiment</a
 Presenter at <a href='https://opensauce.com/'>OpenSauce 2024</a>. 
 Machinic Garden LLC.
 
-You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>. Find me on <a href='https://www.linkedin.com'>LinkedIn</a>. 
+You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.
 
 You can see the code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
