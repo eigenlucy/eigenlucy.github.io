@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Panellus Stipticus
-description: SI4712/ESP32 Base Bluetooth->FM Transmitter
+title: Bluetooth/FM Transmitter
+description: DIY SI4712/ESP32 Base Bluetooth->FM Transmitter
 img: assets/img/FMtransmitter.jpg
 importance: 1
 category: electrical engineering
