@@ -15,5 +15,5 @@ children:
     permalink: /gallery/
   - title: divider
   - title: projects
-  permalink: /projects/
+    permalink: /projects/
 ---
