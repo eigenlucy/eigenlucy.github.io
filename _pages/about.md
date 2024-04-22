@@ -26,4 +26,4 @@ Machinic Garden LLC.
 
 You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.
 
-You can see the code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
+Site under construction. You can see the code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
