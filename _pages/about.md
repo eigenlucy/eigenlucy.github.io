@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.linkedin.com'>LinkedIn</a>. Research Engineering. Liberty, SC. lucycchambers12@gmail.com.
+subtitle: <a href='www.linkedin.com/in/lucy-chambers-46b257303</a>. Research Engineering. Liberty, SC. lucycchambers12@gmail.com.
 
 profile:
   align: right
