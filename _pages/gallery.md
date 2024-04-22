@@ -15,7 +15,7 @@ nav_order: 1
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.html path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}
           </div>
         </div>
       </div>
