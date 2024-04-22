@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Panellus Stipticus
-description: Panellus Stipticus Bioluminescent Mushroom Cultures. pictures, notes, cultivation guide
-img: assets/img/PS2.jpg
+title: NFC/LED Chip Implant
+description: Notes on-Implanting an xSiiD NFC/LED Chip
+img: assets/img/NFCImplantSuccess.jpg
 importance: 1
 category: general systemantics
 related_publications: false
@@ -21,5 +21,5 @@ This project features <a href="https://dangerousthings.com/product/xsiid/">Dange
     </div>
 </div>
 <div class="caption">
-    (left to right) Rye berry gran spawn, grain spawn bioluminescence, PS agar/LME plate
+    (left to right) Just after the procedure, video of the chip going in, first time loading some data on
 </div>
