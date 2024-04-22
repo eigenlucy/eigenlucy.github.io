@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: An assortment of personal projects
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [mycology, electrical engineering, general systemantics]
 horizontal: false
 ---
