@@ -38,7 +38,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/MusicalIgnitionCoil.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">This is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jaobs ladder. Here it is producing a heart around 20khz.</p>
+              <p class="card-text">This is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jaobs ladder. Here it is producing a heart around 20khz</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -49,7 +49,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/LionsMane.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">This is a Lion's Mane grain spawn jar that has begun to fruit in the spawn jar to to overcultvation.</p>
+              <p class="card-text">This is a Lion's Mane grain spawn jar that has begun to fruit in the spawn jar to to overcultvation</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -60,7 +60,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text"Printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. She LOVES it.</p>
+              <p class="card-text"Printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. She LOVES it</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -104,7 +104,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/TableEngraving.JPG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">Laser engraving a table we were building. </p>
+              <p class="card-text">Laser engraving a table my roommate and I build (image from Deleuze and Guattari's A Thousand Plateaus)</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
