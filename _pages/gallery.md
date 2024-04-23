@@ -58,6 +58,17 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text"Printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. She LOVES it.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/MarcelleEgg.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">This is marcelle the red tail boa basking on her egg :) She's quite the hermeticist</p>
