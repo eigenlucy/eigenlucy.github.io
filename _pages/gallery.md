@@ -19,9 +19,6 @@ nav_order: 1
             <div class="card-body">
               <p class="card-text">Brain jar🧠 (pink oyster rye berry grain spawn jar)</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
               </div>
             </div>
           </div>
@@ -34,9 +31,6 @@ nav_order: 1
             <div class="card-body">
               <p class="card-text">This is my setup for extracting diethyl ether and heptane from starting fluid</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
               </div>
             </div>
           </div>
@@ -48,9 +42,6 @@ nav_order: 1
             <div class="card-body">
               <p class="card-text">This is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jaobs ladder. Here it is producing a heart around 20khz.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
               </div>
             </div>
           </div>
@@ -62,9 +53,6 @@ nav_order: 1
             <div class="card-body">
               <p class="card-text">This is a Lion's Mane grain spawn jar that has begun to fruit in the spawn jar to to overcultvation.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
               </div>
             </div>
           </div>
@@ -76,9 +64,6 @@ nav_order: 1
             <div class="card-body">
               <p class="card-text">This is marcelle the red tail boa basking on her egg :) She's quite the hermeticist</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
               </div>
             </div>
           </div>
