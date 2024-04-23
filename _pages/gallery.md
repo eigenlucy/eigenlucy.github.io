@@ -58,7 +58,7 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">ATTiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. Milled on an LPFK protomat.</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -203,9 +203,42 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">Holding the first LTC3350 based bidirectional supercap backup prototype I assembled</p>
+              <p class="card-text">Building a bioactive enclosure for my ball python Basil. Made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/BasilTankComplete.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">Completed bioactive setup for Basil :)</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">DIY magnet implant surgery. Gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet. The goal was to sense magnetic fields and construct a device to buzz the magnet in your finger in a manner that corresponds to a number of sensors. I removed the magnet due to complications (paralene degradation). Next time I am opting for  glass encased injectable magnet in the webbing of my right hand</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">DIY magnet implant surgery. Gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet. The goal was to sense magnetic fields and construct a device to buzz the magnet in your finger in a manner that corresponds to a number of sensors. I removed the magnet due to complications (paralene degradation). Next time I am opting for  glass encased injectable magnet in the webbing of my right hand</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
