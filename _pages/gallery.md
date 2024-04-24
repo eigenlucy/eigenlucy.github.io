@@ -25,6 +25,28 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">this is my setup for extracting diethyl ether and heptane from starting fluid</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEther.JPEG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">diethyl ether succesfully extracted</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenCAD.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">draft PCB design in Fusion360 for an LTC3350 based bidirectional converter supercap backup system. this circuit contains the LTC3550 bidirectional converter driver, the correspindeding DC-DC converter circuitry, an attiny 1627 uC, and a half bridge driver. designed to AEC standards while exploring the use of supercaps for automotive elatch drivers</p>
@@ -56,16 +78,6 @@ nav_order: 1
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
-            <div class="card-body">
-              <p class="card-text">this is my setup for extracting diethyl ether and heptane from starting fluid</p>
-              <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
@@ -144,6 +156,28 @@ nav_order: 1
           </div>
         </div>
 
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/individuation.png" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">individuation of the technical object ;)</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/PS_LC.JPEG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">panellus stipticus liquid culture</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
@@ -183,6 +217,17 @@ nav_order: 1
             {% include figure.liquid loading="eager" path="assets/img/Gallery/TableEngraving.JPG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">laser engraving a table my roommate and I build (image from Deleuze and Guattari's A Thousand Plateaus)</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/MarcelleDreammachine.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">Marcelle on a 3D printed recreation of William Burroughs' Dreamachine</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
