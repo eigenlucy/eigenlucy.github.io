@@ -103,7 +103,7 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">attiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. milled on an LPFK protomat.</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -116,7 +116,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackupPrizmacapTop.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">LTC3110 based bidirectional converter with attiny1627 uC. produced in the process of testing kyocera-AVX prismatic caps for a variety of applications<p>
+              <p class="card-text">LTC3110 based bidirectional converter with attiny1627 uC. produced in the process of testing kyocera-AVX prismatic caps for a variety of applications</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
