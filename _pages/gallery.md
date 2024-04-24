@@ -82,7 +82,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/LionsMane.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">this is a Lion's Mane that has begun to fruit in the grain spawn jar</p>
+              <p class="card-text">this is a lion's mane that has begun to fruit in the grain spawn jar</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -93,7 +93,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">attiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. Milled on an LPFK protomat.</p>
+              <p class="card-text">attiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. milled on an LPFK protomat.</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -126,7 +126,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. She LOVES it</p>
+              <p class="card-text">printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. she LOVES it</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -239,7 +239,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/Engraving.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">playing with digital art/laser engraving. The snakeskin pattern on the wood comes from the grain on the sycamore.</p>
+              <p class="card-text">playing with digital art/laser engraving. the snakeskin pattern on the wood comes from the grain on the sycamore.</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -261,7 +261,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">building a bioactive enclosure for my ball python Basil. Made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma</p>
+              <p class="card-text">building a bioactive enclosure for my ball python Basil. made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -283,18 +283,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">DIY magnet implant surgery. Gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet. The goal was to sense magnetic fields and construct a device to buzz the magnet in your finger in a manner that corresponds to a number of sensors. I removed the magnet due to complications (paralene degradation). Next time I am opting for  glass encased injectable magnet in the webbing of my right hand</p>
-              <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
-            <div class="card-body">
-              <p class="card-text">DIY magnet implant surgery. Gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet. The goal was to sense magnetic fields and construct a device to buzz the magnet in your finger in a manner that corresponds to a number of sensors. I removed the magnet due to complications (paralene degradation). Next time I am opting for  glass encased injectable magnet in the webbing of my right hand</p>
+              <p class="card-text">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
