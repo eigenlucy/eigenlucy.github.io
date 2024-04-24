@@ -112,7 +112,7 @@ nav_order: 1
           </div>
         </div>
 
-                <div class="col-md-4">
+        <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackupPrizmacapTop.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
