@@ -73,7 +73,7 @@ dblp_url: # your DBLP profile url
 discord_id: autopoieesis # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: # your GitHub user name
+github_username: eigenlucy # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 instagram_id: autopoieesis # your instagram id
@@ -107,7 +107,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  
+
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

@@ -25,9 +25,20 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/distillationthermalcam.JPG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">fractional distillation setup</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">this is my setup for extracting diethyl ether and heptane from starting fluid</p>
+              <p class="card-text">fractional distillation setup (thermal camera)</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -38,7 +49,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEther.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">diethyl ether succesfully extracted</p>
+              <p class="card-text">diethyl ether extracted from starting fluid</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -134,6 +145,28 @@ nav_order: 1
           </div>
         </div>
 
+         <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapCrankGeneratorPrintedParts.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">Printed parts to convert a NEMA23 stepper motor into a hand crank generator</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+         
+         <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/Nema23CrankGenerator.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">NEMA23 stepper motor converter to a crank generator supercap charger</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
@@ -150,6 +183,50 @@ nav_order: 1
             {% include figure.liquid loading="eager" path="assets/img/Gallery/MarcelleEgg.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">this is marcelle the red tail boa basking on her egg :) she's quite the hermeticist</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/POVglobe.JPG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">this is a POV globe made from an addressable LED strip and random brushles motor. the wood frame was a poor choice</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/nietzscheplating.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">coating an mSLA printed part in a polyutherane/copper nanopartile based conductive coating to prep for electroplating</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/electroplatingbath.JPG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">electroplating setup where copper (CuSO4 + sulfuric acid + brightener solution) is deposited on the printed piece</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/platednietzsche.png" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">mSLA resin printed part after an electroplating procedure</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
