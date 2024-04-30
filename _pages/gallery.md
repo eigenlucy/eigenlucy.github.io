@@ -138,7 +138,7 @@ nav_order: 1
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
-              <p class="card-text">understide of the LTC3110 PCB. off-the-shelf RF cans secure two prismatic caps securing and provide some protection. produced a version with a lower profile solid aluminum can in the same style</p>
+              <p class="card-text">underside of the LTC3110 PCB. off-the-shelf RF cans secure two prismatic caps securing and provide some protection. produced a version with a lower profile solid aluminum can in the same style</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
