@@ -255,6 +255,28 @@ nav_order: 1
           </div>
         </div>
 
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/DRSSTCTesting.JPEG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">testing a DRSSTC driver</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/FLCLpcb.JPG" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">guitar pedal PCB with a FLCL graphic</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
@@ -381,6 +403,17 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/NFCimplant.png" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">LED visible in daylight after some healing</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">building a bioactive enclosure for my ball python Basil. made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma</p>
@@ -406,6 +439,17 @@ nav_order: 1
             {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/ZebraIsopodTerrarium.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">zebra isopod terrarium setup</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
