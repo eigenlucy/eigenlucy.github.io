@@ -25,7 +25,7 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/distillationthermalcam.JPG" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">short path distillation setup</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -36,7 +36,7 @@ nav_order: 1
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/distillationthermalcam.JPG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">fractional distillation setup (thermal camera)</p>
               <div class="d-flex justify-content-between align-items-center">
