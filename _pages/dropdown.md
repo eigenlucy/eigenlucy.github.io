@@ -16,4 +16,7 @@ children:
   - title: divider
   - title: projects
     permalink: /projects/
+  - title: divider
+  - title: CV
+    permalink: /cv/
 ---
