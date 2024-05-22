@@ -14,7 +14,7 @@ nav_order: 1
   <button class="tag-filter" data-tag="electrical engineering">electrical engineering</button>  
   <button class="tag-filter" data-tag="electronics">electronics</button>
   <button class="tag-filter" data-tag="chemistry">chemistry</button>
-  <button class="tag-filter" data-tag="hv">hv</button>
+  <button class="tag-filter" data-tag="hv">high voltage</button>
   <button class="tag-filter" data-tag="mycology">mycology</button>
   <button class="tag-filter" data-tag="biology">biology</button>
   <button class="tag-filter" data-tag="cnc">CNC</button>
@@ -94,7 +94,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, fusion360, supercaps, electrical engineering, electronics, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, attiny, fusion360, supercaps, electrical engineering, electronics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenCAD.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -105,7 +105,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, fusion360, electrical engineering, electronics, supercaps, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, attiny, fusion360, electrical engineering, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -116,7 +116,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, electrical engineering, electronics, supercaps, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, electrical engineering, attiny, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -283,9 +283,9 @@ nav_order: 1
 
   <div class="col-md- card-item" data-tags="electroplating, chemistry, 3d printing, video">
     <div class="card mb-4 shadow-sm">
-         {% include video.liquid loading="eager" path="assets/video/airbrushcopperapplication.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      {% include video.liquid loading="eager" path="assets/video/airbrushcopperapplication.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
-        <p class="card-text">Airbrushing conductive copper nanoparticle paint onto a printed part to prep for plating</p>
+        <p class="card-text">airbrushing conductive copper nanoparticle paint onto a printed part to prep for plating</p>
         <div class="d-flex justify-content-between align-items-center">
         </div>
       </div>
