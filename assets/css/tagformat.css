@@ -1,0 +1,64 @@
+/* tagformat.css */
+/* Tag button styles */
+.tag-filter-container button {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif; /* Change this to your desired font */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tag-filter-container button:hover,
+.tag-filter-container button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show more/less styles */
+.show-more-container {
+  margin-top: 10px;
+}
+
+.show-more-container button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif; /* Change this to your desired font */
+}
+
+.tag-filter-container .extra-tags {
+  display: none;
+}
+
+/* Tag list styles */
+.tag-category-list {
+  margin-top: 10px;
+}
+
+.tag-category-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-category-list li {
+  display: flex;
+  align-items: center;
+}
+
+.tag-category-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tag-category-list p {
+  margin: 0 5px;
+}

@@ -7,32 +7,79 @@ nav: true
 nav_order: 1
 ---
 
-<div class="tag-filter-container">
-  <button class="tag-filter" data-tag="all">All</button>
-  <button class="tag-filter" data-tag="image">image</button>
-  <button class="tag-filter" data-tag="video">video</button>
-  <button class="tag-filter" data-tag="electrical engineering">electrical engineering</button>  
-  <button class="tag-filter" data-tag="electronics">electronics</button>
-  <button class="tag-filter" data-tag="chemistry">chemistry</button>
-  <button class="tag-filter" data-tag="hv">high voltage</button>
-  <button class="tag-filter" data-tag="mycology">mycology</button>
-  <button class="tag-filter" data-tag="biology">biology</button>
-  <button class="tag-filter" data-tag="cnc">CNC</button>
-  <button class="tag-filter" data-tag="laser">laser</button>
-  <button class="tag-filter" data-tag="biohacking">biohacking</button>
-  <button class="tag-filter" data-tag="implants">implants</button>
-  <button class="tag-filter" data-tag="pcb design">PCB design</button>
-  <button class="tag-filter" data-tag="3d printing">3D printing</button>
-  <button class="tag-filter" data-tag="nfc">nfc</button>
-  <button class="tag-filter" data-tag="attiny">attiny</button>
-  <button class="tag-filter" data-tag="samd21">samd21</button>
-  <button class="tag-filter" data-tag="fusion360">fusion360</button>
-  <button class="tag-filter" data-tag="supercaps">supercaps</button>
-  <button class="tag-filter" data-tag="thermal cam">thermal cam</button>
-  <button class="tag-filter" data-tag="terrarium">terrarium</button>
-  <button class="tag-filter" data-tag="distillation">distillation</button>
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> Tags</h1>
+    <p class="post-description">Filter cards by selecting tags</p>
+  </header>
+  <div class="tag-filter-container">
+    <!-- Default tags -->
+    <div class="default-tags">
+      <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
+      <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
+      <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
+      <button class="tag-filter" data-tag="electrical engineering"><i class="fa-solid fa-hashtag"></i> Electrical Engineering</button>
+      <button class="tag-filter" data-tag="electronics"><i class="fa-solid fa-hashtag"></i> Electronics</button>
+      <button class="tag-filter" data-tag="chemistry"><i class="fa-solid fa-hashtag"></i> Chemistry</button>
+      <button class="tag-filter" data-tag="hv"><i class="fa-solid fa-hashtag"></i> High Voltage</button>
+    </div>
+    
+    <!-- Extra tags, hidden by default -->
+    <div class="extra-tags">
+      <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
+      <button class="tag-filter" data-tag="biology"><i class="fa-solid fa-hashtag"></i> Biology</button>
+      <button class="tag-filter" data-tag="cnc"><i class="fa-solid fa-hashtag"></i> CNC</button>
+      <button class="tag-filter" data-tag="laser"><i class="fa-solid fa-hashtag"></i> Laser</button>
+      <button class="tag-filter" data-tag="biohacking"><i class="fa-solid fa-hashtag"></i> Biohacking</button>
+      <button class="tag-filter" data-tag="implants"><i class="fa-solid fa-hashtag"></i> Implants</button>
+      <button class="tag-filter" data-tag="pcb design"><i class="fa-solid fa-hashtag"></i> PCB Design</button>
+      <button class="tag-filter" data-tag="3d printing"><i class="fa-solid fa-hashtag"></i> 3D Printing</button>
+      <button class="tag-filter" data-tag="nfc"><i class="fa-solid fa-hashtag"></i> NFC</button>
+      <button class="tag-filter" data-tag="attiny"><i class="fa-solid fa-hashtag"></i> ATTiny</button>
+      <button class="tag-filter" data-tag="samd21"><i class="fa-solid fa-hashtag"></i> SAMD21</button>
+      <button class="tag-filter" data-tag="fusion360"><i class="fa-solid fa-hashtag"></i> Fusion360</button>
+      <button class="tag-filter" data-tag="supercaps"><i class="fa-solid fa-hashtag"></i> Supercaps</button>
+      <button class="tag-filter" data-tag="thermal cam"><i class="fa-solid fa-hashtag"></i> Thermal Cam</button>
+      <button class="tag-filter" data-tag="terrarium"><i class="fa-solid fa-hashtag"></i> Terrarium</button>
+      <button class="tag-filter" data-tag="distillation"><i class="fa-solid fa-hashtag"></i> Distillation</button>
+    </div>
+
+    <!-- Show More/Show Less button -->
+    <div class="show-more-container">
+      <button id="show-more-btn">Show More</button>
+    </div>
+  </div>
 </div>
 
+<!-- Your existing content goes here -->
+
+<div class="cards-container">
+  <!-- Example card -->
+  <div class="col-md-4 card-item" data-tags="chemistry, distillation, image">
+    <div class="card mb-4 shadow-sm">
+      {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
+      <div class="card-body">
+        <p class="card-text">short path distillation setup</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+        <div class="tag-category-list">
+          <ul class="p-0 m-0">
+            {% assign tags = 'chemistry, distillation, image' | split: ', ' %}
+            {% for tag in tags %}
+              <li>
+                <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/tags/' | relative_url }}">{{ tag }}</a>
+              </li>
+              {% unless forloop.last %}
+                <p>&bull;</p>
+              {% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add more cards here -->
+</div>
 <!-- _pages/gallery.md -->
 <div class="gallery">
  <div class="container">

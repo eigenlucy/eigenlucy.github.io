@@ -1,6 +1,10 @@
+// assets/js/filter.js
 document.addEventListener('DOMContentLoaded', function() {
   const tagButtons = document.querySelectorAll('.tag-filter');
-  const cards = document.querySelectorAll('.card-item');
+  const cardsContainer = document.querySelector('.cards-container');
+  const cards = Array.from(document.querySelectorAll('.card-item'));
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const extraTags = document.querySelector('.extra-tags');
 
   tagButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -10,18 +14,37 @@ document.addEventListener('DOMContentLoaded', function() {
       tagButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      // Filter cards based on the selected tag
+      // Filter and reorder cards based on the selected tag
+      const matchedCards = [];
+      const unmatchedCards = [];
+
       cards.forEach(card => {
         const cardTags = card.getAttribute('data-tags').split(', ');
         if (tag === 'all' || cardTags.includes(tag)) {
-          card.style.display = 'block';
+          matchedCards.push(card);
         } else {
-          card.style.display = 'none';
+          unmatchedCards.push(card);
         }
       });
+
+      // Clear the container and append matched and unmatched cards
+      cardsContainer.innerHTML = '';
+      matchedCards.forEach(card => cardsContainer.appendChild(card));
+      unmatchedCards.forEach(card => cardsContainer.appendChild(card));
     });
   });
 
   // Initialize with 'all' tag selected
   document.querySelector('.tag-filter[data-tag="all"]').click();
+
+  // Show More/Show Less functionality
+  showMoreBtn.addEventListener('click', function() {
+    if (extraTags.style.display === 'none' || extraTags.style.display === '') {
+      extraTags.style.display = 'block';
+      showMoreBtn.textContent = 'Show Less';
+    } else {
+      extraTags.style.display = 'none';
+      showMoreBtn.textContent = 'Show More';
+    }
+  });
 });
