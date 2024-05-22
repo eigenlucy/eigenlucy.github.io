@@ -171,7 +171,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, attiny, supercaps, electrical engineering, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, attiny, cnc, fusion360, electrical engineering, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
