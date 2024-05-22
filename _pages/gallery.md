@@ -7,24 +7,23 @@ nav: true
 nav_order: 1
 ---
 
+<div class="tag-filter-container">
+  <button class="tag-filter" data-tag="all">All</button>
+  <button class="tag-filter" data-tag="image">image</button>
+  <button class="tag-filter" data-tag="video">video</button>
+  <button class="tag-filter" data-tag="chemistry">chemistry</button>
+  <button class="tag-filter" data-tag="electronics">electronics</button>
+  <button class="tag-filter" data-tag="thermal cam">thermal cam</button>
+  <button class="tag-filter" data-tag="distillation">distillation</button>
+</div>
+
 <!-- _pages/gallery.md -->
 <div class="gallery">
     <div class="container">
       <div class="row">
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            {% include figure.liquid loading="eager" path="assets/img/Gallery/PinkOysterJar.jpg" class="img-fluid rounded z-depth-1" %}
-            <div class="card-body">
-              <p class="card-text">Brain jar🧠 (pink oyster rye berry grain spawn jar)</p>
-              <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
+        <div class="col-md-4" data-tags="chemistry, distillation, image">
+          <div class="card mb-4 shadow-sm" data-tags=">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">short path distillation setup</p>
@@ -34,7 +33,7 @@ nav_order: 1
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-tags="chemistry, distillation, video">
           <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="eager" path="assets/video/distillationapparatus.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
             <div class="card-body">
@@ -45,7 +44,7 @@ nav_order: 1
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-tags="chemistry, distillation, thermal camera, image">
           <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/distillationthermalcam.JPG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
@@ -61,6 +60,17 @@ nav_order: 1
             {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEther.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">diethyl ether extracted from starting fluid</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/PinkOysterJar.jpg" class="img-fluid rounded z-depth-1" %}
+            <div class="card-body">
+              <p class="card-text">Brain jar🧠 (pink oyster rye berry grain spawn jar)</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
