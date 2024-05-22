@@ -205,9 +205,9 @@ nav_order: 1
 
   <div class="col-md-4" data-tags="hv, electrical engineering, video">
     <div class="card mb-4 shadow-sm">
-         {% include video.liquid loading="eager" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      {% include video.liquid loading="eager" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
-        <p class="card-text">fractional distillation + condensor column</p>
+        <p class="card-text">voltage multiplier with ~100kV output</p>
         <div class="d-flex justify-content-between align-items-center">
         </div>
       </div>
