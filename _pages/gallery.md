@@ -23,7 +23,7 @@ nav_order: 1
       <div class="row">
 
         <div class="col-md-4" data-tags="chemistry, distillation, image">
-          <div class="card mb-4 shadow-sm" data-tags=">
+          <div class="card mb-4 shadow-sm">
             {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
             <div class="card-body">
               <p class="card-text">short path distillation setup</p>
