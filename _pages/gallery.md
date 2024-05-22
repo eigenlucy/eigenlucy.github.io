@@ -24,6 +24,7 @@ nav_order: 1
   <button class="tag-filter" data-tag="pcb design">PCB design</button>
   <button class="tag-filter" data-tag="3d printing">3D printing</button>
   <button class="tag-filter" data-tag="nfc">nfc</button>
+  <button class="tag-filter" data-tag="attiny">attiny</button>
   <button class="tag-filter" data-tag="samd21">samd21</button>
   <button class="tag-filter" data-tag="fusion360">fusion360</button>
   <button class="tag-filter" data-tag="supercaps">supercaps</button>
