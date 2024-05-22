@@ -95,3 +95,18 @@
     <figcaption class="caption">{{ include.caption }}</figcaption>
   {% endif %}
 </figure>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        video.style.display = 'block';
+        video.play();
+        button.previousElementSibling.style.display = 'none'; // Hide thumbnail
+        button.style.display = 'none'; // Hide play button
+      });
+    });
+  });
+</script>
