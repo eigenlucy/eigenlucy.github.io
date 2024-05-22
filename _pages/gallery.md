@@ -11,9 +11,24 @@ nav_order: 1
   <button class="tag-filter" data-tag="all">All</button>
   <button class="tag-filter" data-tag="image">image</button>
   <button class="tag-filter" data-tag="video">video</button>
-  <button class="tag-filter" data-tag="chemistry">chemistry</button>
+  <button class="tag-filter" data-tag="electrical engineering">electrical engineering</button>  
   <button class="tag-filter" data-tag="electronics">electronics</button>
+  <button class="tag-filter" data-tag="chemistry">chemistry</button>
+  <button class="tag-filter" data-tag="hv">hv</button>
+  <button class="tag-filter" data-tag="mycology">mycology</button>
+  <button class="tag-filter" data-tag="biology">biology</button>
+  <button class="tag-filter" data-tag="cnc">CNC</button>
+  <button class="tag-filter" data-tag="laser">laser</button>
+  <button class="tag-filter" data-tag="biohacking">biohacking</button>
+  <button class="tag-filter" data-tag="implants">implants</button>
+  <button class="tag-filter" data-tag="pcb design">PCB design</button>
+  <button class="tag-filter" data-tag="3d printing">3D printing</button>
+  <button class="tag-filter" data-tag="nfc">nfc</button>
+  <button class="tag-filter" data-tag="samd21">samd21</button>
+  <button class="tag-filter" data-tag="fusion360">fusion360</button>
+  <button class="tag-filter" data-tag="supercaps">supercaps</button>
   <button class="tag-filter" data-tag="thermal cam">thermal cam</button>
+  <button class="tag-filter" data-tag="terrarium">terrarium</button>
   <button class="tag-filter" data-tag="distillation">distillation</button>
 </div>
 
@@ -67,7 +82,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, brain jar, image">
+  <div class="col-md-4 card-item" data-tags="mycology, oyster mushrooms, biology, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PinkOysterJar.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -78,7 +93,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, fusion360, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, fusion360, supercaps, electrical engineering, electronics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenCAD.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -89,7 +104,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, fusion360, electrical engineering, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -100,7 +115,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, prototype, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, electrical engineering, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -111,7 +126,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="music, electronics, image">
+  <div class="col-md-4 card-item" data-tags="hv, samd21, electrical engineering, electronics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/MusicalIgnitionCoil.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -122,7 +137,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, grain spawn, image">
+  <div class="col-md-4 card-item" data-tags="mycology, biology, grain spawn, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/LionsMane.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -133,7 +148,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="power usage, attiny, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, attiny, supercaps, electrical engineering, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PowerUsageTrackerATtiny.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -144,7 +159,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, supercaps, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, attiny, electrical engineering, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackupPrizmacapTop.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -155,7 +170,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, supercaps, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, electrical engineering, electronics, supercaps, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -166,7 +181,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="hand crank generator, 3d printing, image">
+  <div class="col-md-4 card-item" data-tags="opensauce, 3d printing, electronics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapCrankGeneratorPrintedParts.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -177,7 +192,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="hand crank generator, supercaps, image">
+  <div class="col-md-4 card-item" data-tags="electrical engineering, electronics opensauce, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/Nema23CrankGenerator.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -188,7 +203,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="3d printing, snake, image">
+  <div class="col-md-4 card-item" data-tags="3d printing, terrarium, biology, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -199,7 +214,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="snake, basking spot, image">
+  <div class="col-md-4 card-item" data-tags="biology, 3d printing, terrarium, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/MarcelleEgg.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -210,7 +225,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electronics, led strip, image">
+  <div class="col-md-4 card-item" data-tags="electronics, electronics engineering, leds, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/POVglobe.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -221,7 +236,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electroplating, mSLA printing, image">
+  <div class="col-md-4 card-item" data-tags="electroplating, 3d printing, chemistry image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/nietzscheplating.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -232,7 +247,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electroplating, setup, image">
+  <div class="col-md-4 card-item" data-tags="electroplating, chemistry, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/electroplatingbath.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -243,7 +258,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electroplating, mSLA printing, image">
+  <div class="col-md-4 card-item" data-tags="electroplating, chemistry, 3d printing, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/platednietzsche.png" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -254,7 +269,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="technical object, individuation, image">
+  <div class="col-md-4 card-item" data-tags="systemantics, Simondon, individuation, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/individuation.png" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -265,7 +280,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, liquid culture, image">
+  <div class="col-md-4 card-item" data-tags="mycology, biology, agar plates, liquid culture, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PS_LC.JPEG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -276,7 +291,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electronics, DRSSTC, image">
+  <div class="col-md-4 card-item" data-tags="electronics, electrical engraving, hv, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/DRSSTCTesting.JPEG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -287,7 +302,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, guitar pedal, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, electronics, electrical engineering, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/FLCLpcb.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -298,7 +313,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, oyster mushrooms, image">
+  <div class="col-md-4 card-item" data-tags="mycology, biology, spawn bag, oyster mushrooms, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ShroomTank.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -309,7 +324,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="electronics, oscilloscope, image">
+  <div class="col-md-4 card-item" data-tags="electrical engineering, electronics, equipment, oscilloscope, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/OsciliscopeWithCouplingError.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -320,7 +335,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, grain spawn, image">
+  <div class="col-md-4 card-item" data-tags="mycology, biology, grain spawn, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PressureCooking.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -331,7 +346,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="laser engraving, image">
+  <div class="col-md-4 card-item" data-tags="laser, cnc, woodworking, systemantics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/TableEngraving.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -342,7 +357,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="3d printing, snake, image">
+  <div class="col-md-4 card-item" data-tags="3d printing, biology, systematics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/MarcelleDreammachine.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -353,7 +368,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, grain spawn, image">
+  <div class="col-md-4 card-item" data-tags="mycology, biology, grain spawn, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PressureCooking2.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -364,7 +379,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="diy, stirplate, image">
+  <div class="col-md-4 card-item" data-tags="diy, biology, chemistry, 3d printing, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/DIYStirplate.JPG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -375,7 +390,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="mycology, agar plates, image">
+  <div class="col-md-4 card-item" data-tags="mycology, agar plates, biology, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/AgarPlates.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -386,7 +401,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="pcb design, reflow, image">
+  <div class="col-md-4 card-item" data-tags="pcb design, prototyping, electrical engineering, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/LostConveyerBelt.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -397,7 +412,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="laser engraving, image">
+  <div class="col-md-4 card-item" data-tags="laser, cnc, woodworking, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/Engraving.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -408,7 +423,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, video">
+  <div class="col-md-4 card-item" data-tags="implants, biohacking, nfc, video">
     <div class="card mb-4 shadow-sm">
       {% include video.liquid loading="eager" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
@@ -419,7 +434,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, nfc chip, image">
+  <div class="col-md-4 card-item" data-tags="implants, biohacking, nfc, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantMissionAccomplished.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -430,7 +445,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, nfc chip, image">
+  <div class="col-md-4 card-item" data-tags="implants, nfc, electrical engineering, biohacking, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/NFCimplant.png" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -441,7 +456,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="enclosure, diy, image">
+  <div class="col-md-4 card-item" data-tags="terrarium, isopods, biology, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -452,7 +467,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="enclosure, diy, image">
+  <div class="col-md-4 card-item" data-tags="terrarium, biology, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/BasilTankComplete.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -463,7 +478,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, diy surgery, image">
+  <div class="col-md-4 card-item" data-tags="implants, biology, biohacking, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -474,7 +489,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="isopods, terrarium, image">
+  <div class="col-md-4 card-item" data-tags="isopods, biology, terrarium, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ZebraIsopodTerrarium.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
