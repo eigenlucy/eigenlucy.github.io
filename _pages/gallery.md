@@ -126,6 +126,28 @@ nav_order: 1
     </div>
   </div>
 
+  <div class="col-md-4" data-tags="hv, electrical engineering, electronics, video">
+    <div class="card mb-4 shadow-sm">
+         {% include video.liquid loading="eager" path="assets/video/MOT.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">microwave oven transformer (MOT) arc</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4" data-tags="hv, samd21, electrical engineering, electronics, systemantics, video">
+    <div class="card mb-4 shadow-sm">
+         {% include video.liquid loading="eager" path="assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">IGBT singing ignition coil playing a nokia ring tone</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="col-md-4 card-item" data-tags="hv, samd21, electrical engineering, electronics, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/MusicalIgnitionCoil.jpg" class="img-fluid rounded z-depth-1" %}
@@ -181,7 +203,18 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="opensauce, 3d printing, electronics, image">
+  <div class="col-md-4" data-tags="hv, electrical engineering, video">
+    <div class="card mb-4 shadow-sm">
+         {% include video.liquid loading="eager" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">fractional distillation + condensor column</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 card-item" data-tags="opensauce, 3d printing, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapCrankGeneratorPrintedParts.jpg" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
@@ -247,6 +280,17 @@ nav_order: 1
     </div>
   </div>
 
+  <div class="col-md-4" data-tags="electroplating, chemistry, 3d printing, video">
+    <div class="card mb-4 shadow-sm">
+         {% include video.liquid loading="eager" path="assets/video/airbrushcopperapplication.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">Airbrushing conductive copper nanoparticle paint onto a printed part to prep for plating</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="col-md-4 card-item" data-tags="electroplating, chemistry, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/electroplatingbath.JPG" class="img-fluid rounded z-depth-1" %}
@@ -279,6 +323,8 @@ nav_order: 1
       </div>
     </div>
   </div>
+
+
 
   <div class="col-md-4 card-item" data-tags="mycology, biology, agar plates, liquid culture, image">
     <div class="card mb-4 shadow-sm">
@@ -483,6 +529,17 @@ nav_order: 1
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
         <p class="card-text">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4" data-tags="implants, systemantics, biohacking, video">
+    <div class="card mb-4 shadow-sm">
+         {% include video.liquid loading="eager" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">xSIID self implant procedure in my kitchen</p>
         <div class="d-flex justify-content-between align-items-center">
         </div>
       </div>
