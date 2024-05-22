@@ -514,7 +514,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, biology, biohacking, image">
+  <div class="col-md-4 card-item" data-tags="implants, biohacking, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
       <div class="card-body">
