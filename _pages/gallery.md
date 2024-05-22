@@ -126,7 +126,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4" data-tags="hv, electrical engineering, electronics, video">
+  <div class="col-md-4 card-item" data-tags="hv, electrical engineering, electronics, video">
     <div class="card mb-4 shadow-sm">
          {% include video.liquid loading="eager" path="assets/video/MOT.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
@@ -137,7 +137,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4" data-tags="hv, samd21, electrical engineering, electronics, systemantics, video">
+  <div class="col-md-4 card-item" data-tags="hv, samd21, electrical engineering, electronics, systemantics, video">
     <div class="card mb-4 shadow-sm">
          {% include video.liquid loading="eager" path="assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
@@ -203,7 +203,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4" data-tags="hv, electrical engineering, video">
+  <div class="col-md-4 card-item" data-tags="hv, electrical engineering, video">
     <div class="card mb-4 shadow-sm">
       {% include video.liquid loading="eager" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
@@ -280,7 +280,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4" data-tags="electroplating, chemistry, 3d printing, video">
+  <div class="col-md- card-item" data-tags="electroplating, chemistry, 3d printing, video">
     <div class="card mb-4 shadow-sm">
          {% include video.liquid loading="eager" path="assets/video/airbrushcopperapplication.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
@@ -535,7 +535,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4" data-tags="implants, systemantics, biohacking, video">
+  <div class="col-md-4 card-item" data-tags="implants, systemantics, biohacking, video">
     <div class="card mb-4 shadow-sm">
          {% include video.liquid loading="eager" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
       <div class="card-body">
