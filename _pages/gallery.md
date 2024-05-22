@@ -415,6 +415,17 @@ nav_order: 1
     </div>
   </div>
 
+  <div class="col-md-4 card-item" data-tags="chemistry, electroplating, video">
+    <div class="card mb-4 shadow-sm">
+      {% include video.liquid loading="eager" path="assets/video/sulfuricacidCUSO4.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      <div class="card-body">
+        <p class="card-text">Addition of of concentrated sulfuric acid to CUSO4 based electroplating solution</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="col-md-4 card-item" data-tags="mycology, biology, grain spawn, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/PressureCooking2.jpg" class="img-fluid rounded z-depth-1" %}
