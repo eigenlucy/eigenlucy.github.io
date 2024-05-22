@@ -480,17 +480,6 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="col-md-4 card-item" data-tags="implants, biohacking, nfc, image">
-    <div class="card mb-4 shadow-sm">
-      {% include figure.liquid loading="eager" path="assets/img/Gallery/ImplantMissionAccomplished.jpg" class="img-fluid rounded z-depth-1" %}
-      <div class="card-body">
-        <p class="card-text">just after injecting my dangerous things xsiid NFC/LED chip into my hand.</p>
-        <div class="d-flex justify-content-between align-items-center">
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="col-md-4 card-item" data-tags="implants, nfc, electrical engineering, biohacking, image">
     <div class="card mb-4 shadow-sm">
       {% include figure.liquid loading="eager" path="assets/img/Gallery/NFCimplant.png" class="img-fluid rounded z-depth-1" %}
