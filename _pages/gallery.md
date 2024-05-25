@@ -8,27 +8,32 @@ nav_order: 1
 ---
 
 <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
   <div class="tag-filter-container">
       <!-- Default tags -->
       <div class="default-tags">
-       <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
-       <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
-       <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
-       <button class="tag-filter" data-tag="electrical engineering"><i class="fa-solid fa-hashtag"></i> Electrical Engineering</button>
-       <button class="tag-filter" data-tag="electronics"><i class="fa-solid fa-hashtag"></i> Electronics</button>
-       <button class="tag-filter" data-tag="chemistry"><i class="fa-solid fa-hashtag"></i> Chemistry</button>
-       <button class="tag-filter" data-tag="hv"><i class="fa-solid fa-hashtag"></i> High Voltage</button>
-       <button class="tag-filter" data-tag="3d printing"><i class="fa-solid fa-hashtag"></i> 3D Printing</button>
-       <button class="tag-filter" data-tag="biohacking"><i class="fa-solid fa-hashtag"></i> Biohacking</button>
+        <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
+        <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
+        <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
+        <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
+        <button class="tag-filter" data-tag="electrical engineering"><i class="fa-solid fa-hashtag"></i> Electrical Engineering</button>
+        <button class="tag-filter" data-tag="chemistry"><i class="fa-solid fa-hashtag"></i> Chemistry</button>
+        <button class="tag-filter" data-tag="hv"><i class="fa-solid fa-hashtag"></i> High Voltage</button>
+        <button class="tag-filter" data-tag="3d printing"><i class="fa-solid fa-hashtag"></i> 3D Printing</button>
+        <button class="tag-filter" data-tag="biohacking"><i class="fa-solid fa-hashtag"></i> Biohacking</button>
+        <button class="tag-filter" data-tag="pcb design"><i class="fa-solid fa-hashtag"></i> PCB Design</button>
       </div>
       <!-- Extra tags, hidden by default -->
       <div class="extra-tags" style="display: none;">
-        <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
+        <button class="tag-filter" data-tag="electronics"><i class="fa-solid fa-hashtag"></i> Electronics</button>
         <button class="tag-filter" data-tag="biology"><i class="fa-solid fa-hashtag"></i> Biology</button>
         <button class="tag-filter" data-tag="cnc"><i class="fa-solid fa-hashtag"></i> CNC</button>
         <button class="tag-filter" data-tag="laser"><i class="fa-solid fa-hashtag"></i> Laser</button>
         <button class="tag-filter" data-tag="implants"><i class="fa-solid fa-hashtag"></i> Implants</button>
-        <button class="tag-filter" data-tag="pcb design"><i class="fa-solid fa-hashtag"></i> PCB Design</button>
         <button class="tag-filter" data-tag="nfc"><i class="fa-solid fa-hashtag"></i> NFC</button>
         <button class="tag-filter" data-tag="attiny"><i class="fa-solid fa-hashtag"></i> ATTiny</button>
         <button class="tag-filter" data-tag="samd21"><i class="fa-solid fa-hashtag"></i> SAMD21</button>
@@ -37,10 +42,6 @@ nav_order: 1
         <button class="tag-filter" data-tag="thermal cam"><i class="fa-solid fa-hashtag"></i> Thermal Cam</button>
         <button class="tag-filter" data-tag="terrarium"><i class="fa-solid fa-hashtag"></i> Terrarium</button>
         <button class="tag-filter" data-tag="distillation"><i class="fa-solid fa-hashtag"></i> Distillation</button>
-      </div>
-      <!-- Show More/Show Less button -->
-      <div class="show-more-container">
-        <button id="show-more-btn">Show More</button>
       </div>
   </div>
 </div>
@@ -259,7 +260,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-4 card-item " data-tags="electroplating, 3d printing, chemistry image">
+      <div class="col-md-4 card-item " data-tags="electroplating, 3d printing, chemistry, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/nietzscheplating.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
