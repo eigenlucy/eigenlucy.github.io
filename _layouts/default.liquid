@@ -2,6 +2,7 @@
 <html lang="{{ site.lang }}">
   <!-- Head -->
   <head>
+  <link rel="stylesheet" href="{{ '/assets/css/tagformat.css' | relative_url }}">
     {% if page.redirect %}
       {% if page.redirect == true %}
         {% assign redirect = site.baseurl | append: '/' %}
@@ -13,8 +14,10 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
-    <link rel="stylesheet" href="{{ '/assets/css/tagformat.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
   </head>
 
   <!-- Body -->
@@ -63,14 +66,19 @@
     {% include scripts/echarts.liquid %}
     {% include scripts/vega.liquid %}
     {% include scripts/tikzjax.liquid %}
+    {% include scripts/typograms.liquid %}
     {% include scripts/misc.liquid %}
     {% include scripts/badges.liquid %}
     {% include scripts/mathjax.liquid %}
+    {% include scripts/pseudocode.liquid %}
     {% include scripts/analytics.liquid %}
     {% include scripts/progressBar.liquid %}
     {% include scripts/wechatModal.liquid %}
     {% include scripts/imageLayouts.liquid %}
-
+    {% include scripts/jekyll_tabs.liquid %}
+    {% include scripts/back_to_top.liquid %}
+    {% include scripts/search.liquid %}
+    
     <!-- Tag filter script -->
     <script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
   </body>

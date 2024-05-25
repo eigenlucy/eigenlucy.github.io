@@ -1,8 +1,8 @@
-// assets/js/filter.js
+//assets/filter.js
 document.addEventListener('DOMContentLoaded', function() {
   const tagButtons = document.querySelectorAll('.tag-filter');
   const cardsContainer = document.querySelector('.cards-container');
-  const cards = Array.from(document.querySelectorAll('.card-item'));
+  const cards = Array.from(document.querySelectorAll('.col-md-4.card-item'));
   const showMoreBtn = document.getElementById('show-more-btn');
   const extraTags = document.querySelector('.extra-tags');
 
