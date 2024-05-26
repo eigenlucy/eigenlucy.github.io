@@ -16,15 +16,17 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am interested in how systems work and how they fail. Electrical engineering is my top proficiency, following from an abiding interest in systems theory/control theory meeting a passion for building machines. At Kyocera-AVX I have been reverse engineering systems to identify and investigate use cases for our products, assessing our components in a variety of existing systems, and investigating application areas of interest on behalf of product development and R&D teams.
+<p>I am interested in electrical engineering, full stack embedded development, control theory, small scale manufacturing, robotics, renewable energy, cybernetics, systems biology, mycology, software development,machine learning, biohacking, botany, post-structuralism, philosphy of science and much more :)</p>
+<p>This website will host blog posts, project galleries, tutorials, etc pertaining to my interests and projects.</p>
 
-Affiliations :
 
-Research engineering at <a href='https://www.kyocera-avx.com/'>Kyocera-AVX</a>.
-Organizer at <a href='https://www.cleobailey.org/'>The Cleo Bailey Experiment</a>.
-Presenter at <a href='https://opensauce.com/'>OpenSauce 2024</a>. 
-Machinic Garden LLC.
+Affiliations:
+<ul>
+<li>Research engineering at <a href='https://www.kyocera-avx.com/'>Kyocera-AVX</a>.</li>
+<li>Organizer at <a href='https://www.cleobailey.org/'>The Cleo Bailey Experiment</a>.</li>
+<li>Presenter at <a href='https://opensauce.com/'>OpenSauce 2024</a>.</li>
+</ul>
 
 You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.
 
-Site under construction. You can see the code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
+This site is under construction. I designed this website with the help of the <a href='https://github.com/alshedivat/al-foli'>al-folio</a> theme for <a href='https://jekyllrb.com/'>jekyll</a>. You can see the full codebase for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.

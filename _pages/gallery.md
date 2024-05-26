@@ -2,7 +2,7 @@
 layout: default
 permalink: /gallery/
 title: gallery
-description: an assortment of project photos 
+description: some of my projects from the last few years 
 nav: true
 nav_order: 1
 ---
@@ -17,11 +17,11 @@ nav_order: 1
       <!-- Default tags -->
       <div class="default-tags">
         <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
-        <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
         <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
         <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
         <button class="tag-filter" data-tag="electrical engineering"><i class="fa-solid fa-hashtag"></i> Electrical Engineering</button>
         <button class="tag-filter" data-tag="chemistry"><i class="fa-solid fa-hashtag"></i> Chemistry</button>
+        <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
         <button class="tag-filter" data-tag="hv"><i class="fa-solid fa-hashtag"></i> High Voltage</button>
         <button class="tag-filter" data-tag="3d printing"><i class="fa-solid fa-hashtag"></i> 3D Printing</button>
         <button class="tag-filter" data-tag="biohacking"><i class="fa-solid fa-hashtag"></i> Biohacking</button>
