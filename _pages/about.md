@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.linkedin.com/in/lucy-chambers-46b257303/'>LinkedIn</a>. Research Engineering. Liberty, SC. eigenlucy@proton.me.
+subtitle: Lucy Chambers. Research Engineering. Liberty, SC. eigenlucy@proton.me.
 
 profile:
   align: right
@@ -27,6 +27,13 @@ Affiliations:
 <li>Presenter at <a href='https://opensauce.com/'>OpenSauce 2024</a>.</li>
 </ul>
 
-You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.
+Links:
+<ul>
+<li>You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.</li>
+<li>Check out some of my repos on <a href='https://github.com/eigenlucy/'>GitHub</a></li>
+<li>Find me on <a href='https://www.linkedin.com/in/lucy-chambers-46b257303/'>LinkedIn</a>.</li>
+</ul>
+
+
 
 This site is under construction. I designed this website with the help of the <a href='https://github.com/alshedivat/al-foli'>al-folio</a> theme for <a href='https://jekyllrb.com/'>jekyll</a>. You can see the full codebase for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
