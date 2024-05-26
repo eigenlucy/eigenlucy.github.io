@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-this site is now configured and working smoothly. check out the gallery and leave a comment on the about page. more content and pages coming soon!
+this site is now configured and working smoothly. check out the gallery and leave a comment on the blog page. more content and pages coming soon!
