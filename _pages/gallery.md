@@ -16,6 +16,7 @@ nav_order: 1
   <div class="tag-filter-container">
       <!-- Default tags -->
       <div class="default-tags">
+        <button class="tag-filter" data-tag="featured"><i class="fa-solid fa-hashtag"></i> Featured</button>
         <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
         <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
         <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
@@ -50,6 +51,26 @@ nav_order: 1
 <div class="gallery">
   <div class="container">
     <div class="row cards-container">
+      <div class="col-md-4 card-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            {% include video.liquid loading="eager" path="assets/video/WardSGTC.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+          <div class="card-body">
+            <p class="card-text">MASSIVE spark gap tesla coil at LOD labs</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="featured, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            {% include video.liquid loading="eager" path="assets/video/laser.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+          <div class="card-body">
+            <p class="card-text">200W UV laser diode lighting a log on fire without a lens</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 card-item " data-tags="chemistry, distillation, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
@@ -140,7 +161,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-4 card-item " data-tags="hv, samd21, electrical engineering, electronics, systemantics, video">
+      <div class="col-md-4 card-item " data-tags="featured, hv, samd21, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="eager" path="assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
@@ -205,16 +226,6 @@ nav_order: 1
           {% include video.liquid loading="eager" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">voltage multiplier with ~100kV output</p>
-            <div class="d-flex justify-content-between align-items-center">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 card-item " data-tags="opensauce, 3d printing, image">
-        <div class="card mb-4 shadow-sm">
-          {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapCrankGeneratorPrintedParts.jpg" class="img-fluid rounded z-depth-1" %}
-          <div class="card-body">
-            <p class="card-text">Printed parts to convert a NEMA23 stepper motor into a hand crank generator</p>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
@@ -491,7 +502,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-4 card-item " data-tags="implants, systemantics, biohacking, video">
+      <div class="col-md-4 card-item " data-tags="featured, implants, systemantics, biohacking, video">
         <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="eager" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
