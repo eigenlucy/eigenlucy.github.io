@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Initialize with 'all' tag selected
-  document.querySelector('.tag-filter[data-tag="all"]').click();
+  document.querySelector('.tag-filter[data-tag="featured"]').click();
 
   // Show More/Show Less functionality
   showMoreBtn.addEventListener('click', function() {
