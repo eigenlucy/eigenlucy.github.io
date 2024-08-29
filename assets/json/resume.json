@@ -3,13 +3,13 @@
   "basics": {
     "name": "Lucy Chambers",
     "label": "Research Engineer",
-    "image": "",
+    "image": "https://eigenlucy.github.io/assets/img/Gallery/lucyresumepfp.jpg",
     "email": "lucycchambers12@gmail.com",
     "phone": "(864) 617-4908",
     "website": "https://eigenlucy.github.io",
     "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evalutating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
     "location": {
-      "city": "Liberty",
+      "city": "Greenville",
       "countryCode": "US",
       "region": "South Carolina"
     },
@@ -33,12 +33,12 @@
       "description": "Electronics Component Manufacturer",
       "position": "Research Engineering",
       "url": "https://www.kyocera-avx.com/",
-      "startDate": "April 2023",
-      "endDate": "",
+      "startDate": "2023-04-01",
+      "endDate": "2024-08-28",
       "summary": "Kyocera-AVX is an American electronics component manufacturer specializing in passive components such as antennas, MLCCs, tantalum capacitors, supercapacitors, and varistors.",
       "highlights": [
         "Preformed teardowns on a wide variety of products and systems on behalf of market research and engineering teams.",
-        "Reverse engineered systems to assist product design and market research teams, produced schematics and component models from product samples, evaluated samples annd prototype components to assess suitability for given products/applications of interest.",
+        "Reverse engineered systems to assist product design and market research teams, produced schematics and component models from product samples, evaluated samples annd prototype components to assess suitability for given products/applications of interest."
       ]
     },
     {
@@ -47,15 +47,15 @@
       "description": "Small Scale Manufacturing and Contract Prototyping Services",
       "position": "Engineer",
       "url": "",
-      "startDate": "October 2022",
-      "endDate": "May 2023",
+      "startDate": "2022-10-01",
+      "endDate": "2023-05-01",
       "summary": "Contract Engineering and Manufacturing Services, Small-Scale Manufacturing",
       "highlights": [
         "Designed prototype PCBs to client specifications and designed processes to address specialty needs (e.g. copper nanopaticle airbrush coating and electroplating of 3D printed parts).",
         "Acquisition and integration of a wide variety of small scale manufacturing and test equipment including 3D printers, laser cutters, arc welders, drill presses, osciloscopes, CNC mills and reflow ovens.",
         "PCB Design (KiCAD, Fusion360)",
         "Managed a shop website and several storefronts such as Etsy and Amazon, mananged AdSense, and handled order processing and shippng for an array of products including t-shirts, laser engraved coasters/signs, 3D prints, and electronics kits.",
-        "CAD Modeling (FreeCAD, SOLIDWORKS, Fusion360)", 
+ 
         "Full-Stack Embedded Development (C/C++, Micropython, Arduino, ATTiny, ARM Cortex M, STM32, ESP32/8266, Teensy, RP2040, SAMD21/51)"
       ]
     },
@@ -80,8 +80,7 @@
       "organization": "Cleo Bailey Experiment",
       "position": "Volunteer",
       "url": "https://www.cleobailey.org/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
+      "startDate": "2020-05-01",
       "summary": "Community garden project in Anderson, SC. Provides food to local food banks, hosts community events, and actively working on renovations with the hope to host many additional resources",
       "highlights": [
         "501c nonprofit organization. https://www.cleobailey.org/",
@@ -91,13 +90,13 @@
       ]
     }
   ],
-  "Awards": [
+  "awards": [
     {
       "title": "OpenSauce 2024 Exhibtor",
       "date": "2024-06-14",
       "awarder": "Daly City, California",
       "url": "https://opensauce.com/",
-      "summary": "An event for engineers, student groups, open source developers, makers, and startups to exhibit something they've been working on."
+      "summary": "An event for engineers, student groups, open source developers, makers, and startups to exhibit something they've been working on. You hear my application on the Safety Third podcast here: https://www.youtube.com/watch?v=NeMPYlnSd-g&t=5884s"
     }
   ],
   "skills": [
@@ -106,10 +105,8 @@
       "level": "Master",
       "keywords": [
         "Circuit Design",
-        "Preformance Evalutation (Thermal, Efficiency, Noise, Etc.)",
         "PDN Analysis",
-        "Filter Design",
-        "PCB Antenna Design and Field Simulation (OpenEMS, Biot-Savart Field Solver)",
+        "PCB Antenna/Filter Design",
         "Failure Mode Analysis",
         "Equipment Design/Construction",
         "PCB Design",
@@ -126,26 +123,11 @@
       "name": "Full-Stack Embedded Development",
       "level": "Advanced",
       "keywords": [
-        "C/C++",
-        "Micropython/Circuitpython",
-        "FreeRTOS",
-        "LORA",
-        "Bit Banging",
-        "ESP32",
-        "ESP8266",
-        "ESP-NOW",
-        "ESP-MESH",
-        "STM32",
-        "ATTiny",
-        "Teensy",
-        "RP2040",
-        "SAMD21",
-        "SAMD51",
-        "LabVIEW",
-        "MPLAB",
-        "STMCubeIDE",
-        "ESP-IDF",
-        "PlatformIO IDE"
+        "C, C++, Arduino, Micropython Firmware Development.",
+        "Circuit Design, PCB Design/CAD Design",
+        "Instrumentation/Test Hardware Design",
+        "Rapid Prototyping",
+        "Rapid Full Stack Turnaround Time"
       ]
     },
     {
@@ -155,8 +137,6 @@
         "HTML/CSS",
         "Javascript",
         "SQL",
-        "Git",
-        "Python",
         "C#",
         "Ruby"
       ]
@@ -164,18 +144,18 @@
   ],
   "languages": [
     {
-      "language": "English, C/C++, Python, Bash, Javascript, Ruby, HTML/CSS"
+      "language": "English, C/C++, Python/Micropython, Bash, Git"
     }
   ],
   "interests": [
     {
       "name": "Fields of Interest",
       "keywords": [
-        "Neurorobotics/BCIs",
+        "BCIs",
         "Resevoir Computing",
         "Machine Learning",
         "Autonomous Systems",
-        "Swarm Robotics",
+        "Robotics",
         "RF Engineering",
         "High Energy Physics/Plasma Physics",
         "Wireless Energy Transmission",
@@ -185,8 +165,7 @@
     {
       "name": "Open Science",
       "keywords": [
-        "Open-source Hardware",
-        "Small Scale Pharmaceutical Production (e.g. OpenInsulin, Open Source Estrogen)",
+        "Open-source Hardware/Free Software",
         "Open-source Bioinformatics",
         "Free Software",
         "Small Scale Manufacturing (3D Printing, CNC Milling, Laser/Plasma Cutting, Etc.)",
@@ -198,9 +177,20 @@
       "name": "Cybernetics",
       "keywords": [
         "Control Theory",
-        "Second-Order Cybernetics",
-        "Michael Levin/Computationally Designed Organisms",
+        "Theory of Computation",
+        "Enactivism",
+        "LLM Fine Tuning",
+        "Information Theory",
+        "Karl Friston/FEP",
         "Machine Learning"
+      ]
+    },
+    {
+      "name": "Mycology",
+      "keywords": [
+        "Mushroom Cultivation",
+        "Cloning/Hybridization",
+        "Mushroom Identification"
       ]
     }
   ],
@@ -222,8 +212,7 @@
         "RFID",
         "Biohacking"
       ],
-      "startDate": "2022-11-30",
-      "endDate": "",
+      "date": "2022-11-30",
       "url": "https://eigenlucy.github.io/projects/NFC_Implant/",
       "type": "application"
     },
@@ -231,12 +220,11 @@
       "name": "Voices In The Radio",
       "description": "OS agnotstic GPT fine-tuning toolchain used in my OpenSauce 2024 exhibit. Automates scraping and processing large quantities of text from a variety of source filetypes, filtering this data with chunk distinctiveness scoring, and automating fine-tuning process via OpenAI's API. Additionally provides tools to automate the assignment of fine-tuned models to Discord bots, and assignment of a voice via eleven labs TTS API. Our OpenSauce booth included a terminal to interact with the models we trained this way, which would then speak at the user through a suite of FM radios with the use of an ESP32 and SI4713 FM Transmitter IC.",
       "keywords": [
-        "OpenAI",
+        "LLM Fine tuning",
         "ChatGPT",
         "Python"
       ],
-      "startDate": "2024-05-12",
-      "endDate": "",
+      "date": "2024-05-12",
       "url": "https://github.com/eigenlucy/Voices-In-The-Radio-PUBLIC-",
       "type": "application"
     }
