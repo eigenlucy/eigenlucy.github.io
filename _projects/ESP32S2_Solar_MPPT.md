@@ -2,7 +2,7 @@
 layout: page
 title: Solar ESPHome with MPPT
 description: Low Cost Supercap Enabled Solar Powered ESP32S2
-img: assets/img/FMtransmitter.jpg
+img: assets/img/Gallery/ESP32S2MPPT.jpg
 importance: 1
 category: electrical engineering
 related_publications: false
@@ -16,12 +16,12 @@ BQ24251 References:
 https://www.ti.com/lit/an/slua687/slua687.pdf?ts=1724359587475&ref_url=https%253A%252F%252Fwww.google.com%252F
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FMtransmitter.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/ESP32S2MPPTSchematic.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FMtransmitter.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/ESP32S2MPPTPCB.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    schematic, assembled PCB
+    schematic, PCB (received 08/25/24)
 </div>
