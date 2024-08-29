@@ -39,7 +39,6 @@
       "highlights": [
         "Preformed teardowns on a wide variety of products and systems on behalf of market research and engineering teams.",
         "Reverse engineered systems to assist product design and market research teams, produced schematics and component models from product samples, evaluated samples annd prototype components to assess suitability for given products/applications of interest.",
-        "Produced PCBs and demo boards for prototype evaluation and component characterization. For example, a board to automatically evaluate PPTC resettable fuses and generate corresponding Time-To-Trip/Ambient Tempurature/Fault Current plots."
       ]
     },
     {
@@ -79,7 +78,7 @@
   "volunteer": [
     {
       "organization": "Cleo Bailey Experiment",
-      "position": "Lead Volunteer",
+      "position": "Volunteer",
       "url": "https://www.cleobailey.org/",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
@@ -92,22 +91,13 @@
       ]
     }
   ],
-  "awards": [
+  "Awards": [
     {
       "title": "OpenSauce 2024 Exhibtor",
       "date": "2024-06-14",
       "awarder": "Daly City, California",
       "url": "https://opensauce.com/",
       "summary": "An event for engineers, student groups, open source developers, makers, and startups to exhibit something they've been working on."
-    }
-  ],
-  "publications": [
-    {
-      "name": "Supercapacitor Whitepaper",
-      "publisher": "Kyocera-AVX",
-      "releaseDate": "",
-      "url": "https://www.kyocera-avx.com/category/technical-info-papers/supercapacitors/",
-      "summary": "Publication in progress"
     }
   ],
   "skills": [
@@ -183,21 +173,15 @@
     {
       "name": "Fields of Interest",
       "keywords": [
-        "Neuromorphic Computing",
         "Neurorobotics/BCIs",
         "Resevoir Computing",
         "Machine Learning",
         "Autonomous Systems",
-        "Systems Biology",
-        "Topological Quantum Computing",
         "Swarm Robotics",
         "RF Engineering",
-        "Xenobiology",
         "High Energy Physics/Plasma Physics",
         "Wireless Energy Transmission",
-        "Chiplets/Heterogenous Integration",
-        "Power Delivery Networks",
-        "Renewable Energy Infrastructure"
+        "Renewable Energy"
       ]
     },
     {
@@ -213,41 +197,12 @@
       ]
     },
     {
-      "name": "Philosophy",
-      "keywords": [
-        "Post-strucutralism",
-        "Gershom Scholem",
-        "Information Theory",
-        "Computational Theory of Mind",
-        "Gilbert Simondon",
-        "Philosophy of Science",
-        "Neo-Uexküllian Biology",
-        "New Materialism/Transendental Empiricism",
-        "Historical Materialism",
-        "Phenomenology",
-        "Raymond Ruyer",
-        "Ontology",
-        "Gilles Deleuze & Felix Guattari"
-      ]
-    },
-    {
       "name": "Cybernetics",
       "keywords": [
         "Control Theory",
         "Second-Order Cybernetics",
         "Michael Levin/Computationally Designed Organisms",
-        "Machine Learning",
-        "Autopoietic Enactivism",
-        "Biosemiotics",
-        "Requisite Variety",
-        "Stafford Beer's Viable Systems Model",
-        "Neurorobotics",
-        "Theory of Computation",
-        "Information Theory",
-        "Computer Vision",
-        "Information Theory",
-        "Control Theory",
-        "Karl Friston/Variational Free Energy"
+        "Machine Learning"
       ]
     }
   ],
