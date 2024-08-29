@@ -104,30 +104,41 @@
       "name": "Electrical Engineering",
       "level": "Master",
       "keywords": [
-        "Circuit Design",
-        "PDN Analysis",
+        "Circuit Design (AVX)",
+        "PDN Analysis (AVX)",
         "PCB Antenna/Filter Design",
-        "Failure Mode Analysis",
-        "Equipment Design/Construction",
-        "PCB Design",
-        "PCB Assembly",
-        "IEC Compliance Testing",
-        "Functional Testing/Debugging",
+        "Failure Mode Analysis (Electrolux)",
+        "Equipment Design/Construction (AVX/ElectroLux)",
+        "PCB Design (AVX/MG)",
+        "PCB Assembly (AVX/MG/Electrolux)",
+        "IEC Compliance Testing (Electrolux)",
+        "Functional Testing/Debugging (AVX/MG/Electrolux",
         "Power Electronics (SiC/GaN)",
-        "Prototype Evaluation",
-        "SPICE",
-        "Reverse Engineering"
+        "Prototype Evaluation (AVX)",
+        "SPICE Modeling (AVX)"
       ]
     },
     {
       "name": "Full-Stack Embedded Development",
       "level": "Advanced",
       "keywords": [
-        "C, C++, Arduino, Micropython Firmware Development.",
-        "Circuit Design, PCB Design/CAD Design",
+        "C, C++, Arduino, Micropython Firmware Development (AVX/MG)",
+        "Circuit Design, PCB Design/CAD Design (AVX/MG)",
         "Instrumentation/Test Hardware Design",
-        "Rapid Prototyping",
-        "Rapid Full Stack Turnaround Time"
+        "Rapid Prototyping (AVX/Electrolux)",
+        "STM8/32, ATMega/ATTiny, ESP8266/ESP32, RP2040, SAMD21/51, Teensy, PIC Microcontrollers",
+        "Rapid Full Stack Turnaround Time (AVX)"
+      ]
+    },
+    {
+      "name": "Research Engineering",
+      "level": "Advanced",
+      "keywords": [
+        "Teardowns (AVX)",
+        "Technical Report Composition (AVX)",
+        "Market Research (AVX/MG)",
+        "Reverse Engineering (AVX/MG)",
+        "Prototype Evaluation (AVX/MG)"
       ]
     },
     {
