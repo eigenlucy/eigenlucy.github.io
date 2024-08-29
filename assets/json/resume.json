@@ -136,8 +136,6 @@
         "ESP-NOW",
         "ESP-MESH",
         "STM32",
-        "STM8",
-        "ATMega",
         "ATTiny",
         "Teensy",
         "RP2040",
