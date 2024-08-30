@@ -17,7 +17,7 @@ This is an FM transmitter project based on the Silicon Labs <a href="https://dan
         {% include figure.liquid loading="eager" path="assets/img/Gallery/PumpkinGuts.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Pumpkin.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/Pumpkin.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 
 </div>
