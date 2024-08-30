@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spore Plates on Agar/LME
-description: A wide array of spores inoculated on LME/Agar spore plates. Budget friendly materials.
+description: A wide array of spores on LME/Agar spore plates. Budget friendly materials.
 img: assets/img/Gallery/AgarPlates.jpg
 importance: 1
 category: mycology
