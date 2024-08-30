@@ -135,8 +135,8 @@
       "keywords": [
         "FDM 3D Printing (AVX/MG)",
         "SLA/mSLA 3D Printing (AVX/MG)",
-        "CNC Machining/Laser Engraving (AVX/MG)",
-        "Casting (AVX/MG)",
+        "CNC Machining/Laser Engraving (MG)",
+        "Casting (MG)",
         "Electroplating (AVX/MG)"
       ]
     },
