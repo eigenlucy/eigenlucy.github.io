@@ -112,8 +112,7 @@
         "PCB Design (AVX/MG)",
         "PCB Assembly (AVX/MG/Electrolux)",
         "IEC Compliance Testing (Electrolux)",
-        "Functional Testing/Debugging (AVX/MG/Electrolux",
-        "Power Electronics (SiC/GaN)",
+        "Functional Testing/Debugging (AVX/MG/Electrolux)",
         "Prototype Evaluation (AVX)",
         "SPICE Modeling (AVX)"
       ]
@@ -131,6 +130,17 @@
       ]
     },
     {
+      "name": "Manufacturing",
+      "level": "Advanced",
+      "keywords": [
+        "FDM 3D Printing (AVX/MG)",
+        "SLA/mSLA 3D Printing (AVX/MG)",
+        "CNC Machining/Laser Engraving (AVX/MG)",
+        "Casting (AVX/MG)",
+        "Electroplating (AVX/MG)"
+      ]
+    },
+    {
       "name": "Research Engineering",
       "level": "Advanced",
       "keywords": [
@@ -139,17 +149,6 @@
         "Market Research (AVX/MG)",
         "Reverse Engineering (AVX/MG)",
         "Prototype Evaluation (AVX/MG)"
-      ]
-    },
-    {
-      "name": "Web Development",
-      "level": "Beginner",
-      "keywords": [
-        "HTML/CSS",
-        "Javascript",
-        "SQL",
-        "C#",
-        "Ruby"
       ]
     }
   ],

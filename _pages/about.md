@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lucy Chambers. Research Engineering. Liberty, SC. eigenlucy@proton.me.
+subtitle: Lucy Chambers. Research Engineering. Greenville, SC. eigenlucy@proton.me.
 
 profile:
   align: right
@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 <p>I am interested in electrical engineering, full stack embedded development, control theory, small scale manufacturing, robotics, renewable energy, cybernetics, systems biology, mycology, software development,machine learning, biohacking, botany, post-structuralism, philosphy of science and much more :)</p>
-<p>This website will host blog posts, project galleries, tutorials, etc pertaining to my interests and projects.</p>
+<p>You can find my resume, CV, and contact info on the Resume page for professional inqueries</p>
 
 
 Affiliations:
