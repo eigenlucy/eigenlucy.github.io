@@ -22,5 +22,5 @@ ATTiny85 NeoPixel Driver. Designed in KiCAD. mSLA Resin Printed Pumpkin.
 
 </div>
 <div class="caption">
-    schematic, assembled PCB
+    Driver, Guts, Assembled Unit
 </div>
