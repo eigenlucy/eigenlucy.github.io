@@ -12,8 +12,8 @@ nav_order: 1
     <p class="post-description">{{ page.description }}</p>
   </header>
 
-Homelab Capacities:
-<ul>
+  Homelab Capacities:
+  <ul>
     <li>Circuit/PCB Design, Assembly, Performance Analysis/Debugging</li>
     <li>Electronics Failure Analysis and Repair</li>
     <li>C, C++, Arduino, Micropython, and Embedded Rust Firmware Development</li>
@@ -26,9 +26,9 @@ Homelab Capacities:
     <li>Small Scale Manufacturing Processes</li>
     <li>Simple Chemistry/Chemical Processes</li>
    <li>Painting, Airbrushing, Specialty Coatings, Electroplating</li>
-</ul>
-Current Homelab Equipment/Tools:
-<ul>
+  </ul>
+  Current Homelab Equipment/Tools:
+  <ul>
     <li>DHO804 70MHz 1.25GSa/s 12bit 4 Channel Oscilloscope</li>
     <li>NanoVNA V2.2 3GHz Vector Network Analyzer / Impedance Analyzer</li>
     <li>HP 1653B 32Channel 25MHz Logic Analyzer</li>
@@ -44,18 +44,5 @@ Current Homelab Equipment/Tools:
     <li>350mm^3 Voron 2.4r2</li>
     <li>Anycubic Photon mSLA Resin Printer</li>
     <li>Large Library of Common Components, ICs, Dev Kits/Boards, Sensors, and Interconnencts</li>
-</ul>
-Software/Computing:
-<ul>
-    <li>Arch Linux / Windows / Proxmox</li>
-    <li>KiCad (Electrical CAD)</li>
-    <li>LTSpice</li>
-    <li>Excel/VBA</li>
-    <li>Fusion360 (Preferred Mechanical and Electrical CAD), Inventor, Eagle</li>
-    <li>PlatformIO CLI w/ NeoVim (Preferred Embedded IDE)</li>
-    <li>Visual Code Studio, Arduino IDE, Platformio IDE, Expressif IDF, MPLab, STMCubeIDE</li>
-    <li>LabVIEW</li>
-    <li>Jupyter</li>
-    <li>Extremely comfortble with BASH, Python, Git, Docker, OpenSSH, etc.</li>
-    <li>GTX 1660 Ti, Quadro M2000M</li>
-</ul>
+  </ul>
+</div>

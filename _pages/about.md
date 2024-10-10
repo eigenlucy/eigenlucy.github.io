@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lucy Chambers. Research Engineering. Greenville, SC. eigenlucy@proton.me.
+subtitle: Lucy Chambers. Research Engineering. San Francisco, CA. lucycchambers12@gmail.com.
 
 profile:
   align: right
