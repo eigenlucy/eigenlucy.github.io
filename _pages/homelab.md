@@ -3,7 +3,7 @@ layout: default
 title: homelab
 permalink: /homelab/
 description: I maintain a very capable homelab setup well equipped for electronics, research engineering, small scale manufacturing, chemistry, embedded development and rapid prototyping work. Currently based in Greenville, SC.
-nav: true
+nav: false
 nav_order: 1
 ---
 <div class="post">
