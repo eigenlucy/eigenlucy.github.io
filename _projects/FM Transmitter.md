@@ -11,10 +11,10 @@ This is an FM transmitter project based on the Silicon Labs <a href="https://dan
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FMtransmitter.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/FMTransmitterSchematic.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FMtransmitter.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/FMtransmitter.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

@@ -22,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 
 Affiliations:
 <ul>
-  <li>Research engineering at <a href='https://www.kyocera-avx.com/'>Kyocera-AVX</a>.</li>
+  <li>Fellow at <a href='https://atopile.io/'>atopile</a>.</li>
   <li>Organizer at <a href='https://www.cleobailey.org/'>The Cleo Bailey Experiment</a>.</li>
   <li>Presenter at <a href='https://opensauce.com/'>OpenSauce 2024</a>.</li>
 </ul>
@@ -32,6 +32,7 @@ Links:
   <li>You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.</li>
   <li>Check out some of my repos on <a href='https://github.com/eigenlucy/'>GitHub</a></li>
   <li>Find me on <a href='https://www.linkedin.com/in/lucy-chambers-46b257303/'>LinkedIn</a>.</li>
+  <li>My <a href ='https://hackaday.io/eigenlucy'>Hackaday</a> profile.</li>
 </ul>
 
 
