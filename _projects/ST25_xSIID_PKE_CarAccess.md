@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Solar Powered NFC Transponder for Car Access via xSIID Implant
+title: Solar Powered NFC Transponder
 description: ST25 Series CR95HF Transponder, TI BQ24251 as MPPT, LiHybrid Supercaps, and ATTiny for a compact, low power, solar powered NFC transponder. Access via PKE Key Fob.
 img: assets/img/Gallery/CR95HFNFCTransponder.jpg
 importance: 1
