@@ -1,7 +1,7 @@
 ---
 layout: page
-title: HAOS Control Panel
-description: Izzymonitor :3 ESP32-S3 based ESPHome HAOS Panel
+title: Izzymonitor HAOS Control Panel
+description: ESP32-S3 based ESPHome HAOS Panel
 img: assets/img/Gallery/izzymonitor.jpg
 importance: 1
 category: electrical engineering
@@ -16,6 +16,8 @@ Features:
     <li>I2S digital microphone for voice commands (WIP)</li>
     <li>3W I2S Class D amplifier + audio quality speaker for TTS</li>
     <li>MX Keyswitches with neopixel backlighting</li>
+    <li>1.8in TFT Display</li>
+    <li>Quiic Port</li>
 </ul>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">

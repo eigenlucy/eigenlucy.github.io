@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lucy Chambers. Research Engineering. San Francisco, CA. lucycchambers12@gmail.com.
+subtitle: Lucy Moglia. Research Engineering. San Francisco, CA. lucycchambers12@gmail.com.
 
 profile:
   align: right
@@ -37,4 +37,4 @@ Links:
 
 
 
-This site is under construction. I designed this website with the help of the <a href='https://github.com/alshedivat/al-foli'>al-folio</a> theme for <a href='https://jekyllrb.com/'>jekyll</a>. You can see the full codebase for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
+You can see the full codebase for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.

@@ -20,6 +20,13 @@ Builds:
     <li>attiny816.ato contains the attiny816 build used by the ccdriver</li>
 </ul>
 
+TO DO:
+<ul>
+    <li>Finish and test ccdriver</li>
+    <li>Finish mechanical design</li>
+    <li>Create builds for other LEDs and battery sizes</li>
+</ul>
+
 Features:
 <ul>
     <li><a href="https://www.ti.com/lit/ds/symlink/bq24045.pdf">TI BQ24040</a> Battery Charger</li>
