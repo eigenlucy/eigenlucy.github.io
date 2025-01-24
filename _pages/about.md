@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lucy Moglia. Research Engineering. San Francisco, CA. lucycchambers12@gmail.com.
+subtitle: Lucy Moglia. Research Engineering. San Francisco, CA. eigenlucy@proton.me.
 
 profile:
   align: right
