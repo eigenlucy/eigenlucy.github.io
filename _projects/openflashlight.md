@@ -23,6 +23,7 @@ Builds:
 TO DO:
 <ul>
     <li>Finish and test ccdriver</li>
+    <li>Add battery and LED current sensing via the ATTinyA ADCs (+ investigate 2-series true differential ADCs)</li>
     <li>Finish mechanical design</li>
     <li>Create builds for other LEDs and battery sizes</li>
 </ul>
@@ -31,13 +32,13 @@ Features:
 <ul>
     <li><a href="https://www.ti.com/lit/ds/symlink/bq24045.pdf">TI BQ24040</a> Battery Charger</li>
     <li><a href="https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1737056749253">TI TPS61169</a>LED Driver</li>
-    <li>1A USB Charger</li>
+    <li>1A USBC Charger</li>
     <li>PWM dimming with adjustable max current</li>
-    <li>ATTiny816 microcontroller with open source firmware (WIP)</li>
+    <li><a href="https://github.com/SpenceKonde/megaTinyCore/blob/master/megaavr/extras/ATtiny_x16.md">ATTiny816</a> microcontroller with open source firmware (WIP). Programmable over <a href="https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md">UPDI</a> using a standard serial adapter.</li>
 </ul>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/flashlightpcb.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/OpenFlashLightRender.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Gallery/FlashlightAssembly.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
@@ -46,4 +47,22 @@ Features:
 <div class="caption">
     ccdriver render, assembly
 </div>
-
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/FlashlightThreadingTests.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/uvlampv1.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Testing fit and threading for enclosure, testing diodes
+</div>
+<div class="row">
+  <div class="col-sm mt-2 mt-md-0">
+      {% include figure.liquid loading="eager" path="assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+    Fluorescence of alleged "uranium glass" (radiacode 103 says otherwise)
+</div>
