@@ -2,7 +2,7 @@
 layout: page
 title: Copper electroplating printed parts
 description: CuSO4 electroplating on mSLA/FDM 3D printed parts 
-img: assets/img/Gallery/platednietzsche.jpg
+img: assets/img/Gallery/platednietzsche.png
 importance: 1
 category: general systemantics
 related_publications: false
