@@ -28,6 +28,21 @@
   },
   "work": [
     {
+      "name": "Atopile",
+      "location": "San Francisco, CA",
+      "description": "Software Defined Hardware Startup",
+      "position": "Research Fellow",
+      "url": "https://docs.atopile.io/latest/",
+      "startDate": "2024-10-15",
+      "summary": "Sponsored in designing a number of PCBs and contributing to various open source projects",
+      "highlights": [
+        "HAOS Control Panels.",
+        "Ultra-Low Power BLE/UWB Mesh Network Clients.",
+        "Meshtastic Clients.",
+        "Find My Network Geolocators"
+      ]
+    },
+    {
       "name": "Kyocera-AVX",
       "location": "Fountain Inn, SC",
       "description": "Electronics Component Manufacturer",
@@ -96,13 +111,6 @@
       "awarder": "Daly City, California",
       "url": "https://opensauce.com/",
       "summary": "An event for engineers, student groups, open source developers, makers, and startups to exhibit something they've been working on. You hear my application on the Safety Third podcast here: https://www.youtube.com/watch?v=NeMPYlnSd-g&t=5884s"
-    },
-    {
-      "title": "Research Fellow at Atopile",
-      "date": "2024-08-15",
-      "awarder": "San Francisco, California",
-      "url": "https://atopile.io",
-      "summary": "Designing boards with atopile, testing the alpha toolchain"
     }
   ],
   "skills": [
