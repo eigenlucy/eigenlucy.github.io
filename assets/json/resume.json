@@ -4,7 +4,7 @@
     "name": "Lucy Chambers",
     "label": "Research Engineer",
     "image": "https://eigenlucy.github.io/assets/img/Gallery/lucyresumepfp.jpg",
-    "email": "lucycchambers12@gmail.com",
+    "email": "eigenlucy.proton.me",
     "phone": "(864) 617-4908",
     "website": "https://eigenlucy.github.io",
     "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evalutating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
@@ -97,6 +97,13 @@
       "awarder": "Daly City, California",
       "url": "https://opensauce.com/",
       "summary": "An event for engineers, student groups, open source developers, makers, and startups to exhibit something they've been working on. You hear my application on the Safety Third podcast here: https://www.youtube.com/watch?v=NeMPYlnSd-g&t=5884s"
+    },
+    {
+      "title": "Research Fellow at Atopile",
+      "date": "2024-08-15,
+      "awarder": "San Francisco, California",
+      "url": "https://atopile.io,
+      "summary": "Designing boards with atopile, testing the alpha toolchain"
     }
   ],
   "skills": [
