@@ -81,7 +81,6 @@ nav_order: 1
           </div>
         </div>
       </div>
-
       <div class="col-md-4 card-item " data-tags="featured, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="eager" path="assets/video/laser.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
@@ -122,6 +121,36 @@ nav_order: 1
           </div>
         </div>
       </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/OpenFlashLightRender.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text">Open Flashlight PCB Rendering</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/izzymonitor.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://eigenlucy.github.io/projects/izzymonitor">Izzymonitor</a> HAOS panel</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/micromppt.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://eigenlucy.github.io/projects/micromppt/">MicroMPPT</a> test board</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 card-item " data-tags="chemistry, distillation, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/DiethylEther.JPEG" class="img-fluid rounded z-depth-1" %}
@@ -137,16 +166,6 @@ nav_order: 1
           {% include figure.liquid loading="eager" path="assets/img/Gallery/PinkOysterJar.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
             <p class="card-text">Brain jar🧠 (pink oyster rye berry grain spawn jar)</p>
-            <div class="d-flex justify-content-between align-items-center">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 card-item " data-tags="pcb design, attiny, fusion360, supercaps, electrical engineering, electronics, image">
-        <div class="card mb-4 shadow-sm">
-          {% include figure.liquid loading="eager" path="assets/img/Gallery/SupercapBackup2ngGenCAD.jpg" class="img-fluid rounded z-depth-1" %}
-          <div class="card-body">
-            <p class="card-text">draft PCB design in Fusion360 for an LTC3350 based bidirectional converter supercap backup system. this circuit contains the LTC3550 bidirectional converter driver, the corresponding DC-DC converter circuitry, an attiny 1627 uC, and a half bridge driver. designed to AEC standards while exploring the use of supercaps for automotive e-latch drivers</p>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
@@ -315,7 +334,7 @@ nav_order: 1
       </div>
       <div class="col-md-4 card-item " data-tags="electroplating, chemistry, 3d printing, image">
         <div class="card mb-4 shadow-sm">
-          {% include figure.liquid loading="eager" path="assets/img/Gallery/platednietzsche.png" class="img-fluid rounded z-depth-1" %}
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/platednietzsche.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
             <p class="card-text">mSLA resin printed part after an electroplating procedure</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -328,6 +347,16 @@ nav_order: 1
           {% include figure.liquid loading="eager" path="assets/img/Gallery/individuation.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
             <p class="card-text">individuation of the technical object ;)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electronics, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/izzymonitorback.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text">ROZ Wild Robot Back Silkscreen</p>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
@@ -363,6 +392,16 @@ nav_order: 1
           </div>
         </div>
       </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electronics, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text">The Owls Are Not What They Seem</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 card-item " data-tags="mycology, biology, spawn bag, oyster mushrooms, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/ShroomTank.jpg" class="img-fluid rounded z-depth-1" %}
@@ -388,6 +427,16 @@ nav_order: 1
           {% include figure.liquid loading="eager" path="assets/img/Gallery/PressureCooking.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
             <p class="card-text">loading up a pressure cooker with grain spawn jars to sterilize them for inoculation</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="biology, grain spawn, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/CCLplants.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text">Greenhouse at Counter Culture Labs</p>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
