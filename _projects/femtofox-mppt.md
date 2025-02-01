@@ -7,11 +7,10 @@ importance: 1
 category: electrical engineering
 related_publications: false
 ---
-WIP, updates to come soon!
+# WIP
 
-1-4S 5A BQ25895 based MPPT charger for the Luckfox Mini / Femtofox Project. 
+1-4S 5A BQ25895 MPPT charger for the Luckfox Mini / Femtofox Project. Designed to provide a low-cost solar powered Linux Meshastic node
 
-Designed for Femtofox Meshtastic Linux clients
+See the <a href="https://github.com/eigenlucy/femtofox-mppt">project GitHub</a> for more info and updates.
 
-You can follow the updates <a href="https://github.com/eigenlucy/femtofox-mppt">here.</a> 
-
+See the <a href="https://eigenlucy.github.io/projects/femotfox">FemtoFox</a> project page for more details on the FemtoFox project.
