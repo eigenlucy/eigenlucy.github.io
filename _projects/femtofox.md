@@ -2,7 +2,7 @@
 layout: page
 title: Femtofox Project
 description: Configuration guidelines, power usage testing, RF transmit power testing
-img: assets/img/Gallery/femtofox-mppt-draft.jpg
+img: assets/img/Gallery/Femtofox.jpg
 importance: 1
 category: electrical engineering
 related_publications: false
@@ -26,6 +26,13 @@ The first boot can take up to 5 minutes to complete, and subsequent boots should
 If you have a FemtoFox Pro, you can connect over USB. Set the device baud rate to 115200 and press enter in the console window a few times if you don't see anything. You should see the Femtofox logo, then be promted to set a root password. After this, you can enter $ sudo femto-config to begin configuring the unit.
 
 # Power Testing
+Instruementation amplifier + shunt + voltage meter
 
 # RF Transmit Power Testing
-Based on the LoRa Alliance LoRa gateway RF Testing Guidelines
+Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads/2021/04/Gateway-Test-and-Measurement-Guidelines-Issue01.pdf">LoRa gateway RF Testing Guidelines</a>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/FemtofoxGatewayTestSetup.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+

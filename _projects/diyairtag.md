@@ -2,7 +2,7 @@
 layout: page
 title: DIY Airtag
 description: Low cost open-source Find My Network geolocator
-img: assets/img/Gallery/femtofox-mppt-draft.jpg
+img: assets/img/Gallery/waymomap.jpg
 importance: 1
 category: electrical engineering
 related_publications: false

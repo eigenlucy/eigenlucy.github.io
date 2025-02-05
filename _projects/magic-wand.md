@@ -2,7 +2,7 @@
 layout: page
 title: Magic Wand
 description: Hitachi Magic Wand Plus USB-C Charging
-img: assets/img/Gallery/izzymonitor.jpg
+img: assets/img/wand3dmodel.png
 importance: 1
 category: electrical engineering
 related_publications: false
