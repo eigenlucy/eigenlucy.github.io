@@ -28,3 +28,4 @@ If you have a FemtoFox Pro, you can connect over USB. Set the device baud rate t
 # Power Testing
 
 # RF Transmit Power Testing
+Based on the LoRa Alliance LoRa gateway RF Testing Guidelines
