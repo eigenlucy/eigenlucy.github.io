@@ -32,7 +32,7 @@ Instruementation amplifier + shunt + voltage meter
 Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads/2021/04/Gateway-Test-and-Measurement-Guidelines-Issue01.pdf">LoRa gateway RF Testing Guidelines</a>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/FemtofoxGatewayTestSetup.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/FemtofoxGatewayTestSetup.png" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
