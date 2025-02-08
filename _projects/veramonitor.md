@@ -9,9 +9,15 @@ related_publications: false
 ---
 For vera
 
+UPDATE JANUARY 2025:
+I do not know why I added a usb-to-uart converter here, and it's been removed for future builds. Rust firmware in progress, see the <a href="https://github.com/eigenlucy/ESPHome-Panel">Izzymonitor</a> branch of the ESPHome-Panel github for more details.
+
 First in my line of state of the art wife surveillance state tech ;)
 
-All of the design files and Gebers/BOM/CPL files for PCBA can be accessed <a href="https://github.com/eigenlucy/ESPHome-Panel/">here.</a> PCBA files are placed in the build artifacts with each Actions run. 
+All of the design files and Gebers/BOM/CPL files for PCBA can be accessed <a href="https://github.com/eigenlucy/ESPHome-Panel/tree/main">here.</a> Gerbers and PCBA files are generated with ```$ ato build -t all``` as of V3
+
+Imagined as a bus/train depature board :)
+Integration with BART and MUNI APIs in progress
 
 Features:
 <ul>

@@ -31,7 +31,7 @@ Links:
 <ul>
   <li>You can check out some of my projects on <a href='https://medium.com/@machinegirl'>Medium</a>.</li>
   <li>Check out some of my repos on <a href='https://github.com/eigenlucy/'>GitHub</a></li>
-  <li>Find me on <a href='https://www.linkedin.com/in/lucy-chambers-46b257303/'>LinkedIn</a>.</li>
+  <li>Find me on <a href='https://www.linkedin.com/in/lucy-moglia/'>LinkedIn</a>.</li>
   <li>My <a href ='https://hackaday.io/eigenlucy'>Hackaday</a> profile.</li>
 </ul>
 

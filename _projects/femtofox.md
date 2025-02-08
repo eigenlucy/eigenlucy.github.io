@@ -19,14 +19,14 @@ related_publications: false
 <li>A Meshtastic Client. iOS support is a WIP, but the Play store Meshtastic app works. I use <a href="https://github.com/pdxlocations/contact">contact</a> to connect via the pure python Meshtatic CLI on Arch Linux</li>
 
 ## FoxBuntu Install
-Follow the instructions in the femotfox repo on <a href="https://github.com/femtofox/femtofox/blob/main/foxbuntu_install.md">flashing the foxbuntu image</a> onto the LuckFox. 
+Follow the instructions in the femotfox repo on <a href="https://github.com/femtofox/femtofox/wiki/Getting-Started">flashing the foxbuntu image</a> onto the LuckFox. 
 
 The first boot can take up to 5 minutes to complete, and subsequent boots should take around 30 seconds.
 
-If you have a FemtoFox Pro, you can connect over USB. Set the device baud rate to 115200 and press enter in the console window a few times if you don't see anything. You should see the Femtofox logo, then be promted to set a root password. After this, you can enter $ sudo femto-config to begin configuring the unit.
+As of Foxbuntu V0.99, you can configure the femtofox via web browser @ https://femtofox.local:7681. If you have a FemtoFox Pro, you can connect over USB. Set the device baud rate to 115200 and press enter in the console window a few times if you don't see anything. You should see the Femtofox logo, then be promted to set a root password. After this, you can enter $ sudo femto-config to begin configuring the unit.
 
 # Power Testing
-Instruementation amplifier + shunt + voltage meter
+3V3 and 5V power testing setup consists of an AD620 instrumentation amplifier as a low side current sensor, a fancy power meter, and an oscilloscope for assessing noise.
 
 # RF Transmit Power Testing
 Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads/2021/04/Gateway-Test-and-Measurement-Guidelines-Issue01.pdf">LoRa gateway RF Testing Guidelines</a>
