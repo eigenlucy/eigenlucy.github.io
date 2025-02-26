@@ -57,10 +57,10 @@ Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads
         {% include figure.liquid loading="eager" path="assets/img/Gallery/FemtofoxGatewayTestSetup.png" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/FemtofoxGatewayTestSetup.png" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/testsetupdrawing.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
    <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/GalleryE22-900M30S-TXPOWER-RESULTS.png" title="results" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png" title="results" class="img-fluid rounded z-depth-1" %}
     </div> 
 </div>
 
@@ -70,4 +70,3 @@ Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads
 <li><a href="https://www.minicircuits.com/pdfs/ZX47-40+.pdf">Mini-Circuits ZX47-40+ Power Detector</a></li>
 <li>NanoVNA V2</li>
 <li>TinySA Ultra</li>
-
