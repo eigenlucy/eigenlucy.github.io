@@ -5,10 +5,10 @@
 title: Eigenlucy # the website title (if blank, full name will be used instead)
 first_name: Lucy
 middle_name:
-last_name: Chambers
+last_name: Moglia
 email: eigenlucy@proton.me
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Eigenlucy // Lucy Chambers' portfolio
+  Eigenlucy // Lucy Moglia
 footer_text: >
   <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: portfolio, engineer, resume, cv, tech, STEM # add your own keywords or leave empty
