@@ -16,9 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-<p>I am interested in electrical engineering, full stack embedded development, control theory, small scale manufacturing, robotics, renewable energy, cybernetics, systems biology, mycology, software development,machine learning, biohacking, botany, post-structuralism, philosphy of science and much more :)</p>
+<p>I am interested in electrical engineering, embedded systems, solar/MPPT design, small scale manufacturing, cybernetics, autonomous robotics, and edge machine-learning</p>
+<p>Currently working on Meshtastic nodes, LoRa module design, a series solar chargers, Find My Network hacking, autonomous waypoint guided copters and tank robots for mesh network deployment, a 10kW microwave furnace, and some HAOS control panels :)</p>
 <p>You can find my resume, CV, and contact info on the Resume page for professional inqueries</p>
-
 
 Affiliations:
 <ul>
