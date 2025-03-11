@@ -35,18 +35,20 @@ As of Foxbuntu V0.99, you can configure the femtofox via web browser @ https://f
 If you are having trouble with the femtox.local page, you can ssh into your femto with something like ```$ ssh femto@{UR_FEMTO_IP}```. Find the IP on your LAN with <a href="https://nmap.org/">NMap</a> by running something like ```$ sudo nmap -p 22 {your IP}/24```.
 
 # Power Testing
-The Femtofox Pro equipped with the Ebyte E22-900M30S LoRa gateway consumed an average of 360mW on 3V3 and 400mW on 5V. This is amazing! These tests were performed with an ethernet/ssh port open, and with meshtasticd running with the default (max) transmit power setting. Further testing is required to investigate the difference in the peak power usage on a 3V3 and 5V supply. This is likely due to a limit on the output power of the LoRa module (which TRANSMITS up to 1.2W / 31dBm at max power according to my testing) at 3V3 volt, not higher efficiency. Results on this are coming soon, along with recommendations for improved decoupling and filtering to prevent the sagging on the 5V and 3V3 lines currently observed.
-
-<div class="row">
-    <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/5VSMUPowerTestResultsSummary.png" title="results" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+The Femtofox Pro equipped with the Ebyte E22-900M30S LoRa gateway consumed an average of 360mW on 3V3 and 400mW on 5V. This is amazing! These tests were performed with an ethernet/ssh port open, and with meshtasticd running with the default (max) transmit power setting. Further testing is required to investigate the difference in the peak power usage on a 3V3 and 5V supply. This is likely due to a limit on the output power of the LoRa module (which TRANSMITS up to 1.2W / 31dBm at max power according to my testing) at 3V3 volt, not higher efficiency. Results on this are coming soon, along with recommendations for improved decoupling and filtering to prevent the sagging on the 5V and 3V3 lines observed.
 
 ## Equipment Utilized:
 <li>Rigol DHO804 Oscilloscope</li>
 <li>Keysight EDU36311A DC PSU</li>
 <li>Keithly 2450 SMU</li>
+
+4-Wire sense via SMU on Femtofox Pro 3V3-5V JST input, 
+
+## 5V Power Consumption Results:
+Internet connected via ethernet, SSH port open, meshtastic running with 22dBm setting (~31dBm TX actual)
+<li>Min: 0.342W</li>
+<li>Max: 3.154W</li>
+<li>Average: 0.4W</li>
 
 # RF Transmit Power Testing
 The Ebyte E22-900M30S LoRa module contains an internal amplifier, which amplifies the SX1268 22dBm max ouput level as high as 31dBm. These tests were performed to evaluate the actual TX power levels of the modules to help ensure compliance with local regulations (namely in the EU, which caps emissions in the LoRa band to a max of 500mW / 27dBm)
