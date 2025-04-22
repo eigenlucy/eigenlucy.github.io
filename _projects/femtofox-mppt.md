@@ -3,7 +3,7 @@ layout: page
 title: Femtofox MPPT
 description: MPPT for the Femtofox Linux Meshtastic Client
 img: assets/img/Gallery/femtofox-mppt-draft.jpg
-importance: 1
+importance: 3
 category: electrical engineering
 related_publications: false
 ---

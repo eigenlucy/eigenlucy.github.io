@@ -3,11 +3,12 @@ layout: page
 title: 10kW Microwave Furnace
 description: 10kW of 2.4GHz RF radiation for metal and glasswork :3
 img: assets/img/Gallery/10kwmagnetron.jpg
-importance: 1
+importance: 2
 category: electrical engineering
 related_publications: false
 ---
-## UPDATE Feb 2025:
+## UPDATE Feb 2025
+
 This project got put on hold since I left South Carolina and no longer had the space por infrastructure, but it has been revived!! Details to be worked out, but I am working with the folks over at Noisebridge to build the driver, cooling and waveguide for an insane microwave furnace in their space!
 
 There have also been some updates to the state of the project:

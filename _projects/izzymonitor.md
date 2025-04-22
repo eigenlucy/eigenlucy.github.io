@@ -3,12 +3,12 @@ layout: page
 title: Izzymonitor HAOS Control Panel
 description: ESP32-S3 based ESPHome HAOS Panel
 img: assets/img/Gallery/izzymonitor.jpg
-importance: 1
+importance: 2
 category: electrical engineering
 related_publications: false
 ---
 For izzy
-All of the design files and Gebers/BOM/CPL files for PCBA can be accessed <a href="https://github.com/eigenlucy/ESPHome-Panel/tree/izzymonitor/">here.</a> PCBA files are placed in the build artifacts with each Actions run. 
+All of the design files and Gebers/BOM/CPL files for PCBA can be accessed <a href="https://github.com/eigenlucy/ESPHome-Panel/tree/izzymonitor/">here.</a> PCBA files are placed in the build artifacts with each Actions run.
 
 Features:
 <ul>
@@ -36,9 +36,8 @@ Features:
     </div>
    <div class="col-sm mt-2 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Gallery/izzymonitorback.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div> 
+    </div>
 </div>
 <div class="caption">
     neopixel back lighting, wild robot silkscreen :3
 </div>
-

@@ -22,9 +22,12 @@ social: true # includes social icons at the bottom of the page
 
 Affiliations:
 <ul>
+  <li>Engineering Consultant @ Machinic Garden LLC</li>
   <li>Founder at <a href="https://github.com/sophia-labs">Sophia Labs</a>.</li>
   <li>Research Fellow at <a href="https://atopile.io/">atopile</a>.</li>
-  <li>Hardware consultant for <a href="https://buoy.fish/">buoy.fish</a>.</li>
+  <li>Hacker at <a href="https://www.noisebridge.net/wiki/User:Eigenlucy">Noisebridge</a></li>
+  <li>Hardware consultant at <a href="https://buoy.fish/">buoy.fish</a>.</li>
+  <li>Organizer at <a href="https://www.cleobailey.org/">The Cleo Bailey Experiment</a></li>
 </ul>
 
 Links:

@@ -3,7 +3,7 @@ layout: page
 title: Veramonitor HAOS Control Panel
 description: ESP32-S3 based ESPHome HAOS Panel
 img: assets/img/Gallery/veramonitor.jpg
-importance: 1
+importance: 2
 category: electrical engineering
 related_publications: false
 ---
@@ -35,4 +35,3 @@ Features:
         {% include figure.liquid loading="eager" path="assets/img/Gallery/veramonitor.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-

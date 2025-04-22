@@ -3,7 +3,7 @@ layout: page
 title: Solar Powered NFC Transponder
 description: Solar powered NFC transponer for PSK car access/ignition via xSIID NFC implant.
 img: assets/img/Gallery/CR95HFNFCTransponder.jpg
-importance: 1
+importance: 3
 category: electrical engineering
 related_publications: false
 ---
