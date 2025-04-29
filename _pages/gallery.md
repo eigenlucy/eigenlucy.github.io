@@ -71,6 +71,66 @@ nav_order: 1
           </div>
         </div>
       </div>
+      <div class="col-md-4 card-item " data-tags="electrical engineering, electronics, systemantics">
+        <div class="card mb-4 shadow-sm">
+            {% include figure.liquid loading="eager" path="assets/img/Gallery/nonhumanscent.png" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/eigenlucy/nonhumanscent">nonhumanscent</a>, ML-assisted gas composition sensing with BME688 and ESP32S3</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/micrompptv3.png" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/eigenlucy/micromppt">Micromppt V3</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/txpowertest.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://hackaday.io/project/202604-femtofox-pro-tx-power-power-consumption-testing">Femtofox/E22-900M30S TX Power Testing</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/HABLaunch.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/femtofoxgroundstation.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/femtofox/femtofox">Femtofox Based Ground Station</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-item " data-tags="biology, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/dinoflagellete.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text">Dinoflagelletes cell</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 card-item " data-tags="featured, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="eager" path="assets/img/Gallery/scintillatorcrystal.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
@@ -125,7 +185,7 @@ nav_order: 1
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/OpenFlashLightRender.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
-            <p class="card-text">Open Flashlight PCB Rendering</p>
+            <p class="card-text"><a href="https://github.com/eigenlucy/uv-lamp">Open Flashlight</a> PCB Rendering</p>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
