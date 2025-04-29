@@ -121,6 +121,16 @@ nav_order: 1
           </div>
         </div>
       </div>
+      <div class="col-md-4 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid loading="eager" path="assets/img/Gallery/openflashlightpcb.png" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://hackaday.io/project/202611-openflashlight">OpenFlashlight</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 card-item " data-tags="biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid loading="eager" path="assets/img/Gallery/dinoflagellete.jpg" class="img-fluid rounded z-depth-1" %}
