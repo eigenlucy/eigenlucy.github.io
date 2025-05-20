@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'observer'
+gem 'logger'
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
@@ -16,6 +18,7 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
+    gem 'google-protobuf', '~> 3.24.4'
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
