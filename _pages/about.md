@@ -16,18 +16,22 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-<p>Working on embedded systems, enviromental monitoring/surveying, energy harvesting, mesh network comms (LoRaWAN, Meshtastic, and Helium IoT)</p>
+<p>Working on edge ML, enviromental monitoring/surveying, HAB payload design, energy harvesting, lora mesh comms (LoRaWAN, Meshtastic, and Helium IoT)</p>
 
-<p>Playing around with Find My Network hacking, autonomous waypoint guided copters and tank robots for mesh network deployment, a 10kW microwave furnace, and some HAOS control panels :)</p>
+Major Ongoing Projects:
+<ul>
+  <li><a href="https://github.com/eigenlucy/nonhumanscent">Nonhumanscent</a></li>
+  <li><a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge High Altitude Balloon Payload</a></li>
+  <li><a href="https://github.com/eigenlucy/micromppt">Micromppt, a tiny 5W autonomous solar charger</a></li>
+  <li><a href="https://opensauce.com/">Come see Nixonbot at Opensauce 2025</a>. We are fine tuning ourselves a Richard Nixon tulpa and building it a robot head. Come chat with him!</li>
+</ul>
+
 
 Affiliations:
 <ul>
   <li>Engineering Consultant @ Machinic Garden LLC</li>
   <li>Founder at <a href="https://github.com/sophia-labs">Sophia Labs</a>.</li>
   <li>Research Fellow at <a href="https://atopile.io/">atopile</a>.</li>
-  <li>Hacker at <a href="https://www.noisebridge.net/wiki/User:Eigenlucy">Noisebridge</a></li>
-  <li>Hardware consultant at <a href="https://buoy.fish/">buoy.fish</a>.</li>
-  <li>Organizer at <a href="https://www.cleobailey.org/">The Cleo Bailey Experiment</a></li>
 </ul>
 
 Links:

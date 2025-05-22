@@ -2,7 +2,7 @@
 layout: page
 title: Open Flashlight
 description: Open Source Flashlight with Atopile
-img: assets/img/Gallery/OpenFlashLightRender.jpg
+img: assets/img/Gallery/OpenFlashlightPCB2.jpg
 importance: 2
 category: electrical engineering
 related_publications: false
@@ -11,7 +11,9 @@ Compact, high power, reliable open source flashlight. Designed with KiCAD, Atopi
 
 Mechanical design by Jessie Stiles
 
-Design files can be viewed <a href="https://github.com/eigenlucy/uv-lamp">here.</a> PCBA files are placed in the build artifacts with each Actions run.
+PCBA files + 3D models can be viewed <a href="https://github.com/eigenlucy/uv-lamp">here.</a> PCBA files are placed in the build artifacts with each Actions run.
+
+Check out my <a href="https://hackaday.io/project/202611-openflashlight">Hackaday post</a> on this build.
 
 Builds:
 <ul>
@@ -49,10 +51,10 @@ Features:
 </div>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/FlashlightThreadingTests.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/OpenFlashlightAssembly.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/uvlampv1.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/OpenFlashlightHeatsink.png" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
