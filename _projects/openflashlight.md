@@ -2,7 +2,7 @@
 layout: page
 title: Open Flashlight
 description: Open Source Flashlight with Atopile
-img: assets/img/Gallery/OpenFlashlightPCB2.jpg
+img: assets/img/Gallery/OpenFlashlightPCB2.png
 importance: 2
 category: electrical engineering
 related_publications: false
