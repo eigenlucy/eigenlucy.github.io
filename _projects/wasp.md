@@ -2,12 +2,12 @@
 layout: page
 title: WASP, Wearable AI Synthesis Platform
 description: BLE 5.2 module for wearable conversation transcription and analysis
-img: assets/img/Gallery/waspmelted.jpg
+img: assets/img/Gallery/wasppcbtop.png
 importance: 1
 category: electrical engineering
 related_publications: false
 ---
-WASP is a wearable AI assistant platform designed to enable transcription and analysis of your conversations, environments, and activities. It is a tiny, low-power BLE 5.2 device that can be worn as a bracelet or necklace. The integrated MEMS sensor captures audio data, and the integrated IMU+audio accelerometer can collect information on the wears motion, activity level, respiration rate, etc. This data is streamed to a phone/laptop (for now) and uploaded to the users chosen analysis platform. WASP is fully open source/copyleft. Designed with KiCAD and Atopile. Watch the <a href="https://github.com/eigenlucy/wasp">Github repo</a> for updates
+WASP is a wearable AI assistant platform designed to enable transcription and analysis of your conversations, environments, and activities. It consists of a tiny, low-power BLE 5.2 device which can be worn as a bracelet or necklace. The sensor array can collect audio data, detect gestures, count steps, track absolute orientation, monitor activity level, and measure heart+respiration rate. This data is streamed to a phone or other device over BLE and processed by the users chosen analysis platform. WASP is fully open source/copyleft. Designed with KiCAD and Atopile. Watch the <a href="https://github.com/eigenlucy/wasp">Github repo</a> for updates. PCBA files and programming guides will be posted Soon.
 
 Features:
 <ul>
@@ -20,12 +20,23 @@ Features:
 </ul>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/wasptop.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/wasppcbtop.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/waspbottom.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/wasppcbbottom.png" title="schematic" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    PCB renderings
+    PCB layout (top and bottom layers)
+</div>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/wasptop.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/waspbottom.png" title="schematic" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    PCB 3D renderings
 </div>
