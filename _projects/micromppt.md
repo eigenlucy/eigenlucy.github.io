@@ -2,7 +2,7 @@
 layout: page
 title: Micromppt
 description: 800mV-5.5Vin MPPT Boost Charger with Autonomous Perturb-and-Observe Setpoint Adjustment
-img: assets/img/Gallery/micrompptV3.png
+img: assets/img/Gallery/micrompptv3.png
 importance: 1
 category: electrical engineering
 related_publications: false

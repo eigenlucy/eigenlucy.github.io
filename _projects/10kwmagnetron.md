@@ -7,6 +7,9 @@ importance: 2
 category: electrical engineering
 related_publications: false
 ---
+Check out this project's page on <a href="https://www.noisebridge.net/wiki/Microwave_furnace">the Noisebridge Wiki</a>
+
+
 ## UPDATE Feb 2025
 
 This project got put on hold since I left South Carolina and no longer had the space por infrastructure, but it has been revived!! Details to be worked out, but I am working with the folks over at Noisebridge to build the driver, cooling and waveguide for an insane microwave furnace in their space!
