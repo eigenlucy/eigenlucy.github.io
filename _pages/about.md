@@ -22,7 +22,7 @@ My primary skills are:
   <li>Electrical engineering</li>
   <li>PCB design and validation</li>
   <li>Teardowns, reverse engineering</li>
-  <li>Embedded development (C, C++, Micropython, and embedded Linux)</li>
+  <li>Embedded development (C++, Micropython, and embedded Linux)</li>
   <li>RF testing, network analysis</li>
   <li>Rapid prototyping</li>
 </ul>
