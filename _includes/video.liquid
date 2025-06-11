@@ -7,8 +7,6 @@
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}
-      {% comment %} Add preload="none" to prevent browsers from downloading video data until play or explicitly requested {% endcomment %}
-      preload="none" 
       {% if include.width %}
         width="{{ include.width }}"
       {% else %}
@@ -50,7 +48,7 @@
         muted
       {% endif %}
       {% if include.poster %}
-        poster="{{ include.poster | relative_url }}" {# Ensure poster path is relative if not full URL #}
+        poster="{{ include.poster | relative_url }}"
       {% endif %}
       {% if include.loading %}
          loading="{{ include.loading }}"
@@ -58,9 +56,6 @@
          loading="lazy"
       {% endif %}
     />
-    <div class="video-full-link-container text-right mt-1"> {# ADDED CONTAINER #}
-      <a href="{{ include.path | relative_url }}" target="_blank" class="btn btn-sm btn-outline-secondary">View Full Video</a> {# ADDED LINK #}
-    </div>                                                                                                    {# ADDED CONTAINER #}
 
   {% else %} {# This part is for iframes like YouTube #}
     <iframe
@@ -99,36 +94,32 @@
       {% if include.title %}
         title="{{ include.title }}"
       {% endif %}
-      {% if include.loading %} {# Added lazy loading for iframes too #}
+      {% if include.loading %} 
          loading="{{ include.loading }}"
       {% elsif site.lazy_loading_images %}
          loading="lazy"
       {% endif %}
     />
-    {% comment %} For embedded videos like YouTube, the 'View Full' often means going to YouTube.
-        We could add a similar link here if include.path is a recognizable YouTube/Vimeo URL.
-        For simplicity now, we'll only add the direct link for local video files. {% endcomment %}
   {% endif %}
   {% if include.caption %}
     <figcaption class="caption">{{ include.caption }}</figcaption>
   {% endif %}
 </figure>
 
-{# The JavaScript below for custom play buttons might not be used if your cards don't have .video-container or .play-button #}
-{# It was present in your original video.liquid, so kept it. #}
+{% comment %} Original script for custom play button - kept for consistency {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var playButtons = document.querySelectorAll('.video-container .play-button');
     playButtons.forEach(function(button) {
       button.addEventListener('click', function() {
         var video = button.parentElement.querySelector('video');
-        if (video) { // Check if video element exists
+        if (video) { 
             video.style.display = 'block';
             video.play();
-            if (button.previousElementSibling) { // Check if thumbnail exists
-                button.previousElementSibling.style.display = 'none'; // Hide thumbnail
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
             }
-            button.style.display = 'none'; // Hide play button
+            button.style.display = 'none'; 
         }
       });
     });
