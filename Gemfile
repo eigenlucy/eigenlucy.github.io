@@ -18,7 +18,7 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
-    gem 'google-protobuf', '~> 3.24.4'
+    gem 'google-protobuf'
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'

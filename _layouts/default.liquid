@@ -21,7 +21,10 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}"}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
     <!-- Header -->
     {% include header.liquid %}
 
@@ -81,5 +84,8 @@
     
     <!-- Tag filter script -->
     <script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="{{ '/assets/js/pde-background.js' | relative_url }}" defer></script><!-- ADDED -->
   </body>
 </html>
