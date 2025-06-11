@@ -30,7 +30,8 @@ I am interested in/post about:
   <li>Biosystems, neuromorphic biocomputation</li>
   <li>Mycology, mycorrhizal networks, mushroom cultivation</li>
   <li>Mesh networks (LoRa, Meshtastic, Helium, BLE Mesh, FindMy)</li>
-  <li>New Materialism, post-humanism, cybertheory, Deleuze and Guattari studies</li>
+  <li>Biohacking, DIY implants, body augmentation</li>
+  <li>New Materialism, post-humanism, cyborgism, Deleuze and Guattari studies</li>
   <li>Cybernetics, enactivism, metamodeling, object-oriented ontology</li>
   <li>Edge ML, autonomous robots, human-machine-interaction</li>
 </ul>
