@@ -17,7 +17,22 @@ social: true # includes social icons at the bottom of the page
 ---
 <p>I am a 24 year old self taught engineer based in San Francisco.</p>
 
-<p>Working on edge ML, environmental monitoring, HAB payload design, energy harvesting, lora mesh comms (LoRaWAN, Meshtastic, and Helium IoT)</p>
+<p>I'm working on ecologically viable rare earth metal extraction, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, neuromorphic enoses and etongues, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi/BLE+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, ontology-workspace + directed acylic knowledge graph data visualization for enhanced ML memory and preference syncing, self-adjusting low-cost high-efficiency solar chargers (5W-100W), lora mesh (meshtastic client hardware especially, but LoRaWAN and Helium too), and find my network hacking.</p>
+
+I am interested in/post about:
+<ul>
+  <li>Power electronics, lasers, high voltage</li>
+  <li>PCB design</li>
+  <li>Olfactory computation</li>
+  <li>Enviromental monitoring</li>
+  <li>SDR, RF comms, HAM, disaster comms</li>
+  <li>Biosystems, neuromorphic biocomputation</li>
+  <li>Mycology</li>
+  <li>Mesh networks</li>
+  <li>New Materialism, post-humanism, cybertheory, Deleuze and Guattari studies</li>
+  <li>Cybernetics, enactivism, metamodeling, object-oriented-ontology</li>
+  <li>Edge ML, autonomous robots, human-machine-interaction</li>
+</ul>
 
 Major Ongoing Projects:
 <ul>
@@ -33,7 +48,7 @@ Major Ongoing Projects:
 Affiliations:
 <ul>
   <li>Consultant @ TECH COMPANIES</li>
-  <li>Founder at Sophia Labs</a>.</li>
+  <li>Founder at Sophia Labs.</li>
   <li>Research Fellow at <a href="https://atopile.io/">atopile</a>.</li>
 </ul>
 
