@@ -74,3 +74,8 @@ footer.sticky-bottom {
   position: relative; 
   z-index: 1020; 
 }
+
+// News date color fix
+.news table th {
+  color: #cccccc !important; // Light greyish off-white. Using !important to ensure override.
+}
