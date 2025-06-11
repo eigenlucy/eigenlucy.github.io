@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Testing an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a> at Clemson University :)</p>
+    <p>Testing an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a> at Clemson University :3</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -26,7 +26,7 @@ I am interested in/post about:
   <li>Hardware design, electrical engineering, PCB design</li>
   <li>Olfactory computation, enoses, etongues</li>
   <li>Environmental monitoring, ecological surveying</li>
-  <li>SDR, RF, antenna design,  HAM, disaster comms</li>
+  <li>SDR, CB/ HAM radio, disaster comms</li>
   <li>Biosystems, neuromorphic biocomputation</li>
   <li>Mycology, mycorrhizal networks, mushroom cultivation</li>
   <li>Mesh networks (LoRa, Meshtastic, Helium, BLE Mesh, FindMy)</li>
