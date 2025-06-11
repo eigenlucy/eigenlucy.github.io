@@ -18,7 +18,7 @@
         {% if include.sizes %}
           sizes="{{include.sizes}}"
         {% elsif page.permalink == '/gallery/' %}
-          sizes="(min-width: 768px) 28vw, 85vw"
+          sizes="(min-width: 768px) 22vw, 85vw"  {# MODIFIED for 4-column layout #}
         {% else %}
           sizes="95vw"
         {% endif %}

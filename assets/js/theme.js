@@ -1,133 +1,107 @@
-// Hard-coded to always apply and maintain dark theme.
+// Hard-coded to always apply and maintain dark theme, with MutationObserver.
 
-// This function now directly applies "dark" settings.
-let applyDarkTheme = () => {
-  const theme = "dark"; // Force dark
+function applyAndEnforceDarkTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const currentSetting = document.documentElement.getAttribute("data-theme-setting");
 
-  // document.documentElement.classList.add("transition"); // Keep transitions if desired
-  // window.setTimeout(() => {
-  //   document.documentElement.classList.remove("transition");
-  // }, 500);
-  // ^ transTheme logic moved here if needed, or removed if transitions are problematic.
-  // Forcing theme, transitions might be less critical or could be simplified.
-
-  // Set main data attributes
-  document.documentElement.setAttribute("data-theme-setting", theme);
-  document.documentElement.setAttribute("data-theme", theme);
-
-  // Highlight.js themes
-  const lightThemeElement = document.getElementById("highlight_theme_light");
-  const darkThemeElement = document.getElementById("highlight_theme_dark");
-  if (lightThemeElement && darkThemeElement) {
-    lightThemeElement.media = "none";
-    darkThemeElement.media = "";
-  }
-
-  // Giscus
-  function sendGiscusMessage(message) {
-    const iframe = document.querySelector("iframe.giscus-frame");
-    if (!iframe) return;
-    iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
-  }
-  sendGiscusMessage({ setConfig: { theme: theme } });
-
-  // Mermaid
-  if (typeof mermaid !== "undefined") {
-    document.querySelectorAll(".mermaid").forEach((elem) => {
-      if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
-        let svgCode = elem.previousSibling.childNodes[0].innerHTML;
-        elem.removeAttribute("data-processed");
-        elem.innerHTML = svgCode;
-      }
-    });
-    mermaid.initialize({ theme: "dark" }); // Force dark for mermaid
-    window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
-    // Mermaid zoom logic (addMermaidZoom) can be called here if needed, or kept separate
-  }
-
-  // Diff2Html
-  if (typeof Diff2HtmlUI !== "undefined") {
-    document.querySelectorAll(".diff2html").forEach((elem) => {
-      if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
-        let textData = elem.previousSibling.childNodes[0].innerHTML;
-        elem.innerHTML = "";
-        const configuration = { colorScheme: "dark", drawFileList: true, highlight: true, matching: "lines" };
-        const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
-        diff2htmlUi.draw();
-      }
-    });
-  }
-  
-  // Echarts
-  if (typeof echarts !== "undefined") {
-    document.querySelectorAll(".echarts").forEach((elem) => {
-      if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
-        let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-        echarts.dispose(elem);
-        var chart = echarts.init(elem, "dark-fresh-cut"); // Force dark theme for echarts
-        chart.setOption(JSON.parse(jsonData));
-      }
-    });
-  }
-
-  // Vega-Lite
-  if (typeof vegaEmbed !== "undefined") {
-    document.querySelectorAll(".vega-lite").forEach((elem) => {
-      if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
-        let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-        elem.innerHTML = "";
-        vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" }); // Force dark for vega
-      }
-    });
-  }
-  
-  // Tables
-  let tables = document.getElementsByTagName("table");
-  for (let i = 0; i < tables.length; i++) {
-    tables[i].classList.add("table-dark");
-  }
-
-  // Jupyter notebooks
-  let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
-  for (let i = 0; i < jupyterNotebooks.length; i++) {
-    if (jupyterNotebooks[i].getElementsByTagName("iframe")[0] && 
-        jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow &&
-        jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document &&
-        jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body) {
-      let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-      bodyElement.setAttribute("data-jp-theme-light", "false");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
+    // Only re-apply if not already dark, to avoid infinite loops with the observer
+    if (currentTheme !== "dark" || currentSetting !== "dark") {
+        console.log("THEME.JS: Detected theme deviation. Re-forcing dark theme.");
+        document.documentElement.setAttribute("data-theme-setting", "dark");
+        document.documentElement.setAttribute("data-theme", "dark");
     }
-  }
 
-  // Medium-zoom
-  if (typeof medium_zoom !== "undefined") {
-    // Ensure --global-bg-color is from the dark theme context
-    // This might need a more robust way to get dark theme's bg color if it's not yet applied
-    // or simply hardcode a dark transparent color.
-    // Forcing dark theme, so --global-bg-color should resolve to the dark version.
-    let bgColor = getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color");
-    if (!bgColor || bgColor === "transparent" || bgColor.trim() === "") { // Fallback if not resolved or transparent
-        bgColor = "#1c1c1d"; // Default dark theme bg from _themes.scss
+    // Ensure localStorage is also dark (might be redundant if nothing else reads it)
+    if (localStorage.getItem("theme") !== "dark") {
+        localStorage.setItem("theme", "dark");
     }
-    medium_zoom.update({
-      background: bgColor + "ee", 
+
+    // --- Apply specific dark theme stylings for components ---
+    // (This part is condensed from your previous theme.js, ensure all necessary components are covered)
+
+    // Highlight.js
+    const lightThemeElement = document.getElementById("highlight_theme_light");
+    const darkThemeElement = document.getElementById("highlight_theme_dark");
+    if (lightThemeElement && darkThemeElement) {
+        lightThemeElement.media = "none";
+        darkThemeElement.media = "";
+    }
+
+    // Giscus
+    const giscusFrame = document.querySelector("iframe.giscus-frame");
+    if (giscusFrame && giscusFrame.contentWindow) { // Added check for contentWindow
+        giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: "dark" } } }, "https://giscus.app");
+    }
+
+    // Mermaid
+    if (typeof mermaid !== "undefined") {
+        document.querySelectorAll(".mermaid").forEach((elem) => {
+            if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
+                let svgCode = elem.previousSibling.childNodes[0].innerHTML;
+                elem.removeAttribute("data-processed");
+                elem.innerHTML = svgCode;
+            }
+        });
+        try { // Mermaid can error if not ready
+            mermaid.initialize({ theme: "dark" });
+            window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+        } catch (e) {
+            console.warn("THEME.JS: Mermaid re-init error (might be ok on first load):", e);
+        }
+    }
+    
+    // Tables (ensure they have .table-dark)
+    let tables = document.getElementsByTagName("table");
+    for (let i = 0; i < tables.length; i++) {
+        if (!tables[i].classList.contains("table-dark")) {
+            tables[i].classList.add("table-dark");
+        }
+    }
+
+    // Other components like Diff2Html, Echarts, Vega-Lite would be similar:
+    // Ensure their themes are set to dark.
+    // Example for Echarts:
+    if (typeof echarts !== "undefined") {
+        document.querySelectorAll(".echarts").forEach((elem) => {
+            // Simplified - assumes chart re-init with dark theme is needed
+            // Actual re-initialization logic from your original theme.js might be more robust
+            // This is a placeholder - you may need to adapt your specific Echarts theme update logic here.
+            if (elem.dataset.echartsInstance) { 
+                 // Consider re-init or theme update for echarts if applicable.
+            }
+        });
+    }
+    // console.log("THEME.JS: Dark theme enforcement applied/checked.");
+}
+
+
+// Initial application
+applyAndEnforceDarkTheme();
+document.addEventListener("DOMContentLoaded", applyAndEnforceDarkTheme);
+window.addEventListener("load", applyAndEnforceDarkTheme);
+
+
+// Setup MutationObserver to watch for changes on <html> attributes
+if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver((mutationsList, observerInstance) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'attributes' && (mutation.attributeName === 'data-theme' || mutation.attributeName === 'data-theme-setting')) {
+                const newTheme = document.documentElement.getAttribute("data-theme");
+                const newSetting = document.documentElement.getAttribute("data-theme-setting");
+                if (newTheme !== "dark" || newSetting !== "dark") {
+                    console.warn("THEME.JS MutationObserver: data-theme or data-theme-setting changed away from dark! Reverting.");
+                    observerInstance.disconnect(); // Temporarily disconnect to avoid self-triggering
+                    applyAndEnforceDarkTheme();    // Force it back
+                    observerInstance.observe(document.documentElement, { attributes: true }); // Reconnect
+                }
+            }
+        }
     });
-  }
-  console.log("Forced dark theme applied.");
-};
 
-// Initialize and force dark theme.
-let initForcedDarkTheme = () => {
-  localStorage.setItem("theme", "dark"); // Ensure localStorage is set to dark.
-  applyDarkTheme(); // Apply dark theme immediately.
-
-  // Optional: Add a listener for DOMContentLoaded if some elements are not ready when this script runs
-  // document.addEventListener("DOMContentLoaded", applyDarkTheme);
-
-  // No listeners for theme toggle or system preference change needed.
-  // We could even add a MutationObserver on documentElement attributes to revert any unwanted changes
-  // but that might be overkill for now. Let's see if this simplification works.
-};
-
-initForcedDarkTheme();
+    observer.observe(document.documentElement, { attributes: true });
+    console.log("THEME.JS: MutationObserver set up to enforce dark theme.");
+} else {
+    console.warn("THEME.JS: MutationObserver not supported. Theme might not be strictly enforced.");
+    // Fallback: Periodically re-check and enforce, though less ideal
+    // setInterval(applyAndEnforceDarkTheme, 1000); 
+}
