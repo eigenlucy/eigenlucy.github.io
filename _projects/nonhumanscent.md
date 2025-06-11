@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Non Human Scent
-description: Edge ML gas composition senseing with MOX arrays with ESP32-S3
+description: Edge ML gas composition sensing with MOX arrays with ESP32-S3
 
 img: assets/img/Gallery/NonHumanScent.jpg
 importance: 1
@@ -18,7 +18,7 @@ Milestones:
     <li>Document the use of PlatformIO IDWE and Bosch-AI studio with Nonhumanscent V1</li>
     <li>Document the use of Nonhumanscent V1 in a variety of interesting use cases</li>
     <li>Begin testing additional sensors for Nonhumanscent V2</li>
-    <li>Release a scent classification model and training process with support for additional sensors</li> 
+    <li>Release a scent classification model and training process with support for additional sensors</li>
     <li>Develop a smell synthesis demo based on Nonhumanscent V2</li>
     <li>Extend the same principles of Nonhumanscent to other architectures (eg biological olfactory sensors, laser patterned high density diversified sensor arrays)</li>
 </ul>

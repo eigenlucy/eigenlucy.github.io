@@ -15,6 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+<p>I am a 24 year old self taught engineer based in San Francisco.</p>
 
 <p>Working on edge ML, environmental monitoring, HAB payload design, energy harvesting, lora mesh comms (LoRaWAN, Meshtastic, and Helium IoT)</p>
 
@@ -23,17 +24,16 @@ Major Ongoing Projects:
   <li><a href="https://github.com/eigenlucy/nonhumanscent">Nonhumanscent</a></li>
   <li><a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge High Altitude Balloon Payload</a></li>
   <li><a href="https://github.com/eigenlucy/micromppt">Micromppt, a tiny 5W autonomous solar charger</a></li>
-  <li><a href="https://opensauce.com/">Come see Nixonbot at Opensauce 2025</a>. We are fine tuning ourselves a Richard Nixon tulpa and building it a robot head. Come chat with him!</li>
+  <li><a href="https://opensauce.com/">Nixonbot at Opensauce 2025</a>. We are fine tuning ourselves a Richard Nixon tulpa and building it a robot head. Come chat with him!</li>
   <li><a href="https://www.noisebridge.net/wiki/Microwave_furnace">A 10kW microwave furnace at noisebridge</a></li>
   <li>DIY-HRT and DIY hormone level testing</li>
   <li>Modular Meshtastic clients with Atopile (check out my contributions to the <a href="https://packages.atopile.io/">Atopile Packages Repo</a>)</li>
 </ul>
 
-
 Affiliations:
 <ul>
-  <li>Engineering Consultant @ Machinic Garden LLC</li>
-  <li>Founder at <a href="https://github.com/sophia-labs">Sophia Labs</a>.</li>
+  <li>Consultant @ TECH COMPANIES</li>
+  <li>Founder at Sophia Labs</a>.</li>
   <li>Research Fellow at <a href="https://atopile.io/">atopile</a>.</li>
 </ul>
 
