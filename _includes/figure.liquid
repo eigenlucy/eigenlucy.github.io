@@ -17,6 +17,8 @@
         srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
         {% if include.sizes %}
           sizes="{{include.sizes}}"
+        {% elsif page.permalink == '/gallery/' %}
+          sizes="(min-width: 768px) 28vw, 85vw"
         {% else %}
           sizes="95vw"
         {% endif %}
