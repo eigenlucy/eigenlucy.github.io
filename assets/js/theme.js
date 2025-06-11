@@ -1,29 +1,28 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
 // Toggle through light, dark, and system theme settings.
-let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
-};
+// This function is no longer used since the toggle button is removed.
+// let toggleThemeSetting = () => {
+//   let themeSetting = determineThemeSetting();
+//   if (themeSetting == "system") {
+//     setThemeSetting("light");
+//   } else if (themeSetting == "light") {
+//     setThemeSetting("dark");
+//   } else {
+//     setThemeSetting("system");
+//   }
+// };
 
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
-
-  document.documentElement.setAttribute("data-theme-setting", themeSetting);
-
+  // localStorage.setItem("theme", themeSetting); // No longer needed to store user preference
+  document.documentElement.setAttribute("data-theme-setting", themeSetting); // Keep for CSS if it uses this
   applyTheme();
 };
 
 // Apply the computed dark or light theme to the website.
 let applyTheme = () => {
-  let theme = determineComputedTheme();
+  let theme = determineComputedTheme(); // Will always be "dark"
 
   transTheme();
   setHighlight(theme);
@@ -83,12 +82,18 @@ let applyTheme = () => {
 };
 
 let setHighlight = (theme) => {
-  if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
-  } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
+  // Ensure highlight_theme_light and highlight_theme_dark elements exist before accessing them
+  const lightThemeElement = document.getElementById("highlight_theme_light");
+  const darkThemeElement = document.getElementById("highlight_theme_dark");
+
+  if (lightThemeElement && darkThemeElement) {
+    if (theme == "dark") {
+      lightThemeElement.media = "none";
+      darkThemeElement.media = "";
+    } else { // Should not happen if theme is forced to dark
+      darkThemeElement.media = "none";
+      lightThemeElement.media = "";
+    }
   }
 };
 
@@ -101,7 +106,7 @@ let setGiscusTheme = (theme) => {
 
   sendMessage({
     setConfig: {
-      theme: theme,
+      theme: theme, // Will be "dark"
     },
   });
 };
@@ -117,29 +122,32 @@ let addMermaidZoom = (records, observer) => {
     });
     svg.call(zoom);
   });
-  observer.disconnect();
+  if (observer && typeof observer.disconnect === 'function') { // Check if observer and disconnect exist
+    observer.disconnect();
+  }
 };
 
 let setMermaidTheme = (theme) => {
-  if (theme == "light") {
-    // light theme name in mermaid is 'default'
-    // https://mermaid.js.org/config/theming.html#available-themes
+  if (theme == "light") { // This condition will likely not be met
     theme = "default";
   }
 
-  /* Re-render the SVG, based on https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/mermaid.html */
   document.querySelectorAll(".mermaid").forEach((elem) => {
-    // Get the code block content from previous element, since it is the mermaid code itself as defined in Markdown, but it is hidden
-    let svgCode = elem.previousSibling.childNodes[0].innerHTML;
-    elem.removeAttribute("data-processed");
-    elem.innerHTML = svgCode;
+    if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
+      let svgCode = elem.previousSibling.childNodes[0].innerHTML;
+      elem.removeAttribute("data-processed");
+      elem.innerHTML = svgCode;
+    }
   });
 
-  mermaid.initialize({ theme: theme });
-  window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+  if (typeof mermaid !== "undefined") {
+      mermaid.initialize({ theme: theme }); // Theme will be "dark"
+      window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+  }
+
 
   const observable = document.querySelector(".mermaid svg");
-  if (observable !== null) {
+  if (observable !== null && typeof MutationObserver !== 'undefined') {
     var observer = new MutationObserver(addMermaidZoom);
     const observerOptions = { childList: true };
     observer.observe(observable, observerOptions);
@@ -148,40 +156,36 @@ let setMermaidTheme = (theme) => {
 
 let setDiff2htmlTheme = (theme) => {
   document.querySelectorAll(".diff2html").forEach((elem) => {
-    // Get the code block content from previous element, since it is the diff code itself as defined in Markdown, but it is hidden
-    let textData = elem.previousSibling.childNodes[0].innerHTML;
-    elem.innerHTML = "";
-    const configuration = { colorScheme: theme, drawFileList: true, highlight: true, matching: "lines" };
-    const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
-    diff2htmlUi.draw();
+    if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
+      let textData = elem.previousSibling.childNodes[0].innerHTML;
+      elem.innerHTML = "";
+      const configuration = { colorScheme: theme, drawFileList: true, highlight: true, matching: "lines" }; // theme will be "dark"
+      const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
+      diff2htmlUi.draw();
+    }
   });
 };
 
 let setEchartsTheme = (theme) => {
   document.querySelectorAll(".echarts").forEach((elem) => {
-    // Get the code block content from previous element, since it is the echarts code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-    echarts.dispose(elem);
+     if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
+        let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+        echarts.dispose(elem);
 
-    if (theme === "dark") {
-      var chart = echarts.init(elem, "dark-fresh-cut");
-    } else {
-      var chart = echarts.init(elem);
-    }
-
-    chart.setOption(JSON.parse(jsonData));
+        // Theme will be "dark"
+        var chart = echarts.init(elem, "dark-fresh-cut");
+        chart.setOption(JSON.parse(jsonData));
+     }
   });
 };
 
 let setVegaLiteTheme = (theme) => {
   document.querySelectorAll(".vega-lite").forEach((elem) => {
-    // Get the code block content from previous element, since it is the vega lite code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-    elem.innerHTML = "";
-    if (theme === "dark") {
-      vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" });
-    } else {
-      vegaEmbed(elem, JSON.parse(jsonData));
+    if (elem.previousSibling && elem.previousSibling.childNodes && elem.previousSibling.childNodes.length > 0) {
+        let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+        elem.innerHTML = "";
+        // Theme will be "dark"
+        vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" });
     }
   });
 };
@@ -193,48 +197,40 @@ let transTheme = () => {
   }, 500);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// MODIFIED: Determine the expected state of the theme toggle.
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
-  }
-  return themeSetting;
+  // localStorage.removeItem("theme"); // Optionally clear any stored preference
+  return "dark"; // Force dark theme setting
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
+// MODIFIED: Determine the computed theme.
 let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    } else {
-      return "light";
-    }
-  } else {
-    return themeSetting;
-  }
+  return "dark"; // Force dark computed theme
 };
 
 let initTheme = () => {
-  let themeSetting = determineThemeSetting();
+  // Force dark theme setting directly.
+  // The 'theme' item in localStorage is no longer primary.
+  // We ensure data-theme-setting and data-theme are set to "dark".
+  localStorage.setItem("theme", "dark"); // Set localStorage to dark to prevent flicker on reload if other parts rely on it.
+  document.documentElement.setAttribute("data-theme-setting", "dark");
+  applyTheme(); // This will use determineComputedTheme which returns "dark"
 
-  setThemeSetting(themeSetting);
+  // REMOVED: Event listener for the theme toggle button as it's gone.
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const mode_toggle = document.getElementById("light-toggle");
+  //   if (mode_toggle) { // Check if element exists
+  //      mode_toggle.addEventListener("click", function () {
+  //        toggleThemeSetting();
+  //      });
+  //   }
+  // });
 
-  // Add event listener to the theme toggle button.
-  document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
-  });
-
-  // Add event listener to the system theme preference change.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
-    applyTheme();
-  });
+  // REMOVED: Event listener for system theme preference change as we force dark mode.
+  // window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+  //   applyTheme();
+  // });
 };
+
+// Initialize the theme when the script loads.
+initTheme();
