@@ -22,6 +22,7 @@ social: true # includes social icons at the bottom of the page
 I am interested in/post about:
 <ul>
   <li>Power electronics, lasers, high voltage</li>
+  <li>Small scale manufacuring, DIY lab equipment, low-cost deep science</li>
   <li>Hardware design, electrical engineering, PCB design</li>
   <li>Olfactory computation, enoses, etongues</li>
   <li>Environmental monitoring, ecological surveying</li>
