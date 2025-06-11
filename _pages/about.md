@@ -48,9 +48,9 @@ Major Ongoing Projects:
 
 Affiliations:
 <ul>
-  <li>Consultant @ TECH COMPANIES</li>
-  <li>Founder at Sophia Labs.</li>
-  <li>Research Fellow at <a href="https://atopile.io/">atopile</a>.</li>
+  <li>Consultant @ TECH COMPANIES.</li>
+  <li>Founder @ Sophia Labs.</li>
+  <li>Research Fellow @ <a href="https://atopile.io/">atopile</a>.</li>
 </ul>
 
 <p>You can see the source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.</p> I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to provide clarification, updated resources, and instructions :)
