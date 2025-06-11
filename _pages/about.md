@@ -17,12 +17,12 @@ social: true # includes social icons at the bottom of the page
 ---
 <p>I am a 24 year old self taught engineer based in San Francisco.</p>
 
-<p>I'm working on ecologically viable rare earth metal extraction, open source electronics design, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi/BLE+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, an ontology-workspace + directed acylic knowledge graph data visualizer for enhanced ML memory and preference mapping/syncing, self-adjusting low-cost high-efficiency solar chargers (5W-100W), and lora mesh comms (meshtastic, reticulum, helium, LoRaWAN)</p>
+<p>I'm working on ecologically viable rare earth metal extraction, open source electronics design, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi/BLE+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, an ontology-workspace + directed acylic knowledge graph data visualizer for enhanced AI memory and preference mapping/syncing, self-adjusting low-cost high-efficiency solar chargers (5W-100W), and lora mesh comms (meshtastic, reticulum, helium, LoRaWAN)</p>
 
 I am interested in/post about:
 <ul>
   <li>Power electronics, lasers, high voltage</li>
-  <li>Small scale manufacuring, DIY lab equipment, low-cost deep science</li>
+  <li>Small scale manufacturing, DIY lab equipment, low-cost deep science</li>
   <li>Hardware design, electrical engineering, PCB design</li>
   <li>Olfactory computation, enoses, etongues</li>
   <li>Environmental monitoring, ecological surveying</li>
