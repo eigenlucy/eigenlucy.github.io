@@ -4,9 +4,9 @@
     <img 
       src="{{ include.path | relative_url }}" 
       alt="{% if include.alt %}{{ include.alt }}{% else %}Gallery Image{% endif %}" 
-      style="width: 100%; height: auto; border: 1px solid red;" {# Added border for visibility #}
+      style="width: 100%; height: auto; border: 1px solid red;" {% comment %} Added border for visibility {% endcomment %}
       {% if include.class %} class="{{ include.class }}" {% endif %}
-      {# We will use eager loading for this test to ensure it tries to load #}
+      {% comment %} We will use eager loading for this test to ensure it tries to load {% endcomment %}
       loading="eager"
     />
     {% if include.caption %}
