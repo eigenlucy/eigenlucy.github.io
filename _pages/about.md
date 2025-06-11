@@ -22,15 +22,15 @@ social: true # includes social icons at the bottom of the page
 I am interested in/post about:
 <ul>
   <li>Power electronics, lasers, high voltage</li>
-  <li>PCB design</li>
-  <li>Olfactory computation</li>
-  <li>Enviromental monitoring</li>
-  <li>SDR, RF comms, HAM, disaster comms</li>
+  <li>Hardware design, electrical engineering, PCB design</li>
+  <li>Olfactory computation, enoses, etongues</li>
+  <li>Environmental monitoring, ecological surveying</li>
+  <li>SDR, RF, antenna design,  HAM, disaster comms</li>
   <li>Biosystems, neuromorphic biocomputation</li>
-  <li>Mycology</li>
-  <li>Mesh networks</li>
+  <li>Mycology, mycorrhizal networks, mushroom cultivation</li>
+  <li>Mesh networks (LoRa, Meshtastic, Helium, BLE Mesh, FindMy)</li>
   <li>New Materialism, post-humanism, cybertheory, Deleuze and Guattari studies</li>
-  <li>Cybernetics, enactivism, metamodeling, object-oriented-ontology</li>
+  <li>Cybernetics, enactivism, metamodeling, object-oriented ontology</li>
   <li>Edge ML, autonomous robots, human-machine-interaction</li>
 </ul>
 
