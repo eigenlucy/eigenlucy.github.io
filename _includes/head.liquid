@@ -1,3 +1,13 @@
+<script>
+  // Immediately try to set dark theme attributes to prevent FOUC
+  (function() {
+    // Set localStorage for consistency, in case theme.js reads it early
+    localStorage.setItem('theme', 'dark');
+    // Set attributes on <html> for CSS to pick up immediately
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
