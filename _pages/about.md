@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Testing an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a> at Clemson University :3</p>
+    <p>Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"

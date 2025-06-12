@@ -40,13 +40,17 @@
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
 >
 
-<!-- Code Syntax Highlighting -->
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+12+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
 <link
   defer
   rel="stylesheet"
-  href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}"
-  media=""
-  id="highlight_theme_light"
+  href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
+  id="highlight_theme_dark"
 >
 
 {% if page.toc and page.toc.sidebar %}
@@ -66,20 +70,9 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-<!-- Dark Mode -->
+<!-- Theme JavaScript (applies dark theme to components) -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
-{% if site.enable_darkmode %}
-  <link
-    defer
-    rel="stylesheet"
-    href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
-    media="none"
-    id="highlight_theme_dark"
-  >
-  <script>
-    initTheme();
-  </script>
-{% endif %}
+
 
 <!-- GeoJSON support via Leaflet -->
 {% if page.map %}
@@ -94,21 +87,13 @@
 
 <!-- diff2html -->
 {% if page.code_diff %}
-  <link
-    defer
-    rel="stylesheet"
-    href="{{ site.third_party_libraries.highlightjs.url.css.light }}"
-    integrity="{{ site.third_party_libraries.highlightjs.integrity.css.light }}"
-    crossorigin="anonymous"
-    media="screen and (prefers-color-scheme: light)"
-  >
+  
   <link
     defer
     rel="stylesheet"
     href="{{ site.third_party_libraries.highlightjs.url.css.dark }}"
     integrity="{{ site.third_party_libraries.highlightjs.integrity.css.dark }}"
     crossorigin="anonymous"
-    media="screen and (prefers-color-scheme: dark)"
   >
   <link
     defer

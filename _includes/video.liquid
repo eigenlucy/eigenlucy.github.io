@@ -57,7 +57,7 @@
       {% endif %}
     />
 
-  {% else %} {# This part is for iframes like YouTube #}
+  {% else %} {% comment %} This part is for iframes like YouTube {% endcomment %}
     <iframe
       src="{{ include.path }}"
       {% if include.class %}

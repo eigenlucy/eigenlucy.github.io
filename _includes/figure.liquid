@@ -1,20 +1,33 @@
-{% comment %} Get the full relative path to the original image {% endcomment %}
-{% assign original_image_relative_url = include.path | relative_url %}
+{%- assign raw_path = include.path | default: "" | strip -%}
+<!-- DEBUG FIGURE.LIQUID: Raw include.path is [{{ raw_path }}] -->
 
-{% comment %} Construct the base path for WebP by removing the extension from the original image's relative URL {% endcomment %}
-{% assign original_url_parts = original_image_relative_url | split: '.' %}
-{% assign webp_base_url = original_url_parts | slice: 0, -1 | join: '.' %}
+{%- if raw_path != "" -%}
+  {%- comment -%} Convert to relative URL first to handle baseurl etc. {%- endcomment -%}
+  {%- assign full_relative_path = raw_path | relative_url -%}
+  <!-- DEBUG FIGURE.LIQUID: full_relative_path is [{{ full_relative_path }}] -->
 
-<figure
-  {% if include.slot %}
-    slot="{{ include.slot }}"
-  {% endif %}
->
+  {%- comment -%} Remove the extension from the full_relative_path to get the base for srcset {%- endcomment -%}
+  {%- assign path_parts = full_relative_path | split: '.' -%}
+  {%- if path_parts.size > 1 -%}
+    {%- assign webp_base_url = path_parts | slice: 0, -1 | join: '.' -%}
+  {%- else -%}
+    {%- comment -%} Path might not have an extension, or split failed unexpectedly {%- endcomment -%}
+    {%- assign webp_base_url = full_relative_path -%}
+  {%- endif -%}
+  <!-- DEBUG FIGURE.LIQUID: webp_base_url for srcset is [{{ webp_base_url }}] -->
+{%- else -%}
+  {%- assign webp_base_url = "" -%}
+  {%- assign full_relative_path = "" -%}
+<!-- DEBUG FIGURE.LIQUID: include.path was empty or nil. Cannot generate image paths. -->
+{%- endif -%}
+
+<figure>
+  {% if raw_path != "" %}
   <picture>
     {% if site.imagemagick.enabled %}
       <source
         class="responsive-img-srcset"
-        srcset="{% for i in site.imagemagick.widths %}{{ webp_base_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+        srcset="{% for i in site.imagemagick.widths %}{{ webp_base_url }}-{{ i }}.webp {{i}}w{% unless forloop.last %},{% endunless %}{% endfor %}"
         {% if include.sizes %}
           sizes="{{include.sizes}}"
         {% elsif page.permalink == '/gallery/' %}
@@ -26,55 +39,17 @@
       >
     {% endif %}
     <img
-      src="{{ original_image_relative_url }}"      
-      {% if include.class %}
-        class="{{ include.class }}"
-      {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
-      {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% else %}
-        height="auto"
-      {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        style="
-          {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
-          {% endif %}
-          {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
-          {% endif %}
-          {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
-          {% endif %}
-          {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
-          {% endif %}
-        "
-      {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
-      {% endif %}
-      {% if include.title %}
-        title="{{ include.title }}"
-      {% endif %}
-      {% if include.zoomable %}
-        data-zoomable
-      {% endif %}
-      {% if include.loading %}
-        loading="{{ include.loading }}" 
-      {% elsif site.lazy_loading_images %}
-        loading="lazy"
-      {% endif %}
-      onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='{{ original_image_relative_url }}';"
+      src="{{ full_relative_path }}" {# Use the processed relative URL for the main src #}
+      alt="{% if include.alt %}{{ include.alt | escape }}{% else %}Gallery Image{% endif %}"
+      style="width: 100%; height: auto; {% comment %} Removed debug border {% endcomment %}"
+      {% if include.class %} class="{{ include.class }}" {% endif %}
+      loading="{% if include.loading %}{{ include.loading }}{% elsif site.lazy_loading_images %}lazy{% else %}eager{% endif %}"
+      onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='{{ full_relative_path }}';"
+      {% if include.zoomable %}data-zoomable{% endif %}
     >
   </picture>
-
-  {% if include.caption %}
-    <figcaption class="caption">{{ include.caption }}</figcaption>
+  {% if include.caption %}<figcaption class="caption">{{ include.caption | escape }}</figcaption>{% endif %}
+  {% else %}
+    <p style="color:red; border:1px solid red; padding:5px;">Error: Image path not provided to figure.liquid.</p>
   {% endif %}
 </figure>
