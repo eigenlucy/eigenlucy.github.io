@@ -1,18 +1,80 @@
-<!-- DEBUG FIGURE.LIQUID (SIMPLIFIED): include.path is [{{ include.path }}] -->
-{% if include.path and include.path != "" %}
-  <figure>
-    <img 
-      src="{{ include.path | relative_url }}" 
-      alt="{% if include.alt %}{{ include.alt }}{% else %}Gallery Image{% endif %}" 
-      style="width: 100%; height: auto; border: 1px solid red;" {% comment %} Added border for visibility {% endcomment %}
-      {% if include.class %} class="{{ include.class }}" {% endif %}
-      {% comment %} We will use eager loading for this test to ensure it tries to load {% endcomment %}
-      loading="eager"
-    />
-    {% if include.caption %}
-      <figcaption class="caption">{{ include.caption }}</figcaption>
+{% comment %} Get the full relative path to the original image {% endcomment %}
+{% assign original_image_relative_url = include.path | relative_url %}
+
+{% comment %} Construct the base path for WebP by removing the extension from the original image's relative URL {% endcomment %}
+{% assign original_url_parts = original_image_relative_url | split: '.' %}
+{% assign webp_base_url = original_url_parts | slice: 0, -1 | join: '.' %}
+
+<figure
+  {% if include.slot %}
+    slot="{{ include.slot }}"
+  {% endif %}
+>
+  <picture>
+    {% if site.imagemagick.enabled %}
+      <source
+        class="responsive-img-srcset"
+        srcset="{% for i in site.imagemagick.widths %}{{ webp_base_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+        {% if include.sizes %}
+          sizes="{{include.sizes}}"
+        {% elsif page.permalink == '/gallery/' %}
+          sizes="(min-width: 768px) 22vw, 85vw"
+        {% else %}
+          sizes="95vw"
+        {% endif %}
+        type="image/webp"
+      >
     {% endif %}
-  </figure>
-{% else %}
-<!-- DEBUG FIGURE.LIQUID (SIMPLIFIED): include.path was empty or nil. Path expected. -->
-{% endif %}
+    <img
+      src="{{ original_image_relative_url }}"      
+      {% if include.class %}
+        class="{{ include.class }}"
+      {% endif %}
+      {% if include.width %}
+        width="{{ include.width }}"
+      {% else %}
+        width="100%"
+      {% endif %}
+      {% if include.height %}
+        height="{{ include.height }}"
+      {% else %}
+        height="auto"
+      {% endif %}
+      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+        style="
+          {% if include['min-width'] %}
+            min-width: {{ include.min-width }};
+          {% endif %}
+          {% if include['min-height'] %}
+            min-height: {{ include.min-height }};
+          {% endif %}
+          {% if include['max-width'] %}
+            max-width: {{ include.max-width }};
+          {% endif %}
+          {% if include['max-height'] %}
+            max-height: {{ include.max-height }};
+          {% endif %}
+        "
+      {% endif %}
+      {% if include.alt %}
+        alt="{{ include.alt }}"
+      {% endif %}
+      {% if include.title %}
+        title="{{ include.title }}"
+      {% endif %}
+      {% if include.zoomable %}
+        data-zoomable
+      {% endif %}
+      {% if include.loading %}
+        loading="{{ include.loading }}" 
+      {% elsif site.lazy_loading_images %}
+        loading="lazy"
+      {% endif %}
+      onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='{{ original_image_relative_url }}';"
+    >
+  </picture>
+
+  {% if include.caption %}
+    <figcaption class="caption">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
