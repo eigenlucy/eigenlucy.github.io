@@ -391,7 +391,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md- card" data-tags="electroplating, chemistry, 3d printing, video">
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, 3d printing, video">
       <div class="col-md-3 card-item " data-tags="electroplating, chemistry, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/electroplatingbath.JPG" class="img-fluid rounded z-depth-1" %}

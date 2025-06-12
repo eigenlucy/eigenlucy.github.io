@@ -1,74 +1,40 @@
-{% comment %} Original version, assuming this worked before more complex base_path logic {% endcomment %}
-{% assign img_path_slug = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | remove: '.JPG' | remove: '.JPEG' | remove: '.PNG' %}
+{%- assign raw_path_from_include = include.path | default: "" | strip -%}
+<!-- DEBUG FIGURE.LIQUID: Raw include.path is [{{ raw_path_from_include }}] -->
 
-<figure
-  {% if include.slot %}
-    slot="{{ include.slot }}"
-  {% endif %}
->
-  <picture>
-    {% if site.imagemagick.enabled %}
-      <source
-        class="responsive-img-srcset"
-        srcset="{% for i in site.imagemagick.widths %}{{ img_path_slug | relative_url }}-{{ i }}.webp {{i}}w{% unless forloop.last %},{% endunless %}{% endfor %}"
-        {% if include.sizes %}
-          sizes="{{include.sizes}}"
-        {% elsif page.permalink == '/gallery/' %}
-          sizes="(min-width: 768px) 22vw, 85vw" {% comment %} For 4-column gallery, assuming max_width 85% {% endcomment %}
-        {% else %}
-          sizes="95vw"
-        {% endif %}
-        type="image/webp"
+{%- if raw_path_from_include != "" -%}
+  {%- assign full_relative_path = raw_path_from_include | relative_url -%}
+  <!-- DEBUG FIGURE.LIQUID: full_relative_path is [{{ full_relative_path }}] -->
+
+  {%- assign last_dot = full_relative_path | split: '.' | last -%}
+  {%- assign extension_with_dot = '.' | append: last_dot -%}
+  {%- assign webp_base_url = full_relative_path | remove_last: extension_with_dot -%}
+  <!-- DEBUG FIGURE.LIQUID: webp_base_url for srcset is [{{ webp_base_url }}] -->
+
+  <figure
+    {% if include.slot %}slot="{{ include.slot }}"{% endif %}
+  >
+    <picture>
+      {% if site.imagemagick.enabled %}
+        <source
+          class="responsive-img-srcset"
+          srcset="{% for i in site.imagemagick.widths %}{{ webp_base_url }}-{{ i }}.webp {{i}}w{% unless forloop.last %},{% endunless %}{% endfor %}"
+          {% if include.sizes %}sizes="{{include.sizes}}"{% elsif page.permalink == '/gallery/' %}sizes="(min-width: 768px) 22vw, 85vw"{% else %}sizes="95vw"{% endif %}
+          type="image/webp"
+        >
+      {% endif %}
+      <img
+        src="{{ full_relative_path }}"
+        alt="{% if include.alt %}{{ include.alt | escape }}{% else %}Gallery Image{% endif %}"
+        style="width: 100%; height: auto;"
+        {% if include.class %}class="{{ include.class }}"{% endif %}
+        loading="{% if include.loading %}{{ include.loading }}{% elsif site.lazy_loading_images %}lazy{% else %}eager{% endif %}"
+        onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='{{ full_relative_path }}';"
+        {% if include.zoomable %}data-zoomable{% endif %}
       >
-    {% endif %}
-    <img
-      src="{{ include.path | relative_url }}"      
-      {% if include.class %}
-        class="{{ include.class }}"
-      {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
-      {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% else %}
-        height="auto"
-      {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        style="
-          {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
-          {% endif %}
-          {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
-          {% endif %}
-          {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
-          {% endif %}
-          {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
-          {% endif %}
-        "
-      {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt | escape }}"
-      {% else %}
-        alt="Gallery Image"
-      {% endif %}
-      {% if include.title %}
-        title="{{ include.title | escape }}"
-      {% endif %}
-      {% if include.zoomable %}
-        data-zoomable
-      {% endif %}
-      loading="{% if include.loading %}{{ include.loading }}{% elsif site.lazy_loading_images %}lazy{% else %}eager{% endif %}"
-      onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='{{ include.path | relative_url }}';"
-    >
-  </picture>
-
-  {% if include.caption %}
-    <figcaption class="caption">{{ include.caption | escape }}</figcaption>
-  {% endif %}
-</figure>
+    </picture>
+    {% if include.caption %}<figcaption class="caption">{{ include.caption | escape }}</figcaption>{% endif %}
+  </figure>
+{%- else -%}
+  <!-- DEBUG FIGURE.LIQUID: include.path was empty or nil. Cannot generate image paths. -->
+  <p style="color:red; border:1px solid red; padding:5px;">Error: Image path not provided to figure.liquid for input [{{ include.path | default: 'NIL' }}].</p>
+{%- endif -%}

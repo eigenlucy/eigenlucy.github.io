@@ -1,12 +1,33 @@
 <script>
-  // Immediately try to set dark theme attributes to prevent FOUC
-  (function() {
-    // Set localStorage for consistency, in case theme.js reads it early
-    localStorage.setItem('theme', 'dark');
-    // Set attributes on <html> for CSS to pick up immediately
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
     document.documentElement.setAttribute('data-theme-setting', 'dark');
     document.documentElement.setAttribute('data-theme', 'dark');
-  })();
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
 </script>
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
@@ -51,6 +72,7 @@
   rel="stylesheet"
   href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
   id="highlight_theme_dark"
+  media="all"
 >
 
 {% if page.toc and page.toc.sidebar %}
@@ -86,7 +108,6 @@
 
 <!-- diff2html -->
 {% if page.code_diff %}
-  
   <link
     defer
     rel="stylesheet"
