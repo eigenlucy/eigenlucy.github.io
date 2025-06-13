@@ -8,5 +8,5 @@ related_posts: false
 Check out my <a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge HAB PCB</a>, designed for the Noisebridge Spacebridge Project
 </div>
 <div>
- <a href="https://github.com/eigenlucy/somethingbeautiful">PATHFINDER, my submission to the Soemthign Beautiful Hackathon (WIP)</a>
+ <a href="https://github.com/eigenlucy/somethingbeautiful">PATHFINDER, my submission to the Soemthing Beautiful Hackathon (WIP)</a>
 </div>

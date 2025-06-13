@@ -14,5 +14,5 @@ Femtofox Pro Linux Meshtastic Node power consumption test results are available 
 My <a href="https://eigenlucy.github.io/projects/10kwmagnetron/">10kW microwave furnace project</a> has been revived and is to be hosted at Noisebridge hackerspace if all works out!
 </div>
 <div>
-<a href="https://eigenlucy.github.io/projects/izzymonitor/">Izzymonitor HAOS panel</a>has been confirmed working, but there will be a V2 soon that improves the board layout signficantly :)
+<a href="https://eigenlucy.github.io/projects/izzymonitor/">Izzymonitor HAOS panel</a> has been confirmed working, but there will be a V2 soon that improves the board layout signficantly :)
 </div>

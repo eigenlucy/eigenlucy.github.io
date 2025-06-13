@@ -4,13 +4,25 @@
 
 // Typography
 
+body {
+  font-family: $body-font-family;
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: transparent !important; 
+  position: relative; 
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $heading-font-family;
+    scroll-margin-top: 66px;
+  }
+}
+
 p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 em,
 div,
 li,
@@ -284,10 +296,12 @@ ul.task-list input[type="checkbox"] {
   }
 
   .navbar-brand {
+    font-family: $site-title-font-family;
     color: var(--global-text-color);
   }
 
   .navbar-nav .nav-item .nav-link {
+    font-family: $menu-font-family;
     color: var(--global-text-color);
 
     &:hover {
@@ -535,6 +549,7 @@ footer.sticky-bottom {
 }
 
 .post-title {
+  font-family: $site-title-font-family; // Added this line
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }

@@ -15,7 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p>I am a 24 year old self taught engineer based in San Francisco with a focus on hardware design</p>
+<p>I am a 24 year old self taught engineer, hardware designer, and founder based in San Francisco</p>
 
 My primary skills are:
 <ul>
@@ -45,7 +45,7 @@ Affiliations:
   <li>Research Fellow @ <a href="https://atopile.io/">atopile</a>.</li>
 </ul>
 
-<p>I'm working on ecologically viable rare earth metal extraction, open source electronics design, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, an ontology-workspace + directed acylic knowledge graph data visualizer for enhanced AI memory and preference mapping/syncing, self-adjusting low-cost high-efficiency solar chargers (5W-100W), and lora mesh comms (meshtastic, reticulum, helium, LoRaWAN)</p>
+<p>I'm working on ecologically viable rare earth metal extraction, open source electronics design, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, knowledge graph AI memory systems, self-adjusting low-cost high-efficiency solar chargers (5W-100W), and lora mesh comms (meshtastic, reticulum, helium, LoRaWAN)</p>
 
 I am interested in/post about:
 <ul>
