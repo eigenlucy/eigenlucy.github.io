@@ -9,16 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('RD Script: Failed to get 2D context!');
         return;
     }
-    console.log('RD Script: Initialized with FIXED simulation grid v9');
+    console.log('RD Script: Initialized with DYNAMIC cell drawing v10'); // Updated log
 
     // === FIXED SIMULATION GRID SIZE (in cells) ===
     const SIM_COLS = 200; // Example: 200 cells wide
     const SIM_ROWS = 150; // Example: 150 cells high
-    const cellSize = 10;  // Size of each cell in pixels
+    // const cellSize = 10;  // REMOVED: Size of each cell in pixels
 
     // Canvas dimensions will still track window size for the drawing surface
     let canvasWidth = canvas.width = window.innerWidth;
     let canvasHeight = canvas.height = window.innerHeight;
+
+    // ADDED: Dynamic cell drawing dimensions
+    let cellDrawWidth = canvasWidth / SIM_COLS;
+    let cellDrawHeight = canvasHeight / SIM_ROWS;
 
     let isDrawingPaused = false; // Used by resize handler
     let resizeDebounceTimer;
@@ -41,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let nextGrid = [];
 
     function initializeGrid() {
+        // Update canvas and cell drawing dimensions
+        canvasWidth = canvas.width = window.innerWidth;
+        canvasHeight = canvas.height = window.innerHeight;
+        cellDrawWidth = canvasWidth / SIM_COLS;
+        cellDrawHeight = canvasHeight / SIM_ROWS;
+        
         // Initialize grid with fixed SIM_COLS and SIM_ROWS
         grid = new Array(SIM_COLS);
         nextGrid = new Array(SIM_COLS);
@@ -55,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const numInitialSeeds = Math.floor(Math.random() * 3) + 2;
         const initialSeedSize = 10;
-        console.log(`RD Script: FIXED Grid ${SIM_COLS}x${SIM_ROWS} initialized. Seeding ${numInitialSeeds} spots.`);
+        // Updated log
+        console.log(`RD Script: Grid ${SIM_COLS}x${SIM_ROWS} initialized. Canvas: ${canvasWidth}x${canvasHeight}. Cell Draw: ${cellDrawWidth.toFixed(2)}x${cellDrawHeight.toFixed(2)}`);
         for (let s = 0; s < numInitialSeeds; s++) {
             const seedX = Math.floor(Math.random() * Math.max(1, SIM_COLS - initialSeedSize * 2)) + Math.min(initialSeedSize - 1, Math.max(0, SIM_COLS - initialSeedSize - 1));
             const seedY = Math.floor(Math.random() * Math.max(1, SIM_ROWS - initialSeedSize * 2)) + Math.min(initialSeedSize - 1, Math.max(0, SIM_ROWS - initialSeedSize - 1));
@@ -124,19 +135,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let x = 0; x < SIM_COLS; x++) {
             for (let y = 0; y < SIM_ROWS; y++) {
-                const screenX = x * cellSize;
-                const screenY = y * cellSize;
+                // Calculate screen position using dynamic cell drawing sizes
+                const screenX = x * cellDrawWidth;
+                const screenY = y * cellDrawHeight;
 
-                if (screenX + cellSize > 0 && screenX < canvasWidth && 
-                    screenY + cellSize > 0 && screenY < canvasHeight) {
-                    if (!grid[x] || !grid[x][y]) continue;
-                    const bVal = grid[x][y].b;
-                    const baseGray = 20; 
-                    const grayRange = 60; 
-                    const grayLevel = Math.floor(baseGray + (bVal * grayRange));
-                    ctx.fillStyle = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
-                    ctx.fillRect(screenX, screenY, cellSize, cellSize);
-                }
+                if (!grid[x] || !grid[x][y]) continue;
+                const bVal = grid[x][y].b;
+                const baseGray = 20; 
+                const grayRange = 60; 
+                const grayLevel = Math.floor(baseGray + (bVal * grayRange));
+                ctx.fillStyle = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
+                // Draw the cell using dynamic cell drawing sizes
+                ctx.fillRect(screenX, screenY, cellDrawWidth, cellDrawHeight);
             }
         }
     }
@@ -167,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function startAnimation(){
         if(!isAnimating && (!motionQuery || !motionQuery.matches)){
-            console.log('RD Script: Starting animation (fixed grid v9)');
+            console.log('RD Script: Starting animation (dynamic cell drawing v10)');
             isDrawingPaused = false;
             animate(performance.now());
         }
@@ -195,25 +205,33 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.width = canvasWidth;   
         canvas.height = canvasHeight; 
         
-        ctx.fillStyle = 'black'; 
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        // Update cell drawing dimensions
+        cellDrawWidth = canvasWidth / SIM_COLS;
+        cellDrawHeight = canvasHeight / SIM_ROWS;
+        
+        // REMOVED THE IMMEDIATE CLEAR TO BLACK TO REDUCE FLICKER
+        // ctx.fillStyle = 'black'; 
+        // ctx.fillRect(0, 0, canvasWidth, canvasHeight);
         
         clearTimeout(resizeDebounceTimer);
         resizeDebounceTimer = setTimeout(() => {
-            console.log(`RD Script: Resize processed. Canvas: ${canvasWidth}x${canvasHeight}. Simulation grid remains ${SIM_COLS}x${SIM_ROWS}.`);
+            // Updated log
+            console.log(`RD Script: Resize processed. Canvas: ${canvasWidth}x${canvasHeight}. Cell Draw: ${cellDrawWidth.toFixed(2)}x${cellDrawHeight.toFixed(2)}.`);
             isDrawingPaused = false;
-            if (isAnimating) {
-                drawGrid(); // Redraw the current state of the static simulation on new canvas size
-            } else if (motionQuery && !motionQuery.matches) { 
-                // If animation was not running but should be (e.g., was paused by isDrawingPaused earlier)
+            if (isAnimating) { // If it was running and paused by resize
+                drawGrid(); // Redraw immediately
+            } else if (motionQuery && !motionQuery.matches && !isAnimating) { 
+                // If animation was not running but should be (e.g., it was paused by isDrawingPaused earlier and not animating before)
                 startAnimation(); 
+            } else if (motionQuery && motionQuery.matches) { // If reduced motion is on and it wasn't animating.
+                drawStaticPattern(); 
             }
         }, DEBOUNCE_DELAY);
     }
 
     window.addEventListener('resize', handleResize);
 
-    initializeGrid(); // Initialize the fixed-size simulation grid once
+    initializeGrid(); // Initialize the fixed-size simulation grid and initial dynamic cell sizes
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (!motionQuery || !motionQuery.matches) {
         startAnimation();
