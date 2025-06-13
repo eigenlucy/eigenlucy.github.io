@@ -213,11 +213,12 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace; // We can discuss changing this to $body-font-family later if you like
-    text-align: center; /* ADDED for centering */
+    font-family: $body-font-family;
+    font-size: 0.7rem; /* CHANGED to 0.7rem */
+    text-align: center;
 
     p {
-      display: block; /* CHANGED for centering */
+      display: block;
       margin: 0;
     }
   }
@@ -234,7 +235,7 @@ ul.task-list input[type="checkbox"] {
 @media (min-width: 576px) {
   .profile {
     // This width will be overridden by .post > .profile if more specific
-    width: 15%; /* Changed from 30% to make it smaller */ 
+    width: 8%; /* Changed from 10% for further reduction */ 
 
     .address {
       p {
@@ -924,8 +925,8 @@ html.transition *:after {
   > .profile {
     position: absolute;
     top: 0.5em;      // Adjusted slightly to align with text baseline better
-    right: 0;
-    width: 100px;    // Significantly smaller
+    right: 70px;   /* Shifted further from the right edge */
+    width: 80px;    /* Increased from 70px */
     margin: 0;       // Override any float margins
 
     img {
@@ -936,7 +937,7 @@ html.transition *:after {
 
     .more-info {
       font-family: $body-font-family; // Use body font, not monospace
-      font-size: 0.75rem;             // Smaller text
+      font-size: 0.7rem; /* Adjusted for new image size */
       text-align: center;
       padding-top: 5px;
       margin-bottom: 0;               // Reset default margin
