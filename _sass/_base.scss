@@ -205,12 +205,12 @@ ul.task-list input[type="checkbox"] {
 // Profile
 
 .profile {
-  width: 100%;
+  width: 100%; // Default width, will be overridden by .post > .profile
 
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: monospace; // Default, overridden in .post > .profile .more-info
 
     p {
       display: inline-block;
@@ -220,16 +220,17 @@ ul.task-list input[type="checkbox"] {
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 1rem; // Will not apply if .profile is absolutely positioned
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 1rem; // Will not apply if .profile is absolutely positioned
 }
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    // This width will be overridden by .post > .profile if more specific
+    width: 30%; 
 
     .address {
       p {
@@ -549,7 +550,7 @@ footer.sticky-bottom {
 }
 
 .post-title {
-  font-family: $site-title-font-family; // Added this line
+  font-family: $site-title-font-family; 
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
@@ -891,6 +892,8 @@ html.transition *:after {
 
 // Extra Markdown style (post Customization)
 .post {
+  position: relative; // Added for profile positioning context
+
   .post-meta {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
@@ -909,6 +912,34 @@ html.transition *:after {
 
       &:hover {
         color: var(--global-theme-color);
+      }
+    }
+  }
+
+  // Profile image specific to the .post layout (e.g., About page)
+  > .profile {
+    position: absolute;
+    top: 0.5em;      // Adjusted slightly to align with text baseline better
+    right: 0;
+    width: 100px;    // Significantly smaller
+    margin: 0;       // Override any float margins
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block; // Remove bottom space
+    }
+
+    .more-info {
+      font-family: $body-font-family; // Use body font, not monospace
+      font-size: 0.75rem;             // Smaller text
+      text-align: center;
+      padding-top: 5px;
+      margin-bottom: 0;               // Reset default margin
+      margin-top: 5px;                // Keep some top margin
+
+      p {
+        display: block; // Stack text if it wraps
       }
     }
   }

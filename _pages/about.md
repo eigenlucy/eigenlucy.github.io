@@ -7,7 +7,7 @@ subtitle: Lucy Moglia. Engineer. San Francisco, CA. eigenlucy@proton.me.
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
 
