@@ -48,13 +48,16 @@ table {
 
 a,
 table.table a {
-  color: var(--global-theme-color);
+  font-family: "Jacquard 24 Charted", sans-serif; /* Changed to Jacquard 24 Charted font */
+  color: #EAEAEA; /* Changed to off-white from var(--global-theme-color) */
 
   &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
+    color: #EAEAEA; /* Kept off-white for hover */
+    text-decoration: underline; /* Kept underline on hover */
   }
 
+  /* This existing rule seems to be for an underline effect/animation on hover. */
+  /* We'll keep it, but it might need adjustment if it conflicts with the new font. */
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
   }
