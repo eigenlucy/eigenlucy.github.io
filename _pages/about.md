@@ -35,7 +35,7 @@ Main Ongoing Open-Source Projects:
   <li><a href="https://opensauce.com/">Nixonbot at Opensauce 2025</a>. We are fine tuning ourselves a Richard Nixon tulpa and building it a robot head. Come chat with him!</li>
   <li><a href="https://www.noisebridge.net/wiki/Microwave_furnace">A 10kW microwave furnace at noisebridge</a></li>
   <li>DIY-HRT and DIY hormone level testing</li>
-  <li>Modular Meshtastic clients with Atopile (check out my contributions to the <a href="https://packages.atopile.io/">Atopile Packages Repo</a>)</li>
+  <li>Modular Meshtastic clients with <a href="https://atopile.io">Atopile</a>. Check out all my contributions to the <a href="https://packages.atopile.io/">Atopile Packages Repo</a>)</li>
 </ul>
 
 Affiliations:

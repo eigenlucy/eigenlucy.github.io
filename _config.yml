@@ -176,6 +176,11 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  eigenlucy:
+    output: true
+    defaults:
+      layout: post
+      sitemap: false
 
 announcements:
   enabled: true
