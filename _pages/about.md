@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p style="text-align: center;">Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
+    <p>Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -47,7 +47,7 @@ Affiliations:
 
 <p>I'm working on ecologically viable rare earth metal extraction, open source electronics design, DIYHRT (HRT synthesis, source analysis, and low-cost DIY level testing), olfactory computation, solar powered heterogeneous mesh network disaster comms (LoRa+WiFi+CB+UHF), edge-ML environmental monitoring, high-altitude balloon trackers, knowledge graph AI memory systems, self-adjusting low-cost high-efficiency solar chargers (5W-100W), and lora mesh comms (meshtastic, reticulum, helium, LoRaWAN)</p>
 
-I am interested in/post about:
+I post about:
 <ul>
   <li>Power electronics, lasers, high voltage</li>
   <li>Small scale manufacturing, DIY lab equipment, low-cost deep science</li>

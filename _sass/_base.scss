@@ -213,10 +213,11 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace; // Default, overridden in .post > .profile .more-info
+    font-family: monospace; // We can discuss changing this to $body-font-family later if you like
+    text-align: center; /* ADDED for centering */
 
     p {
-      display: inline-block;
+      display: block; /* CHANGED for centering */
       margin: 0;
     }
   }
