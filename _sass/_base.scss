@@ -234,7 +234,7 @@ ul.task-list input[type="checkbox"] {
 @media (min-width: 576px) {
   .profile {
     // This width will be overridden by .post > .profile if more specific
-    width: 30%; 
+    width: 15%; /* Changed from 30% to make it smaller */ 
 
     .address {
       p {
