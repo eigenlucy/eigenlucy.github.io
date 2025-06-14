@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Lucy Moglia. Engineer. San Francisco, CA. eigenlucy@proton.me.
+subtitle: lucy moglia. hardware design, cybernetics, general systemantics
 
 profile:
   align: right
