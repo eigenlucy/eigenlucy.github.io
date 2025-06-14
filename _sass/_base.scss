@@ -926,7 +926,7 @@ html.transition *:after {
     position: absolute;
     top: 0.5em;      // Adjusted slightly to align with text baseline better
     right: 70px;   /* Shifted further from the right edge */
-    width: 80px;    /* Increased from 70px */
+    width: 100px;   /* Set to 100px */
     margin: 0;       // Override any float margins
 
     img {
