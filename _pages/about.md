@@ -29,7 +29,8 @@ My primary skills are:
 
 Main Ongoing Open-Source Projects:
 <ul>
-  <li><a href="https://github.com/eigenlucy/nonhumanscent">Nonhumanscent</a></li>
+  <li><a href="https://eigenlucy.com/projects/wasp">WASP</a>, wearable AI synthesis platform. An open source AI companion.</li>
+  <li><a href="https://github.com/eigenlucy/nonhumanscent">Nonhumanscent</a>, an open source AI enose developer kit. Check out my recent presentations at <a href="https://www.youtube.com/watch?v=IcFa14aXTKQ">Ekkolapto institute</a>.</li>
   <li><a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge</a>High Altitude Balloon Payload</li>
   <li><a href="https://github.com/eigenlucy/micromppt">Micromppt</a>, a tiny 5W autonomous solar charger</li>
   <li>Nixonbot at <a href="https://opensauce.com/">Opensauce 2025</a>. We are fine tuning ourselves a Richard Nixon tulpa and building it a robot head. Come chat with him!</li>
