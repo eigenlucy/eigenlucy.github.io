@@ -155,7 +155,7 @@ giscus:
 
 # Disqus comments (DEPRECATED)
 disqus_shortname: # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+# https://help.disqus.com/en/articles/1717111-what'''s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
@@ -195,6 +195,7 @@ latest_posts:
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
+lsi: false # <--- ADDED THIS LINE TO DISABLE LSI TEMPORARILY
 
 # Markdown and syntax highlight
 markdown: kramdown
