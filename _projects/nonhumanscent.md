@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Non Human Scent
-description: Edge ML gas composition sensing with MOX arrays with ESP32-S3
+description: Edge ML gas composition sensing with MOX arrays and ESP32-S3
 
 img: assets/img/Gallery/NonHumanScent.jpg
 importance: 1
