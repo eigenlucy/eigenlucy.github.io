@@ -8,9 +8,20 @@ importance: 1
 category: electrical engineering
 related_publications: false
 ---
+
+UPDATE 06/14/25: V2 PCBs Arrived!
 <p>
 Nonhumanscent is a platform for gas composition sensing and scent classification developed by <a href="https://x.com/indiraschka">Yoyo</a> and I. Our goal is to develop a platform for olfactory computation, starting with an open source platform for scent classification with edge-ML models and low cost embedded hardware called Nonhumanscent V1. For now, training and programming is done through Bosch's BME-AI-Studio platform + BSEC2 firmware. We are currently working on our own scent model, training process, and open source firmware with extended capabilities and support for other sensors and processors. From there, we will build a more general olfactory computation platform.
 </p>
+
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/nonhumanscentpcbtop.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/nonhumanscentpcbbottom.jpg" title="schematic" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 Milestones:
 <ul>
