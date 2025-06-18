@@ -636,6 +636,10 @@ footer.sticky-bottom {
   a {
     text-decoration: none;
 
+    .card-text {
+      font-family: $body-font-family;
+    }
+
     &:hover {
       .card-title {
         color: var(--global-theme-color);
