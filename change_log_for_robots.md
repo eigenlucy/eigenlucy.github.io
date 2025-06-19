@@ -31,3 +31,24 @@
 *   **"Le Fin de Satan" Post (`_eigenlucy/2025-06-18-the-end-of-satan.md`):**
     *   Replaced the Markdown image tag at the top of the post with an HTML `div` and `img` structure.
     *   Applied inline styles to the `img` tag to set its `width` to `50%` (with `height: auto;`) and to center it on the page (`display: block; margin-left: auto; margin-right: auto;`).
+*   **`CUSTOMIZE.md` Update:**
+    *   Added an introductory note clarifying the document's scope and pointing to other site-specific guides (`jekyll_guide_for_robots.md`, `change_log_for_robots.md`, etc.).
+    *   Updated the "Project structure" diagram to include the `_eigenlucy/` collection, more page examples, and the new root-level documentation files.
+    *   Added a new section "Site-Specific Documentation & Agent Guides" detailing the purpose of `jekyll_guide_for_robots.md`, `CRITICAL_JEKYLL_RULES.md`, `change_log_for_robots.md`, `robot_reflections.md`, and `goose_prompt.md`.
+    *   Added a clarification to the "Adding Collections" section mentioning `_eigenlucy` as an example.
+*   **Global Font Changes for Titles, Subheadings, and Links:**
+    *   **Objective:** Change non-link titles/subheadings to 'Jacquard 24' and links to 'Jacquard 24 Charted', replacing 'Jacquard 12 Charted'.
+    *   **`_includes/head.liquid`**:
+        *   Updated Google Fonts `<link>` to import 'Jacquard 24' and 'Jacquard 24 Charted', and removed 'Jacquard 12 Charted'. The new import URL is: `https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap`.
+    *   **`_sass/_variables.scss`**:
+        *   Changed `$heading-font-family` from `'Source Serif 4', serif;` to `'Jacquard 24', cursive;`. This applies to `h1-h6` elements.
+        *   Noted that `$site-title-font-family` is `'Jacquard 24 Charted', cursive;`.
+    *   **`_sass/_base.scss`**:
+        *   Confirmed `h1-h6` elements use `$heading-font-family`.
+        *   Changed the `.post-title` rule to use `$heading-font-family` (for 'Jacquard 24') instead of `$site-title-font-family`.
+        *   Confirmed that `a` tags (links) are already explicitly styled with `font-family: "Jacquard 24 Charted", sans-serif;`.
+        *   Noted that `.navbar .navbar-brand` uses `$site-title-font-family` ('Jacquard 24 Charted') and will retain this, assuming the brand is a link or this styling is preferred.
+*   **Resume Page Font Rendering Fix:**
+    *   **Issue:** Titles of job listings, volunteer roles, and awards were not rendering correctly, likely due to inheriting the 'Jacquard 24 Charted' font.
+    *   **Analysis:** Identified that these titles are links (`<a>`) within `<h6 class="title">` tags in the resume's list items (e.g., in `_includes/resume/work.liquid`, `volunteer.liquid`, `awards.liquid`).
+    *   **Solution:** Added a specific SASS rule to `/home/lucy/eigenlucy.github.io/_sass/_cv.scss` to target these links (`.cv .card .list-group-item h6.title a`) and set their `font-family` to `$body-font-family` ('Source Serif 4') for better legibility.

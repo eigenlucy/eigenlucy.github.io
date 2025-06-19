@@ -1,5 +1,11 @@
 # Customize
 
+> **Note from Lucy & Goose (AI Assistant):** This `CUSTOMIZE.md` file originates from the al-folio theme and provides excellent general guidance. However, this website has been significantly customized. For a more comprehensive understanding of this specific site's setup, custom structures (like the `_eigenlucy` collection), and ongoing development notes, please **also consult** the following documents in the root directory:
+> *   `jekyll_guide_for_robots.md` (Primary technical guide for this site)
+> *   `change_log_for_robots.md` (Log of changes)
+> *   `CRITICAL_JEKYLL_RULES.md` (Essential quick-reference rules)
+> *   `robot_reflections.md` (Aesthetic and improvement ideas)
+
 Here we will give you some tips on how to customize the website. One important thing to note is that **ALL** the changes you make should be done on the **main** branch of your repository. The `gh-pages` branch is automatically overwritten every time you make a change to the main branch.
 
 ## Project structure
@@ -8,31 +14,52 @@ The project is structured as follows, focusing on the main components that you w
 
 ```txt
 .
-├── 📂 assets/: contains the assets that are displayed in the website
-│   └── 📂 json/
-    │   └── 📄 resume.json: CV in JSON format (https://jsonresume.org/)
+├── 📂 assets/: contains the assets that are displayed in the website (images, CSS, JS, PDFs, etc.)
+│   └── 📂 json/
+    │   └── 📄 resume.json: CV in JSON format (https://jsonresume.org/)
 ├── 📂 _bibliography/
-│   └── 📄 papers.bib: bibliography in BibTeX format
-├── 📄 _config.yml: the configuration file of the template
-├── 📂 _data/: contains some of the data used in the template
-│   ├── 📄 cv.yml: CV in YAML format, used when assets/json/resume.json is not found
-│   └── 📄 repositories.yml: users and repositories info in YAML format
-├── 📂 _includes/: contains code parts that are included in the main HTML file
-│   └── 📄 news.liquid: defines the news section layout in the about page
-├── 📂 _layouts/: contains the layouts to choose from in the frontmatter of the Markdown files
-├── 📂 _news/: the news that will appear in the news section in the about page
-├── 📂 _pages/: contains the pages of the website
-|   └── 📄 404.md: 404 page (page not found)
-├── 📂 _posts/: contains the blog posts
-├── 📂 _projects/: contains the projects
-└── 📂 _sass/: contains the SASS files that define the style of the website
-    ├── 📄 _base.scss: base style of the website
-    ├── 📄 _cv.scss: style of the CV page
-    ├── 📄 _distill.scss: style of the Distill articles
-    ├── 📄 _layout.scss: style of the overall layout
-    ├── 📄 _themes.scss: themes colors and a few icons
-    └── 📄 _variables.scss: variables used in the SASS files
+│   └── 📄 papers.bib: bibliography in BibTeX format
+├── 📄 _config.yml: the main Jekyll configuration file for the site.
+├── 📂 _data/: contains data files (YAML, JSON, CSV) used by the site.
+│   ├── 📄 cv.yml: CV in YAML format, used as a fallback.
+│   └── 📄 repositories.yml: Users and repositories info.
+├── 📂 _eigenlucy/: Custom collection for specific themed blog posts (e.g., "Origin is the Goal", "Notes on Stillstellung").
+├── 📂 _includes/: Reusable HTML snippets included in layouts/pages.
+│   └── 📄 news.liquid: Defines the news section layout.
+├── 📂 _layouts/: HTML templates defining the structure for different page types.
+├── 📂 _news/: Markdown files for news items.
+├── 📂 _pages/: Markdown files for standalone pages.
+│   ├── 📄 404.md: Page not found.
+│   ├── 📄 about.md: Main about page.
+│   ├── 📄 blog.md: Blog listing page.
+│   ├── 📄 eigenlucy_hub.md: Hub/landing for '_eigenlucy' content.
+│   └── 📄 ... (other custom pages like gallery.md, homelab.md, etc.)
+├── 📂 _posts/: Main blog posts (follow YYYY-MM-DD-title.md format).
+├── 📂 _projects/: Markdown files for project pages.
+├── 📂 _sass/: SASS files defining the website's styles and themes.
+│   ├── 📄 _base.scss: Base style of the website.
+│   ├── 📄 _themes.scss: Theme colors and specific icon styles.
+│   └── 📄 _variables.scss: SASS variables.
+├── 📄 change_log_for_robots.md: Log of substantial site changes and issues.
+├── 📄 CRITICAL_JEKYLL_RULES.md: Essential Jekyll rules for this site.
+├── 📄 CUSTOMIZE.md: This guide.
+├── 📄 FAQ.md: Frequently Asked Questions about the theme.
+├── 📄 Gemfile: Lists Ruby gem dependencies for Bundler.
+├── 📄 INSTALL.md: Original theme installation instructions.
+├── 📄 jekyll_guide_for_robots.md: Comprehensive site-specific technical guide.
+├── 📄 robot_reflections.md: Notes on site aesthetics and improvement ideas.
+└── 📄 ... (other configuration files like .gitignore, Dockerfiles, etc.)
 ```
+
+## Site-Specific Documentation & Agent Guides
+
+In addition to this `CUSTOMIZE.md` guide (which originates from the al-folio theme), several other Markdown files in the root directory have been created to aid in the ongoing development and maintenance of this heavily customized site:
+
+*   **`jekyll_guide_for_robots.md`**: This is a comprehensive technical guide tailored to this specific website. It covers Jekyll fundamentals, the Arch Linux development environment, Bundler usage, local development commands, GitHub Pages deployment details, key al-folio concepts leveraged, and specific configurations for this site. *This should be a primary reference for future agents.*
+*   **`CRITICAL_JEKYLL_RULES.md`**: A minimal, very concise document listing absolutely essential rules and conventions (like filename formats) that must be followed for the site to build and function correctly. No extra commentary, just critical rules.
+*   **`change_log_for_robots.md`**: A chronological log summarizing substantial changes, updates made to the site, significant errors encountered, and their resolutions. Useful for tracking the evolution of the site and understanding past work.
+*   **`robot_reflections.md`**: A repository for broader thoughts, discussions, and reflections regarding the site's aesthetic (medieval-cyberpunk retro-futurism), potential areas for improvement, user experience considerations, and thematic consistency.
+*   **`goose_prompt.md`**: The initial prompt and operational guidelines provided for the Goose AI assistant working on this site.
 
 ## Configuration
 
@@ -74,7 +101,7 @@ You can add news in the about page by adding new Markdown files in the [\_news](
 
 This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page.
 
-You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [\_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection, similar to [\_pages/projects.md](_pages/projects.md).
+You can easily create your own collections, apps, short stories, courses, or whatever your creative work is. To do this, edit the collections in the [\_config.yml](_config.yml) file, create a corresponding folder, and create a landing page for your collection, similar to [\_pages/projects.md](_pages/projects.md). For example, this site includes a custom `_eigenlucy` collection for specific themed posts, defined in `_config.yml` and with its content in the `/_eigenlucy/` folder. A corresponding page `_pages/eigenlucy_hub.md` might serve as its landing page.
 
 ## Adding a new publication
 

@@ -213,3 +213,21 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+// Override font for specific titles within resume sections (work, volunteer, awards)
+// to ensure legibility if decorative fonts cause rendering issues.
+.cv {
+  .card {
+    .list-group-item {
+      h6.title { // Target the h6 tag with class 'title'
+        a { // Target the link within that h6
+          font-family: $body-font-family; // Apply the standard body font ('Source Serif 4')
+          // If the Jacquard font was also too bold or had other style issues,
+          // you might want to reset other properties here, e.g.:
+          // font-weight: normal; // Or specific weight like 400 or 700
+          // text-transform: none; // If it was being uppercased undesirably
+        }
+      }
+    }
+  }
+}
