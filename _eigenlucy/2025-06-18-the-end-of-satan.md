@@ -13,8 +13,8 @@ In 1854, Victor Hugo began writing an epic poem titled "La Fin de Satan" (The En
 "A great deal of innocence or cunning is needed by a
 philosophy of communication that claims to restore the society of
 friends, or even of wise men, by forming a universal opinion as
-"consensus" able to moralize nations, States, and the markct.!" Hu-
-man rights say nothing about the immanent modes of existence of
+"consensus" able to moralize nations, States, and the markct.!"
+<a href="https://thoughtjam.wordpress.com/2009/01/02/wallerstein-immanuel-european-universalism-the-rhetoric-of-power/">Human rights</a> say nothing about the immanent modes of existence of
 people provided with rights. Nor is it only in the extreme situations
 described by Primo Levi that we experience the shame of being
 human. We also experience it in insignificant conditions, before the
@@ -23,7 +23,7 @@ the propagation of these modes of existence and of thought-for-the-
 market, and before the values, ideals, and opinions of our time. The
 ignominy of the possibilities of life that we are offered appears from
 within. We do not feel ourselves outside of our time but continue 10
-undergo shameful compromises with it. This feeling of shame is om-
+undergo shameful compromises with it. This feeling of shame is one
 of philosophy's most powerful motifs. We are not responsible lor (he
 victims but responsible before them. And there is no way to escape
 the ignoble but to play the part of the animal (to growl, burrow,
