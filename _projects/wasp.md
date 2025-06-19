@@ -2,7 +2,7 @@
 layout: page
 title: WASP, Wearable AI Synthesis Platform
 description: BLE 5.2 module for wearable conversation transcription and analysis
-img: assets/img/Gallery/wasppcbtop.png
+img: assets/img/Gallery/wasppcbtop.jpg
 importance: 1
 category: electrical engineering
 related_publications: false
