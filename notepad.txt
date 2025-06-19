@@ -1,0 +1,3 @@
+The card system my galery runs on seems.. bad. tiling is uneven, loading is slow. can you help me fix this? Id like to keep the tagging system in place.
+
+Can we make all the font on the resume page normal? The jacquard font in some places is hard to read. 
