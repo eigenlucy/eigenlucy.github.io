@@ -4,7 +4,7 @@
     *   Created and populated with initial documentation covering Jekyll basics, Arch Linux environment (Ruby, Bundler), local development, GitHub Pages deployment, key al-folio concepts used in the site, and references to other important log files.
 *   **`_eigenlucy/` Collection**:
     *   Confirmed `_eigenlucy` collection is defined in `_config.yml` with `output: true`, `layout: post` (default), and `sitemap: false`.
-    *   Migrated "Origin is the Goal" from Medium to `_eigenlucy/origin-is-the-goal.md` (later renamed to `2025-01-06-origin.md` - this needs verification based on current `ls` output).
+    *   Migrated "Origin is the Goal" from Medium to `_eigenlucy/origin-is-the-goal.md` (actual current name is `2025-01-06-origin.md`).
         *   Fetched content, extracted relevant text.
         *   Added front matter: `layout`, `title`, `author`, `date` (original), `description`, `source_url`, and `tags: [reflection]`.
     *   Migrated "Notes on Cοvιd, Witchcraft, & Stillstellungen" (renamed to "Notes on Stillstellungen" for the site) from Medium to the file now named `_eigenlucy/2025-01-24-stillstellungen.md`.
@@ -15,6 +15,11 @@
 
 *   **Stillstellungen Page (`_eigenlucy/2025-01-24-stillstellungen.md` formerly `.../2025-01-02-stillstellungen.md`):**
     *   Implemented a side-by-side layout for Klee's Angel image and the Gershom Scholem poem block using HTML with inline Flexbox styling. This was applied to the file originally named `2025-01-02-stillstellungen.md`.
+    *   Adjusted the Flexbox `align-items` property from `flex-start` to `center` to vertically center the image and poem relative to each other.
+    *   Added `justify-content: center;` to the Flexbox styling to horizontally center the entire image/poem block on the page.
+    *   Added `text-align: center;` to the poem's container `div` to center the poem text within its column.
+    *   Added `margin-left: auto; margin-right: auto;` to the `<img>` tag's style to center the image within its column.
+    *   Attempted to remove a gray box from the Klee's Angel image by adding `border: none; outline: none; text-decoration: none;` to its inline style.
     *   Corrected a date inconsistency: The file `_eigenlucy/2025-01-02-stillstellungen.md` had a front matter date of `2025-01-24`.
     *   Renamed the file to `/home/lucy/eigenlucy.github.io/_eigenlucy/2025-01-24-stillstellungen.md` to align the filename with its front matter date and the content's origin.
 *   **`CRITICAL_JEKYLL_RULES.md`**:
@@ -23,3 +28,6 @@
         *   Filename conventions for posts/dated collections (e.g., `YYYY-MM-DD-title.md` and matching filename date with front matter date).
         *   Mandatory YAML front matter structure.
         *   Requirement to restart the Jekyll server after `_config.yml` changes.
+*   **"Le Fin de Satan" Post (`_eigenlucy/2025-06-18-the-end-of-satan.md`):**
+    *   Replaced the Markdown image tag at the top of the post with an HTML `div` and `img` structure.
+    *   Applied inline styles to the `img` tag to set its `width` to `50%` (with `height: auto;`) and to center it on the page (`display: block; margin-left: auto; margin-right: auto;`).

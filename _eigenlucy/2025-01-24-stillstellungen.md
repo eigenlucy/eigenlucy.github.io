@@ -18,11 +18,11 @@ sitemap: false
 </ul>
 </div>
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 1em;">
+<div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 1em;">
   <div style="flex: 0 0 40%;">
-    <img src="/assets/img/angelusnovus.png" alt="Klee's Angel" style="max-width: 100%; height: auto; display: block;">
+    <img src="/assets/img/angelusnovus.png" alt="Klee's Angel" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; border: none; outline: none; text-decoration: none;">
   </div>
-  <div style="flex: 1;">
+  <div style="flex: 1; text-align: center;">
     <ul style="list-style-type: none; padding: 0; margin: 0;">
       <li style="margin-bottom: 0.5em;"><i>My wing is ready to fly</i></li>
       <li style="margin-bottom: 0.5em;"><i>I would rather turn back</i></li>
@@ -34,6 +34,9 @@ sitemap: false
 </div>
 
 # ["The chronicler, who recounts events without distinguishing between the great and small, thereby accounts for the truth, that nothing which has ever happened is to be given as lost to history.""](https://thetragiccommunity.wordpress.com/2020/10/28/from-theological-to-historical-apocatastasis-notes-on-benjamins-theologico-political-fragment/)
+
+# [Perhaps there will be another ending to this story](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.katharinemeynell.co.uk/about/essays%26downloads/for%2520The%2520Lost%2520Diagrams%2520of%2520Walter%2520Benjamin.pdf&ved=2ahUKEwik1_mLxvyNAxVxEUQIHUB5IEkQFnoECB4QAQ&usg=AOvVaw1ZOjxMT0G-Dv6pqglLHEsu)
+
 
 *   The analysis of the relationship between law and violence leads to the critique of violence (experienced in the present as the class struggle illuminated by Marx) through the historical gaze, which confronts the overflows and tensions of thought
 *   See relation to deleuze’s diagrammatics vs the image of thought and its application in the critique of human rights (WTP), immanece of transgender experience (logic of flows), and the “everyhing breaking apart” (logic of sense, what happened in ATP)
