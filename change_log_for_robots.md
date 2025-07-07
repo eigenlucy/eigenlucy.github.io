@@ -7,13 +7,13 @@
     *   Migrated "Origin is the Goal" from Medium to `_eigenlucy/origin-is-the-goal.md` (actual current name is `2025-01-06-origin.md`).
         *   Fetched content, extracted relevant text.
         *   Added front matter: `layout`, `title`, `author`, `date` (original), `description`, `source_url`, and `tags: [reflection]`.
-    *   Migrated "Notes on Cοvιd, Witchcraft, & Stillstellungen" (renamed to "Notes on Stillstellungen" for the site) from Medium to the file now named `_eigenlucy/2025-01-24-stillstellungen.md`.
+    *   Migrated "Notes on Cοvιd, Witchcraft, & Stillstellungen" (renamed to "Notes on Stillstellungen" for the site) from Medium to the file now named `_eigenlucy/2025-01-24-stillstellung.md`.
         *   Fetched content, extracted relevant text (translator's note and bullet points).
         *   Added front matter: `layout`, `title` ("Notes on Stillstellungen"), `author`, `date` (original), `description`, `source_url`, and `tags: [philosophy, Walter Benjamin, Stillstellung, critical theory]`.
 
 ## 2025-06-19 Goose: Layout Adjustments, File Corrections, and Critical Rules Doc
 
-*   **Stillstellungen Page (`_eigenlucy/2025-01-24-stillstellungen.md` formerly `.../2025-01-02-stillstellungen.md`):**
+*   **Stillstellungen Page (`_eigenlucy/2025-01-24-stillstellung.md` formerly `.../2025-01-02-stillstellungen.md`):**
     *   Implemented a side-by-side layout for Klee's Angel image and the Gershom Scholem poem block using HTML with inline Flexbox styling. This was applied to the file originally named `2025-01-02-stillstellungen.md`.
     *   Adjusted the Flexbox `align-items` property from `flex-start` to `center` to vertically center the image and poem relative to each other.
     *   Added `justify-content: center;` to the Flexbox styling to horizontally center the entire image/poem block on the page.
@@ -22,6 +22,7 @@
     *   Attempted to remove a gray box from the Klee's Angel image by adding `border: none; outline: none; text-decoration: none;` to its inline style.
     *   Corrected a date inconsistency: The file `_eigenlucy/2025-01-02-stillstellungen.md` had a front matter date of `2025-01-24`.
     *   Renamed the file to `/home/lucy/eigenlucy.github.io/_eigenlucy/2025-01-24-stillstellungen.md` to align the filename with its front matter date and the content's origin.
+    *   Proofread and corrected spelling/grammar in `/home/lucy/eigenlucy.github.io/_eigenlucy/2025-01-24-stillstellung.md`.
 *   **`CRITICAL_JEKYLL_RULES.md`**:
     *   Created this new document in the root directory.
     *   Populated with essential, concise rules for Jekyll site maintenance, covering:
@@ -39,16 +40,34 @@
 *   **Global Font Changes for Titles, Subheadings, and Links:**
     *   **Objective:** Change non-link titles/subheadings to 'Jacquard 24' and links to 'Jacquard 24 Charted', replacing 'Jacquard 12 Charted'.
     *   **`_includes/head.liquid`**:
-        *   Updated Google Fonts `<link>` to import 'Jacquard 24' and 'Jacquard 24 Charted', and removed 'Jacquard 12 Charted'. The new import URL is: `https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap`.
+        *   Updated Google Fonts `<link>` to import 'Jacquard 24' and 'Jacquard 24 Charted', and removed 'Jacquard 12 Charted'.
     *   **`_sass/_variables.scss`**:
-        *   Changed `$heading-font-family` from `'Source Serif 4', serif;` to `'Jacquard 24', cursive;`. This applies to `h1-h6` elements.
-        *   Noted that `$site-title-font-family` is `'Jacquard 24 Charted', cursive;`.
+        *   Changed `$heading-font-family` to `'Jacquard 24', cursive;`.
     *   **`_sass/_base.scss`**:
-        *   Confirmed `h1-h6` elements use `$heading-font-family`.
-        *   Changed the `.post-title` rule to use `$heading-font-family` (for 'Jacquard 24') instead of `$site-title-font-family`.
-        *   Confirmed that `a` tags (links) are already explicitly styled with `font-family: "Jacquard 24 Charted", sans-serif;`.
-        *   Noted that `.navbar .navbar-brand` uses `$site-title-font-family` ('Jacquard 24 Charted') and will retain this, assuming the brand is a link or this styling is preferred.
+        *   Changed the `.post-title` rule to use `$heading-font-family`.
+        *   Confirmed `a` tags use "Jacquard 24 Charted".
 *   **Resume Page Font Rendering Fix:**
-    *   **Issue:** Titles of job listings, volunteer roles, and awards were not rendering correctly, likely due to inheriting the 'Jacquard 24 Charted' font.
-    *   **Analysis:** Identified that these titles are links (`<a>`) within `<h6 class="title">` tags in the resume's list items (e.g., in `_includes/resume/work.liquid`, `volunteer.liquid`, `awards.liquid`).
-    *   **Solution:** Added a specific SASS rule to `/home/lucy/eigenlucy.github.io/_sass/_cv.scss` to target these links (`.cv .card .list-group-item h6.title a`) and set their `font-family` to `$body-font-family` ('Source Serif 4') for better legibility.
+    *   **Solution:** Added a specific SASS rule to `_sass/_cv.scss` to target item titles (`.cv .card .list-group-item h6.title a`) and set their `font-family` to `$body-font-family`.
+*   **Gallery Page (`_pages/gallery.md`) Masonry and Video Layout Fixes:**
+    *   **Objective:** Address uneven tiling, slow loading, and card appearance issues.
+    *   **HTML Updates (`_pages/gallery.md`):**
+        *   Added `grid` class to the main gallery container.
+        *   Added `grid-item` class to each gallery card wrapper.
+        *   Removed `col-md-3` Bootstrap class from gallery items for better Masonry control.
+        *   Wrapped all `{% include video.liquid ... %}` instances with `<div class="video-aspect-ratio-container">...</div>`.
+    *   **SASS Updates (`_sass/_gallery.scss` created and imported):**
+        *   Defined styles for `.gallery .grid-item` (e.g., `width: 24%;`).
+        *   Added CSS rules for `.video-aspect-ratio-container` to enforce a 16:9 aspect ratio.
+        *   Refined `.card` styles within the gallery for better flexbox layout.
+    *   **JavaScript Update (`assets/js/masonry.js`):**
+        *   Modified script to initialize Masonry after `imagesLoaded()` and to explicitly re-layout Masonry on the `loadedmetadata` event for each video, resolving video-related layout issues.
+    *   **Outcome:** Successfully resolved card overlapping and improved layout consistency.
+
+## 2025-06-20 Goose: Initial Review and Documentation Check
+
+*   **`CUSTOMIZE.md` Review:**
+    *   Identified a minor typo in the project structure diagram: `jekyll_guide_for_robot.md` should be `jekyll_guide_for_robots.md`. The textual descriptions and other references are correct.
+*   **`jekyll_guide_for_robots.md` Review:**
+    *   Confirmed the guide is comprehensive and up-to-date for Jekyll, Arch Linux environment (RubyGems, Bundler), and GitHub Pages deployment. No immediate updates proposed.
+*   **Site Structure Verification:**
+    *   Confirmed the main site structure (`_eigenlucy`, `_pages`, `_projects`, etc.) aligns with the descriptions in `CUSTOMIZE.md`.

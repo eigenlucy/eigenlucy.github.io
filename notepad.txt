@@ -1,3 +1,8 @@
 The card system my galery runs on seems.. bad. tiling is uneven, loading is slow. can you help me fix this? Id like to keep the tagging system in place.
 
-Can we make all the font on the resume page normal? The jacquard font in some places is hard to read. 
+Can we make all the font on the resume page normal? The jacquard font in some places is hard to read.
+
+I'd like to create a way to suggest edits to be recorded in log of major to do items and projects later, with rankings of the apparent relative difficulty and status. Can you help me create this log, and then lets edit goose_prompt.md and CUSTOMIZE.md to point to this log.
+
+Okay now this is an ambitious one. 
+

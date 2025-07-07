@@ -1,0 +1,43 @@
+// _sass/_gallery.scss
+// Flexbox-based gallery layout
+
+.gallery-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; // Align items to the start
+  gap: 15px; // Modern way to handle spacing between items (both row and column)
+}
+
+.gallery-card {
+  // For 4 columns with gap:
+  // flex-basis will be 100% / 4 columns = 25%, then subtract the gap.
+  // calc is very reliable for this.
+  flex: 0 0 calc(25% - (15px * 3 / 4));
+  display: flex; // Make the card a flex container itself
+  flex-direction: column; // Stack its children (image, card-body) vertically
+
+  .card {
+    height: 100%; // Crucial: make the card fill the entire space of the flex item
+    width: 100%;
+    margin-bottom: 0; // The gap property on the container handles this
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991px) { // md breakpoint
+  .gallery-card {
+    flex-basis: calc(33.333% - (15px * 2 / 3)); // 3 columns
+  }
+}
+
+@media (max-width: 767px) { // sm breakpoint
+  .gallery-card {
+    flex-basis: calc(50% - (15px / 2)); // 2 columns
+  }
+}
+
+@media (max-width: 575px) { // xs breakpoint
+  .gallery-card {
+    flex-basis: 100%; // 1 column
+  }
+}
