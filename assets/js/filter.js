@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         cardsContainer.innerHTML = ''; // Clear existing cards
         matchedCards.forEach(card => cardsContainer.appendChild(card));
         unmatchedCards.forEach(card => cardsContainer.appendChild(card));
+        
+        // Trigger masonry relayout after filtering
+        if (window.jQuery && jQuery('.grid').data('masonry')) {
+          setTimeout(function() {
+            jQuery('.grid').masonry('layout');
+          }, 100);
+        }
       });
     });
 

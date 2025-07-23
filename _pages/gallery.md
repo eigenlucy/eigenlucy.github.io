@@ -53,7 +53,7 @@ nav_order: 1
     <div class="row cards-container grid">
       <div class="col-md-3 card-item grid-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/video/WardSGTC.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/video/WardSGTC.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">MASSIVE spark gap tesla coil at LOD labs</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -63,7 +63,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/video/wirelessbike.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/video/wirelessbike.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Wirelessly powered capacitively coupled wireless bike at LOD labs</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -143,7 +143,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="featured, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/img/Gallery/scintillatorcrystal.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/img/Gallery/scintillatorcrystal.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Gallium aluminum garnet scintilator crystals</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -153,7 +153,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="featured, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/video/laser.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/video/laser.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">200W UV laser diode lighting a log on fire without a lens</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -173,7 +173,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="chemistry, distillation, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid loading="lazy" path="assets/video/distillationapparatus.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid path="assets/video/distillationapparatus.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">fractional distillation + condensor column</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -263,7 +263,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="hv, electrical engineering, electronics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/video/MOT.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/video/MOT.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">microwave oven transformer (MOT) arc</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -273,7 +273,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="featured, hv, samd21, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid loading="lazy" path="assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid path="assets/video/ignitioncoilnokia.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">IGBT singing ignition coil playing a nokia ring tone</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -534,7 +534,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="chemistry, electroplating, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid loading="lazy" path="assets/video/sulfuricacidCUSO4.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid path="assets/video/sulfuricacidCUSO4.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Addition of of concentrated sulfuric acid to CUSO4 based electroplating solution</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -594,7 +594,7 @@ nav_order: 1
       </div>
       <div class="col-md-3 card-item grid-item " data-tags="implants, biohacking, nfc, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid loading="lazy" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid path="assets/video/ImplantProcedureVideo.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">xSIID self implant procedure</p>
             <div class="d-flex justify-content-between align-items-center">

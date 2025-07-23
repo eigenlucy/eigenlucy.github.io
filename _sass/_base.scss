@@ -669,6 +669,47 @@ footer.sticky-bottom {
     margin-bottom: 10px;
   }
 
+  .grid {
+    // Ensure grid doesn't have conflicting CSS Grid properties
+    display: block;
+  }
+
+  // Fix video dimensions in masonry grid
+  .grid-item video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    // Set a minimum height to prevent layout collapse before video loads
+    min-height: 140px;
+    display: block;
+  }
+
+  // Ensure video containers maintain aspect ratio
+  .grid-item .card {
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  // Fix for video aspect ratio containers if they exist
+  .video-aspect-ratio-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+    
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   h2.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);

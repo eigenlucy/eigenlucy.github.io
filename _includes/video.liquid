@@ -50,11 +50,7 @@
       {% if include.poster %}
         poster="{{ include.poster | relative_url }}"
       {% endif %}
-      {% if include.loading %}
-         loading="{{ include.loading }}"
-      {% elsif site.lazy_loading_images %}
-         loading="lazy"
-      {% endif %}
+      loading="eager"
     />
 
   {% else %} {% comment %} This part is for iframes like YouTube {% endcomment %}
