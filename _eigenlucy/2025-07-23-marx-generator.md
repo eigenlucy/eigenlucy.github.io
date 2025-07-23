@@ -20,8 +20,8 @@ BOM:
 <li>Copper for cap bank bus bars</li>
 <li>Mangetic proximity switches with NC and NO outputs like <a href="https://www.amazon.com/EPLZON-Magnetic-Normally-Proximity-Equipment">this</a> + magnets</li>
 <li>x4 >2in pnematic actuator like <a href="https://www.amazon.com/Tailonz-Pneumatic-Air-Cylinder-Bore/dp/B07THMDZ61">this</a></li>
-
+<li>x2 three way hand operated 5 position pnematic valve like <a href="https://www.amazon.com/TAILONZ-PNEUMATIC-Pneumatic-Push-Pull-4H230-08C/dp/B086V8HDS7">this</a></li>
 <li>M3-5 screws, spade and ring connectors, etc</li>
-<li>Nylon pnematic air tubing like <a href="https://www.amazon.com/CheeMuii-Pneumatic-Tubing-System-Transfer/dp/B0DCJKKDXD">this</a></li>
-<li>12V DC PSU like <a href="https://www.amazon.com/MEAN-WELL-LRS-350-12-Computer-Project">this</a></li>
+<li>~15ft nylon(!) pnematic air tubing like <a href="https://www.amazon.com/CheeMuii-Pneumatic-Tubing-System-Transfer/dp/B0DCJKKDXD">this</a></li>
+<li>x1 Air compressor like <a href="https://www.amazon.com/ECOMAX-Compressor-Portable-Pneumatic-Accessories/dp/B0DGGFW73S">this</a></li>
 </ul>
