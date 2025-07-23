@@ -5,10 +5,10 @@
   {%- assign full_relative_path = raw_path_from_include | relative_url -%}
   <!-- DEBUG FIGURE.LIQUID: full_relative_path is [{{ full_relative_path }}] -->
 
-  {%- assign last_dot = full_relative_path | split: '.' | last -%}
+  {%- assign last_dot = raw_path_from_include | split: '.' | last -%}
   {%- assign extension_with_dot = '.' | append: last_dot -%}
-  {%- assign webp_base_url = full_relative_path | remove_last: extension_with_dot -%}
-  <!-- DEBUG FIGURE.LIQUID: webp_base_url for srcset is [{{ webp_base_url }}] -->
+  {%- assign base_path = raw_path_from_include | remove_last: extension_with_dot -%}
+  <!-- DEBUG FIGURE.LIQUID: base_path for srcset is [{{ base_path }}] -->
 
   <figure
     {% if include.slot %}slot="{{ include.slot }}"{% endif %}
@@ -17,7 +17,7 @@
       {% if site.imagemagick.enabled %}
         <source
           class="responsive-img-srcset"
-          srcset="{% for i in site.imagemagick.widths %}{{ webp_base_url }}-{{ i }}.webp {{i}}w{% unless forloop.last %},{% endunless %}{% endfor %}"
+          srcset="{% for i in site.imagemagick.widths %}{{ base_path }}{{ extension_with_dot }}-{{ i }}.webp {{ i }}w{% unless forloop.last %},{% endunless %}{% endfor %}"
           {% if include.sizes %}sizes="{{include.sizes}}"{% elsif page.permalink == '/gallery/' %}sizes="(min-width: 768px) 22vw, 85vw"{% else %}sizes="95vw"{% endif %}
           type="image/webp"
         >

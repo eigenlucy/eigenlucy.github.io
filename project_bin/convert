@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# This script is a wrapper to bridge the gap between jekyll-imagemagick (which expects the old `convert` command)
+# and ImageMagick 7 (which uses `magick convert`).
+# It takes all arguments passed to it and forwards them to `/usr/bin/magick convert`.
+
+# The full path to the magick binary is used to avoid any recursive loops if the PATH is unusual.
+/usr/bin/magick convert "$@"
