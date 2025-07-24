@@ -54,7 +54,7 @@
         *   Added `grid` class to the main gallery container.
         *   Added `grid-item` class to each gallery card wrapper.
         *   Removed `col-md-3` Bootstrap class from gallery items for better Masonry control.
-        *   Wrapped all `{% include video.liquid ... %}` instances with `<div class="video-aspect-ratio-container">...</div>`.
+        *   Wrapped all {% raw %}`{% include video.liquid ... %}`{% endraw %} instances with `<div class="video-aspect-ratio-container">...</div>`.
     *   **SASS Updates (`_sass/_gallery.scss` created and imported):**
         *   Defined styles for `.gallery .grid-item` (e.g., `width: 24%;`).
         *   Added CSS rules for `.video-aspect-ratio-container` to enforce a 16:9 aspect ratio.
