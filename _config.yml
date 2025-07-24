@@ -16,7 +16,8 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://eigenlucy.github.io # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
+repository: eigenlucy/eigenlucy.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -131,8 +132,8 @@ blog_description: general systemantics
 permalink: /blog/:year/:title/
 
 # Pagination
-pagination:
-  enabled: true
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 related_blog_posts:
   enabled: true
@@ -238,20 +239,19 @@ keep_files:
 
 # Plug-ins
 plugins:
-  - jekyll-archives
-  - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
-  - jekyll-link-attributes
-  - jekyll-minifier
-  - jekyll-paginate-v2
-  - jekyll/scholar
   - jekyll-sitemap
-  - jekyll-toc
-  - jekyll-twitter-plugin
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-coffeescript
   - jemoji
+  - jekyll-mentions
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
 
 # Sitemap settings
 defaults:
