@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 
 Areas of research:
 <ul>
-  <li>Plasma assisted exploratory drilling at <a href="https://mithras.industries">Mithras</a></li>
+  <li>Plasma assisted exploratory drilling at <a href="https://mithras.industries">Mithras Industries</a></li>
   <li>Agent memory and orchestration at <a href="https://sophia-labs.com">sophia-labs</a></li>
   <li>Low-cost, maskless, DIY <a href="https://eigenlucy.com/projects/mea_arrays">microelectrode arrays</a> for cultured neurons</li>
   <li>Artificial olfaction. Check out my enose dev board,<a href="https://github.com/eigenlucy/nonhumanscent">NonHumanScent</a>, and my talks with <a href="https://youtu.be/jGN_bRmlDQo?feature=shared">Ekkolapto</a> Institute</li>
