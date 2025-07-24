@@ -7,6 +7,13 @@ sitemap: false
 ---
 Marx Generator notes
 
+<div>
+  <img src="/assets/img/Gallery/Marx-stage.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div>
+  <img src="/assets/img/Gallery/Marx-stage2.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+
 Notes:
 <li>Mechanically actuated Marx eliminates the need for spark gaps</li>
 <li>A neon sign transformer source is a bit of a hacky solution. It gives you an independently UL certified interfacing with mains and saves lots of time though. In the future this should be a custom driver made from widely available CO2 laser ferrite transformers</li>
@@ -33,4 +40,5 @@ BOM:
 <li>Acrylic sheets (1/4in and 1/8in)</li>
 <li>fused AC sockets like <a href="https://www.amazon.com/EPLZON-Module-Socket-Connector-Extension/dp/B0CN721ZS7">this</a></li>
 <li>x12 3W 1Mohm HV resistors, like <a href="https://www.amazon.com/QINIZX-Voltage-Resistor-Marx-Generator-Rectifier/dp/B09FDYKJBQ">this</a></li>
+<li>x6 high power servos, eg HS311</li>
 </ul>
