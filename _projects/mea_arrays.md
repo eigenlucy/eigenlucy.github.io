@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mind In Vitro MEA Arrays
-description: Constructing microelectrode arrays for cultured neurons for Frotnier Tower's Neurotech floor
+description: Constructing microelectrode arrays for cultured neurons for Frontier Tower's Neurotech floor
 img: assets/img/Gallery/MEA_Array_test.jpeg
 importance: 1
 category: biology
