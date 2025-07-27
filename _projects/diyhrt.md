@@ -15,6 +15,11 @@ My areas of research are:
 * Alternative level measurement techniques
 * Small scale manufacturing of E vials
 
+# Basics
+* Check out <a href="https://diyhrt.wiki">DIY.HRT</a> wiki for basic info on sourcing, dosage, and testing.
+* Check out <a href="https://www.hrt.mom">HRT.MOM</a> for info on homebrewing vials
+* <a href="https://www.dragonordnance.com">DragonOrindance</a> is my preferred site for sourcing raws.
+
 # DIY level monitoring
 
 I have found two promising alternatives to traditional blood tests thus far:
