@@ -16,7 +16,7 @@ We will be making a number of modifications to this system. For one, we are atte
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gallery/MEA_Array_test.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/MEA_Array_Test.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Gallery/MIV_Headstage.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -26,4 +26,8 @@ We will be making a number of modifications to this system. For one, we are atte
     </div>
 </div>
 
+To start, we are going to be using <a href="https://intantech.com/RHD_headstages.html">RHD headstages</a> for signal acquistion. These are INSANELY overpriced. For a sense of just how overpriced they are, each connector costs around $180. There is nothing special about them, I promise. We call this BIOTAX. It is the bane for free and open source bio. We are going to get a system working with the classic Intan setup, then begin working on some DIY EEG ADCs and acquisition units. We have already gotten some really great advice on some suitable simultaneously samnpling high res ADCs from the folks at Backyard Brains. This will be a lot of fun to play more with.
 
+We have begun fabricating the Mind In Vitro open hardware with the help of this <a href="https://github.com/GazzolaLab/MiV-OH">repo</a>. As we go through it, we've been tweaking things like connectors and schematic layout to make the system cheaper and easier to modify. I'll dump everything in a repo once I get them all finalized.
+
+We are working on two methods of fabricating the high conductivity electrodes. We are going to try using my desktop sputtering system to deposit Ti or Au in a thin film onto our polymide, then ablating off that metal with the DPSS to leave only fidicuals and our electrodes/pogo pin contacts. Then, we can have the camera in our C02 laser align to the fidicuals and draw the pourous graphene. We are also investigating screen printing electrodes onto the surface of the polymide. As painful as this will be, particularly the alignment after the fact, this is all so much cheaper and easier than traditional photolithography methods.
