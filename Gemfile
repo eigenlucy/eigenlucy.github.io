@@ -18,4 +18,5 @@ group :jekyll_plugins do
   gem "jekyll-readme-index"
   gem "jekyll-default-layout"
   gem "jekyll-titles-from-headings"
+  gem "jekyll-get-json"
 end

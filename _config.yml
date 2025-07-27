@@ -252,6 +252,7 @@ plugins:
   - jekyll-readme-index
   - jekyll-default-layout
   - jekyll-titles-from-headings
+  - jekyll-get-json
 
 # Sitemap settings
 defaults:
