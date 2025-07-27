@@ -50,10 +50,10 @@ nav_order: 1
 <!-- _pages/gallery.md -->
 <div class="gallery">
   <div class="container">
-    <div class="row cards-container grid">
-      <div class="col-md-3 card-item grid-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
+    <div class="row cards-container">
+      <div class="col-md-3 card-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/video/WardSGTC.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/video/WardSGTC.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">MASSIVE spark gap tesla coil at LOD labs</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -61,9 +61,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
+      <div class="col-md-3 card-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/video/wirelessbike.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/video/wirelessbike.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Wirelessly powered capacitively coupled wireless bike at LOD labs</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -71,7 +71,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electrical engineering, electronics, systemantics">
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics, systemantics">
         <div class="card mb-4 shadow-sm">
             {% include figure.liquid  loading="lazy" path="assets/img/Gallery/nonhumanscent.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -81,7 +81,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/micrompptv3.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -91,7 +91,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/txpowertest.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -101,7 +101,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/HABLaunch.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -111,7 +111,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/femtofoxgroundstation.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -121,7 +121,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/openflashlightpcb.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -131,7 +131,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="biology, image">
+      <div class="col-md-3 card-item " data-tags="biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/dinoflagellete.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -141,9 +141,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="featured, electrical engineering, electronics, systemantics, video">
+      <div class="col-md-3 card-item " data-tags="featured, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/img/Gallery/scintillatorcrystal.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/img/Gallery/scintillatorcrystal.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Gallium aluminum garnet scintilator crystals</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -151,9 +151,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="featured, electronics, systemantics, video">
+      <div class="col-md-3 card-item " data-tags="featured, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/video/laser.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/video/laser.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">200W UV laser diode lighting a log on fire without a lens</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -161,7 +161,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="chemistry, distillation, image">
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -171,9 +171,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="chemistry, distillation, video">
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid path="assets/video/distillationapparatus.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid loading="lazy" path="assets/video/distillationapparatus.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">fractional distillation + condensor column</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -181,7 +181,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="chemistry, distillation, thermal camera, image">
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, thermal camera, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/distillationthermalcam.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -191,7 +191,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/OpenFlashLightRender.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -201,7 +201,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/izzymonitor.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -211,7 +211,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/micromppt.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -221,7 +221,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="chemistry, distillation, image">
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/DiethylEther.JPEG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -231,7 +231,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, oyster mushrooms, biology, image">
+      <div class="col-md-3 card-item " data-tags="mycology, oyster mushrooms, biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/PinkOysterJar.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -241,7 +241,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, attiny, fusion360, electrical engineering, electronics, supercaps, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, fusion360, electrical engineering, electronics, supercaps, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -251,7 +251,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, attiny, electronics, supercaps, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, supercaps, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -261,9 +261,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="hv, electrical engineering, electronics, video">
+      <div class="col-md-3 card-item " data-tags="hv, electrical engineering, electronics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/video/MOT.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/video/MOT.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">microwave oven transformer (MOT) arc</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -271,9 +271,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="featured, hv, samd21, electrical engineering, electronics, systemantics, video">
+      <div class="col-md-3 card-item " data-tags="featured, hv, samd21, electrical engineering, electronics, systemantics, video">
         <div class="card mb-4 shadow-sm">
-            {% include video.liquid path="assets/video/ignitioncoilnokia.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+            {% include video.liquid loading="lazy" path="assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">IGBT singing ignition coil playing a nokia ring tone</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -281,7 +281,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="hv, samd21, electrical engineering, electronics, image">
+      <div class="col-md-3 card-item " data-tags="hv, samd21, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/MusicalIgnitionCoil.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -291,7 +291,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, biology, grain spawn, image">
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/LionsMane.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -301,7 +301,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, attiny, cnc, fusion360, electrical engineering, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, cnc, fusion360, electrical engineering, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/PowerUsageTrackerATtiny.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -311,7 +311,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, attiny, electrical engineering, electronics, supercaps, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, electrical engineering, electronics, supercaps, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/SupercapBackupPrizmacapTop.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -321,7 +321,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electrical engineering, electronics, supercaps, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, supercaps, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -331,7 +331,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="hv, electrical engineering, video">
+      <div class="col-md-3 card-item " data-tags="hv, electrical engineering, video">
         <div class="card mb-4 shadow-sm">
             {% include video.liquid loading="lazy" path="assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
@@ -341,7 +341,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electrical engineering, electronics opensauce, image">
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics opensauce, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/Nema23CrankGenerator.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -351,7 +351,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="3d printing, terrarium, biology, image">
+      <div class="col-md-3 card-item " data-tags="3d printing, terrarium, biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/EggPrinting.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -361,7 +361,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="biology, 3d printing, terrarium, image">
+      <div class="col-md-3 card-item " data-tags="biology, 3d printing, terrarium, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/MarcelleEgg.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -371,7 +371,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electronics, electronics engineering, leds, image">
+      <div class="col-md-3 card-item " data-tags="electronics, electronics engineering, leds, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/POVglobe.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -381,7 +381,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electroplating, 3d printing, chemistry, image">
+      <div class="col-md-3 card-item " data-tags="electroplating, 3d printing, chemistry, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/nietzscheplating.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -391,8 +391,8 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electroplating, chemistry, 3d printing, video">
-      <div class="col-md-3 card-item grid-item " data-tags="electroplating, chemistry, image">
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, 3d printing, video">
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/electroplatingbath.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -402,7 +402,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electroplating, chemistry, 3d printing, image">
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, 3d printing, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/platednietzsche.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -412,7 +412,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="systemantics, Simondon, individuation, image">
+      <div class="col-md-3 card-item " data-tags="systemantics, Simondon, individuation, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/individuation.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -422,7 +422,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electronics, electrical engineering, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/izzymonitorback.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -432,7 +432,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, biology, agar plates, liquid culture, image">
+      <div class="col-md-3 card-item " data-tags="mycology, biology, agar plates, liquid culture, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/PS_LC.JPEG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -442,7 +442,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electronics, electrical engraving, hv, image">
+      <div class="col-md-3 card-item " data-tags="electronics, electrical engraving, hv, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/DRSSTCTesting.JPEG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -452,7 +452,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electronics, electrical engineering, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/FLCLpcb.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -462,7 +462,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, electronics, electrical engineering, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -472,7 +472,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, biology, spawn bag, oyster mushrooms, image">
+      <div class="col-md-3 card-item " data-tags="mycology, biology, spawn bag, oyster mushrooms, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/ShroomTank.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -482,7 +482,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="electrical engineering, electronics, equipment, oscilloscope, image">
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics, equipment, oscilloscope, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/OsciliscopeWithCouplingError.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -492,7 +492,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, biology, grain spawn, image">
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/PressureCooking.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -502,7 +502,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="biology, grain spawn, image">
+      <div class="col-md-3 card-item " data-tags="biology, grain spawn, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/CCLplants.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -512,7 +512,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="laser, cnc, woodworking, systemantics, image">
+      <div class="col-md-3 card-item " data-tags="laser, cnc, woodworking, systemantics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/TableEngraving.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -522,7 +522,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="3d printing, biology, systematics, image">
+      <div class="col-md-3 card-item " data-tags="3d printing, biology, systematics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/MarcelleDreammachine.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -532,9 +532,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="chemistry, electroplating, video">
+      <div class="col-md-3 card-item " data-tags="chemistry, electroplating, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid path="assets/video/sulfuricacidCUSO4.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid loading="lazy" path="assets/video/sulfuricacidCUSO4.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">Addition of of concentrated sulfuric acid to CUSO4 based electroplating solution</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -542,7 +542,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, biology, grain spawn, image">
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/PressureCooking2.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -552,7 +552,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="diy, biology, chemistry, 3d printing, image">
+      <div class="col-md-3 card-item " data-tags="diy, biology, chemistry, 3d printing, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/DIYStirplate.JPG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -562,7 +562,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="mycology, agar plates, biology, image">
+      <div class="col-md-3 card-item " data-tags="mycology, agar plates, biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/AgarPlates.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -572,7 +572,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="pcb design, prototyping, electrical engineering, image">
+      <div class="col-md-3 card-item " data-tags="pcb design, prototyping, electrical engineering, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/LostConveyerBelt.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -582,7 +582,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="laser, cnc, woodworking, image">
+      <div class="col-md-3 card-item " data-tags="laser, cnc, woodworking, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/Engraving.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -592,9 +592,9 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="implants, biohacking, nfc, video">
+      <div class="col-md-3 card-item " data-tags="implants, biohacking, nfc, video">
         <div class="card mb-4 shadow-sm">
-          {% include video.liquid path="assets/video/ImplantProcedureVideo.mp4" class="rounded z-depth-1" type="video/mp4" controls=true %}
+          {% include video.liquid loading="lazy" path="assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
           <div class="card-body">
             <p class="card-text">xSIID self implant procedure</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -602,7 +602,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="implants, nfc, electrical engineering, biohacking, image">
+      <div class="col-md-3 card-item " data-tags="implants, nfc, electrical engineering, biohacking, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/NFCimplant.png" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -612,7 +612,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="terrarium, isopods, biology, image">
+      <div class="col-md-3 card-item " data-tags="terrarium, isopods, biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -622,7 +622,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="terrarium, biology, image">
+      <div class="col-md-3 card-item " data-tags="terrarium, biology, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/BasilTankComplete.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -632,7 +632,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="implants, biohacking, image">
+      <div class="col-md-3 card-item " data-tags="implants, biohacking, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/ImplantSurgery.PNG" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">
@@ -642,7 +642,7 @@ nav_order: 1
           </div>
         </div>
       </div>
-      <div class="col-md-3 card-item grid-item " data-tags="isopods, biology, terrarium, image">
+      <div class="col-md-3 card-item " data-tags="isopods, biology, terrarium, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/ZebraIsopodTerrarium.jpg" class="img-fluid rounded z-depth-1" %}
           <div class="card-body">

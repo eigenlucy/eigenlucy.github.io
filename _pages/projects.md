@@ -6,7 +6,7 @@ description: An assortment of personal projects
 nav: true
 nav_order: 2
 display_categories: [electrical engineering, mycology, biology, general systemantics]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
