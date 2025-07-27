@@ -18,7 +18,7 @@ My areas of research are:
 # Basics
 * Check out <a href="https://diyhrt.wiki">DIY.HRT</a> wiki for basic info on sourcing, dosage, and testing.
 * Check out <a href="https://www.hrt.mom">HRT.MOM</a> for info on homebrewing vials
-* <a href="https://www.dragonordnance.com">DragonOrindance</a> is my preferred site for sourcing raws.
+* <a href="https://www.dragonordnance.com">DragonOrdinance</a> is my preferred site for sourcing raws.
 
 # DIY level monitoring
 
@@ -36,3 +36,14 @@ I will post more info on this Soon.
 
 
 In the meantime, check out this <a href="https://patents.google.com/patent/US20070237822A1/en">patent</a> containing an ingredient list and methods of Tgel
+
+# Vials
+
+## Equipment:
+* Dry/Wet sterilizer (I use an Omniclave)
+* Vials + vial crimp
+* .22uM PTFE filters
+* Benzyl Alcohol
+* Benzyl Benzoate
+* Raws
+* MCT or Castor oil
