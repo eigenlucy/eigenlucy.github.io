@@ -57,7 +57,7 @@
   
 </title>
 <meta name="author" content="Lucy Moglia">
-<meta name="description" content="Constructing microelectrode arrays for cultured neurons for Frotnier Tower's Neurotech floor">
+<meta name="description" content="Constructing microelectrode arrays for cultured neurons for Frontier Tower's Neurotech floor">
 
   <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
 
@@ -341,7 +341,7 @@
         <div class="post">
   <header class="post-header">
     <h1 class="post-title">Mind In Vitro MEA Arrays</h1>
-    <p class="post-description">Constructing microelectrode arrays for cultured neurons for Frotnier Tower's Neurotech floor</p>
+    <p class="post-description">Constructing microelectrode arrays for cultured neurons for Frontier Tower's Neurotech floor</p>
   </header>
 
   <article>
@@ -353,14 +353,14 @@
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MEA_Array_test.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MEA_Array_test.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MEA_Array_test.jpeg] -->
+        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MEA_Array_Test.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MEA_Array_Test.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MEA_Array_Test.jpeg] -->
 
   <figure>
     <picture>
       
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MEA_Array_test.jpeg.jpeg-480.webp 480w,assets/img/Gallery/MEA_Array_test.jpeg.jpeg-800.webp 800w,assets/img/Gallery/MEA_Array_test.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MEA_Array_Test.jpeg.jpeg-480.webp 480w,assets/img/Gallery/MEA_Array_Test.jpeg.jpeg-800.webp 800w,assets/img/Gallery/MEA_Array_Test.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
-      <img src="/assets/img/Gallery/MEA_Array_test.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MEA_Array_test.jpeg';" />
+      <img src="/assets/img/Gallery/MEA_Array_Test.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MEA_Array_Test.jpeg';" />
     </picture>
     
   </figure>
@@ -393,6 +393,11 @@
     </div>
 </div>
 
+<p>To start, we are going to be using <a href="https://intantech.com/RHD_headstages.html">RHD headstages</a> for signal acquistion. These are INSANELY overpriced. For a sense of just how overpriced they are, each connector costs around $180. There is nothing special about them, I promise. We call this BIOTAX. It is the bane for free and open source bio. We are going to get a system working with the classic Intan setup, then begin working on some DIY EEG ADCs and acquisition units. We have already gotten some really great advice on some suitable simultaneously samnpling high res ADCs from the folks at Backyard Brains. This will be a lot of fun to play more with.</p>
+
+<p>We have begun fabricating the Mind In Vitro open hardware with the help of this <a href="https://github.com/GazzolaLab/MiV-OH">repo</a>. As we go through it, we’ve been tweaking things like connectors and schematic layout to make the system cheaper and easier to modify. I’ll dump everything in a repo once I get them all finalized.</p>
+
+<p>We are working on two methods of fabricating the high conductivity electrodes. We are going to try using my desktop sputtering system to deposit Ti or Au in a thin film onto our polymide, then ablating off that metal with the DPSS to leave only fidicuals and our electrodes/pogo pin contacts. Then, we can have the camera in our C02 laser align to the fidicuals and draw the pourous graphene. We are also investigating screen printing electrodes onto the surface of the polymide. As painful as this will be, particularly the alignment after the fact, this is all so much cheaper and easier than traditional photolithography methods.</p>
 
   </article>
 
