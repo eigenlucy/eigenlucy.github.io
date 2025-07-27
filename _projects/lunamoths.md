@@ -3,7 +3,7 @@ layout: page
 title: Raising Luna Moth
 description: Eggs to adults to eggs :) 
 img: assets/img/Gallery/LunaMothsCover.jpg
-importance: 1
+importance: 2
 category: biology
 related_publications: false
 ---

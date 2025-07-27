@@ -3,7 +3,7 @@ layout: page
 title: Dinoflagellates Cultures
 description: Eggs to adults to eggs :) 
 img: assets/img/Gallery/DinoFlagCell.jpg
-importance: 1
+importance: 2
 category: biology
 related_publications: false
 ---

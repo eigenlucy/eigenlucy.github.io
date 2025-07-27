@@ -2,7 +2,7 @@
 layout: page
 title: Mind In Vitro MEA Arrays
 description: Constructing microelectrode arrays for cultured neurons for Frotnier Tower's Neurotech floor
-img: assets/img/Gallery/femme.png
+img: assets/img/Gallery/MEA_Array_test.jpeg
 importance: 1
 category: biology
 related_publications: false
@@ -12,5 +12,18 @@ Recently, I have been doing a lot of work on biotech hardware with my good frien
 We are starting with a system titled Mind In Vitro, an open source headstage platform developed by a <a href-="https://mindinvitro.illinois.edu">team at University of Illinois</a>.
 
 We will be making a number of modifications to this system. For one, we are attempting an entirely maskless MEA fabrication process which removes the need for spin coating. Our plan is to first deposit gold or titanium (need to test to determine which is better) onto polymide tape via atomic layer deposition with sputtering. We'll then selective ablate the Ti/Au from the surface leaving behind the electrodes and pogo pin contactsn using our Cloudray MOPA 60W 1064nm DPSS laser. Then, we use our C02 laser to add laser induced graphene wires connecting the electrodes to pogo pin contacts. We need two different kinds of deposits so that our electrodes are capturing signals from a well localized area of neurons. The consistency of graphene conductivity will be crucial to signal integrity.
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/MEA_Array_test.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/MIV_Headstage.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+<div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Gallery/MIV_Frame.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 

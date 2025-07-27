@@ -1,40 +1,18 @@
 #!/bin/bash
 #
-# process_gallery.sh (v2 - Simplified YAML handling)
+# process_gallery.sh (v3 - YAML handling only)
 #
-# This script intelligently processes media for the Jekyll gallery.
-# It converts new images to WebP and ensures an entry for every media file
-# exists in _data/gallery.yml.
+# This script manages the Jekyll gallery data file.
+# WebP conversion is now handled by Jekyll's imagemagick plugin.
+# This script only ensures an entry for every media file exists in _data/gallery.yml.
 
 # --- CONFIGURATION ---
 SOURCE_IMG_DIR="assets/img/Gallery"
 SOURCE_VIDEO_DIR="assets/video"
-WEBP_DIR="assets/img/Gallery/webp"
 DATA_FILE="_data/gallery.yml"
-WIDTHS=(480 800 1400)
-QUALITY=85
 # ---------------------
 
-# Ensure the output directory for webp images exists
-mkdir -p "$WEBP_DIR"
-
-echo "Processing new images..."
-find "$SOURCE_IMG_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read -r IMG_PATH; do
-  FILENAME_WITH_EXT=$(basename "$IMG_PATH")
-  FILENAME="${FILENAME_WITH_EXT%.*}"
-  
-  if [ -f "$WEBP_DIR/$FILENAME-${WIDTHS[-1]}.webp" ]; then
-    continue
-  fi
-  
-  echo "-> Converting $FILENAME_WITH_EXT..."
-  for WIDTH in "${WIDTHS[@]}"; do
-    OUTPUT_PATH="$WEBP_DIR/$FILENAME-$WIDTH.webp"
-    cwebp -q "$QUALITY" -resize "$WIDTH" 0 "$IMG_PATH" -o "$OUTPUT_PATH"
-  done
-done
-echo "Image conversion complete."
-
+echo "Note: WebP conversion is now handled by Jekyll's imagemagick plugin."
 echo ""
 echo "Scanning for new media to add to $DATA_FILE..."
 
