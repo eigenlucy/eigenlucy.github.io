@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-27T18:45:00+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+</subtitle><entry><title type="html">Spacebridge HAB PCB Development</title><link href="https://eigenlucy.github.io/blog/2025/post3/" rel="alternate" type="text/html" title="Spacebridge HAB PCB Development" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/post3</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/post3/"><![CDATA[<p>I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I’ve gotten lot’s of help from some of the folks over at SF HAB, including some folks that put together the amazing <a href="https://www.picoballoons.net/">Pico Balloon Project</a>. I have a PCB in my hand now, which I’ll be testing in the upcoming weeks. You can follow my <a href="https://github.com/eigenlucy/spacebridgehabpcb">GitHub repo</a>.</p>
+
+<p>In this post I would just like to give and overview of the hardware and explain some of my design choices.</p>
+
+<p>Here is the mainboard.ato file for reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Mainboard:
+    power = new ElectricPower
+    power_5V = new ElectricPower; power_5V.gnd ~ power.gnd
+    power_3V3 = new ElectricPower; power_3V3.gnd ~ power.gnd
+    power_vbat = new ElectricPower; power_vbat.gnd ~ power.gnd
+    battery_conn = new XH2A
+    battery_conn.p1 ~ power_vbat.vcc; battery_conn.p2 ~ power_vbat.gnd
+    C_batconn = new Capacitor; C_batconn.value = 10uF +/- 20%; C_batconn.package = "C0805"
+    C_batconn.power ~ power_vbat
+
+    usbc = new USBCConn
+    power_usb = new ElectricPower
+    power_usb.vcc ~ usbc.usb2.buspower.hv; power_usb.gnd ~ usbc.usb2.buspower.gnd
+    power_5V ~ power_usb
+
+    i2c_conn = new _4P1MMJST
+    i2c_conn.power ~ power_3V3
+    i2c_conn2 = new _4P1MMJST
+    i2c_conn2.power ~ power_3V3
+
+    uc = new ESP32S3
+    uc.power ~ power_3V3
+    uc.i2c ~ i2c_conn.i2c
+    uc.i2c ~ i2c_conn2.i2c
+    uc.usb2 ~ usbc.usb2
+
+    gpio_conn = new _7P1MMJST
+    gpio_conn.p1 ~ uc.io45
+    gpio_conn.p2 ~ uc.io48
+    gpio_conn.p3 ~ uc.io47
+    gpio_conn.p4 ~ uc.io21
+    gpio_conn.p5 ~ uc.io14
+    gpio_conn.p6 ~ power_3V3.vcc
+    gpio_conn.p7 ~ power_3V3.gnd
+
+    pressure_sensor =  new GZP6859D101KPP
+    pressure_sensor.i2c ~ uc.i2c
+    pressure_sensor.power ~ power_3V3
+    C_pres = new Capacitor; C_pres.value = 100nF +/- 20%; C_pres.package = "C0402"
+    C_pres.power ~ pressure_sensor.power
+
+    ldo = new Regulator
+    ldo.ic.EN ~ ldo.Vin.vcc
+    ldo.Vin ~ power_vbat
+    ldo.Vin ~ power_usb
+    # DO NOT PLUG IN USB-C AND BATTERY AT THE SAME TIME
+    ldo.Vout ~ power_3V3
+    assert ldo.OUTPUT_VOLTAGE is 3.3V +/- 5%
+
+    lora = new Lora
+    lora.power ~ power_3V3
+    lora.spi ~ uc.spi2
+    lora.lora.spi_cs.line ~ uc.spi2_cs.line
+
+    bme688 = new Nose
+    bme688.power ~ power_3V3
+    bme688.i2c ~ uc.i2c
+
+    gps = new ATGM336H
+    gps.power ~ power_3V3
+    gps.i2c ~ uc.i2c
+    C_gps1 = new Capacitor; C_gps1.value = 2.2uF +/- 20%; C_gps1.package = "C0603"
+    C_gps1.power ~ gps.power
+    C_gps2 = new Capacitor; C_gps2.value = 100nF +/- 20%; C_gps2.package = "C0402"
+    C_gps2.power ~ gps.power
+    gps_bat = new Keystone_2998; gps_bat.power.vcc ~ gps.VBAT; gps_bat.power.gnd ~ power.gnd
+    RF_conn = new IPEX
+    RF_conn.RF_IN ~ gps.RF_IN
+    RF_conn.GND ~ gps.GND
+    rf_L = new Murata_Electronics_LQP03TG47NJ02D
+    gps.VCC_RF ~ rf_L.p1; rf_L.p2 ~ RF_conn.RF_IN
+
+    cutoff = new Cutoff
+    cutoff.power ~ power_vbat # cutoff.power--/\1kohm/\--&gt;|supercap|
+    # IO can be remapped as needed for layout, check esp32s3.ato
+    cutoff.SC_GATE ~ uc.io0 # Dis/connect supercapacitor
+    cutoff.CUTOFF_GATE ~ uc.io1 # Fire cutoff, active high
+    cutoff.SC_Sense ~ uc.io37
+
+    ntc = new NCP03WF104F05RL
+    R_div = new Resistor; R_div.value = 10kohm +/- 5%; R_div.package = "R0201"
+    R_div.p1 ~ uc.power.vcc; R_div.p2 ~ ntc.p1; ntc.p2 ~ uc.power.gnd
+    signal TEMP; TEMP ~ ntc.p1
+    uc.io16 ~ TEMP
+</code></pre></div></div>
+
+<p><img src="/assets/img/Gallery/HABBlockDiagram.png" alt="Hab Block Diagram" /></p>
+
+<p><img src="/assets/img/Gallery/HABPCBtop.jpg" alt="Hab PCB (top)" />
+<img src="/assets/img/Gallery/HABPCBbottom.jpg" alt="Hab PCB (bottom)" /></p>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Meshtastic DIY High Altitude Ballooning at Noisebridge Hackerspace]]></summary></entry><entry><title type="html">WASP, Wearable AI Synthesis Platform</title><link href="https://eigenlucy.github.io/blog/2025/post4/" rel="alternate" type="text/html" title="WASP, Wearable AI Synthesis Platform" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/post4</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/post4/"><![CDATA[<p>I just got V1 PCBs in!</p>
+
+<p>Check this board out in <a href="https://x.com/viemccoy">Vie Mccoy’s</a> upcoming bee.computer competitor wearable</p>
+
+<p>Check out the <a href="https://github.com/eigenlucy/wasp.git">GitHub repo</a></p>
+
+<p>I’ll post usage guidelines and status updates on the <a href="https://eigenlucy.com/projects/wasp">main project page</a></p>
+
+<p><img src="/assets/img/Gallery/wasppcbtop.jpg" alt="PCB Top" /></p>
+<div class="caption">WASP V1 PCB Top</div>
+<p><img src="/assets/img/Gallery/wasppcbbottom.jpg" alt="PCB Bottom" /></p>
+<div class="caption">WASP V1 PCB Bottom</div>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[An open source AI weable project]]></summary></entry><entry><title type="html">Hello, San Francisco</title><link href="https://eigenlucy.github.io/blog/2025/SF/" rel="alternate" type="text/html" title="Hello, San Francisco" /><published>2025-01-21T13:00:00+00:00</published><updated>2025-01-21T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/SF</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/SF/"><![CDATA[<h2 id="assorted-adventures">Assorted Adventures</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/HelloSanFrancisco.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/HelloSanFrancisco.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/HelloSanFrancisco.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/HelloSanFrancisco.jpg.jpg-480.webp 480w,assets/img/Gallery/HelloSanFrancisco.jpg.jpg-800.webp 800w,assets/img/Gallery/HelloSanFrancisco.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/HelloSanFrancisco.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/HelloSanFrancisco.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Mt. Davidson</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">  
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/santransisco.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/santransisco.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/santransisco.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/santransisco.jpg.jpg-480.webp 480w,assets/img/Gallery/santransisco.jpg.jpg-800.webp 800w,assets/img/Gallery/santransisco.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/santransisco.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/santransisco.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">SanTranCisco</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/GoldenGate.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/GoldenGate.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/GoldenGate.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/GoldenGate.jpg.jpg-480.webp 480w,assets/img/Gallery/GoldenGate.jpg.jpg-800.webp 800w,assets/img/Gallery/GoldenGate.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/GoldenGate.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/GoldenGate.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Golden Gate Bridge on the ferry to Saulsalito</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Redwoods.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Redwoods.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Redwoods.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Redwoods.jpg.jpg-480.webp 480w,assets/img/Gallery/Redwoods.jpg.jpg-800.webp 800w,assets/img/Gallery/Redwoods.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Redwoods.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Redwoods.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Muir Woods Redwoods</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/InfiniteBox.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/InfiniteBox.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/InfiniteBox.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/InfiniteBox.jpg.jpg-480.webp 480w,assets/img/Gallery/InfiniteBox.jpg.jpg-800.webp 800w,assets/img/Gallery/InfiniteBox.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/InfiniteBox.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/InfiniteBox.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Dreaming of Earth’s Sphericity, I Would Offer My Love</figcaption>
+    </figure>
+  </swiper-slide>
+</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[A Variety of Fun Updates and Adventures]]></summary></entry><entry><title type="html">OpenSauce 2024</title><link href="https://eigenlucy.github.io/blog/2024/SF/" rel="alternate" type="text/html" title="OpenSauce 2024" /><published>2024-09-03T13:00:00+00:00</published><updated>2024-09-03T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2024/SF</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2024/SF/"><![CDATA[<p>Earlier this year I was fortunate enough to be accepted as an OpenSauce 2024 Exhibitor :)
+While I was there I got to check out some other fun spots, like Oakland’s Counter Culture Labs, Mission District’s noisebridge hackerspace, and Greg Leyh’s LOD Labs</p>
+
+<h2 id="misc">Misc</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/flightin.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/flightin.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/flightin.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/flightin.jpg.jpg-480.webp 480w,assets/img/Gallery/flightin.jpg.jpg-800.webp 800w,assets/img/Gallery/flightin.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/flightin.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/flightin.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Flight Into SF</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">  
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SFarrival.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SFarrival.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SFarrival.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SFarrival.jpg.jpg-480.webp 480w,assets/img/Gallery/SFarrival.jpg.jpg-800.webp 800w,assets/img/Gallery/SFarrival.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SFarrival.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SFarrival.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">SF Arrival</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/beautifulwoman.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/beautifulwoman.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/beautifulwoman.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/beautifulwoman.jpg.jpg-480.webp 480w,assets/img/Gallery/beautifulwoman.jpg.jpg-800.webp 800w,assets/img/Gallery/beautifulwoman.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/beautifulwoman.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/beautifulwoman.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Flight Into SF</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/AIDsmemorial.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/AIDsmemorial.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/AIDsmemorial.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/AIDsmemorial.jpg.jpg-480.webp 480w,assets/img/Gallery/AIDsmemorial.jpg.jpg-800.webp 800w,assets/img/Gallery/AIDsmemorial.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/AIDsmemorial.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/AIDsmemorial.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Flight Into SF</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/BridgeSFmoMA.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/BridgeSFmoMA.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/BridgeSFmoMA.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/BridgeSFmoMA.jpg.jpg-480.webp 480w,assets/img/Gallery/BridgeSFmoMA.jpg.jpg-800.webp 800w,assets/img/Gallery/BridgeSFmoMA.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/BridgeSFmoMA.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/BridgeSFmoMA.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">Flight Into SF</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/beautyineverybreathe.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/beautyineverybreathe.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/beautyineverybreathe.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/beautyineverybreathe.jpg.jpg-480.webp 480w,assets/img/Gallery/beautyineverybreathe.jpg.jpg-800.webp 800w,assets/img/Gallery/beautyineverybreathe.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/beautyineverybreathe.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/beautyineverybreathe.jpg';" />
+    </picture>
+    
+  </figure>
+    <figcaption class="figure-caption">example</figcaption>
+    </figure>
+  </swiper-slide>
+</swiper-container>
+
+<h2 id="noise-bridge">Noise Bridge</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SCBank.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SCBank.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SCBank.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SCBank.jpg.jpg-480.webp 480w,assets/img/Gallery/SCBank.jpg.jpg-800.webp 800w,assets/img/Gallery/SCBank.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SCBank.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SCBank.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/canmachinesthink.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/canmachinesthink.jpg.jpg-480.webp 480w,assets/img/Gallery/canmachinesthink.jpg.jpg-800.webp 800w,assets/img/Gallery/canmachinesthink.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/canmachinesthink.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/canmachinesthink.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/noisebridge.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/noisebridge.jpg.jpg-480.webp 480w,assets/img/Gallery/noisebridge.jpg.jpg-800.webp 800w,assets/img/Gallery/noisebridge.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/noisebridge.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/noisebridge.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+</swiper-container>
+
+<h2 id="counter-culture-labs">Counter Culture Labs</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/singlecuvettescreen.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/singlecuvettescreen.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/singlecuvettescreen.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/singlecuvettescreen.jpg.jpg-480.webp 480w,assets/img/Gallery/singlecuvettescreen.jpg.jpg-800.webp 800w,assets/img/Gallery/singlecuvettescreen.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/singlecuvettescreen.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/singlecuvettescreen.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/diyinsulin.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/diyinsulin.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/diyinsulin.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/diyinsulin.jpg.jpg-480.webp 480w,assets/img/Gallery/diyinsulin.jpg.jpg-800.webp 800w,assets/img/Gallery/diyinsulin.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/diyinsulin.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/diyinsulin.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+</swiper-container>
+
+<h2 id="opensauce-2024">OpenSauce 2024</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/COWPALACE.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/COWPALACE.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/COWPALACE.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/COWPALACE.jpg.jpg-480.webp 480w,assets/img/Gallery/COWPALACE.jpg.jpg-800.webp 800w,assets/img/Gallery/COWPALACE.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/COWPALACE.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/COWPALACE.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lastminutechanges.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lastminutechanges.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lastminutechanges.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lastminutechanges.jpg.jpg-480.webp 480w,assets/img/Gallery/lastminutechanges.jpg.jpg-800.webp 800w,assets/img/Gallery/lastminutechanges.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/lastminutechanges.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lastminutechanges.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+</swiper-container>
+
+<h2 id="lightning-on-demand-labs">Lightning On Demand Labs</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lightningtowerconstruction.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lightningtowerconstruction.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lightningtowerconstruction.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lightningtowerconstruction.jpg.jpg-480.webp 480w,assets/img/Gallery/lightningtowerconstruction.jpg.jpg-800.webp 800w,assets/img/Gallery/lightningtowerconstruction.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/lightningtowerconstruction.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lightningtowerconstruction.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lightningdriver.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lightningdriver.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lightningdriver.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lightningdriver.jpg.jpg-480.webp 480w,assets/img/Gallery/lightningdriver.jpg.jpg-800.webp 800w,assets/img/Gallery/lightningdriver.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/lightningdriver.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lightningdriver.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lorentzcannon.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lorentzcannon.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lorentzcannon.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lorentzcannon.jpg.jpg-480.webp 480w,assets/img/Gallery/lorentzcannon.jpg.jpg-800.webp 800w,assets/img/Gallery/lorentzcannon.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/lorentzcannon.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lorentzcannon.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/sgtc.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/sgtc.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/sgtc.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/sgtc.jpg.jpg-480.webp 480w,assets/img/Gallery/sgtc.jpg.jpg-800.webp 800w,assets/img/Gallery/sgtc.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/sgtc.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/sgtc.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/bikewirelesspowerreciever.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/bikewirelesspowerreciever.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/bikewirelesspowerreciever.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-480.webp 480w,assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-800.webp 800w,assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/bikewirelesspowerreciever.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/bikewirelesspowerreciever.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Exhibiting at OpenSauce 2023 and Related SF Adventures]]></summary></entry></feed>

@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+  <link rel="stylesheet" href="/assets/css/tagformat.css">
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <script>
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
+</script>
+<!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Marx Generator Notes | Eigenlucy
+    
+  
+</title>
+<meta name="author" content="Lucy Moglia">
+<meta name="description" content="Eigenlucy // Lucy Moglia
+">
+
+  <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+<!-- Bootstrap Table -->
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-native.css"
+  id="highlight_theme_dark"
+  media="all"
+>
+
+
+
+<!-- Styles -->
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://eigenlucy.github.io/eigenlucy/marx-generator/">
+
+<!-- Theme JavaScript (applies dark theme to components) -->
+<script src="/assets/js/theme.js"></script>
+
+<!-- GeoJSON support via Leaflet -->
+
+
+<!-- diff2html -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/filter.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav "}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Eigenlucy
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/gallery/">gallery
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/projects/">projects
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/resume/">resume
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >submenus
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/">about</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/gallery/">gallery</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/projects/">projects</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/cv/">CV</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          <!-- THEME TOGGLE BUTTON REMOVED -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+
+
+
+
+
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Marx Generator Notes</h1>
+    <p class="post-meta">
+      July 23, 2025
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i> 2025
+      
+      
+
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <div id="markdown-content">
+      <p>Marx Generator notes</p>
+
+<div>
+  <img src="/assets/img/Gallery/Marx-stage.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+<div>
+  <img src="/assets/img/Gallery/Marx-stage2.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+
+<p>Notes:</p>
+<li>Mechanically actuated Marx eliminates the need for spark gaps</li>
+<li>A neon sign transformer source is a bit of a hacky solution. It gives you an independently UL certified interfacing with mains and saves lots of time though. In the future this should be a custom driver made from widely available CO2 laser ferrite transformers</li>
+
+<p>References:</p>
+<li>On dielectric breakdown in rock <a href="https://link.springer.com/article/10.1007/s00603-024-03851-4">link</a></li>
+
+<p>BOM:</p>
+<ul>
+<li>x2 UL rated neon sign transformer like <a href="https://www.ebay.ca/itm/354859756450">this</a></li>
+<li>x8 PRHVP 2A 20kV HV diodes like <a href="https://www.amazon.com/Comimark-20000V-Rectifier-High-Voltage-181975mm/dp/B087PRYGRT">these</a></li>
+<li>x1 <a href="https://www.ebay.ca/itm/126052798176">HV</a> Cloudray ferrite transformer</li>
+<li>x10 <a href="https://www.ebay.com/itm/296645015965">HV</a> 20kV Murata pulse capacitors. <a href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2584/High%20Voltage%20Ceramic%20Capacitors.pdf">Datasheet</a>.</li>
+<li>4ft of copper stock for cap bank bus bars, 50mm wide like <a href="https://www.amazon.com/Copper-Flat-Long-305mm-Stock">this</a> + ~8mm wide</li>
+<li>Mangetic proximity switches with NC and NO outputs like <a href="https://www.amazon.com/EPLZON-Magnetic-Normally-Proximity-Equipment">this</a> + magnets</li>
+<li>x3 &gt;2in pnematic actuator like <a href="https://www.amazon.com/Tailonz-Pneumatic-Air-Cylinder-Bore/dp/B07THMDZ61">this</a></li>
+<li>x1 three way hand operated 5 position pnematic valve like <a href="https://www.amazon.com/TAILONZ-PNEUMATIC-Pneumatic-Push-Pull-4H230-08C/dp/B086V8HDS7">this</a></li>
+<li>x2 electrically operated 5 position 3 way valves like <a href="https://www.amazon.com/AIRIX-4V310-10-Pneumatic-Solenoid-Pilot-Operated">this</a></li>
+<li>M3-5 screws, spade and ring connectors, etc</li>
+<li>~15ft NPT3 nylon(!) pnematic air tubing like <a href="https://www.amazon.com/CheeMuii-Pneumatic-Tubing-System-Transfer/dp/B0DCJKKDXD">this</a></li>
+<li>x1 Air compressor like <a href="https://www.amazon.com/ECOMAX-Compressor-Portable-Pneumatic-Accessories/dp/B0DGGFW73S">this</a></li>
+<li>x4 solid state relays like <a href="https://www.amazon.com/SSR-25DA-3-32VDC-Output-24-480VAC-Plastic">this</a></li>
+<li>Arduino Uno and terminal blocks like <a href="https://www.amazon.com/Electronics-Salon-Arduino-Terminal-Breakout-Module">this</a></li>
+<li>Acrylic sheets (1/4in and 1/8in)</li>
+<li>fused AC sockets like <a href="https://www.amazon.com/EPLZON-Module-Socket-Connector-Extension/dp/B0CN721ZS7">this</a></li>
+<li>x12 3W 1Mohm HV resistors, like <a href="https://www.amazon.com/QINIZX-Voltage-Resistor-Marx-Generator-Rectifier/dp/B09FDYKJBQ">this</a></li>
+<li>x6 high power servos, eg HS311</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+    
+      
+
+  
+    
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/post4/">WASP, Wearable AI Synthesis Platform</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/post3/">Spacebridge HAB PCB Development</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/SF/">Hello, San Francisco</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/SF/">OpenSauce 2024</a>
+  </li>
+
+
+    
+  
+
+  
+  
+</div>
+      
+    </div>
+
+    <!-- Footer -->
+    
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright 2025
+      Lucy
+      
+      Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+      
+      
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/js/mdb.min.js"></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+    
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+<!-- Bootstrap Table -->
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+
+
+    
+
+
+    
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  ></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"></script>
+
+
+    
+    
+
+
+    
+
+    
+
+    
+
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+<script>
+  
+</script>
+    
+    
+    <!-- Tag filter script -->
+    <script src="/assets/js/filter.js"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="/assets/js/pde-background.js" defer></script><!-- ADDED -->
+  </body>
+</html>

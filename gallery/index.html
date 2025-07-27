@@ -1,0 +1,1928 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+  <link rel="stylesheet" href="/assets/css/tagformat.css">
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <script>
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
+</script>
+<!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      gallery | Eigenlucy
+    
+  
+</title>
+<meta name="author" content="Lucy Moglia">
+<meta name="description" content="some of my projects from the last few years">
+
+  <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+<!-- Bootstrap Table -->
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-native.css"
+  id="highlight_theme_dark"
+  media="all"
+>
+
+
+
+<!-- Styles -->
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://eigenlucy.github.io/gallery/">
+
+<!-- Theme JavaScript (applies dark theme to components) -->
+<script src="/assets/js/theme.js"></script>
+
+<!-- GeoJSON support via Leaflet -->
+
+
+<!-- diff2html -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/filter.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav "}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Eigenlucy
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item active">
+                  
+                  <a class="nav-link" href="/gallery/">gallery
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/projects/">projects
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/resume/">resume
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown active">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >submenus
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/">about</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item active" href="/gallery/">gallery</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/projects/">projects</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/cv/">CV</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          <!-- THEME TOGGLE BUTTON REMOVED -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">gallery</h1>
+    <p class="post-description">some of my projects from the last few years</p>
+  </header>
+
+  <div class="tag-filter-container">
+      <!-- Default tags -->
+      <div class="default-tags">
+        <button class="tag-filter" data-tag="featured"><i class="fa-solid fa-hashtag"></i> Featured</button>
+        <button class="tag-filter" data-tag="all"><i class="fa-solid fa-hashtag"></i> All</button>
+        <button class="tag-filter" data-tag="image"><i class="fa-solid fa-hashtag"></i> Image</button>
+        <button class="tag-filter" data-tag="video"><i class="fa-solid fa-hashtag"></i> Video</button>
+        <button class="tag-filter" data-tag="electrical engineering"><i class="fa-solid fa-hashtag"></i> Electrical Engineering</button>
+        <button class="tag-filter" data-tag="chemistry"><i class="fa-solid fa-hashtag"></i> Chemistry</button>
+        <button class="tag-filter" data-tag="mycology"><i class="fa-solid fa-hashtag"></i> Mycology</button>
+        <button class="tag-filter" data-tag="hv"><i class="fa-solid fa-hashtag"></i> High Voltage</button>
+        <button class="tag-filter" data-tag="3d printing"><i class="fa-solid fa-hashtag"></i> 3D Printing</button>
+        <button class="tag-filter" data-tag="biohacking"><i class="fa-solid fa-hashtag"></i> Biohacking</button>
+        <button class="tag-filter" data-tag="pcb design"><i class="fa-solid fa-hashtag"></i> PCB Design</button>
+      </div>
+      <!-- Extra tags, hidden by default -->
+      <div class="extra-tags" style="display: none;">
+        <button class="tag-filter" data-tag="electronics"><i class="fa-solid fa-hashtag"></i> Electronics</button>
+        <button class="tag-filter" data-tag="biology"><i class="fa-solid fa-hashtag"></i> Biology</button>
+        <button class="tag-filter" data-tag="cnc"><i class="fa-solid fa-hashtag"></i> CNC</button>
+        <button class="tag-filter" data-tag="laser"><i class="fa-solid fa-hashtag"></i> Laser</button>
+        <button class="tag-filter" data-tag="implants"><i class="fa-solid fa-hashtag"></i> Implants</button>
+        <button class="tag-filter" data-tag="nfc"><i class="fa-solid fa-hashtag"></i> NFC</button>
+        <button class="tag-filter" data-tag="attiny"><i class="fa-solid fa-hashtag"></i> ATTiny</button>
+        <button class="tag-filter" data-tag="samd21"><i class="fa-solid fa-hashtag"></i> SAMD21</button>
+        <button class="tag-filter" data-tag="fusion360"><i class="fa-solid fa-hashtag"></i> Fusion360</button>
+        <button class="tag-filter" data-tag="supercaps"><i class="fa-solid fa-hashtag"></i> Supercaps</button>
+        <button class="tag-filter" data-tag="thermal cam"><i class="fa-solid fa-hashtag"></i> Thermal Cam</button>
+        <button class="tag-filter" data-tag="terrarium"><i class="fa-solid fa-hashtag"></i> Terrarium</button>
+        <button class="tag-filter" data-tag="distillation"><i class="fa-solid fa-hashtag"></i> Distillation</button>
+      </div>
+  </div>
+</div>
+
+<!-- _pages/gallery.md -->
+<div class="gallery">
+  <div class="container">
+    <div class="row cards-container">
+      <div class="col-md-3 card-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/WardSGTC.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">MASSIVE spark gap tesla coil at LOD labs</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="featured, hv, electrical engineering, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/wirelessbike.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">Wirelessly powered capacitively coupled wireless bike at LOD labs</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics, systemantics">
+        <div class="card mb-4 shadow-sm">
+            <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/nonhumanscent.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/nonhumanscent.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/nonhumanscent.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/nonhumanscent.png.png-480.webp 480w,assets/img/Gallery/nonhumanscent.png.png-800.webp 800w,assets/img/Gallery/nonhumanscent.png.png-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/nonhumanscent.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/nonhumanscent.png';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/eigenlucy/nonhumanscent">nonhumanscent</a>, ML-assisted gas composition sensing with BME688 and ESP32S3</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/micrompptv3.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/micrompptv3.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/micrompptv3.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/micrompptv3.png.png-480.webp 480w,assets/img/Gallery/micrompptv3.png.png-800.webp 800w,assets/img/Gallery/micrompptv3.png.png-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/micrompptv3.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/micrompptv3.png';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/eigenlucy/micromppt">Micromppt V3</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/txpowertest.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/txpowertest.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/txpowertest.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/txpowertest.jpg.jpg-480.webp 480w,assets/img/Gallery/txpowertest.jpg.jpg-800.webp 800w,assets/img/Gallery/txpowertest.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/txpowertest.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/txpowertest.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://hackaday.io/project/202604-femtofox-pro-tx-power-power-consumption-testing">Femtofox/E22-900M30S TX Power Testing</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/HABLaunch.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/HABLaunch.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/HABLaunch.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/HABLaunch.jpg.jpg-480.webp 480w,assets/img/Gallery/HABLaunch.jpg.jpg-800.webp 800w,assets/img/Gallery/HABLaunch.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/HABLaunch.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/HABLaunch.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/femtofoxgroundstation.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/femtofoxgroundstation.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/femtofoxgroundstation.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/femtofoxgroundstation.jpg.jpg-480.webp 480w,assets/img/Gallery/femtofoxgroundstation.jpg.jpg-800.webp 800w,assets/img/Gallery/femtofoxgroundstation.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/femtofoxgroundstation.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/femtofoxgroundstation.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/femtofox/femtofox">Femtofox Based Ground Station</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/openflashlightpcb.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/openflashlightpcb.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/openflashlightpcb.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/openflashlightpcb.png.png-480.webp 480w,assets/img/Gallery/openflashlightpcb.png.png-800.webp 800w,assets/img/Gallery/openflashlightpcb.png.png-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/openflashlightpcb.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/openflashlightpcb.png';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://hackaday.io/project/202611-openflashlight">OpenFlashlight</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/dinoflagellete.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/dinoflagellete.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/dinoflagellete.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/dinoflagellete.jpg.jpg-480.webp 480w,assets/img/Gallery/dinoflagellete.jpg.jpg-800.webp 800w,assets/img/Gallery/dinoflagellete.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/dinoflagellete.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/dinoflagellete.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">Dinoflagelletes cell</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="featured, electrical engineering, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/img/Gallery/scintillatorcrystal.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">Gallium aluminum garnet scintilator crystals</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="featured, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/laser.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">200W UV laser diode lighting a log on fire without a lens</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG.JPEG-480.webp 480w,assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG.JPEG-800.webp 800w,assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG.JPEG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/DiethylEtherHeptaneExtraction.JPEG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">short path distillation setup</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, video">
+        <div class="card mb-4 shadow-sm">
+          
+
+<figure>
+  
+    <video src="/assets/video/distillationapparatus.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">fractional distillation + condensor column</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, thermal camera, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/distillationthermalcam.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/distillationthermalcam.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/distillationthermalcam.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/distillationthermalcam.JPG.JPG-480.webp 480w,assets/img/Gallery/distillationthermalcam.JPG.JPG-800.webp 800w,assets/img/Gallery/distillationthermalcam.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/distillationthermalcam.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/distillationthermalcam.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">fractional distillation setup (thermal camera)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/OpenFlashLightRender.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/OpenFlashLightRender.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/OpenFlashLightRender.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/OpenFlashLightRender.jpg.jpg-480.webp 480w,assets/img/Gallery/OpenFlashLightRender.jpg.jpg-800.webp 800w,assets/img/Gallery/OpenFlashLightRender.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/OpenFlashLightRender.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/OpenFlashLightRender.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://github.com/eigenlucy/uv-lamp">Open Flashlight</a> PCB Rendering</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/izzymonitor.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/izzymonitor.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/izzymonitor.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/izzymonitor.jpg.jpg-480.webp 480w,assets/img/Gallery/izzymonitor.jpg.jpg-800.webp 800w,assets/img/Gallery/izzymonitor.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/izzymonitor.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/izzymonitor.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://eigenlucy.github.io/projects/izzymonitor">Izzymonitor</a> HAOS panel</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/micromppt.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/micromppt.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/micromppt.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/micromppt.jpg.jpg-480.webp 480w,assets/img/Gallery/micromppt.jpg.jpg-800.webp 800w,assets/img/Gallery/micromppt.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/micromppt.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/micromppt.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text"><a href="https://eigenlucy.github.io/projects/micromppt/">MicroMPPT</a> test board</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="chemistry, distillation, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/DiethylEther.JPEG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/DiethylEther.JPEG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/DiethylEther.JPEG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/DiethylEther.JPEG.JPEG-480.webp 480w,assets/img/Gallery/DiethylEther.JPEG.JPEG-800.webp 800w,assets/img/Gallery/DiethylEther.JPEG.JPEG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/DiethylEther.JPEG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/DiethylEther.JPEG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">diethyl ether extracted from starting fluid</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, oyster mushrooms, biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/PinkOysterJar.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/PinkOysterJar.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/PinkOysterJar.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/PinkOysterJar.jpg.jpg-480.webp 480w,assets/img/Gallery/PinkOysterJar.jpg.jpg-800.webp 800w,assets/img/Gallery/PinkOysterJar.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/PinkOysterJar.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/PinkOysterJar.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">Brain jar🧠 (pink oyster rye berry grain spawn jar)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, fusion360, electrical engineering, electronics, supercaps, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg.jpg-480.webp 480w,assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg.jpg-800.webp 800w,assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SupercapBackup2ngGenRENDER.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">rendering of the LTC3350 supercap bidirectional converter PCB</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, attiny, electronics, supercaps, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg.jpg-480.webp 480w,assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg.jpg-800.webp 800w,assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SupercapBackup2ngGenAssebled.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">holding the first bidirectional converter prototype I assembled :)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="hv, electrical engineering, electronics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/MOT.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">microwave oven transformer (MOT) arc</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="featured, hv, samd21, electrical engineering, electronics, systemantics, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/ignitioncoilnokia.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">IGBT singing ignition coil playing a nokia ring tone</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="hv, samd21, electrical engineering, electronics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MusicalIgnitionCoil.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MusicalIgnitionCoil.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MusicalIgnitionCoil.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MusicalIgnitionCoil.jpg.jpg-480.webp 480w,assets/img/Gallery/MusicalIgnitionCoil.jpg.jpg-800.webp 800w,assets/img/Gallery/MusicalIgnitionCoil.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/MusicalIgnitionCoil.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MusicalIgnitionCoil.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">this is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jacob's ladder. here it is producing a heart around 20khz</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/LionsMane.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/LionsMane.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/LionsMane.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/LionsMane.jpg.jpg-480.webp 480w,assets/img/Gallery/LionsMane.jpg.jpg-800.webp 800w,assets/img/Gallery/LionsMane.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/LionsMane.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/LionsMane.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">this is a lion's mane that has begun to fruit in the grain spawn jar</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, cnc, fusion360, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/PowerUsageTrackerATtiny.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/PowerUsageTrackerATtiny.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/PowerUsageTrackerATtiny.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/PowerUsageTrackerATtiny.jpg.jpg-480.webp 480w,assets/img/Gallery/PowerUsageTrackerATtiny.jpg.jpg-800.webp 800w,assets/img/Gallery/PowerUsageTrackerATtiny.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/PowerUsageTrackerATtiny.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/PowerUsageTrackerATtiny.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">attiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. milled on an LPFK protomat.</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, attiny, electrical engineering, electronics, supercaps, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SupercapBackupPrizmacapTop.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SupercapBackupPrizmacapTop.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SupercapBackupPrizmacapTop.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SupercapBackupPrizmacapTop.jpg.jpg-480.webp 480w,assets/img/Gallery/SupercapBackupPrizmacapTop.jpg.jpg-800.webp 800w,assets/img/Gallery/SupercapBackupPrizmacapTop.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SupercapBackupPrizmacapTop.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SupercapBackupPrizmacapTop.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">LTC3110 based bidirectional converter with attiny1627 uC. produced in the process of testing kyocera-AVX prismatic caps for a variety of applications</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, supercaps, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg.jpg-480.webp 480w,assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg.jpg-800.webp 800w,assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SupercapBackupPrizmacapBottom.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">underside of the LTC3110 PCB. off-the-shelf RF cans secure two prismatic caps securing and provide some protection. produced a version with a lower profile solid aluminum can in the same style</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="hv, electrical engineering, video">
+        <div class="card mb-4 shadow-sm">
+            
+
+<figure>
+  
+    <video src="/assets/video/VoltageMultiplier.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">voltage multiplier with ~100kV output</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics opensauce, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Nema23CrankGenerator.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Nema23CrankGenerator.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Nema23CrankGenerator.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Nema23CrankGenerator.jpg.jpg-480.webp 480w,assets/img/Gallery/Nema23CrankGenerator.jpg.jpg-800.webp 800w,assets/img/Gallery/Nema23CrankGenerator.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Nema23CrankGenerator.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Nema23CrankGenerator.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">NEMA23 stepper motor converter to a crank generator supercap charger</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="3d printing, terrarium, biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/EggPrinting.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/EggPrinting.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/EggPrinting.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/EggPrinting.jpg.jpg-480.webp 480w,assets/img/Gallery/EggPrinting.jpg.jpg-800.webp 800w,assets/img/Gallery/EggPrinting.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/EggPrinting.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/EggPrinting.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">printing an an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. she LOVES it</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="biology, 3d printing, terrarium, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MarcelleEgg.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MarcelleEgg.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MarcelleEgg.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MarcelleEgg.jpg.jpg-480.webp 480w,assets/img/Gallery/MarcelleEgg.jpg.jpg-800.webp 800w,assets/img/Gallery/MarcelleEgg.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/MarcelleEgg.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MarcelleEgg.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">this is marcelle the red tail boa basking on her egg :) she's quite the hermeticist</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electronics, electronics engineering, leds, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/POVglobe.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/POVglobe.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/POVglobe.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/POVglobe.JPG.JPG-480.webp 480w,assets/img/Gallery/POVglobe.JPG.JPG-800.webp 800w,assets/img/Gallery/POVglobe.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/POVglobe.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/POVglobe.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">this is a POV globe made from an addressable LED strip and random brushless motor. the wood frame was a poor choice</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electroplating, 3d printing, chemistry, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/nietzscheplating.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/nietzscheplating.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/nietzscheplating.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/nietzscheplating.jpg.jpg-480.webp 480w,assets/img/Gallery/nietzscheplating.jpg.jpg-800.webp 800w,assets/img/Gallery/nietzscheplating.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/nietzscheplating.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/nietzscheplating.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">coating an mSLA printed part in a polyurethane/copper nanoparticle based conductive coating to prep for electroplating</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, 3d printing, video">
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/electroplatingbath.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/electroplatingbath.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/electroplatingbath.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/electroplatingbath.JPG.JPG-480.webp 480w,assets/img/Gallery/electroplatingbath.JPG.JPG-800.webp 800w,assets/img/Gallery/electroplatingbath.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/electroplatingbath.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/electroplatingbath.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">electroplating setup where copper (CuSO4 + sulfuric acid + brightener solution) is deposited on the printed piece</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electroplating, chemistry, 3d printing, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/platednietzsche.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/platednietzsche.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/platednietzsche.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/platednietzsche.jpg.jpg-480.webp 480w,assets/img/Gallery/platednietzsche.jpg.jpg-800.webp 800w,assets/img/Gallery/platednietzsche.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/platednietzsche.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/platednietzsche.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">mSLA resin printed part after an electroplating procedure</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="systemantics, Simondon, individuation, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/individuation.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/individuation.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/individuation.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/individuation.png.png-480.webp 480w,assets/img/Gallery/individuation.png.png-800.webp 800w,assets/img/Gallery/individuation.png.png-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/individuation.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/individuation.png';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">individuation of the technical object ;)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/izzymonitorback.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/izzymonitorback.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/izzymonitorback.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/izzymonitorback.jpg.jpg-480.webp 480w,assets/img/Gallery/izzymonitorback.jpg.jpg-800.webp 800w,assets/img/Gallery/izzymonitorback.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/izzymonitorback.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/izzymonitorback.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">ROZ Wild Robot Back Silkscreen</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, biology, agar plates, liquid culture, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/PS_LC.JPEG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/PS_LC.JPEG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/PS_LC.JPEG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/PS_LC.JPEG.JPEG-480.webp 480w,assets/img/Gallery/PS_LC.JPEG.JPEG-800.webp 800w,assets/img/Gallery/PS_LC.JPEG.JPEG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/PS_LC.JPEG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/PS_LC.JPEG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">panellus stipticus liquid culture</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electronics, electrical engraving, hv, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/DRSSTCTesting.JPEG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/DRSSTCTesting.JPEG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/DRSSTCTesting.JPEG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/DRSSTCTesting.JPEG.JPEG-480.webp 480w,assets/img/Gallery/DRSSTCTesting.JPEG.JPEG-800.webp 800w,assets/img/Gallery/DRSSTCTesting.JPEG.JPEG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/DRSSTCTesting.JPEG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/DRSSTCTesting.JPEG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">testing a DRSSTC driver</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/FLCLpcb.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/FLCLpcb.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/FLCLpcb.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/FLCLpcb.JPG.JPG-480.webp 480w,assets/img/Gallery/FLCLpcb.JPG.JPG-800.webp 800w,assets/img/Gallery/FLCLpcb.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/FLCLpcb.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/FLCLpcb.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">guitar pedal PCB with a FLCL graphic</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, electronics, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg.jpg-480.webp 480w,assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg.jpg-800.webp 800w,assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/TheOwlsAreNotWhatTheySeem.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">The Owls Are Not What They Seem</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, biology, spawn bag, oyster mushrooms, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/ShroomTank.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/ShroomTank.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/ShroomTank.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/ShroomTank.jpg.jpg-480.webp 480w,assets/img/Gallery/ShroomTank.jpg.jpg-800.webp 800w,assets/img/Gallery/ShroomTank.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/ShroomTank.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/ShroomTank.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">golden oyster mushrooms taking over a tank of mulch</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="electrical engineering, electronics, equipment, oscilloscope, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/OsciliscopeWithCouplingError.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/OsciliscopeWithCouplingError.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/OsciliscopeWithCouplingError.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/OsciliscopeWithCouplingError.JPG.JPG-480.webp 480w,assets/img/Gallery/OsciliscopeWithCouplingError.JPG.JPG-800.webp 800w,assets/img/Gallery/OsciliscopeWithCouplingError.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/OsciliscopeWithCouplingError.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/OsciliscopeWithCouplingError.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">dead analog oscilloscope running with the hood off</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/PressureCooking.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/PressureCooking.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/PressureCooking.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/PressureCooking.jpg.jpg-480.webp 480w,assets/img/Gallery/PressureCooking.jpg.jpg-800.webp 800w,assets/img/Gallery/PressureCooking.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/PressureCooking.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/PressureCooking.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">loading up a pressure cooker with grain spawn jars to sterilize them for inoculation</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="biology, grain spawn, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/CCLplants.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/CCLplants.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/CCLplants.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/CCLplants.jpg.jpg-480.webp 480w,assets/img/Gallery/CCLplants.jpg.jpg-800.webp 800w,assets/img/Gallery/CCLplants.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/CCLplants.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/CCLplants.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">Greenhouse at Counter Culture Labs</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="laser, cnc, woodworking, systemantics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/TableEngraving.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/TableEngraving.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/TableEngraving.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/TableEngraving.JPG.JPG-480.webp 480w,assets/img/Gallery/TableEngraving.JPG.JPG-800.webp 800w,assets/img/Gallery/TableEngraving.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/TableEngraving.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/TableEngraving.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">laser engraving a table my roommate and I built (image from Deleuze and Guattari's A Thousand Plateaus)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="3d printing, biology, systematics, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MarcelleDreammachine.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MarcelleDreammachine.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MarcelleDreammachine.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MarcelleDreammachine.jpg.jpg-480.webp 480w,assets/img/Gallery/MarcelleDreammachine.jpg.jpg-800.webp 800w,assets/img/Gallery/MarcelleDreammachine.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/MarcelleDreammachine.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MarcelleDreammachine.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">Marcelle on a 3D printed recreation of William Burroughs' Dreamachine</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="chemistry, electroplating, video">
+        <div class="card mb-4 shadow-sm">
+          
+
+<figure>
+  
+    <video src="/assets/video/sulfuricacidCUSO4.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">Addition of of concentrated sulfuric acid to CUSO4 based electroplating solution</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, biology, grain spawn, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/PressureCooking2.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/PressureCooking2.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/PressureCooking2.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/PressureCooking2.jpg.jpg-480.webp 480w,assets/img/Gallery/PressureCooking2.jpg.jpg-800.webp 800w,assets/img/Gallery/PressureCooking2.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/PressureCooking2.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/PressureCooking2.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">using a pressure cooker as an autoclave for spawn bag sterilization</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="diy, biology, chemistry, 3d printing, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/DIYStirplate.JPG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/DIYStirplate.JPG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/DIYStirplate.JPG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/DIYStirplate.JPG.JPG-480.webp 480w,assets/img/Gallery/DIYStirplate.JPG.JPG-800.webp 800w,assets/img/Gallery/DIYStirplate.JPG.JPG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/DIYStirplate.JPG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/DIYStirplate.JPG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">DIY stirplate with a computer fan and printed parts</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="mycology, agar plates, biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/AgarPlates.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/AgarPlates.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/AgarPlates.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/AgarPlates.jpg.jpg-480.webp 480w,assets/img/Gallery/AgarPlates.jpg.jpg-800.webp 800w,assets/img/Gallery/AgarPlates.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/AgarPlates.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/AgarPlates.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">Agar/LME spore plates</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="pcb design, prototyping, electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/LostConveyerBelt.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/LostConveyerBelt.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/LostConveyerBelt.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/LostConveyerBelt.jpg.jpg-480.webp 480w,assets/img/Gallery/LostConveyerBelt.jpg.jpg-800.webp 800w,assets/img/Gallery/LostConveyerBelt.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/LostConveyerBelt.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/LostConveyerBelt.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">sad PCB lost in the reflow conveyer belt :((</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="laser, cnc, woodworking, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Engraving.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Engraving.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Engraving.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Engraving.jpg.jpg-480.webp 480w,assets/img/Gallery/Engraving.jpg.jpg-800.webp 800w,assets/img/Gallery/Engraving.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Engraving.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Engraving.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">playing with digital art/laser engraving. the snakeskin pattern on the wood comes from the grain on the sycamore.</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="implants, biohacking, nfc, video">
+        <div class="card mb-4 shadow-sm">
+          
+
+<figure>
+  
+    <video src="/assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
+          <div class="card-body">
+            <p class="card-text">xSIID self implant procedure</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="implants, nfc, electrical engineering, biohacking, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/NFCimplant.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/NFCimplant.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/NFCimplant.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/NFCimplant.png.png-480.webp 480w,assets/img/Gallery/NFCimplant.png.png-800.webp 800w,assets/img/Gallery/NFCimplant.png.png-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/NFCimplant.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/NFCimplant.png';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">LED visible in daylight after some healing</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="terrarium, isopods, biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg.jpg-480.webp 480w,assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg.jpg-800.webp 800w,assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/BioactiveTankConstructionLayingOut.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">building a bioactive enclosure for my ball python Basil. made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="terrarium, biology, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/BasilTankComplete.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/BasilTankComplete.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/BasilTankComplete.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/BasilTankComplete.jpg.jpg-480.webp 480w,assets/img/Gallery/BasilTankComplete.jpg.jpg-800.webp 800w,assets/img/Gallery/BasilTankComplete.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/BasilTankComplete.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/BasilTankComplete.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">completed bioactive setup for Basil :)</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="implants, biohacking, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/ImplantSurgery.PNG] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/ImplantSurgery.PNG] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/ImplantSurgery.PNG] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/ImplantSurgery.PNG.PNG-480.webp 480w,assets/img/Gallery/ImplantSurgery.PNG.PNG-800.webp 800w,assets/img/Gallery/ImplantSurgery.PNG.PNG-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/ImplantSurgery.PNG" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/ImplantSurgery.PNG';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 card-item " data-tags="isopods, biology, terrarium, image">
+        <div class="card mb-4 shadow-sm">
+          <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/ZebraIsopodTerrarium.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/ZebraIsopodTerrarium.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/ZebraIsopodTerrarium.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/ZebraIsopodTerrarium.jpg.jpg-480.webp 480w,assets/img/Gallery/ZebraIsopodTerrarium.jpg.jpg-800.webp 800w,assets/img/Gallery/ZebraIsopodTerrarium.jpg.jpg-1400.webp 1400w" sizes="(min-width: 768px) 22vw, 85vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/ZebraIsopodTerrarium.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/ZebraIsopodTerrarium.jpg';" />
+    </picture>
+    
+  </figure>
+          <div class="card-body">
+            <p class="card-text">zebra isopod terrarium setup</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright 2025
+      Lucy
+      
+      Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+      
+      
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/js/mdb.min.js"></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+    
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+<!-- Bootstrap Table -->
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+
+
+    
+
+
+    
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  ></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"></script>
+
+
+    
+    
+
+
+    
+
+    
+
+    
+
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+<script>
+  
+</script>
+    
+    
+    <!-- Tag filter script -->
+    <script src="/assets/js/filter.js"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="/assets/js/pde-background.js" defer></script><!-- ADDED -->
+  </body>
+</html>

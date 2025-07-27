@@ -1,5 +1,0 @@
-Questionable use of curly braces in "{%ifsite.news!=blank%}"
-    Error: unexpected token in: "[%i]fsite.news!=blank%"
-Fatal Error: Incorrect use of curly braces in "{%ifsite.news!=blank%}"
-    Error: unexpected token in: "[%i]fsite.news!=blank%"
-

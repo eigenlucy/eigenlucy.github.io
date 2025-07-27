@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+  <link rel="stylesheet" href="/assets/css/tagformat.css">
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <script>
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
+</script>
+<!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      2025-06-18 Goose: Initial Setup and Content Migration | Eigenlucy
+    
+  
+</title>
+<meta name="author" content="Lucy Moglia">
+<meta name="description" content="Eigenlucy // Lucy Moglia
+">
+
+  <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+<!-- Bootstrap Table -->
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-native.css"
+  id="highlight_theme_dark"
+  media="all"
+>
+
+
+
+<!-- Styles -->
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://eigenlucy.github.io/change_log_for_robots/">
+
+<!-- Theme JavaScript (applies dark theme to components) -->
+<script src="/assets/js/theme.js"></script>
+
+<!-- GeoJSON support via Leaflet -->
+
+
+<!-- diff2html -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/filter.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav "}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Eigenlucy
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/gallery/">gallery
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/projects/">projects
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/resume/">resume
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >submenus
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/">about</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/gallery/">gallery</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/projects/">projects</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/cv/">CV</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          <!-- THEME TOGGLE BUTTON REMOVED -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">2025-06-18 Goose: Initial Setup and Content Migration</h1>
+    <p class="post-description"></p>
+  </header>
+
+  <article>
+    <h2 id="2025-06-18-goose-initial-setup-and-content-migration">2025-06-18 Goose: Initial Setup and Content Migration</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">jekyll_guide_for_robots.md</code></strong>:
+    <ul>
+      <li>Created and populated with initial documentation covering Jekyll basics, Arch Linux environment (Ruby, Bundler), local development, GitHub Pages deployment, key al-folio concepts used in the site, and references to other important log files.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_eigenlucy/</code> Collection</strong>:
+    <ul>
+      <li>Confirmed <code class="language-plaintext highlighter-rouge">_eigenlucy</code> collection is defined in <code class="language-plaintext highlighter-rouge">_config.yml</code> with <code class="language-plaintext highlighter-rouge">output: true</code>, <code class="language-plaintext highlighter-rouge">layout: post</code> (default), and <code class="language-plaintext highlighter-rouge">sitemap: false</code>.</li>
+      <li>Migrated “Origin is the Goal” from Medium to <code class="language-plaintext highlighter-rouge">_eigenlucy/origin-is-the-goal.md</code> (actual current name is <code class="language-plaintext highlighter-rouge">2025-01-06-origin.md</code>).
+        <ul>
+          <li>Fetched content, extracted relevant text.</li>
+          <li>Added front matter: <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">date</code> (original), <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">source_url</code>, and <code class="language-plaintext highlighter-rouge">tags: [reflection]</code>.</li>
+        </ul>
+      </li>
+      <li>Migrated “Notes on Cοvιd, Witchcraft, &amp; Stillstellungen” (renamed to “Notes on Stillstellungen” for the site) from Medium to the file now named <code class="language-plaintext highlighter-rouge">_eigenlucy/2025-01-24-stillstellung.md</code>.
+        <ul>
+          <li>Fetched content, extracted relevant text (translator’s note and bullet points).</li>
+          <li>Added front matter: <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">title</code> (“Notes on Stillstellungen”), <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">date</code> (original), <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">source_url</code>, and <code class="language-plaintext highlighter-rouge">tags: [philosophy, Walter Benjamin, Stillstellung, critical theory]</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2025-06-19-goose-layout-adjustments-file-corrections-and-critical-rules-doc">2025-06-19 Goose: Layout Adjustments, File Corrections, and Critical Rules Doc</h2>
+
+<ul>
+  <li><strong>Stillstellungen Page (<code class="language-plaintext highlighter-rouge">_eigenlucy/2025-01-24-stillstellung.md</code> formerly <code class="language-plaintext highlighter-rouge">.../2025-01-02-stillstellungen.md</code>):</strong>
+    <ul>
+      <li>Implemented a side-by-side layout for Klee’s Angel image and the Gershom Scholem poem block using HTML with inline Flexbox styling. This was applied to the file originally named <code class="language-plaintext highlighter-rouge">2025-01-02-stillstellungen.md</code>.</li>
+      <li>Adjusted the Flexbox <code class="language-plaintext highlighter-rouge">align-items</code> property from <code class="language-plaintext highlighter-rouge">flex-start</code> to <code class="language-plaintext highlighter-rouge">center</code> to vertically center the image and poem relative to each other.</li>
+      <li>Added <code class="language-plaintext highlighter-rouge">justify-content: center;</code> to the Flexbox styling to horizontally center the entire image/poem block on the page.</li>
+      <li>Added <code class="language-plaintext highlighter-rouge">text-align: center;</code> to the poem’s container <code class="language-plaintext highlighter-rouge">div</code> to center the poem text within its column.</li>
+      <li>Added <code class="language-plaintext highlighter-rouge">margin-left: auto; margin-right: auto;</code> to the <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tag’s style to center the image within its column.</li>
+      <li>Attempted to remove a gray box from the Klee’s Angel image by adding <code class="language-plaintext highlighter-rouge">border: none; outline: none; text-decoration: none;</code> to its inline style.</li>
+      <li>Corrected a date inconsistency: The file <code class="language-plaintext highlighter-rouge">_eigenlucy/2025-01-02-stillstellungen.md</code> had a front matter date of <code class="language-plaintext highlighter-rouge">2025-01-24</code>.</li>
+      <li>Renamed the file to <code class="language-plaintext highlighter-rouge">/home/lucy/eigenlucy.github.io/_eigenlucy/2025-01-24-stillstellungen.md</code> to align the filename with its front matter date and the content’s origin.</li>
+      <li>Proofread and corrected spelling/grammar in <code class="language-plaintext highlighter-rouge">/home/lucy/eigenlucy.github.io/_eigenlucy/2025-01-24-stillstellung.md</code>.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">CRITICAL_JEKYLL_RULES.md</code></strong>:
+    <ul>
+      <li>Created this new document in the root directory.</li>
+      <li>Populated with essential, concise rules for Jekyll site maintenance, covering:
+        <ul>
+          <li>Filename conventions for posts/dated collections (e.g., <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code> and matching filename date with front matter date).</li>
+          <li>Mandatory YAML front matter structure.</li>
+          <li>Requirement to restart the Jekyll server after <code class="language-plaintext highlighter-rouge">_config.yml</code> changes.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>“Le Fin de Satan” Post (<code class="language-plaintext highlighter-rouge">_eigenlucy/2025-06-18-the-end-of-satan.md</code>):</strong>
+    <ul>
+      <li>Replaced the Markdown image tag at the top of the post with an HTML <code class="language-plaintext highlighter-rouge">div</code> and <code class="language-plaintext highlighter-rouge">img</code> structure.</li>
+      <li>Applied inline styles to the <code class="language-plaintext highlighter-rouge">img</code> tag to set its <code class="language-plaintext highlighter-rouge">width</code> to <code class="language-plaintext highlighter-rouge">50%</code> (with <code class="language-plaintext highlighter-rouge">height: auto;</code>) and to center it on the page (<code class="language-plaintext highlighter-rouge">display: block; margin-left: auto; margin-right: auto;</code>).</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">CUSTOMIZE.md</code> Update:</strong>
+    <ul>
+      <li>Added an introductory note clarifying the document’s scope and pointing to other site-specific guides (<code class="language-plaintext highlighter-rouge">jekyll_guide_for_robots.md</code>, <code class="language-plaintext highlighter-rouge">change_log_for_robots.md</code>, etc.).</li>
+      <li>Updated the “Project structure” diagram to include the <code class="language-plaintext highlighter-rouge">_eigenlucy/</code> collection, more page examples, and the new root-level documentation files.</li>
+      <li>Added a new section “Site-Specific Documentation &amp; Agent Guides” detailing the purpose of <code class="language-plaintext highlighter-rouge">jekyll_guide_for_robots.md</code>, <code class="language-plaintext highlighter-rouge">CRITICAL_JEKYLL_RULES.md</code>, <code class="language-plaintext highlighter-rouge">change_log_for_robots.md</code>, <code class="language-plaintext highlighter-rouge">robot_reflections.md</code>, and <code class="language-plaintext highlighter-rouge">goose_prompt.md</code>.</li>
+      <li>Added a clarification to the “Adding Collections” section mentioning <code class="language-plaintext highlighter-rouge">_eigenlucy</code> as an example.</li>
+    </ul>
+  </li>
+  <li><strong>Global Font Changes for Titles, Subheadings, and Links:</strong>
+    <ul>
+      <li><strong>Objective:</strong> Change non-link titles/subheadings to ‘Jacquard 24’ and links to ‘Jacquard 24 Charted’, replacing ‘Jacquard 12 Charted’.</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">_includes/head.liquid</code></strong>:
+        <ul>
+          <li>Updated Google Fonts <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> to import ‘Jacquard 24’ and ‘Jacquard 24 Charted’, and removed ‘Jacquard 12 Charted’.</li>
+        </ul>
+      </li>
+      <li><strong><code class="language-plaintext highlighter-rouge">_sass/_variables.scss</code></strong>:
+        <ul>
+          <li>Changed <code class="language-plaintext highlighter-rouge">$heading-font-family</code> to <code class="language-plaintext highlighter-rouge">'Jacquard 24', cursive;</code>.</li>
+        </ul>
+      </li>
+      <li><strong><code class="language-plaintext highlighter-rouge">_sass/_base.scss</code></strong>:
+        <ul>
+          <li>Changed the <code class="language-plaintext highlighter-rouge">.post-title</code> rule to use <code class="language-plaintext highlighter-rouge">$heading-font-family</code>.</li>
+          <li>Confirmed <code class="language-plaintext highlighter-rouge">a</code> tags use “Jacquard 24 Charted”.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Resume Page Font Rendering Fix:</strong>
+    <ul>
+      <li><strong>Solution:</strong> Added a specific SASS rule to <code class="language-plaintext highlighter-rouge">_sass/_cv.scss</code> to target item titles (<code class="language-plaintext highlighter-rouge">.cv .card .list-group-item h6.title a</code>) and set their <code class="language-plaintext highlighter-rouge">font-family</code> to <code class="language-plaintext highlighter-rouge">$body-font-family</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Gallery Page (<code class="language-plaintext highlighter-rouge">_pages/gallery.md</code>) Masonry and Video Layout Fixes:</strong>
+    <ul>
+      <li><strong>Objective:</strong> Address uneven tiling, slow loading, and card appearance issues.</li>
+      <li><strong>HTML Updates (<code class="language-plaintext highlighter-rouge">_pages/gallery.md</code>):</strong>
+        <ul>
+          <li>Added <code class="language-plaintext highlighter-rouge">grid</code> class to the main gallery container.</li>
+          <li>Added <code class="language-plaintext highlighter-rouge">grid-item</code> class to each gallery card wrapper.</li>
+          <li>Removed <code class="language-plaintext highlighter-rouge">col-md-3</code> Bootstrap class from gallery items for better Masonry control.</li>
+          <li>Wrapped all <code class="language-plaintext highlighter-rouge">{% include video.liquid ... %}</code> instances with <code class="language-plaintext highlighter-rouge">&lt;div class="video-aspect-ratio-container"&gt;...&lt;/div&gt;</code>.</li>
+        </ul>
+      </li>
+      <li><strong>SASS Updates (<code class="language-plaintext highlighter-rouge">_sass/_gallery.scss</code> created and imported):</strong>
+        <ul>
+          <li>Defined styles for <code class="language-plaintext highlighter-rouge">.gallery .grid-item</code> (e.g., <code class="language-plaintext highlighter-rouge">width: 24%;</code>).</li>
+          <li>Added CSS rules for <code class="language-plaintext highlighter-rouge">.video-aspect-ratio-container</code> to enforce a 16:9 aspect ratio.</li>
+          <li>Refined <code class="language-plaintext highlighter-rouge">.card</code> styles within the gallery for better flexbox layout.</li>
+        </ul>
+      </li>
+      <li><strong>JavaScript Update (<code class="language-plaintext highlighter-rouge">assets/js/masonry.js</code>):</strong>
+        <ul>
+          <li>Modified script to initialize Masonry after <code class="language-plaintext highlighter-rouge">imagesLoaded()</code> and to explicitly re-layout Masonry on the <code class="language-plaintext highlighter-rouge">loadedmetadata</code> event for each video, resolving video-related layout issues.</li>
+        </ul>
+      </li>
+      <li><strong>Outcome:</strong> Successfully resolved card overlapping and improved layout consistency.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2025-06-20-goose-initial-review-and-documentation-check">2025-06-20 Goose: Initial Review and Documentation Check</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">CUSTOMIZE.md</code> Review:</strong>
+    <ul>
+      <li>Identified a minor typo in the project structure diagram: <code class="language-plaintext highlighter-rouge">jekyll_guide_for_robot.md</code> should be <code class="language-plaintext highlighter-rouge">jekyll_guide_for_robots.md</code>. The textual descriptions and other references are correct.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">jekyll_guide_for_robots.md</code> Review:</strong>
+    <ul>
+      <li>Confirmed the guide is comprehensive and up-to-date for Jekyll, Arch Linux environment (RubyGems, Bundler), and GitHub Pages deployment. No immediate updates proposed.</li>
+    </ul>
+  </li>
+  <li><strong>Site Structure Verification:</strong>
+    <ul>
+      <li>Confirmed the main site structure (<code class="language-plaintext highlighter-rouge">_eigenlucy</code>, <code class="language-plaintext highlighter-rouge">_pages</code>, <code class="language-plaintext highlighter-rouge">_projects</code>, etc.) aligns with the descriptions in <code class="language-plaintext highlighter-rouge">CUSTOMIZE.md</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+  </article>
+
+  
+</div>
+      
+    </div>
+
+    <!-- Footer -->
+    
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright 2025
+      Lucy
+      
+      Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+      
+      
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/js/mdb.min.js"></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+    
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+<!-- Bootstrap Table -->
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+
+
+    
+
+
+    
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  ></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"></script>
+
+
+    
+    
+
+
+    
+
+    
+
+    
+
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+<script>
+  
+</script>
+    
+    
+    <!-- Tag filter script -->
+    <script src="/assets/js/filter.js"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="/assets/js/pde-background.js" defer></script><!-- ADDED -->
+  </body>
+</html>

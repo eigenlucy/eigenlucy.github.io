@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+  <link rel="stylesheet" href="/assets/css/tagformat.css">
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <script>
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
+</script>
+<!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Femtofox Project | Eigenlucy
+    
+  
+</title>
+<meta name="author" content="Lucy Moglia">
+<meta name="description" content="Configuration guidelines, power usage testing, RF transmit power testing">
+
+  <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+<!-- Bootstrap Table -->
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-native.css"
+  id="highlight_theme_dark"
+  media="all"
+>
+
+
+
+<!-- Styles -->
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://eigenlucy.github.io/projects/femtofox/">
+
+<!-- Theme JavaScript (applies dark theme to components) -->
+<script src="/assets/js/theme.js"></script>
+
+<!-- GeoJSON support via Leaflet -->
+
+
+<!-- diff2html -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/filter.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav "}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Eigenlucy
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/gallery/">gallery
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item active">
+                  
+                  <a class="nav-link" href="/projects/">projects
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/resume/">resume
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >submenus
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/">about</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/gallery/">gallery</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/projects/">projects</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/cv/">CV</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          <!-- THEME TOGGLE BUTTON REMOVED -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Femtofox Project</h1>
+    <p class="post-description">Configuration guidelines, power usage testing, RF transmit power testing</p>
+  </header>
+
+  <article>
+    <h2 id="update-feburary-25-2025">Update Feburary 25, 2025</h2>
+
+<p>My first round of tests are wrapping up. I am looking for a good 900mhz source with a known output level (I have one reserved in the next few days), until then take the TX power results with a grain of salt (+/- 1dBm). Consumption results should be solid, but for now I’d recommend a 5V supply until we verify the output levels off of 3V3. For anyone in the EU looking to stay under 500mW / 27dBm TX power, 18dBm appears to be at about 26.9dBm out, so somewhere in the 16-18dBm range should work well depending on your risk tolerance ;P</p>
+
+<p>You can see my test results <a href="https://github.com/eigenlucy/Meshtastic-Test-Scripting/tree/main/results">here :)</a></p>
+
+<p><a href="https://github.com/femtofox/femtofox">Femtofox</a> is a project to create a Linux Meshtastic node based on the low cost Luckfox Mini SBC.</p>
+
+<h1 id="configuration">Configuration</h1>
+
+<h2 id="requirements">Requirements</h2>
+
+<li>A femtofox board</li>
+<li>A microSD card</li>
+<li>A disk imaging tool, such as Rufus or Balena Etcher</li>
+<li>Some sort of SSH+Serial client like <a href="https://www.putty.org/">PuTTY</a></li>
+<li>A Meshtastic Client. iOS support is a WIP, but the Play store Meshtastic app works. I use <a href="https://github.com/pdxlocations/contact">contact</a> to connect via the pure python Meshtatic CLI on Arch Linux. USB Serial configuration is available on the Femtofox Pro</li>
+
+<h2 id="foxbuntu-install">FoxBuntu Install</h2>
+
+<p>Follow the instructions in the Femotfox repo on <a href="https://github.com/femtofox/femtofox/wiki/Getting-Started">flashing the foxbuntu image</a> onto the LuckFox.</p>
+
+<p>The first boot can take up to 5 minutes to complete, and subsequent boots should take around 30 seconds.</p>
+
+<p>As of Foxbuntu V0.99, you can configure the femtofox via web browser @ <a href="https://femtofox.local:7681">https://femtofox.local:7681</a>. If you have a FemtoFox Pro, you can connect over USB. Set the device baud rate to 115200 and press enter in the console window a few times if you don’t see anything. You should see the Femtofox logo, then be promted to set a root password. After this, you can enter $ sudo femto-config to begin configuring the unit.</p>
+
+<p>If you are having trouble with the femtox.local page, you can ssh into your femto with something like <code class="language-plaintext highlighter-rouge">$ ssh femto@{UR_FEMTO_IP}</code>. Find the IP on your LAN with <a href="https://nmap.org/">NMap</a> by running something like <code class="language-plaintext highlighter-rouge">$ sudo nmap -p 22 {your IP}/24</code>.</p>
+
+<h1 id="power-testing">Power Testing</h1>
+
+<p>The Femtofox Pro equipped with the Ebyte E22-900M30S LoRa gateway consumed an average of 360mW on 3V3 and 400mW on 5V. This is amazing! These tests were performed with an ethernet/ssh port open, and with meshtasticd running with the default (max) transmit power setting. Further testing is required to investigate the difference in the peak power usage on a 3V3 and 5V supply. This is likely due to a limit on the output power of the LoRa module (which TRANSMITS up to 1.2W / 31dBm at max power according to my testing) at 3V3 volt, not higher efficiency. Results on this are coming soon, along with recommendations for improved decoupling and filtering to prevent the sagging on the 5V and 3V3 lines observed.</p>
+
+<h2 id="equipment-utilized">Equipment Utilized</h2>
+
+<li>Rigol DHO804 Oscilloscope</li>
+<li>Keysight EDU36311A DC PSU</li>
+<li>Keithly 2450 SMU</li>
+
+<p>4-Wire sense via SMU on Femtofox Pro 3V3-5V JST input,</p>
+
+<h2 id="5v-power-consumption-results">5V Power Consumption Results</h2>
+
+<p>Internet connected via ethernet, SSH port open, meshtastic running with 22dBm setting (~31dBm TX actual)</p>
+<li>Min: 0.342W</li>
+<li>Max: 3.154W</li>
+<li>Average: 0.4W</li>
+
+<h1 id="rf-transmit-power-testing">RF Transmit Power Testing</h1>
+
+<p>The Ebyte E22-900M30S LoRa module contains an internal amplifier, which amplifies the SX1268 22dBm max ouput level as high as 31dBm. These tests were performed to evaluate the actual TX power levels of the modules to help ensure compliance with local regulations (namely in the EU, which caps emissions in the LoRa band to a max of 500mW / 27dBm)</p>
+
+<p>Based on the LoRa Alliance <a href="https://lora-alliance.org/wp-content/uploads/2021/04/Gateway-Test-and-Measurement-Guidelines-Issue01.pdf">LoRa gateway RF Testing Guidelines</a></p>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/FemtofoxGatewayTestSetup.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/FemtofoxGatewayTestSetup.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/FemtofoxGatewayTestSetup.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/FemtofoxGatewayTestSetup.png.png-480.webp 480w,assets/img/Gallery/FemtofoxGatewayTestSetup.png.png-800.webp 800w,assets/img/Gallery/FemtofoxGatewayTestSetup.png.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/FemtofoxGatewayTestSetup.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/FemtofoxGatewayTestSetup.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/testsetupdrawing.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/testsetupdrawing.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/testsetupdrawing.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/testsetupdrawing.jpg.jpg-480.webp 480w,assets/img/Gallery/testsetupdrawing.jpg.jpg-800.webp 800w,assets/img/Gallery/testsetupdrawing.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/testsetupdrawing.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/testsetupdrawing.jpg';" />
+    </picture>
+    
+  </figure>
+    </div>
+   <div class="col-sm mt-2 mt-md-0">
+        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png.png-480.webp 480w,assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png.png-800.webp 800w,assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/E22-900M30S-TXPOWER-RESULTS.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<h2 id="equipment-utilized-1">Equipment Utilized</h2>
+
+<li><a href="https://www.minicircuits.com/WebStore/dashboard.html?model=VAT-10A%2B&amp;srsltid=AfmBOopckfpry16G-akbiZXm-Gqm3-jvujM1NTpF60RuBGH8qnNVZdg8">Mini-Circuits VAT-10A+</a> + <a href="https://www.minicircuits.com/WebStore/dashboard.html?model=VAT-20A%2B&amp;srsltid=AfmBOoozK4Fy6i-COwgI8UHc4esJiRiAXFEfWHltpLQLQljSdLcpDM0r">VAT-20A+ Attenuator</a></li>
+<li><a href="https://www.minicircuits.com/WebStore/dashboard.html?model=ZX30-9-4-S%2B&amp;srsltid=AfmBOopdqCBTN6KkLpb9eHuEoMRAXftzYnE-KRgJKLMOqU16P11W7STQ">Mini-Circuits ZX30-9-4-S Directional Coupler</a></li>
+<li><a href="https://www.minicircuits.com/pdfs/ZX47-40+.pdf">Mini-Circuits ZX47-40+ Power Detector</a></li>
+<li>NanoVNA V2</li>
+<li>TinySA Ultra</li>
+
+  </article>
+
+  
+</div>
+      
+    </div>
+
+    <!-- Footer -->
+    
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright 2025
+      Lucy
+      
+      Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+      
+      
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/js/mdb.min.js"></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+    
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+<!-- Bootstrap Table -->
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+
+
+    
+
+
+    
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  ></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"></script>
+
+
+    
+    
+
+
+    
+
+    
+
+    
+
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+<script>
+  
+</script>
+    
+    
+    <!-- Tag filter script -->
+    <script src="/assets/js/filter.js"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="/assets/js/pde-background.js" defer></script><!-- ADDED -->
+  </body>
+</html>

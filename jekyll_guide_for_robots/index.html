@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+  <link rel="stylesheet" href="/assets/css/tagformat.css">
+    
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <script>
+  // Define critical theme functions globally and early to prevent ReferenceErrors
+  window.determineComputedTheme = function() {
+    // console.log('Early global determineComputedTheme: returning dark');
+    return 'dark'; // Hardcode to dark as site is dark-only
+  };
+
+  window.initThemeGlobal = function() { // Renamed to avoid potential naming conflicts
+    // console.log('Early global initThemeGlobal: setting dark theme attributes');
+    if (document.documentElement) {
+      document.documentElement.setAttribute('data-theme-setting', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (localStorage) {
+      localStorage.setItem('theme', 'dark');
+    }
+    // The main assets/js/theme.js will handle detailed component styling on DOMContentLoaded
+  };
+
+  // Immediately set attributes to prevent FOUC & ensure localStorage is set.
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-theme-setting', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (localStorage) {
+    localStorage.setItem('theme', 'dark');
+  }
+  // Call the global initializer once, early. 
+  // Other scripts like theme.js will also run their initialization (e.g., on DOMContentLoaded)
+  window.initThemeGlobal(); 
+</script>
+<!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Jekyll Guide for Future Robots (and Humans!) | Eigenlucy
+    
+  
+</title>
+<meta name="author" content="Lucy Moglia">
+<meta name="description" content="Eigenlucy // Lucy Moglia
+">
+
+  <meta name="keywords" content="portfolio, engineer, resume, cv, tech, STEM">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+<!-- Bootstrap Table -->
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Site-specific Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Jacquard+24&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+
+<!-- Code Syntax Highlighting (Dark Theme Only) -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-native.css"
+  id="highlight_theme_dark"
+  media="all"
+>
+
+
+
+<!-- Styles -->
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://eigenlucy.github.io/jekyll_guide_for_robots/">
+
+<!-- Theme JavaScript (applies dark theme to components) -->
+<script src="/assets/js/theme.js"></script>
+
+<!-- GeoJSON support via Leaflet -->
+
+
+<!-- diff2html -->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/filter.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav "}>
+    <!-- Background Canvas --><!-- ADDED -->
+    <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
+
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Eigenlucy
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/gallery/">gallery
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/projects/">projects
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+              
+                <li class="nav-item ">
+                  
+                  <a class="nav-link" href="/resume/">resume
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >submenus
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/">about</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/gallery/">gallery</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/projects/">projects</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/cv/">CV</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          <!-- THEME TOGGLE BUTTON REMOVED -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Jekyll Guide for Future Robots (and Humans!)</h1>
+    <p class="post-description"></p>
+  </header>
+
+  <article>
+    <h1 id="jekyll-guide-for-future-robots-and-humans">Jekyll Guide for Future Robots (and Humans!)</h1>
+
+<p>This guide provides essential information for maintaining and developing this Jekyll-based website.</p>
+
+<h2 id="1-core-technology-jekyll">1. Core Technology: Jekyll</h2>
+
+<p>Jekyll is a static site generator. It takes your content (written in Markdown), applies layouts and includes (using the Liquid templating engine), and generates a complete, static website (HTML, CSS, JS) that can be served by almost any web server.</p>
+
+<p><strong>Key Concepts:</strong></p>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">_config.yml</code></strong>: The main configuration file for your Jekyll site. Contains site-wide settings, theme information, plugin configurations, and more.</li>
+  <li><strong>Content:</strong>
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">_posts/</code></strong>: Blog posts. Filenames must follow <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code>.</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">_pages/</code></strong>: Static pages (e.g., About, Contact).</li>
+      <li><strong>Collections (e.g., <code class="language-plaintext highlighter-rouge">_projects/</code>, <code class="language-plaintext highlighter-rouge">_news/</code>, <code class="language-plaintext highlighter-rouge">_eigenlucy/</code>)</strong>: Custom content types. Each collection is a folder prefixed with an underscore and defined in <code class="language-plaintext highlighter-rouge">_config.yml</code>. They allow grouping similar content (like projects or specialized blog posts).</li>
+    </ul>
+  </li>
+  <li><strong>Structure &amp; Templating:</strong>
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">_layouts/</code></strong>: Defines the basic HTML structure for different types of pages (e.g., <code class="language-plaintext highlighter-rouge">default.html</code>, <code class="language-plaintext highlighter-rouge">post.html</code>).</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">_includes/</code></strong>: Reusable snippets of HTML/Liquid code that can be included in layouts and pages.</li>
+      <li><strong>Front Matter</strong>: YAML block at the very beginning of Markdown files (between triple-dashed lines <code class="language-plaintext highlighter-rouge">---</code>) that defines metadata like <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">permalink</code>, and custom variables.</li>
+    </ul>
+  </li>
+  <li><strong>Styling:</strong>
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">_sass/</code></strong>: Contains SASS (Syntactically Awesome Stylesheets) files. SASS is a CSS preprocessor that adds features like variables, nesting, and mixins. These files are compiled into standard CSS. For this al-folio based theme, <code class="language-plaintext highlighter-rouge">_themes.scss</code> and <code class="language-plaintext highlighter-rouge">_variables.scss</code> are particularly important for aesthetic customization.</li>
+    </ul>
+  </li>
+  <li><strong>Assets (<code class="language-plaintext highlighter-rouge">assets/</code>)</strong>: Static files like images, PDFs, and global CSS/JS files.</li>
+</ul>
+
+<p><strong>Official Documentation:</strong> <a href="https://jekyllrb.com/docs/">https://jekyllrb.com/docs/</a></p>
+
+<h2 id="2-environment--dependencies-arch-linux-focus">2. Environment &amp; Dependencies (Arch Linux Focus)</h2>
+
+<p>This site is developed on EndeavourOS/Arch Linux.</p>
+
+<ul>
+  <li><strong>Ruby:</strong> Jekyll is built with Ruby.
+    <ul>
+      <li>Installation: <code class="language-plaintext highlighter-rouge">sudo pacman -S ruby</code></li>
+    </ul>
+  </li>
+  <li><strong>RubyGems:</strong> The package manager for Ruby. Used to install Jekyll and its plugins (which are called “gems”).
+    <ul>
+      <li>Usually installed with Ruby. <code class="language-plaintext highlighter-rouge">gem --version</code> to check.</li>
+    </ul>
+  </li>
+  <li><strong>Bundler:</strong> Manages Ruby gem dependencies for the project, ensuring consistency.
+    <ul>
+      <li>Installation: <code class="language-plaintext highlighter-rouge">sudo pacman -S ruby-bundler</code> (or <code class="language-plaintext highlighter-rouge">gem install bundler</code>)</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">Gemfile</code></strong>: Lists all direct gem dependencies for the project.</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">Gemfile.lock</code></strong>: Records the exact versions of all gems (direct and indirect) that were last successfully used. <strong>Commit this file to your repository.</strong></li>
+      <li><strong>Workflow:</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">bundle install</code>: Installs all gems specified in <code class="language-plaintext highlighter-rouge">Gemfile</code> (and <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> if present). Run this after cloning the repo or when <code class="language-plaintext highlighter-rouge">Gemfile</code> changes.</li>
+          <li><code class="language-plaintext highlighter-rouge">bundle exec &lt;command&gt;</code>: <strong>Crucial!</strong> Always prefix Jekyll commands (and other gem commands like <code class="language-plaintext highlighter-rouge">rake</code>) with <code class="language-plaintext highlighter-rouge">bundle exec</code>. This ensures you are using the gem versions defined in your project’s <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>, not system-wide gems.</li>
+          <li><code class="language-plaintext highlighter-rouge">bundle update &lt;gemname&gt;</code>: Updates a specific gem and its dependencies.</li>
+          <li><code class="language-plaintext highlighter-rouge">bundle update</code>: Updates all gems according to <code class="language-plaintext highlighter-rouge">Gemfile</code>. Use with caution, test thoroughly after.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-local-development">3. Local Development</h2>
+
+<p>To view the site locally:</p>
+
+<ol>
+  <li>Navigate to the project directory: <code class="language-plaintext highlighter-rouge">cd /home/lucy/eigenlucy.github.io</code></li>
+  <li>Run the Jekyll development server:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span> <span class="nt">--port</span> 4002
+</code></pre></div>    </div>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">--livereload</code>: Automatically refreshes the browser when you save changes to files.</li>
+      <li><code class="language-plaintext highlighter-rouge">--port 4002</code>: Specifies the port to run the server on.</li>
+    </ul>
+  </li>
+  <li>Open your browser to <a href="http://localhost:4002">http://localhost:4002</a>.</li>
+</ol>
+
+<p>To build the site (generates static files into <code class="language-plaintext highlighter-rouge">_site/</code>):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
+</code></pre></div></div>
+
+<h2 id="4-deployment-github-pages">4. Deployment: GitHub Pages</h2>
+
+<p>This site is deployed using GitHub Pages.</p>
+
+<ul>
+  <li><strong>How it Works:</strong> GitHub Pages can automatically build and serve Jekyll sites. Typically, you push your source code (including <code class="language-plaintext highlighter-rouge">_config.yml</code>, Markdown files, <code class="language-plaintext highlighter-rouge">Gemfile</code>, etc.) to a specific branch (e.g., <code class="language-plaintext highlighter-rouge">main</code> or <code class="language-plaintext highlighter-rouge">master</code>), and GitHub Actions (or an older internal system) builds the Jekyll site and deploys it.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_config.yml</code> settings for GitHub Pages:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">url</code>: The main URL of your site (e.g., <code class="language-plaintext highlighter-rouge">https://username.github.io</code>).</li>
+      <li><code class="language-plaintext highlighter-rouge">baseurl</code>: If your site is served from a subdirectory (e.g., <code class="language-plaintext highlighter-rouge">https://username.github.io/repository-name</code>), this should be set to <code class="language-plaintext highlighter-rouge">/repository-name</code>. If served from the root of the domain, it’s often an empty string <code class="language-plaintext highlighter-rouge">""</code> or <code class="language-plaintext highlighter-rouge">/</code>. Check your site’s specific configuration.</li>
+    </ul>
+  </li>
+  <li><strong>Plugin Compatibility:</strong> GitHub Pages has a list of <a href="https://pages.github.com/versions/">supported Jekyll plugins</a>. If you use plugins not on this list, you might need to build the site locally and push the static <code class="language-plaintext highlighter-rouge">_site/</code> content, or use a custom GitHub Actions workflow to build the site with your specific gems.</li>
+  <li><strong>Build Logs:</strong> If deployment fails, check the build logs in the “Actions” tab of your GitHub repository.</li>
+</ul>
+
+<p><strong>Official Documentation:</strong> <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll</a></p>
+
+<h2 id="5-key-al-folio-theme-concepts-used">5. Key al-folio Theme Concepts Used</h2>
+
+<p>This site is based on the al-folio theme, which has several conventions:</p>
+
+<ul>
+  <li><strong>Collections for Content:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">_projects/</code>: For project pages.</li>
+      <li><code class="language-plaintext highlighter-rouge">_news/</code>: For news items, often displayed on the homepage.</li>
+      <li><code class="language-plaintext highlighter-rouge">_eigenlucy/</code>: Custom collection for specific blog posts not on the main page. <em>Ensure this is correctly configured in <code class="language-plaintext highlighter-rouge">_config.yml</code> if you want Jekyll to process it as a collection with its own permalinks, layouts, etc.</em></li>
+    </ul>
+  </li>
+  <li><strong>Data Files (<code class="language-plaintext highlighter-rouge">_data/</code>):</strong>
+    <ul>
+      <li>YAML files like <code class="language-plaintext highlighter-rouge">cv.yml</code> (CV data) and <code class="language-plaintext highlighter-rouge">repositories.yml</code> (GitHub repo info) can be used to store structured data that is then pulled into pages/layouts.</li>
+    </ul>
+  </li>
+  <li><strong>Bibliography (<code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code>):</strong>
+    <ul>
+      <li>Uses <code class="language-plaintext highlighter-rouge">jekyll-scholar</code> plugin to process BibTeX files and display publications.</li>
+    </ul>
+  </li>
+  <li><strong>SASS Customization (<code class="language-plaintext highlighter-rouge">_sass/</code>):</strong>
+    <ul>
+      <li>Theme colors, fonts, and layout styles are managed here. <code class="language-plaintext highlighter-rouge">_themes.scss</code> and <code class="language-plaintext highlighter-rouge">_variables.scss</code> are key for visual customization.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-important-site-specific-logs">6. Important Site-Specific Logs</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">change_log_for_robots.md</code></strong>: Summarizes substantial changes, updates, and errors encountered during site development.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">robot_reflections.md</code></strong>: Contains broader reflections on site aesthetics, potential improvements, and thematic consistency.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">CUSTOMIZE.md</code></strong>: Original (now partially outdated) guide for customizing the al-folio theme. Still a useful reference for theme basics.</li>
+</ul>
+
+<hr />
+<p><em>This guide is a living document. Please update it with any new, relevant information as you work on the site.</em></p>
+
+  </article>
+
+  
+</div>
+      
+    </div>
+
+    <!-- Footer -->
+    
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright 2025
+      Lucy
+      
+      Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+      
+      
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="/assets/js/mdb.min.js"></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+    
+  <!-- Masonry & imagesLoaded -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js"
+    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+<!-- Bootstrap Table -->
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+
+
+    
+
+
+    
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  ></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"></script>
+
+
+    
+    
+
+
+    
+
+    
+
+    
+
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+    <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+<script>
+  
+</script>
+    
+    
+    <!-- Tag filter script -->
+    <script src="/assets/js/filter.js"></script>
+
+    <!-- PDE Background Animation Script --><!-- ADDED -->
+    <script src="/assets/js/pde-background.js" defer></script><!-- ADDED -->
+  </body>
+</html>
