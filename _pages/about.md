@@ -31,3 +31,5 @@ Areas of research:
 </ul>
 
 <p>You can see the source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.</p> I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions :)
+
+If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com.

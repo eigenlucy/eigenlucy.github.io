@@ -12,7 +12,7 @@ Recently, I have been doing a lot of work on biotech hardware with my good frien
 <div>
   <img src="/assets/img/Gallery/LIG_Demo.webp" alt="LIG SEM Images" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
-SEM images of pourous graphene on polymide
+SEM images of pourous graphene on polyimide
 
 
 We are starting with a system titled Mind In Vitro (MIV), an open source headstage platform developed by a <a href-="https://mindinvitro.illinois.edu">team at University of Illinois</a>.
