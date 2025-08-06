@@ -3,7 +3,7 @@
   "basics": {
     "name": "Lucy Moglia",
     "label": "Research Engineer",
-    "image": "https://eigenlucy.github.io/assets/img/Gallery/lucyresumepfp.jpg",
+    "image": "https://eigenlucy.com/assets/img/Gallery/lucyresumepfp.jpg",
     "email": "eigenlucy@proton.me",
     "website": "https://eigenlucy.com",
     "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evaluating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
@@ -272,6 +272,18 @@
   ],
   "projects": [
     {
+      "name": "Spacebridge High Altitude Balloon PCB",
+      "description": "Designed a high altitude balloon payload for DIY weather/radioilogical surveying with Noisebridge's Spacebridge group",
+      "keywords": [
+        "Ecological surveying",
+        "DIY",
+        "Solar"
+      ],
+      "startDate": "2025-01-05",
+      "url": "https://eigenlucy.com/projects/spacebridhehabpcb/",
+      "type": "application"
+    },
+    {
       "name": "Micromppt",
       "description": "Low-cost 5W autonomous solar charger with embedded perturb-and-observe setpoint adjustment. Designed for use with Meshtastic and other low power embedded devices. Now sold and distributed by a number of Meshtastic community hardware developers.",
       "keywords": [
@@ -281,7 +293,7 @@
       ],
       "startDate": "2024-11-05",
       "endDate": "2025-04-05",
-      "url": "https://eigenlucy.github.io/projects/micromppt/",
+      "url": "https://eigenlucy.com/projects/micromppt/",
       "type": "application"
     },
     {
@@ -294,7 +306,7 @@
         "Edge ML"
       ],
       "startDate": "2024-10-05",
-      "url": "https://eigenlucy.github.io/projects/NonHumanScent/",
+      "url": "https://eigenlucy.com/projects/NonHumanScent/",
       "type": "application"
     },
     {
@@ -306,7 +318,7 @@
         "Biohhacking"
       ],
       "startDate": "2025-01-15",
-      "url": "https://eigenlucy.github.io/projects/mea_arrays/",
+      "url": "https://eigenlucy.com/projects/mea_arrays/",
       "type": "application"
     },
     {
@@ -317,7 +329,7 @@
         "Biohacking"
       ],
       "startDate": "2022-11-30",
-      "url": "https://eigenlucy.github.io/projects/NFC_Implant/",
+      "url": "https://eigenlucy.com/projects/NFC_Implant/",
       "type": "application"
     },
     {
