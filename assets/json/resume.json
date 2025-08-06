@@ -5,12 +5,13 @@
     "label": "Research Engineer",
     "image": "https://eigenlucy.github.io/assets/img/Gallery/lucyresumepfp.jpg",
     "email": "eigenlucy@proton.me",
-    "website": "https://eigenlucy.github.io",
-    "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evalutating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
+    "website": "https://eigenlucy.com",
+    "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evaluating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
     "location": {
-      "city": "Greenville",
+      "city": "San Francisco",
       "countryCode": "US",
-      "region": "South Carolina"
+      "region": "California",
+      "postalCode": "94107"
     },
     "profiles": [
       {
@@ -27,18 +28,35 @@
   },
   "work": [
     {
+      "name": "Self Employed Hardware Designer",
+      "location": "San Francisco, CA",
+      "description": "Contracting and consulting work for an array of startups",
+      "position": "Engineer",
+      "url": "https://eigenlucy.com",
+      "startDate": "2024-10-15",
+      "summary": "PCB design, rapid prototyping, embedded devevlopment, RF performance testing, and more",
+      "highlights": [
+        "Developed a number of demos which helped secure startups funding",
+        "Provided rapid turnaround PCB design and testing services",
+        "Early-stage hardware consulting, assisting founders in understanding their products' technical requirements",
+        "Lab specification and equipment recommendations, process initialization and calibration",
+        "Performance analysis",
+        "Failure mode analysis"
+      ]
+    },
+    {
       "name": "Atopile",
       "location": "San Francisco, CA",
-      "description": "Software Defined Hardware Startup",
+      "description": "Developed software-defined hardware solutions.",
       "position": "Research Fellow",
       "url": "https://docs.atopile.io/latest/",
       "startDate": "2024-10-15",
-      "summary": "Sponsored in designing a number of PCBs and contributing to various open source projects",
+      "summary": "Built hardware using Atopile's domain-specific language for PCB design.",
       "highlights": [
-        "HAOS Control Panels.",
-        "Ultra-Low Power BLE/UWB Mesh Network Clients.",
-        "Meshtastic Clients.",
-        "Find My Network Geolocators"
+        "Developed MicroMPPT, a 5W autonomous multi-chemistry solar charger with autonomous perturb-and-observe, now distributed by a number of third-party sellers",
+        "Developed a series of home assistant control panels",
+        "Developed a high-altitude balloon payload with LoRa telemetry",
+        "Testing/debugging prototype features"
       ]
     },
     {
@@ -51,31 +69,31 @@
       "endDate": "2024-08-28",
       "summary": "Kyocera-AVX is an American electronics component manufacturer specializing in passive components such as antennas, MLCCs, tantalum capacitors, supercapacitors, and varistors.",
       "highlights": [
-        "Preformed teardowns on a wide variety of products and systems on behalf of market research and engineering teams.",
-        "Reverse engineered systems to assist product design and market research teams, produced schematics and component models from product samples, evaluated samples annd prototype components to assess suitability for given products/applications of interest."
+        "Performed teardowns on a wide variety of products and systems on behalf of market research and engineering teams.",
+        "Reverse-engineered systems to assist product design and market research teams; produced schematics and component models from product samples; evaluated samples and prototype components to assess suitability for given products/applications of interest."
       ]
     },
     {
       "name": "Machinic Garden LLC",
       "location": "Liberty, SC",
-      "description": "Small Scale Manufacturing and Contract Prototyping Services",
-      "position": "Engineer",
-      "url": "",
+      "description": "Provided contract engineering and manufacturing services to startups and small businesses.",
+      "position": "Founder/Engineer",
+      "url": "https://www.eigenlucy.com",
       "startDate": "2022-10-01",
       "endDate": "2023-05-01",
       "summary": "Contract Engineering and Manufacturing Services, Small-Scale Manufacturing",
       "highlights": [
-        "Designed prototype PCBs to client specifications and designed processes to address specialty needs (e.g. copper nanopaticle airbrush coating and electroplating of 3D printed parts).",
-        "Acquisition and integration of a wide variety of small scale manufacturing and test equipment including 3D printers, laser cutters, arc welders, drill presses, osciloscopes, CNC mills and reflow ovens.",
-        "PCB Design (KiCAD, Fusion360)",
-        "Managed a shop website and several storefronts such as Etsy and Amazon, mananged AdSense, and handled order processing and shippng for an array of products including t-shirts, laser engraved coasters/signs, 3D prints, and electronics kits.",
-        "Full-Stack Embedded Development (C/C++, Micropython, Arduino, ATTiny, ARM Cortex M, STM32, ESP32/8266, Teensy, RP2040, SAMD21/51)"
+        "Designed prototype PCBs to client specifications and designed processes to address specialty needs (e.g., copper nanoparticle airbrush coating and electroplating of 3D-printed parts).",
+        "Acquisition and integration of a wide variety of small-scale manufacturing and test equipment including 3D printers, laser cutters, arc welders, drill presses, oscilloscopes, CNC mills, and reflow ovens.",
+        "(KiCAD, Fusion360)",
+        "Managed a shop website and several storefronts such as Etsy and Amazon; managed AdSense; and handled order processing and shipping for an array of products including t-shirts, laser-engraved coasters/signs, 3D prints, and electronics kits.",
+        "Full-stack Embedded Development (C/C++, MicroPython, Arduino, ATTiny, ARM Cortex-M, STM32, ESP32/8266, Teensy, RP2040, SAMD21/51)"
       ]
     },
     {
       "name": "Electrolux",
       "location": "Anderson, SC",
-      "description": "Electronics Lab Tech Position",
+      "description": "Electronics Lab Technician",
       "position": "Electronics Lab Technician",
       "url": "https://www.electrolux.com/en/",
       "startDate": "2022-05-01",
@@ -83,8 +101,9 @@
       "summary": "Electrolux is an Swedish multinational home electronics manufacturer specializing in appliances such as fridges and washing machines.",
       "highlights": [
         "Assisted engineers in PCB and firmware development and validation.",
-        "Preformed IEC compliance testing, evaluated hardware and firmware revisions with LabVIEW, NI embedded PCs and custom Arduino based test hardware.",
-        "Used OrCAD, LabVIEW, National Instruments PXI, and a wide array of electronics lab equipment."
+        "Performed IEC/UL compliance testing, evaluated hardware and firmware revisions with LabVIEW, NI embedded PCs, and custom Arduino-based test hardware.",
+        "Used OrCAD, LabVIEW, National Instruments PXI, and a wide array of electronics lab equipment.",
+        "Assisted in development of EOL test fixtures"
       ]
     }
   ],
@@ -98,14 +117,22 @@
       "highlights": [
         "501c nonprofit organization. https://www.cleobailey.org/",
         "Coordinated with university student organizations and community groups to organize volunteer efforts and plan events.",
-        "Managed and participated in the planning and construction of a wide array of construction, rennovation and gardening projects.",
-        "Assisted in the design and implementation of an array of low-cost, experimental construction and gardening methods, such as 'DIY' irrigation systems made from PVC pipes and low-cost rainwater collection/distrubution systems."
+        "Managed and participated in the planning and construction of a wide array of construction, renovation, and gardening projects.",
+        "Assorted gardening, farm work, construction, and fabrication work",
+        "Assisted in the design and implementation of an array of low-cost, experimental construction and gardening methods, such as 'DIY' irrigation systems made from PVC pipes and low-cost rainwater collection/distribution systems."
       ]
     }
   ],
   "awards": [
     {
-      "title": "OpenSauce 2024 Exhibtor",
+      "title": "OpenSauce 2025 Exhibitor",
+      "date": "2024-06-14",
+      "awarder": "San Mateo, California",
+      "url": "https://opensauce.com/",
+      "summary": "OpenSauce, year two. This time we presented 'Richard Nixon's Head in a Jar', an interactive animatronic Nixon robot with silicone skin plugged into a fine tuned LLM and voice model."
+    },
+    {
+      "title": "OpenSauce 2024 Exhibitor",
       "date": "2024-06-14",
       "awarder": "Daly City, California",
       "url": "https://opensauce.com/",
@@ -114,140 +141,195 @@
   ],
   "skills": [
     {
-      "name": "Electrical Engineering",
-      "level": "Master",
+      "name": "Plasma physics/high voltage",
+      "level": "master",
       "keywords": [
-        "Circuit Design (AVX)",
-        "PDN Analysis (AVX)",
+        "Solid-state Tesla coil design/construction",
+        "Inductively coupled plasma, RF plasma",
+        "Marx generator design/construction",
+        "HV converter design (flyback, ZVS, LLC, Hbridge)",
+        "HV interlock design",
+        "Transient simulation and isolation in HV systems",
+        "High power waveguide design and simulation"
+      ]
+    },
+    {
+      "name": "Electrical Engineering",
+      "level": "master",
+      "keywords": [
+        "Circuit Design",
+        "PDN Analysis",
         "PCB Antenna/Filter Design",
-        "Failure Mode Analysis (Electrolux)",
-        "Equipment Design/Construction (AVX/ElectroLux)",
-        "PCB Design (AVX/MG)",
-        "PCB Assembly (AVX/MG/Electrolux)",
-        "IEC Compliance Testing (Electrolux)",
-        "Functional Testing/Debugging (AVX/MG/Electrolux)",
-        "Prototype Evaluation (AVX)",
-        "SPICE Modeling (AVX)"
+        "Failure Mode Analysis",
+        "Equipment Design/Construction",
+        "PCB Design",
+        "PCB Assembly",
+        "IEC Compliance Testing",
+        "Functional Testing/Debugging",
+        "Prototype Evaluation",
+        "SPICE Modeling"
       ]
     },
     {
       "name": "Full-Stack Embedded Development",
-      "level": "Advanced",
+      "level": "advanced",
       "keywords": [
-        "C, C++, Arduino, Micropython Firmware Development (AVX/MG)",
-        "Circuit Design, PCB Design/CAD Design (AVX/MG)",
+        "C, C++, Arduino, Micropython Firmware Development",
+        "Circuit Design, PCB Design/CAD Design",
         "Instrumentation/Test Hardware Design",
-        "Rapid Prototyping (AVX/Electrolux)",
-        "STM8/32, ATMega/ATTiny, ESP8266/ESP32, RP2040, SAMD21/51, Teensy, PIC Microcontrollers",
-        "Rapid Full Stack Turnaround Time (AVX)"
+        "Rapid Prototyping",
+        "STM8/32, ATMega/ATTiny, ESP8266/ESP32, RP2040, SAMD21/51, Teensy, PIC",
+        "Debugging/Performance Analysis"
       ]
     },
     {
       "name": "Manufacturing",
-      "level": "Advanced",
+      "level": "advanced",
       "keywords": [
-        "FDM 3D Printing (AVX/MG)",
-        "SLA/mSLA 3D Printing (AVX/MG)",
-        "CNC Machining/Laser Engraving (MG)",
-        "Casting (MG)",
-        "Electroplating (AVX/MG)"
+        "3D Printing (FDM, SLA/mSLA, SLS)",
+        "Direct laser writing and electrode patterning for biosensor and MEA fabrication",
+        "Electroplating, electrodeposition, laser induced deposition",
+        "General fabrication",
+        "Light hand/CNC machining"
       ]
     },
     {
       "name": "Research Engineering",
-      "level": "Advanced",
+      "level": "advanced",
       "keywords": [
-        "Teardowns (AVX)",
-        "Technical Report Composition (AVX)",
-        "Market Research (AVX/MG)",
-        "Reverse Engineering (AVX/MG)",
-        "Prototype Evaluation (AVX/MG)"
+        "Teardowns",
+        "Technical Report Composition",
+        "Market Research",
+        "Reverse Engineering",
+        "Prototype Evaluation"
       ]
     }
   ],
   "languages": [
     {
-      "language": "English, C/C++, Python/Micropython, Bash, Git"
+      "language": "English, C/C++, Python, HTML, Javascript"
     }
   ],
   "interests": [
     {
-      "name": "Fields of Interest",
       "keywords": [
-        "BCIs",
-        "Resevoir Computing",
-        "Machine Learning",
-        "Autonomous Systems",
-        "Robotics",
-        "RF Engineering",
-        "High Energy Physics/Plasma Physics",
-        "Wireless Power Transfer",
-        "Renewable Energy"
+        "Mesh networks (OpenWRT, LoRaWAN, BLE Mesh, Reticulum)",
+        "Solar converters",
+        "High Energy Physics/Plasma Physics/High Voltage",
+        "Artificial Olfaction",
+        "Mycology",
+        "Applied ML for robotics",
+        "RF engineering",
+        "Wireless Power Transfer"
       ]
     },
     {
-      "name": "Open Science",
       "keywords": [
-        "Open-source Hardware/Free Software",
-        "Open-source Bioinformatics",
-        "Free Software",
+        "Open-source hardware",
+        "Low cost, open source microelectrode arrays",
+        "DIYBIO",
+        "DIY weather and radiological surveying with high altitude balloons",
         "Small Scale Manufacturing (3D Printing, CNC Milling, Laser/Plasma Cutting, Etc.)",
-        "'Biohacking'",
         "Open Source/Low Cost Lab Equipment"
       ]
     },
     {
-      "name": "Cybernetics",
       "keywords": [
+        "Artificial olfaction",
+        "Sensor design",
+        "Agent memory and orchestration",
         "Control Theory",
-        "Theory of Computation",
         "Enactivism",
-        "LLM Fine Tuning",
-        "Information Theory",
-        "Karl Friston/FEP",
-        "Machine Learning"
+        "Machine learning",
+        "Biosystems, biosensing"
       ]
     },
     {
-      "name": "Mycology",
       "keywords": [
+        "Maskless microelectrode array fabrication for low cost cultured neuron signal acquisiton headstages",
         "Mushroom Cultivation",
-        "Cloning/Hybridization",
-        "Mushroom Identification"
+        "DIY TDCS/TEMS based on Howland Current pump",
+        "Spore and Phage Culturing on Agar",
+        "Fungal network mapping with diy EEG hardware",
+        "Mushroom Identification",
+        "Biosensor fabricationw with laser induced graphene"
       ]
     }
   ],
   "references": [
     {
+      "name": "Mark Hansen,  Cofounder at Mithras",
+      "reference": "mark@mithras.industries"
+    },
+    {
       "name": "Zephaniah Smith,  Founder at The Cleo Bailey Experiment",
-      "reference": ""
+      "reference": "1-(704)-439-6308"
     },
     {
       "name": "Julian Wilson, Market Research Engineer II at Kyocera-AVX",
-      "reference": ""
+      "reference": "1-678-923-3100"
     }
   ],
   "projects": [
     {
+      "name": "Micromppt",
+      "description": "Low-cost 5W autonomous solar charger with embedded perturb-and-observe setpoint adjustment. Designed for use with Meshtastic and other low power embedded devices. Now sold and distributed by a number of Meshtastic community hardware developers.",
+      "keywords": [
+        "Power converters",
+        "Open source hardware",
+        "Solar"
+      ],
+      "startDate": "2024-11-05",
+      "endDate": "2025-04-05",
+      "url": "https://eigenlucy.github.io/projects/micromppt/",
+      "type": "application"
+    },
+    {
+      "name": "NonHumanScent, Artificial Olfaction",
+      "description": "Designed electronic olfaction gas composition sensors and developed open-source edge ML electronic olfaction dev kits.",
+      "keywords": [
+        "Open source hardware",
+        "Open Science",
+        "Material science",
+        "Edge ML"
+      ],
+      "startDate": "2024-10-05",
+      "url": "https://eigenlucy.github.io/projects/NonHumanScent/",
+      "type": "application"
+    },
+    {
+      "name": "Cultured Neurons at Frontier Tower",
+      "description": "Developing techniques for Frontier Tower's neurotech floor to read and stimulate cultured neurons, including maskless MEA fabrication process, biocompatible fluid exchange systems, and custom signal acquisition boards",
+      "keywords": [
+        "Biosystems",
+        "DIYBIO",
+        "Biohhacking"
+      ],
+      "startDate": "2025-01-15",
+      "url": "https://eigenlucy.github.io/projects/mea_arrays/",
+      "type": "application"
+    },
+    {
       "name": "NFC/LED Chip Implant",
       "description": "Self-surgery to install an xSIID NFC/LED chip in the webbing of my left hand",
       "keywords": [
-        "RFID",
+        "RFID/NFC Hacking",
         "Biohacking"
       ],
-      "date": "2022-11-30",
+      "startDate": "2022-11-30",
       "url": "https://eigenlucy.github.io/projects/NFC_Implant/",
       "type": "application"
     },
     {
       "name": "Voices In The Radio",
-      "description": "OS agnotstic GPT fine-tuning toolchain used in my OpenSauce 2024 exhibit. Automates scraping and processing large quantities of text from a variety of source filetypes, filtering this data with chunk distinctiveness scoring, and automating fine-tuning process via OpenAI's API. Additionally provides tools to automate the assignment of fine-tuned models to Discord bots, and assignment of a voice via eleven labs TTS API. Our OpenSauce booth included a terminal to interact with the models we trained this way, which would then speak at the user through a suite of FM radios with the use of an ESP32 and SI4713 FM Transmitter IC.",
+      "description": "OS-agnostic GPT fine-tuning toolchain used in my OpenSauce 2024 exhibit. Automates scraping and processing large quantities of text from a variety of source file types, filtering this data with chunk distinctiveness scoring, and automating the fine-tuning process via OpenAI's API. Additionally, provides tools to automate the assignment of fine-tuned models to Discord bots and the assignment of a voice via the Eleven Labs TTS API. Our OpenSauce booth included a terminal to interact with the models we trained this way, which would then speak to the user through a suite of FM radios with the use of an ESP32 and SI4713 FM Transmitter IC.",
       "keywords": [
         "LLM Fine tuning",
         "ChatGPT",
         "Python"
       ],
-      "date": "2024-05-12",
+      "startDate": "2024-04-12",
+      "endDate": "2024-06-18",
       "url": "https://github.com/eigenlucy/Voices-In-The-Radio-PUBLIC-",
       "type": "application"
     }
