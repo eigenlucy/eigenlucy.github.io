@@ -55,4 +55,4 @@ We sterilize our raws by baking the powder, and we sterilize our liquids with ou
 
 If you are compounding at any reasonable scale, you should really test your aseptic technique. The standard method is to run a test batch and periodically touch each finger to an agar plate as you work to identify if and when contamination is introduced.
 
-For small batches, this is much less sensitive, but as a rule the longer your vials are stored and the larger quantity you brew in, the more perfect your aseptic technique must be.
+For small batches, this is much less sensitive, but as a rule the longer your vials are stored and the larger quantity you brew in, the more perfect your aseptic technique must be.https://www.when2meet.com/?33032434-dbXhP
