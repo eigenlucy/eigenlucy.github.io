@@ -16,9 +16,10 @@ My areas of research are:
 * Small scale manufacturing of E vials
 
 # Basics
-* Check out <a href="https://diyhrt.wiki">DIY.HRT</a> wiki for basic info on sourcing, dosage, and testing.
-* Check out <a href="https://www.hrt.mom">HRT.MOM</a> for info on homebrewing vials
-* <a href="https://www.dragonordnance.com">DragonOrdinance</a> is my preferred site for sourcing raws.
+* Check out <a href="https://diyhrt.wiki">DIY.HRT</a> wiki for basic info on sourcing, dosage, and testing. Do not use their HRT prep guide!! See this critique of their methodology from hrt.mom
+* Check out <a href="https://www.hrt.mom">HRT.MOM</a> for info on homebrewing vials. This is by far the best guide on aseptic technique and proper sterilization methods!!
+* <a href="https://www.dragonordnance.com">DragonOrdinance</a> is my preferred site for sourcing raws. Check out the source list on <a href="https://diyhrt.wiki">DIY.HRT wiki</a> for more options shipping to just about every country on earth.
+* Check out this simulation of level given dosage, injection frequency, and 
 
 # DIY level monitoring
 
@@ -40,11 +41,18 @@ In the meantime, check out this <a href="https://patents.google.com/patent/US200
 # Vials
 
 ## Equipment:
-* Dry/Wet sterilizer (I use an Omniclave)
+* Dry sterilizer (I use an Omniclave, an oven will do)
+* Still air box
 * Vials + vial crimp
 * .22uM PTFE filters
 * Benzyl Alcohol
 * Benzyl Benzoate
 * Raws
 * MCT or Castor oil
-* Miligram scale
+* Scale (>.001g resolution)
+
+We sterilize our raws by baking the powder, and we sterilize our liquids with our sub micron filter. You need perform a bubble point test on the filters!!
+
+If you are compounding at any reasonable scale, you should really test your aseptic technique. The standard method is to run a test batch and periodically touch each finger to an agar plate as you work to identify if and when contamination is introduced.
+
+For small batches, this is much less sensitive, but as a rule the longer your vials are stored and the larger quantity you brew in, the more perfect your aseptic technique must be.
