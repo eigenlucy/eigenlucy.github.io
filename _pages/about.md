@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 ---
 <p>I am a 24 year old self taught engineer and founder based in San Francisco</p>
 
-Areas of research:
+Projects/research:
 <ul>
   <li>Plasma assisted exploratory drilling at <a href="https://mithras.industries">Mithras</a></li>
   <li>Agent memory and orchestration at <a href="https://sophia-labs.com">sophia-labs</a></li>
@@ -25,11 +25,14 @@ Areas of research:
   <li>Artificial olfaction. Check out my enose dev board,<a href="https://github.com/eigenlucy/nonhumanscent">NonHumanScent</a>, and my talks with <a href="https://youtu.be/jGN_bRmlDQo?feature=shared">Ekkolapto</a> Institute</li>
   <li>Micro-solar chargers, like  <a href="https://github.com/eigenlucy/micromppt">Micromppt</a></li>
   <li> Low power mesh network clients (BLE Mesh, LoRa, OpenWRT), like <a href="https://eigenlucy.com/projects/femtofox">Femtofox</a></li>
-  <li>High Altitude Ballooning with <a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge</a></li>
-  <li>Wearable assistants, like <a href="https://eigenlucy.com/projects/wasp">WASP</a></li>
-  <li>Software defined hardware with <a href="https://atopile.io">Atopile's</a> domain specific language for PCB design</li> 
+  <li>DIY high altitude ballooning with <a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge</a></li>
+  <li>Software defined hardware with <a href="https://atopile.io">Atopile's</a> domain specific language for PCB design</li>
 </ul>
 
-<p>You can see the source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.</p> I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions :)
+Check out my [projects](/projects)
 
-If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com.
+You can see the source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
+
+I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions.
+
+If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com

@@ -10,7 +10,7 @@ related_publications: false
 
 The original [Mind In Vitro](https://mindinvitro.illinois.edu) publication provides a low cost, open source headstage system to interface cultured neurons with a computer. I have recently been working on replicating and revising the system with the help of some folks at Frontier Tower and  Neuromorph VC.
 
-img src="/assets/img/Gallery/MindInVitro.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+<img src="/assets/img/Gallery/MindInVitro.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 
 Many of the design files and protocols can be found in the [project's Github page](https://mindinvitro.illinois.edu)
 
@@ -32,7 +32,7 @@ This board is responsible for connecting the MEA electrodes to our signal acquis
 ## Acquisition System
 
 The acquisition system captures and records electrical activity sampled by the MEA array. The critical system parameters are:
-* Channel count, determines the number of electrodes which can be recorded
+* Channel count, determines the number of electrodes which can be recorded. Multiple acquisition boards can be connected to a single recording system, so the recording hardware sets the channel limit
 * Sample rate, determines the frequency of neuronal activity which can can measure
 * Bit resolution, determines the precision of the electrode voltage measurements
 
