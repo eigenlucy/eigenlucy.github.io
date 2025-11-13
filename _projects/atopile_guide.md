@@ -8,4 +8,6 @@ category: electrical engineering
 related_publications: false
 ---
 
-WIP
+Over the last year, I've spent a lot of time using Atopile for my PCB designs.
+
+
