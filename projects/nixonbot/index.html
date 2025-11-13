@@ -345,37 +345,55 @@
   </header>
 
   <article>
-    <div class="row">
-    <div class="col-sm mt-2 mt-md-0">
-        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Skull.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Skull.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Skull.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Skull.jpg.jpg-480.webp 480w,assets/img/Gallery/Skull.jpg.jpg-800.webp 800w,assets/img/Gallery/Skull.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/Skull.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Skull.jpg';" />
-    </picture>
-    
-  </figure>
-    </div>
-    <div class="col-sm mt-2 mt-md-0">
-        <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/facecasting.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/facecasting.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/facecasting.png] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/facecasting.png.png-480.webp 480w,assets/img/Gallery/facecasting.png.png-800.webp 800w,assets/img/Gallery/facecasting.png.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/facecasting.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/facecasting.png';" />
-    </picture>
-    
-  </figure>
-    </div>
+    <div>
+  <img src="/assets/img/Gallery/opensaucebooth.jpg" alt="opensauce 2025 booth" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">
-    Animatronic head (WIP), face casting
+<p style="text-align: center;">Opensauce 2025 Booth</p>
+<div class="col-sm mt-3 mt-md-0">
+  
+
+<figure>
+  
+    <video src="/assets/img/Gallery/NixonSpeaking.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" controls="" loading="eager" />
+
+  
+  
+</figure>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+
 </div>
+<p style="text-align: center;">Nixon Speaks</p>
+<div>
+  <img src="/assets/img/Gallery/Skull.jpg" alt="opensauce 2025 booth" style="width: 25%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+<p style="text-align: center;">Animatronic Skull</p>
+<div>
+  <img src="/assets/img/Gallery/facecasting.png" alt="opensauce 2025 booth" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+<p style="text-align: center;">Silicone Casting President Nixon's Face</p>
+<div>
+  <img src="/assets/img/Gallery/NixonMasks.jpg" alt="Nixon Masks" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+<p style="text-align: center;">Nixon masks</p>
 
   </article>
 
