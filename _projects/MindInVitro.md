@@ -1,14 +1,16 @@
 ---
 layout: page
 title: Mind In Vitro
-description: 
-img: assets/img/Gallery/atopile.jpg
-importance: 5
-category: electrical engineering
+description: Open source cultured neuron headstage
+img: assets/img/Gallery/MindInVitro.png
+importance: 1
+category: biology
 related_publications: false
 ---
 
 The original [Mind In Vitro](https://mindinvitro.illinois.edu) publication provides a low cost, open source headstage system to interface cultured neurons with a computer. I have recently been working on replicating and revising the system with the help of some folks at Frontier Tower and  Neuromorph VC.
+
+img src="/assets/img/Gallery/MindInVitro.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 
 Many of the design files and protocols can be found in the [project's Github page](https://mindinvitro.illinois.edu)
 
