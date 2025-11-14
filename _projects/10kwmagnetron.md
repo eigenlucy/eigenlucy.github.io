@@ -9,7 +9,7 @@ related_publications: false
 ---
 Check out this project's page on <a href="https://www.noisebridge.net/wiki/Microwave_furnace">the Noisebridge Wiki</a>
 
-<img src="/assets/img/Gallery/MagnetronFurnace.png" alt="Marx Generator stage" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+<img src="/assets/img/Gallery/MagnetronFurnace.png" alt="Magnetron furnace block diagram" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 
 ## UPDATE Feb 2025
 
@@ -53,5 +53,3 @@ You can see this magentron in action <a href="https://www.youtube.com/watch?v=mg
 <div class="caption">
     Magnetron, Chiller and Tubing, 10kW sputtering PSUs
 </div>
-
-
