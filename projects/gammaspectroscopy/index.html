@@ -422,6 +422,8 @@ GAGG Crystal florescence stimulated with 395nm UV measured with OceanOptics USB2
 Thallium doped cesium iodine scintillator crystal with TiO coating for optical shielding, packaged with SiPM
 </div>
 
+<p>Gamma spectroscopy is suprisingly cheap and intuitive to explore as a hobbyist. Nowadays, you can get fairly precise gamma spectroscopy devices from manufacturers like <a href="https://www.radviewdetection.com">Radview</a> and <a href="https://www.radiacode.com">Radiacode</a> fairlly cheaper (~$200-$500). Other projects, like <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">OpenGammaDetector</a>, use low cost microcontrollers and open source hardware for even cheaper detectors. This post will outline such cheap detectors are possible and demonstrate the effective simulation and design of a gamma spectrscopy device.</p>
+
 <p>The rest of this post is split into a few parts:</p>
 <ul>
   <li>a technical overview of particle detection circuits</li>
@@ -453,10 +455,11 @@ Thallium doped cesium iodine scintillator crystal with TiO coating for optical s
 LTSpice detector model
 </div>
 
-<p>Each SiPM contains a number of individually biased microcells, each of which can detect a single photon. Each triggered cell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.</p>
+<p>The number of photons emitted by the scintillator is proportional to the energy level of the incident gamma particle. Each SiPM contains a number of individually biased microcells, each of which can detect a single photon. Each triggered microcell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2, but it depends on the cell area) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.</p>
 
 <h1 id="references">References</h1>
 <ul>
+  <li><a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a></li>
   <li>ONSemi AND9782/D Biasing and Readout of ON Semiconductor SiPM Sensor <a href="https://www.onsemi.com/pub/Collateral/AND9782-D.PDF">LINK</a></li>
   <li>Improved SPICE electrical model of silicon photomultipliers <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168900213007389">LINK</a></li>
   <li>ONSemi AND9770/D Introduction to the Silicon Photomultiplier (SiPM) <a href="https://www.onsemi.com/pub/Collateral/AND9770-D.PDF">LINK</a></li>
