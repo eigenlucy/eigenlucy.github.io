@@ -70,8 +70,8 @@ LTSpice detector model
 Each SiPM contains a number of individually biased microcells, each of which can detect a single photon. Each triggered cell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.
 
 # References
-* ONSemi AND9782/D Biasing and Readout of ON Semiconductor SiPM Sensor [LINK]](https://www.onsemi.com/pub/Collateral/AND9782-D.PDF)
-* Improved SPICE electrical model of silicon photomultipliers [LINK]](https://www.sciencedirect.com/science/article/abs/pii/S0168900213007389)
+* ONSemi AND9782/D Biasing and Readout of ON Semiconductor SiPM Sensor [LINK](https://www.onsemi.com/pub/Collateral/AND9782-D.PDF)
+* Improved SPICE electrical model of silicon photomultipliers [LINK](https://www.sciencedirect.com/science/article/abs/pii/S0168900213007389)
 * ONSemi AND9770/D Introduction to the Silicon Photomultiplier (SiPM) [LINK](https://www.onsemi.com/pub/Collateral/AND9770-D.PDF)
 * An Open-Source Iterative Python Module for the Automated Identification of Photopeaks in Photon Spectra [LINK](https://www.mdpi.com/2673-592X/2/2/193)
 * LTC6244 High Speed Peak Detector [LINK](https://www.analog.com/en/resources/technical-articles/ltc6244-high-speed-peak-detector.html)
