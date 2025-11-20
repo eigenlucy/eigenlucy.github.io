@@ -18,7 +18,7 @@ A spectrum chart is composed with counts (number of particle detections) on the 
 </div>
 
 
-Each gamma emitting isotope emits particles at specific charecteristic energy level, so isotopes can be identified by matching spectrum readings to a reference spectrum. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.
+Each gamma emitting isotope emits particles of charecteristic energy levels, so isotopes can be identified by matching spectrum readings to reference spectrum. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.
 
 There are a variety of scintillator crystal chemistries available specialized for different applications (energy ranges, spectral efficicies, and energy resolutions).
 
@@ -67,10 +67,10 @@ The rest of this post is split into a few parts:
 LTSpice detector model
 </div>
 
-The number of photons emitted by the scintillator is proportional to the energy level of the incident gamma particle. Each SiPM contains a number of individually biased microcells, each of which can detect a single photon. Each triggered microcell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2, but it depends on the cell area) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.
+The number of photons emitted by the scintillator is proportional to the energy level of the incident gamma particle. The SiPM contains an array of individually biased microcells, each of which can detect a single photon. Each triggered microcell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2, but it depends on the cell area) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.
 
 # References
-* [Open Gamma Detector](https://github.com/OpenGammaProject/Open-Gamma-Detector)
+* Open Gamma Detector [LINK](https://github.com/OpenGammaProject/Open-Gamma-Detector)
 * ONSemi AND9782/D Biasing and Readout of ON Semiconductor SiPM Sensor [LINK](https://www.onsemi.com/pub/Collateral/AND9782-D.PDF)
 * Improved SPICE electrical model of silicon photomultipliers [LINK](https://www.sciencedirect.com/science/article/abs/pii/S0168900213007389)
 * ONSemi AND9770/D Introduction to the Silicon Photomultiplier (SiPM) [LINK](https://www.onsemi.com/pub/Collateral/AND9770-D.PDF)
