@@ -2,7 +2,7 @@
 layout: page
 title: Gamma Spectroscopy
 description: Modeling and buidling scintillator + SiPM gamma spectroscopes for radioisotope identification
-img: assets/img/Gallery/Femtofox.jpg
+img: assets/img/Gallery/GAGG.png
 importance: 2
 category: electrical engineering
 related_publications: false
