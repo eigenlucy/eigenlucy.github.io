@@ -27,8 +27,5 @@ sitemap: false
 ##   [garden](/eigenlucy/garden)
 * wasted youth, appeals to the Outside, experimental protocols for Life
 
-##   iemanja
-* only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast
-
 ## [war communism](/eigenlucy/warcommunism)
 * the communism of destitution, experimental family, social murder
