@@ -28,4 +28,4 @@ sitemap: false
 * wasted youth, appeals to the Outside, experimental protocols for Life
 
 ## [war communism](/eigenlucy/warcommunism)
-* the communism of destitution, experimental family, social murder
+* the communism of destitution, experimental family
