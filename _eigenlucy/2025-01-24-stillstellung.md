@@ -33,9 +33,9 @@ sitemap: false
   </div>
 </div>
 
-# ["The chronicler, who recounts events without distinguishing between the great and small, thereby accounts for the truth, that nothing which has ever happened is to be given as lost to history."](https://thetragiccommunity.wordpress.com/2020/10/28/from-theological-to-historical-apocatastasis-notes-on-benjamins-theologico-political-fragment/)
+## ["The chronicler, who recounts events without distinguishing between the great and small, thereby accounts for the truth, that nothing which has ever happened is to be given as lost to history."](https://thetragiccommunity.wordpress.com/2020/10/28/from-theological-to-historical-apocatastasis-notes-on-benjamins-theologico-political-fragment/)
 
-# [Perhaps there will be another ending to this story](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.katharinemeynell.co.uk/about/essays%26downloads/for%2520The%2520Lost%2520Diagrams%2520of%2520Walter%2520Benjamin.pdf&ved=2ahUKEwik1_mLxvyNAxVxEUQIHUB5IEkQFnoECB4QAQ&usg=AOvVaw1ZOjxMT0G-Dv6pqglLHEsu)
+## [Perhaps there will be another ending to this story](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.katharinemeynell.co.uk/about/essays%26downloads/for%2520The%2520Lost%2520Diagrams%2520of%2520Walter%2520Benjamin.pdf&ved=2ahUKEwik1_mLxvyNAxVxEUQIHUB5IEkQFnoECB4QAQ&usg=AOvVaw1ZOjxMT0G-Dv6pqglLHEsu)
 
 
 *   The analysis of the relationship between law and violence leads to the critique of violence (experienced in the present as the class struggle illuminated by Marx) through the historical gaze, which confronts the overflows and tensions of thought

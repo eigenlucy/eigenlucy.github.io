@@ -15,7 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p>I am a 24 year old self taught engineer and founder based in San Francisco</p>
+<p>I am a 24 year old self taught engineer and founder split between San Francisco, Mexico City, and Montevideo</p>
 
 Projects/research:
 <ul>
@@ -36,3 +36,5 @@ You can see the source code for this website <a href='https://github.com/eigenlu
 I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions.
 
 If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com
+
+You can also check out some of my less technical writings <a href="/eigenlucy">here</a>.
