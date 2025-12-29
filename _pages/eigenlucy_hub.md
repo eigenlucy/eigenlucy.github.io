@@ -13,7 +13,7 @@ sitemap: false
 * memory, fragmentation, reflections on a life interrupted, profession of faith
 
 ##   [multiplicity](/eigenlucy/multiplicity/)
-* what are we to do with our innumerabnle bodies
+* what are we to do with our innumerable bodies
 
 ##   [le fin de satan](/eigenlucy/bastille/)
 * hugo's unfinished epic, the redemption of Justice
