@@ -24,6 +24,9 @@ sitemap: false
 ##   [kaddish](/eigenlucy/kaddish)
 * the murdered absolute
 
+##   iemanja
+* only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast
+
 ##   [garden](/eigenlucy/garden)
 * wasted youth, appeals to the Outside, experimental protocols for Life
 
