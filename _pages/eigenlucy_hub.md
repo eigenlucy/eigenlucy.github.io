@@ -24,7 +24,7 @@ sitemap: false
 ##   [kaddish](/eigenlucy/kaddish)
 * the murdered absolute
 
-##   iemanja
+##   [iemanja (ode to vera)](/eigenlucy/iemanja)
 * only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast
 
 ##   [garden](/eigenlucy/garden)
