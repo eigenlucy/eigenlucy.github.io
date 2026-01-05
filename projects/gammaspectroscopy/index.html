@@ -354,9 +354,9 @@
   <img src="/assets/img/Gallery/SpectrumExample.png" alt="Example gamma spectrum" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
 
-<p>Each gamma emitting isotope emits particles of charecteristic energy levels, so isotopes can be identified by matching spectrum readings to reference spectrum. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.</p>
+<p>Each gamma emitting isotope emits particles of charecteristic energy levels. Isotopes can be identified by matching readings to reference spectrum/eV peaks. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.</p>
 
-<p>There are a variety of scintillator crystal chemistries available specialized for different applications (energy ranges, spectral efficicies, and energy resolutions).</p>
+<p>There are a variety of scintillator crystal chemistries available specialized for different applications (energy ranges, spectral efficiencies, and effective resolutions).</p>
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
@@ -422,7 +422,7 @@ GAGG Crystal florescence stimulated with 395nm UV measured with OceanOptics USB2
 Thallium doped cesium iodine scintillator crystal with TiO coating for optical shielding, packaged with SiPM
 </div>
 
-<p>Gamma spectroscopy is suprisingly cheap and intuitive to explore as a hobbyist. Nowadays, you can get fairly precise gamma spectroscopy devices from manufacturers like <a href="https://www.radviewdetection.com">Radview</a> and <a href="https://www.radiacode.com">Radiacode</a> fairlly cheaper (~$200-$500). Other projects, like <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">OpenGammaDetector</a>, use low cost microcontrollers and open source hardware for even cheaper detectors. This post will outline such cheap detectors are possible and demonstrate the effective simulation and design of a gamma spectrscopy device.</p>
+<p>Gamma spectroscopy is shockingly cheap and intuitive to explore as a hobbyist. Nowadays, you can get fairly precise gamma spectroscopy devices from manufacturers like <a href="https://www.radviewdetection.com">Radview</a> and <a href="https://www.radiacode.com">Radiacode</a> (~$200-$500). Other projects, like <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">OpenGammaDetector</a>, use low cost microcontrollers and open source hardware for even cheaper detectors. This post will outline such cheap detectors are possible and demonstrate the effective simulation and design of a gamma spectroscopy device.</p>
 
 <p>The rest of this post is split into a few parts:</p>
 <ul>
@@ -434,7 +434,7 @@ Thallium doped cesium iodine scintillator crystal with TiO coating for optical s
   <li>reference material</li>
 </ul>
 
-<h1 id="technical-overview">Technical Overview</h1>
+<h1 id="technical-overview">Technical overview</h1>
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
@@ -457,6 +457,12 @@ LTSpice detector model
 
 <p>The number of photons emitted by the scintillator is proportional to the energy level of the incident gamma particle. The SiPM contains an array of individually biased microcells, each of which can detect a single photon. Each triggered microcell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2, but it depends on the cell area) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.</p>
 
+<h1 id="scintillator-crystal-selection-and-silicone-photomultiplier-matching">Scintillator crystal selection and silicone photomultiplier matching</h1>
+
+<h1 id="ltspice-model">LTSpice Model</h1>
+
+<h1 id="gamma-spectroscope-pcb-v01">Gamma Spectroscope PCB, V0.1</h1>
+
 <h1 id="references">References</h1>
 <ul>
   <li>Open Gamma Detector <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">LINK</a></li>
@@ -478,7 +484,7 @@ LTSpice detector model
     
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
-      &copy; Copyright 2025
+      &copy; Copyright 2026
       Lucy
       
       Moglia. <a href="https://github.com/eigenlucy/eigenlucy.github.io">site git repo</a>. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
