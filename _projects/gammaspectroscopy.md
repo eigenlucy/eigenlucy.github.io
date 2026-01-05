@@ -18,9 +18,9 @@ A spectrum chart is composed with counts (number of particle detections) on the 
 </div>
 
 
-Each gamma emitting isotope emits particles of charecteristic energy levels, so isotopes can be identified by matching spectrum readings to reference spectrum. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.
+Each gamma emitting isotope emits particles of charecteristic energy levels. Isotopes can be identified by matching readings to reference spectrum/eV peaks. As a dosimeter, the detector adds the energy of each detection and measures detection rate (counts per second, CPS) to monitor total exposure.
 
-There are a variety of scintillator crystal chemistries available specialized for different applications (energy ranges, spectral efficicies, and energy resolutions).
+There are a variety of scintillator crystal chemistries available specialized for different applications (energy ranges, spectral efficiencies, and effective resolutions).
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
@@ -46,7 +46,7 @@ GAGG Crystal florescence stimulated with 395nm UV measured with OceanOptics USB2
 Thallium doped cesium iodine scintillator crystal with TiO coating for optical shielding, packaged with SiPM
 </div>
 
-Gamma spectroscopy is suprisingly cheap and intuitive to explore as a hobbyist. Nowadays, you can get fairly precise gamma spectroscopy devices from manufacturers like [Radview](https://www.radviewdetection.com) and [Radiacode](https://www.radiacode.com) fairlly cheaper (~$200-$500). Other projects, like [OpenGammaDetector](https://github.com/OpenGammaProject/Open-Gamma-Detector), use low cost microcontrollers and open source hardware for even cheaper detectors. This post will outline such cheap detectors are possible and demonstrate the effective simulation and design of a gamma spectrscopy device.
+Gamma spectroscopy is shockingly cheap and intuitive to explore as a hobbyist. Nowadays, you can get fairly precise gamma spectroscopy devices from manufacturers like [Radview](https://www.radviewdetection.com) and [Radiacode](https://www.radiacode.com) (~$200-$500). Other projects, like [OpenGammaDetector](https://github.com/OpenGammaProject/Open-Gamma-Detector), use low cost microcontrollers and open source hardware for even cheaper detectors. This post will outline such cheap detectors are possible and demonstrate the effective simulation and design of a gamma spectroscopy device.
 
 The rest of this post is split into a few parts:
 * a technical overview of particle detection circuits
@@ -56,7 +56,7 @@ The rest of this post is split into a few parts:
 * building a pocket sized DIY gamma detector
 * reference material
 
-# Technical Overview
+# Technical overview
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
@@ -68,6 +68,12 @@ LTSpice detector model
 </div>
 
 The number of photons emitted by the scintillator is proportional to the energy level of the incident gamma particle. The SiPM contains an array of individually biased microcells, each of which can detect a single photon. Each triggered microcell avalanches in parallel, contributing to the total forward current (If). Peak If ranges from 25uA to a few mA, depending on the given SiPM and number of incident photons. The SiPM is reverse biased to something like 25-35V. The anode of the SiPM is connected to a low gain (e.g. 2, but it depends on the cell area) transimpedance amplifier to convert the SiPM output to a usable signal. This signal is routed to both a comparator which functions as a pulse discriminator and a peak detector which holds the peak signal level.
+
+# Scintillator crystal selection and silicone photomultiplier matching
+
+# LTSpice Model
+
+# Gamma Spectroscope PCB, V0.1
 
 # References
 * Open Gamma Detector [LINK](https://github.com/OpenGammaProject/Open-Gamma-Detector)

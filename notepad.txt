@@ -1,8 +1,12 @@
-The card system my galery runs on seems.. bad. tiling is uneven, loading is slow. can you help me fix this? Id like to keep the tagging system in place.
+# To Do (12-31-2025)
 
-Can we make all the font on the resume page normal? The jacquard font in some places is hard to read.
-
-I'd like to create a way to suggest edits to be recorded in log of major to do items and projects later, with rankings of the apparent relative difficulty and status. Can you help me create this log, and then lets edit goose_prompt.md and CUSTOMIZE.md to point to this log.
-
-Okay now this is an ambitious one. 
-
+## Fix blog section
+* figure out image siders
+* add some travel posts
+## Eigenlucy Hub
+* Add eigenlucy_hub to drop down menu? or is it better that you have to look for it?
+* Add pictures to war communism post 
+## eigenlucy posts
+## gamma spec zine post
+* finish big project post
+## write "brics will not save us" post (from discord messages)
