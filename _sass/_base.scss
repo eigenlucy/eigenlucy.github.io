@@ -604,6 +604,8 @@ footer.sticky-bottom {
   .page-item {
     .page-link {
       color: var(--global-text-color);
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
 
       &:hover {
         color: $black-color;
