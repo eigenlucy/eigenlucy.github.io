@@ -11,5 +11,6 @@ images:
   slider: true
 ---
 
-*DRAFT* 
-this post will host my article or Hardware Thrasers of X on low cost gamma spectroscopy. 
+This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.
+
+
