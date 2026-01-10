@@ -37,4 +37,3 @@ I keep myself too busy and am behind on documentation, please message me if you 
 
 If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com
 
-You can also check out some of my less technical writings <a href="/eigenlucy">here</a>.
