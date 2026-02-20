@@ -19,49 +19,12 @@
 }
 
 /* Show more/less styles */
-.show-more-container {
-  margin-top: 10px;
-}
-
-.show-more-container button {
-  background-color: transparent;
-  border: none;
-  color: #007bff;
-  cursor: pointer;
-  font-family: 'Arial', sans-serif; /* Change this to your desired font */
-}
 
 .tag-filter-container .extra-tags {
   display: none;
 }
 
 /* Tag list styles */
-.tag-category-list {
-  margin-top: 10px;
-}
-
-.tag-category-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag-category-list li {
-  display: flex;
-  align-items: center;
-}
-
-.tag-category-list li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.tag-category-list p {
-  margin: 0 5px;
-}
 
 /* Full-page canvas styles */
 html, body {
