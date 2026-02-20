@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-20T20:37:25+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-20T20:45:20+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Hello, CDMX</title><link href="https://eigenlucy.github.io/blog/2026/CDMX/" rel="alternate" type="text/html" title="Hello, CDMX" /><published>2026-02-20T13:00:00+00:00</published><updated>2026-02-20T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/CDMX</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/CDMX/"><![CDATA[<p>After a few months of bouncing between friends and family all over the world, going back adn forth to Mexico and Uruguay to work out visa situations, and signing a lease, my wife and I have now officially begun settling into Mexico City :)</p>
 
 <p>It’s been a brutal process up to this point, but the city is sooo beautiful and I am so happy to finally be settling in. I am still in the process of learning Spanish, so it’s a little bit lonely. My wife does her best to translate for me, and plenty of people speak English, but it’s not really the same. So I’ve been spending a lot of time just exploring, going to various churches and museums. Here are some of the pictures I’ve taken so fars:</p>
@@ -16,25 +16,80 @@
     </picture>
     
   </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/canmachinesthink.jpg] -->
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/high_chapel.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/high_chapel.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/high_chapel.jpg] -->
 
   <figure>
     <picture>
       
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/canmachinesthink.jpg.jpg-480.webp 480w,assets/img/Gallery/canmachinesthink.jpg.jpg-800.webp 800w,assets/img/Gallery/canmachinesthink.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/high_chapel.jpg.jpg-480.webp 480w,assets/img/Gallery/high_chapel.jpg.jpg-800.webp 800w,assets/img/Gallery/high_chapel.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
-      <img src="/assets/img/Gallery/canmachinesthink.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/canmachinesthink.jpg';" />
+      <img src="/assets/img/Gallery/high_chapel.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/high_chapel.jpg';" />
     </picture>
     
   </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/noisebridge.jpg] -->
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/CDMX_sky.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/CDMX_sky.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/CDMX_sky.jpg] -->
 
   <figure>
     <picture>
       
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/noisebridge.jpg.jpg-480.webp 480w,assets/img/Gallery/noisebridge.jpg.jpg-800.webp 800w,assets/img/Gallery/noisebridge.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/CDMX_sky.jpg.jpg-480.webp 480w,assets/img/Gallery/CDMX_sky.jpg.jpg-800.webp 800w,assets/img/Gallery/CDMX_sky.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
-      <img src="/assets/img/Gallery/noisebridge.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/noisebridge.jpg';" />
+      <img src="/assets/img/Gallery/CDMX_sky.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/CDMX_sky.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/fountainCDMX.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/fountainCDMX.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/fountainCDMX.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/fountainCDMX.jpg.jpg-480.webp 480w,assets/img/Gallery/fountainCDMX.jpg.jpg-800.webp 800w,assets/img/Gallery/fountainCDMX.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/fountainCDMX.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/fountainCDMX.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/shroud.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/shroud.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/shroud.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/shroud.jpg.jpg-480.webp 480w,assets/img/Gallery/shroud.jpg.jpg-800.webp 800w,assets/img/Gallery/shroud.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/shroud.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/shroud.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/clocks.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/clocks.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/clocks.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/clocks.jpg.jpg-480.webp 480w,assets/img/Gallery/clocks.jpg.jpg-800.webp 800w,assets/img/Gallery/clocks.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/clocks.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/clocks.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/old_chapel.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/old_chapel.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/old_chapel.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/old_chapel.jpg.jpg-480.webp 480w,assets/img/Gallery/old_chapel.jpg.jpg-800.webp 800w,assets/img/Gallery/old_chapel.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/old_chapel.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/old_chapel.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/wifely_sky.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/wifely_sky.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/wifely_sky.jpg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/wifely_sky.jpg.jpg-480.webp 480w,assets/img/Gallery/wifely_sky.jpg.jpg-800.webp 800w,assets/img/Gallery/wifely_sky.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/wifely_sky.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/wifely_sky.jpg';" />
     </picture>
     
   </figure></swiper-slide>
