@@ -101,6 +101,16 @@ nav_order: 1
           </div>
         </div>
       </div>
+      <div class="col-md-3 card-item " data-tags="electrical engineering, image">
+        <div class="card mb-4 shadow-sm">
+          {% include figure.liquid  loading="lazy" path="assets/img/Gallery/blacksands_balloon.jpg" class="img-fluid rounded z-depth-1" %}
+          <div class="card-body">
+            <p class="card-text"><a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-3 card-item " data-tags="pcb design, electrical engineering, electronics, image">
         <div class="card mb-4 shadow-sm">
           {% include figure.liquid  loading="lazy" path="assets/img/Gallery/HABLaunch.jpg" class="img-fluid rounded z-depth-1" %}
