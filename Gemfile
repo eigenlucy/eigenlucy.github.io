@@ -1,8 +1,12 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.8"
 gem "csv"
+
+gem "feedjira"
+gem "httparty"
+gem "css_parser"
 
 group :jekyll_plugins do
   gem "jekyll-feed"

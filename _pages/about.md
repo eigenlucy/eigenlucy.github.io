@@ -15,7 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p>I am a 24 year old self taught engineer and founder split between San Francisco, Mexico City, and Montevideo</p>
+<p>I am a 24 year old self taught engineer split between San Francisco and Mexico City</p>
 
 Projects/research:
 <ul>
