@@ -38,7 +38,7 @@ hr {
 table {
   td,
   th {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   th {
@@ -455,21 +455,21 @@ ul.task-list input[type="checkbox"] {
 
 // Footer
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
+  background-color: transparent;
   font-size: 0.75rem;
 
   .container {
-    color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 4px;
     text-align: center;
   }
 
   a {
-    color: var(--global-footer-link-color);
+    color: rgba(255, 255, 255, 0.85);
 
     &:hover {
-      color: var(--global-theme-color);
+      color: white;
       text-decoration: none;
     }
   }
@@ -1130,12 +1130,12 @@ nav[data-toggle="toc"] {
   top: 5rem;
 
   .nav .nav > li > a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1146,7 +1146,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1208,6 +1208,7 @@ nav[data-toggle="toc"] {
 
 #toc-sidebar {
   z-index: 1;
+  max-width: 160px;
 }
 
 .echarts {

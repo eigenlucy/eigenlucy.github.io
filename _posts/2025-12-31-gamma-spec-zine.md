@@ -42,12 +42,10 @@ At the very high frequency end (>10^19 Hz) there are gamma ray photons. Particle
 
 ## Scintillators and Silicone Photomultipliers (SiPM)
 
-Scintillators crystals are the magical crystals which enable low cost, high resolution gamma spectroscopy. It is extremely difficult to directly measure the energy level of high energy particles, so we use scintillators to "down convert" the high energy particle to a number of lower energy photons. Put simply, when you shoot a scintillator with radiation particles, it produces some amount of light (often visible light) proportional to the energy of the particle which hit it. One 1460kev gamma particle becomes some number of ~2ev 550nm photons. A detector is created by pairing this scintillator with a light sensor which can measure the brightness of secondary emissions.
+Scintillators crystals are the magical crystals which enable low cost, high resolution gamma spectroscopy. It is extremely difficult to directly measure the energy level of high energy particles, so we use scintillators to "down convert" the high energy particle to a number of lower energy photons. Put simply, when you shoot a scintillator with radiation particles, it produces some amount of light (often visible light) proportional to the energy of the particle which hit it. One 1460kev gamma particle becomes some number of ~2ev 550nm photons (a number dependent on the conversion efficiency of the given scintillator). A detector is created by pairing this scintillator with a light sensor which can measure the brightness of secondary emissions.
 
 ![scintillators](/assets/img/Gallery/scintillators_example.jpeg){:.centered}{:.sixty}
 <div class="caption">Scintillators exposed to a cobalt-60 source</div>
-
-
 
 Only really things are a bit more complicated. Each scintillation event produces all the photons at once, in a brief flash lasting a few picoseconds. To precisely measure the amplitude of these brief pulses, we need a highly specialized sensor:
 
@@ -58,3 +56,15 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
 The output is a current pulse: brief (microseconds), tiny (nanoamperes), but carrying the energy information you need. From here we just need a circuit to amplify, shape, and measure this pulse so a microcontroller can histogram it into a spectrum.
 
 ## Building a Gamma Spec Driver
+
+![schematic](/assets/img/Gallery/gammaspec_schem.png){:.centered}{:.sixty}
+<div class="caption">Schematic</div>
+
+![pcb](/assets/img/Gallery/pcb_view.png){:.centered}{:.sixty}
+<div class="caption">PCB layout</div>
+
+## Bias voltage generator:
+
+## Transimpedance amplifier:
+
+## Pulse discriminator:
