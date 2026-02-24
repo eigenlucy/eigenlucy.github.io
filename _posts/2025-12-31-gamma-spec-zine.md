@@ -60,8 +60,9 @@ The output is a current pulse: brief (microseconds), tiny (nanoamperes), but car
 ![schematic](/assets/img/Gallery/gammaspec_schem.png){:.centered}{:.sixty}
 <div class="caption">Schematic</div>
 
-![pcb](/assets/img/Gallery/pcb_view.png){:.centered}{:.sixty}
+![pcb](/assets/img/Gallery/pcbview.png){:.centered}{:.sixty}
 <div class="caption">PCB layout</div>
+
 
 ## Bias voltage generator:
 
