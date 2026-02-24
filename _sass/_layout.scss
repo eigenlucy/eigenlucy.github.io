@@ -82,3 +82,14 @@ footer.sticky-bottom {
 .news table th {
   color: #cccccc !important; // Light greyish off-white. Using !important to ensure override.
 }
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.sixty {
+  width: 60%;
+}
+
