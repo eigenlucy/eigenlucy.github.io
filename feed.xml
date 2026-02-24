@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-24T22:56:18+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-24T23:08:17+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Hello, CDMX</title><link href="https://eigenlucy.github.io/blog/2026/CDMX/" rel="alternate" type="text/html" title="Hello, CDMX" /><published>2026-02-20T13:00:00+00:00</published><updated>2026-02-20T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/CDMX</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/CDMX/"><![CDATA[<p>After a few months of bouncing between friends and family all over the world, going back adn forth to Mexico and Uruguay to work out visa situations, and signing a lease, my wife and I have now officially begun settling into Mexico City :)</p>
 
 <p>It’s been a brutal process up to this point, but the city is sooo beautiful and I am so happy to finally be settling in. I am still in the process of learning Spanish, so it’s a little bit lonely. My wife does her best to translate for me, and plenty of people speak English, but it’s not really the same. So I’ve been spending a lot of time just exploring, going to various churches and museums. Here are some of the pictures I’ve taken so fars:</p>
@@ -142,7 +142,7 @@
 <p><img src="/assets/img/Gallery/gammaspec_schem.png" alt="schematic" class="centered sixty" /></p>
 <div class="caption">Schematic</div>
 
-<p><img src="/assets/img/Gallery/PCB_view.png" alt="pcb" class="centered sixty" /></p>
+<p><img src="/assets/img/Gallery/pcb_view.png" alt="pcb" class="centered sixty" /></p>
 <div class="caption">PCB layout</div>
 
 <h2 id="bias-voltage-generator">Bias voltage generator:</h2>
