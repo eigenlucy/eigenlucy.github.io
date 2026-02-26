@@ -75,7 +75,11 @@
 .highlight .ne {
   color: #990000;
   font-weight: bold;
-} /* Name.Exception */ /* Name.Function */
+} /* Name.Exception */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+} /* Name.Function */
 .highlight .nl {
   color: #990000;
   font-weight: bold;
