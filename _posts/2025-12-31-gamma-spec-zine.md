@@ -17,7 +17,7 @@ This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwar
 
 ## Intro
 
-Every second, thousands of high energy particles, sheered off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it—potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.
+Every second, thousands of high energy particles, sheered off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it: potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.
 
 For decades, reading these fingerprints required photomultiplier tubes, cryogenic cooling, and equipment costing tens of thousands of dollars. Not anymore. Gamma spectroscopy has become suprisingly cheap. With about $100 in parts and a Saturday afternoon, you can build a device that identifies isotopes by their gamma signatures.
 
