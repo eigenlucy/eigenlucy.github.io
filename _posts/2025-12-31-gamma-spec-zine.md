@@ -125,6 +125,6 @@ Bring your detector through the airport Xray detector or to the dentist with you
 
 Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!
 
-
+![prospect](/assets/img/Gallery/prospect.png){:.centered}{:.sixty}
 
 Have fun!
