@@ -70,7 +70,7 @@ The output is a current pulse: brief (microseconds), tiny (nanoamperes), but car
 ![sipm](/assets/img/Gallery/sipm.jpeg){:.centered}{:.sixty}
 <div class="caption">Assembled board</div>
 
-This is the board I built to interface with an SiPM and scintillator pair. It is heavily inspired by the amazing open-gamma-detector project. I know it looks intimidating, but it's amazingly intuitive. 
+This is the board I built to interface with an SiPM and scintillator pair. It is heavily inspired by the amazing open-gamma-detector project. I know it looks intimidating, but it's pretty intuitive. 
 
 On a high level we have to build: a bias voltage generator for the SiPM, an amplifier to convert the current pulse to a readable voltage,  a pulse discriminator to send a digital interrupt when a pulse occurs, a peak detector to hold the peak voltage out of the amplifier (used for histogram), and an ADC to record the peaks.  Let's go through the circuit.
 
