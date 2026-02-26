@@ -13,6 +13,8 @@ images:
 
 This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.
 
+*WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)
+
 ## Intro
 
 Every second, thousands of high energy particles, sheered off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it—potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.
@@ -63,9 +65,66 @@ The output is a current pulse: brief (microseconds), tiny (nanoamperes), but car
 ![pcb](/assets/img/Gallery/pcbview.png){:.centered}{:.sixty}
 <div class="caption">PCB layout</div>
 
+This is the board I built to interface with an SiPM and scintillator pair. It is heavily inspired by the amazing open-gamma-detector project. I know it looks intimidating, but it's amazingly intuitive. 
+
+On a high level we have to build: a bias voltage generator for the SiPM, an amplifier to convert the current pulse to a readable voltage,  a pulse discriminator to send a digital interrupt when a pulse occurs, a peak detector to hold the peak voltage out of the amplifier (used for histogram), and an ADC to record the peaks.  Let's go through the circuit.
 
 ## Bias voltage generator:
 
-## Transimpedance amplifier:
+ bias voltage must be applied applied to the SiPM to hold charge across the photon sensitive junction. Bias voltage tends to be between 25 and 35 volts, depending not the photocell. I used a MAX5026 boost converter to generate this  from a battery. We need this bias be smooth to help avoid "dark-counts", random firings of photocells, so I used an LDO linear regulator after the boost. My board allows Vbias adjustment up to 36V.
+
+![Bias Generator](/assets/img/Gallery/bias_generator.png){:.centered}{:.sixty}
+<div class="caption">Vbias Generator + Filtering</div>
+
+## Transimpedance amplifier (TIA):
+
+A transimpedance amplifier (TIA) converts current to voltage. The SiPM outputs a brief pulse of current when the photocells trigger. The gain is fairly low, but high bandwidth is required: the pulse is nanoamperes for microseconds. The anode, connected to the TIA non-inverting input, is held a bit above 0V with a reference produced via zener diode and voltage divider for stability. When the amplifier works correctly, the number of cells that fires determines the peak output voltage, which we can read to measure incident particle energy.
+
+![TIA](/assets/img/Gallery/tia_nf100.png){:.centered}{:.sixty}
+<div class="caption">photon collision, SiPM output, and TIA output (nf = 100)</div>
+
+![TIA](/assets/img/Gallery/tia_nf500.png){:.centered}{:.sixty}
+<div class="caption">photon collision, SiPM output, and TIA output (nf = 500)</div>
+
 
 ## Pulse discriminator:
+
+The pulse discriminator is a comparator circuit responsible for telling us when to trigger measurements.  It consists of a reference voltage held just above the level of the signal from the TIA. We want to be able to adjust the reference voltage finely in order to effectively measure low energy particles, so make sure you use something like a 10+ turn pot.  The pulse discriminator will trigger whenever the signal goes above the reference voltage, triggering a reading.
+
+![Pulse discriminator](/assets/img/Gallery/pulse_detector.png){:.centered}{:.sixty}
+<div class="caption">Pulse discriminator, signal crossing Vref (Vint = 3.3V)</div>
+
+
+## Peak detector:
+
+The peak detector circuit, aka the "sample and hold" circuit, is a circuit which samples a signal and outputs the peak value until reset. (In the spice model shown the 100k resistor is really a BJT used for reset, but this interfered with my model.) It is important that the value of the capacitor used to hold the peak value (C3 in SPICE, C12 in my schematic) is sized correctly to avoid undershooting the peak. This output will be sampled by the analog-to-digital converter to determine particle energy.
+
+![Peak detector](/assets/img/Gallery/peak_detector.png){:.centered}{:.sixty}
+<div class="caption">Peak detector holding signeak detector holding signal Vmax, reset by draining cap via BJT in place of R12</div>
+
+## Analog To Digital Converter (ADC):
+
+An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. An ADC resolution is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn't see differences smaller than ~12.9mV).   So make sure to use a high resolution (>=16bit) ADC.
+
+## Wrapping up:
+
+I set up my board to easily interface with any microcontroller you like over SPI. The ADC is the only part that requires complicated interfacing, otherwise it's just a simple digital interrupt connected to the INT pin, and a digital output connected to the RST pin to reset the peak detector circuit. From there, just log the ADC readings into a histogram. I used a Thallium-doped Cesium Iodeine (CsITl) scintillator I got on eBay for around $200 which covers from about 30kev-3MeV, coverage varies with scintillator material. Sodium Iodine (NaITl) are farrr cheaper, and provide decent results. There are more novel materials for higher resolution in specific ranges, plastic scintillators for low cost, low weight, low resolution detection, and all kinds of other weird detectors. If you are adventurous like me, you can even buy your SiPM and scintillators separately and package them together yourself. Atomspectra on eBay sells well characterized scintillators and detector pairs at decent prices, that's a good place to start. If the PCB intimidates you give this circuit a shot on protoboard, it's easier than it looks to get working! 
+
+Since a lot of people don't really know what to do with gamma spectroscopy, here are some suggestions on what to try:
+
+Collect some background radiation data by letting your detector sit for a few hours, then walk around in grids to map fluctuations in dose rate. This can be used to generate a radiological survey (check my GitHub @eigenlucy).
+
+![Gamma map](/assets/img/Gallery/gamma_map.jpeg){:.centered}{:.sixty}
+<div class="caption">Gamma survey at Hunter's Point</div>
+
+Bring your detector through the airport Xray detector or to the dentist with you; the Xray machines emit broad spectrum radiation which you can see as broad pulses on the spectrum.
+
+![Xray](/assets/img/Gallery/dentist_spectrum.png){:.centered}{:.sixty}
+<div class="caption">Xray pulses from a dentist's panoramic Xray machine</div>
+
+
+Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!
+
+
+
+Have fun!
