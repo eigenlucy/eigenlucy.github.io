@@ -123,11 +123,13 @@ Collect some background radiation data by letting your detector sit for a few ho
 Bring your detector through the airport Xray detector or to the dentist with you; the Xray machines emit broad spectrum radiation which you can see as broad pulses on the spectrum.
 
 ![Xray](/assets/img/Gallery/dentist_spectrum.png){:.centered}{:.sixty}
-<div class="caption">Xray pulses from a dentist's panoramic Xray machine</div>
+<div class="caption">Xray pulses from a dentist's panoramic Xray machine (captured with Radiacode 103)</div>
 
 
 Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!
 
 ![prospect](/assets/img/Gallery/prospect.png){:.centered}{:.sixty}
+<div class="caption">Radioactive hole!</div>
+
 
 Have fun!
