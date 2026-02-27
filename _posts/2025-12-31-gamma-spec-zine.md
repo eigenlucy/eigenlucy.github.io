@@ -13,8 +13,6 @@ images:
 
 This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.
 
-*WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)*
-
 ## Intro
 
 Every second, thousands of high energy particles, sheared off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it: potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.
@@ -59,6 +57,8 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
 The output is a current pulse: brief (nanoseconds), small (microamperes per cell, but we need to resolve differences between individual cells firing), carrying the energy information you need. From here we just need a circuit to amplify, shape, and measure this pulse so a microcontroller can histogram it into a spectrum. 
 
 ## Building a Gamma Spec Driver
+
+*WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)*
 
 ![schematic](/assets/img/Gallery/gammaspec_schem.png){:.centered}{:.sixty}
 <div class="caption">Schematic</div>
@@ -108,29 +108,45 @@ The peak detector circuit, aka the "sample and hold" circuit, is a circuit which
 
 ## Analog To Digital Converter (ADC):
 
-An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn't see differences smaller than ~12.9mV).   A 12-bit ADC (4096 channels) can produce usable spectra, but a >=16-bit ADC will give you finer energy resolution.
+An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn't see differences smaller than ~12.9mV). It's best to use at least a 12bit ADC, I used 16bit.
 
-## Wrapping up:
+## Firmware: reading the spectrum
 
-I set up my board to easily interface with any microcontroller you like over SPI. The ADC is the only part that requires complicated interfacing, otherwise it's just a simple digital interrupt connected to the INT pin, and a digital output connected to the RST pin to reset the peak detector circuit. From there, just log the ADC readings into a histogram. I used a Thallium-doped Cesium Iodide (CsI(Tl)) scintillator I got on eBay for around $200 which covers from about 30kev-3MeV, coverage varies with scintillator material. Sodium Iodide (NaI(Tl)) are farrr cheaper, and provide decent results. There are more novel materials for higher resolution in specific ranges, plastic scintillators for low cost, low weight, low resolution detection, and all kinds of other weird detectors. If you are adventurous like me, you can even buy your SiPM and scintillators separately and package them together yourself. Atomspectra on eBay sells well characterized scintillators and detector pairs at decent prices, that's a good place to start. If the PCB intimidates you give this circuit a shot on protoboard, it's easier than it looks to get working! 
+My board is set up to interface with any microcontroller over SPI. The core loop is simple: the pulse discriminator fires a digital interrupt on the INT pin whenever a particle hits. Your MCU wakes up, reads the peak voltage from the ADC over SPI, then pulls the RST pin high to drain the peak detector capacitor and reset for the next event. Each ADC reading gets binned into a histogram — that histogram is your spectrum. Any MCU with SPI and a GPIO interrupt will work: ESP32, RP2040, STM32, Arduino, whatever you have lying around.
 
-Since a lot of people don't really know what to do with gamma spectroscopy, here are some suggestions on what to try:
+## Sourcing guide
+
+### Driver board
+
+My board's design files will be on my GitHub (@eigenlucy) once V2 is ready. In the meantime, the <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> project is an excellent all-in-one alternative and major inspiration for this project. You can also build the amplifier, discriminator, and peak detector on protoboard (it's much more forgiving than it looks).
+
+### Detector pairs
+
+The easiest way to get started is to buy a pre-packaged scintillator+SiPM pair. Atomspectra on eBay sells well-characterized detector pairs at decent prices. If you want to source components separately, the onsemi MICROFC series SiPMs are available on Mouser and Digikey for ~$15-25, and scintillator crystals (NaI(Tl), CsI(Tl), LYSO) show up on eBay regularly.
+
+## What to do with it
 
 Collect some background radiation data by letting your detector sit for a few hours, then walk around in grids to map fluctuations in dose rate. This can be used to generate a radiological survey (check my GitHub @eigenlucy).
 
 ![Gamma map](/assets/img/Gallery/gamma_map.jpeg){:.centered}{:.sixty}
 <div class="caption">Gamma survey at Hunter's Point</div>
 
-Bring your detector through the airport Xray detector or to the dentist with you; the Xray machines emit broad spectrum radiation which you can see as broad pulses on the spectrum.
+Bring your detector through the airport X-ray machine or to the dentist with you. X-ray machines emit broad spectrum radiation which shows up as wide pulses on the spectrum.
 
 ![Xray](/assets/img/Gallery/dentist_spectrum.png){:.centered}{:.sixty}
-<div class="caption">Xray pulses from a dentist's panoramic Xray machine (captured with Radiacode 103)</div>
-
+<div class="caption">X-ray pulses from a dentist's panoramic X-ray machine (captured with Radiacode 103)</div>
 
 Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!
 
 ![prospect](/assets/img/Gallery/prospect.png){:.centered}{:.sixty}
 <div class="caption">Radioactive hole!</div>
 
-
 Have fun!
+
+## References
+
+- <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> — Open source all-in-one gamma spectrometer by NuclearPhoenix
+- <a href="https://github.com/OpenGammaProject/Gamma-MCA">Gamma MCA</a> — Web-based multichannel analyzer for spectrum plotting
+- <a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier
+- <a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., "SPICE Electrical Models and Simulations of Silicon Photomultipliers"</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)
+- Glenn F. Knoll, *Radiation Detection and Measurement* — The textbook on radiation detector physics
