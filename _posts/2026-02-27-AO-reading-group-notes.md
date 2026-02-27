@@ -13,6 +13,8 @@ images:
 
 # Anti-Oedipus: Intro & Section 1 Concept Map
 
+*WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members*
+
 ---
 
 <h4>MACHINES / DESIRING-MACHINES:</h4>
