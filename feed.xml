@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-27T21:01:00+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-27T22:11:52+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/"><![CDATA[]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[For an AO reading group]]></summary></entry><entry><title type="html">Hello, CDMX</title><link href="https://eigenlucy.github.io/blog/2026/CDMX/" rel="alternate" type="text/html" title="Hello, CDMX" /><published>2026-02-20T13:00:00+00:00</published><updated>2026-02-20T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/CDMX</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/CDMX/"><![CDATA[<p>After a few months of bouncing between friends and family all over the world, going back adn forth to Mexico and Uruguay to work out visa situations, and signing a lease, my wife and I have now officially begun settling into Mexico City :)</p>
 
 <p>It’s been a brutal process up to this point, but the city is sooo beautiful and I am so happy to finally be settling in. I am still in the process of learning Spanish, so it’s a little bit lonely. My wife does her best to translate for me, and plenty of people speak English, but it’s not really the same. So I’ve been spending a lot of time just exploring, going to various churches and museums. Here are some of the pictures I’ve taken so fars:</p>
@@ -95,8 +95,6 @@
   </figure></swiper-slide>
 </swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[On relocating to Mexico City]]></summary></entry><entry><title type="html">An Introduction to Gamma Spectroscopy</title><link href="https://eigenlucy.github.io/blog/2026/gamma-spec-zine/" rel="alternate" type="text/html" title="An Introduction to Gamma Spectroscopy" /><published>2026-01-06T13:00:00+00:00</published><updated>2026-01-06T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/gamma-spec-zine</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/gamma-spec-zine/"><![CDATA[<p>This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.</p>
 
-<p><em>WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)</em></p>
-
 <h2 id="intro">Intro</h2>
 
 <p>Every second, thousands of high energy particles, sheared off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it: potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.</p>
@@ -141,6 +139,8 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
 <p>The output is a current pulse: brief (nanoseconds), small (microamperes per cell, but we need to resolve differences between individual cells firing), carrying the energy information you need. From here we just need a circuit to amplify, shape, and measure this pulse so a microcontroller can histogram it into a spectrum.</p>
 
 <h2 id="building-a-gamma-spec-driver">Building a Gamma Spec Driver</h2>
+
+<p><em>WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)</em></p>
 
 <p><img src="/assets/img/Gallery/gammaspec_schem.png" alt="schematic" class="centered sixty" /></p>
 <div class="caption">Schematic</div>
@@ -188,30 +188,50 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
 
 <h2 id="analog-to-digital-converter-adc">Analog To Digital Converter (ADC):</h2>
 
-<p>An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn’t see differences smaller than ~12.9mV).   A 12-bit ADC (4096 channels) can produce usable spectra, but a &gt;=16-bit ADC will give you finer energy resolution.</p>
+<p>An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn’t see differences smaller than ~12.9mV). It’s best to use at least a 12bit ADC, I used 16bit.</p>
 
-<h2 id="wrapping-up">Wrapping up:</h2>
+<h2 id="firmware-reading-the-spectrum">Firmware: reading the spectrum</h2>
 
-<p>I set up my board to easily interface with any microcontroller you like over SPI. The ADC is the only part that requires complicated interfacing, otherwise it’s just a simple digital interrupt connected to the INT pin, and a digital output connected to the RST pin to reset the peak detector circuit. From there, just log the ADC readings into a histogram. I used a Thallium-doped Cesium Iodide (CsI(Tl)) scintillator I got on eBay for around $200 which covers from about 30kev-3MeV, coverage varies with scintillator material. Sodium Iodide (NaI(Tl)) are farrr cheaper, and provide decent results. There are more novel materials for higher resolution in specific ranges, plastic scintillators for low cost, low weight, low resolution detection, and all kinds of other weird detectors. If you are adventurous like me, you can even buy your SiPM and scintillators separately and package them together yourself. Atomspectra on eBay sells well characterized scintillators and detector pairs at decent prices, that’s a good place to start. If the PCB intimidates you give this circuit a shot on protoboard, it’s easier than it looks to get working!</p>
+<p>My board is set up to interface with any microcontroller over SPI. The core loop is simple: the pulse discriminator fires a digital interrupt on the INT pin whenever a particle hits. Your MCU wakes up, reads the peak voltage from the ADC over SPI, then pulls the RST pin high to drain the peak detector capacitor and reset for the next event. Each ADC reading gets binned into a histogram — that histogram is your spectrum. Any MCU with SPI and a GPIO interrupt will work: ESP32, RP2040, STM32, Arduino, whatever you have lying around.</p>
 
-<p>Since a lot of people don’t really know what to do with gamma spectroscopy, here are some suggestions on what to try:</p>
+<h2 id="sourcing-guide">Sourcing guide</h2>
+
+<h3 id="driver-board">Driver board</h3>
+
+<p>My board’s design files will be on my GitHub (@eigenlucy) once V2 is ready. In the meantime, the <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> project is an excellent all-in-one alternative and major inspiration for this project. You can also build the amplifier, discriminator, and peak detector on protoboard (it’s much more forgiving than it looks).</p>
+
+<h3 id="detector-pairs">Detector pairs</h3>
+
+<p>The easiest way to get started is to buy a pre-packaged scintillator+SiPM pair. Atomspectra on eBay sells well-characterized detector pairs at decent prices. If you want to source components separately, the onsemi MICROFC series SiPMs are available on Mouser and Digikey for ~$15-25, and scintillator crystals (NaI(Tl), CsI(Tl), LYSO) show up on eBay regularly.</p>
+
+<h2 id="what-to-do-with-it">What to do with it</h2>
 
 <p>Collect some background radiation data by letting your detector sit for a few hours, then walk around in grids to map fluctuations in dose rate. This can be used to generate a radiological survey (check my GitHub @eigenlucy).</p>
 
 <p><img src="/assets/img/Gallery/gamma_map.jpeg" alt="Gamma map" class="centered sixty" /></p>
 <div class="caption">Gamma survey at Hunter's Point</div>
 
-<p>Bring your detector through the airport Xray detector or to the dentist with you; the Xray machines emit broad spectrum radiation which you can see as broad pulses on the spectrum.</p>
+<p>Bring your detector through the airport X-ray machine or to the dentist with you. X-ray machines emit broad spectrum radiation which shows up as wide pulses on the spectrum.</p>
 
 <p><img src="/assets/img/Gallery/dentist_spectrum.png" alt="Xray" class="centered sixty" /></p>
-<div class="caption">Xray pulses from a dentist's panoramic Xray machine (captured with Radiacode 103)</div>
+<div class="caption">X-ray pulses from a dentist's panoramic X-ray machine (captured with Radiacode 103)</div>
 
 <p>Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!</p>
 
 <p><img src="/assets/img/Gallery/prospect.png" alt="prospect" class="centered sixty" /></p>
 <div class="caption">Radioactive hole!</div>
 
-<p>Have fun!</p>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Spacebridge HAB PCB Development</title><link href="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/" rel="alternate" type="text/html" title="Spacebridge HAB PCB Development" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/"><![CDATA[<p>I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I’ve gotten lot’s of help from some of the folks over at SF HAB, including some folks that put together the amazing <a href="https://www.picoballoons.net/">Pico Balloon Project</a>. I have a PCB in my hand now, which I’ll be testing in the upcoming weeks. You can follow my <a href="https://github.com/eigenlucy/spacebridgehabpcb">GitHub repo</a>.</p>
+<p>Have fun!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> — Open source all-in-one gamma spectrometer by NuclearPhoenix</li>
+  <li><a href="https://github.com/OpenGammaProject/Gamma-MCA">Gamma MCA</a> — Web-based multichannel analyzer for spectrum plotting</li>
+  <li><a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier</li>
+  <li><a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., “SPICE Electrical Models and Simulations of Silicon Photomultipliers”</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)</li>
+  <li>Glenn F. Knoll, <em>Radiation Detection and Measurement</em> — The textbook on radiation detector physics</li>
+</ul>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Spacebridge HAB PCB Development</title><link href="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/" rel="alternate" type="text/html" title="Spacebridge HAB PCB Development" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/"><![CDATA[<p>I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I’ve gotten lot’s of help from some of the folks over at SF HAB, including some folks that put together the amazing <a href="https://www.picoballoons.net/">Pico Balloon Project</a>. I have a PCB in my hand now, which I’ll be testing in the upcoming weeks. You can follow my <a href="https://github.com/eigenlucy/spacebridgehabpcb">GitHub repo</a>.</p>
 
 <p>In this post I would just like to give and overview of the hardware and explain some of my design choices.</p>
 
