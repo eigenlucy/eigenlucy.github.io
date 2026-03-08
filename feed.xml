@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-27T23:09:12+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-08T23:29:14+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/"><![CDATA[<h1 id="anti-oedipus-intro--section-1-concept-map">Anti-Oedipus: Intro &amp; Section 1 Concept Map</h1>
 
 <p><em>WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members</em></p>
@@ -787,7 +787,7 @@
 
 <p>It’s been a brutal process up to this point, but the city is sooo beautiful and I am so happy to finally be settling in. I am still in the process of learning Spanish, so it’s a little bit lonely. My wife does her best to translate for me, and plenty of people speak English, but it’s not really the same. So I’ve been spending a lot of time just exploring, going to various churches and museums. Here are some of the pictures I’ve taken so fars:</p>
 
-<h2 id="bascillica-de-guadalupe">Bascillica de Guadalupe</h2>
+<h2 id="bascillica-santa-maria-de-guadalupe">Bascillica Santa Maria de Guadalupe</h2>
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
   <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/angelCDMX.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/angelCDMX.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/angelCDMX.jpg] -->
 
@@ -874,6 +874,76 @@
         <source class="responsive-img-srcset" srcset="assets/img/Gallery/wifely_sky.jpg.jpg-480.webp 480w,assets/img/Gallery/wifely_sky.jpg.jpg-800.webp 800w,assets/img/Gallery/wifely_sky.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
       <img src="/assets/img/Gallery/wifely_sky.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/wifely_sky.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+</swiper-container>
+
+<h2 id="biblioteca-vasconcelos">Biblioteca Vasconcelos</h2>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/MainFloor.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/MainFloor.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/MainFloor.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/MainFloor.png.png-480.webp 480w,assets/img/Gallery/MainFloor.png.png-800.webp 800w,assets/img/Gallery/MainFloor.png.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/MainFloor.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/MainFloor.png';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/LevelView.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/LevelView.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/LevelView.jpeg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/LevelView.jpeg.jpeg-480.webp 480w,assets/img/Gallery/LevelView.jpeg.jpeg-800.webp 800w,assets/img/Gallery/LevelView.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/LevelView.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/LevelView.jpeg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Cubes.png] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Cubes.png] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Cubes.png] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Cubes.png.png-480.webp 480w,assets/img/Gallery/Cubes.png.png-800.webp 800w,assets/img/Gallery/Cubes.png.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Cubes.png" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Cubes.png';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/OutsideBiblioteca.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/OutsideBiblioteca.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/OutsideBiblioteca.jpeg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/OutsideBiblioteca.jpeg.jpeg-480.webp 480w,assets/img/Gallery/OutsideBiblioteca.jpeg.jpeg-800.webp 800w,assets/img/Gallery/OutsideBiblioteca.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/OutsideBiblioteca.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/OutsideBiblioteca.jpeg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Garden.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Garden.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Garden.jpeg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Garden.jpeg.jpeg-480.webp 480w,assets/img/Gallery/Garden.jpeg.jpeg-800.webp 800w,assets/img/Gallery/Garden.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Garden.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Garden.jpeg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/Planter.jpeg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/Planter.jpeg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/Planter.jpeg] -->
+
+  <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/Planter.jpeg.jpeg-480.webp 480w,assets/img/Gallery/Planter.jpeg.jpeg-800.webp 800w,assets/img/Gallery/Planter.jpeg.jpeg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/Planter.jpeg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/Planter.jpeg';" />
     </picture>
     
   </figure></swiper-slide>
