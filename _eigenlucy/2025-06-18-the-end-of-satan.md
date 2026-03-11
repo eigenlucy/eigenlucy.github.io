@@ -35,11 +35,11 @@ animal that dies than to a living, even democratic, human being."
 [What Is Philosophy](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://transversalinflections.wordpress.com/wp-content/uploads/2015/04/deleuze-3207-what_is_philosophy-fenomenologie-van-schilderkunst.pdf&ved=2ahUKEwjah8f-y_yNAxUniO4BHXPJC4cQFnoECBkQAQ&usg=AOvVaw0px4eJIuq7kvUlBwO_NGai)
 
 <div>
-  <img src="/assets/img/Gallery/testement.jpg" alt="The Execution of the Testament of the Marquis de Sade by Jean Benoît" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+  <img src="/assets/img/Gallery/testement.jpg" alt="The Execution of the Testament of the Marquis de Sade by Jean Benoît" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
 
 <div>
-  <img src="/assets/img/Gallery/DeportationMueseum.jpg" alt="Corridor of Lost Souls, Paris Deportation Mueseum" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+  <img src="/assets/img/Gallery/DeportationMueseum.jpg" alt="Corridor of Lost Souls, Paris Deportation Mueseum" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
 
 
@@ -59,5 +59,5 @@ Then, it makes sense this work went unfinished. The consciousness which made its
 To find our way out of this maze, we have to hold onto our hatred and our solitary individuality. We have to have known aggression and defensiveness, we have to experience them for what they are and work through them without succumbing to them. The peace we win must be won on behalf of each element struggle against the whole. And at the same time, we have to believe in the possibility of an appeal to the whole. Not as an all encompassing transcendent perspective, not as a return to our origins, but as a struggle to be one in the name of grace. The turning of our stomachs reading the last pleas of a condemned man, an encounter with the serene violence underneath the hegemonic sensibility that directs punishment. We have to trace it all back to the love we have been denied, and then we can start asking the real questions. To see with all the eyes that one can hold. Our boundaries, our stubbornness, our hatred, our discontent; these cannot help but forward the coming of the kingdom. In the crater of each signifier, in the unassailability of the object of desire, there is the outline of a being capable of holding the weight of everything everywhere all at once. This latent thing is both the inevitable return of the repressed and the unstoppable march towards peace.
 
 <div>
-  <img src="/assets/img/Gallery/klint_spirals.webp" alt="Hilma Klint, The Swan No. 17" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+  <img src="/assets/img/Gallery/klint_spirals.webp" alt="Hilma Klint, The Swan No. 17" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>

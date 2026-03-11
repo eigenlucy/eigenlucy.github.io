@@ -1,26 +1,37 @@
 {%- comment -%}
-  This is a reusable card for the gallery.
-  It expects to be included with a variable `item` that has the following properties:
-  - item.file: The base filename of the media (e.g., "my_image.png" or "my_video.mp4").
-  - item.type: "image" or "video".
-  - item.caption: The text description for the card body.
-  - item.tags: An array of strings.
+  Reusable gallery card. Include with: {% include gallery_card.liquid item=item %}
+  Item fields: file, type (image/video), caption, tags (array), path (optional override)
 {%- endcomment -%}
 
-<div class="gallery-card" data-tags="{{ item.tags | join: ', ' | downcase }}">
+{%- assign tag_list = item.tags | join: ', ' -%}
+{%- if tag_list != '' -%}
+  {%- assign all_tags = tag_list | append: ', ' | append: item.type -%}
+{%- else -%}
+  {%- assign all_tags = item.type -%}
+{%- endif -%}
+
+<div class="col-md-3 card-item" data-tags="{{ all_tags | downcase }}">
   <div class="card mb-4 shadow-sm">
     {%- if item.type == 'image' -%}
-      {%- assign webp_filename = item.file | split: '.' | first | append: '-800.webp' -%}
-      {%- assign webp_path = '/assets/img/Gallery/webp/' | append: webp_filename | relative_url -%}
-      <img loading="lazy" src="{{ webp_path }}" class="img-fluid rounded z-depth-1" alt="{{ item.caption | escape }}">
+      {%- if item.path -%}
+        {%- assign media_path = item.path -%}
+      {%- else -%}
+        {%- assign media_path = 'assets/img/Gallery/' | append: item.file -%}
+      {%- endif -%}
+      {% include figure.liquid loading="lazy" path=media_path class="img-fluid rounded z-depth-1" %}
     {%- elsif item.type == 'video' -%}
-      <div class="video-aspect-ratio-container">
-        <video loading="lazy" src="{{ '/assets/video/' | append: item.file | relative_url }}" class="img-fluid rounded z-depth-1" type="video/mp4" controls></video>
-      </div>
+      {%- if item.path -%}
+        {%- assign media_path = item.path -%}
+      {%- else -%}
+        {%- assign media_path = 'assets/video/' | append: item.file -%}
+      {%- endif -%}
+      {% include video.liquid loading="lazy" path=media_path class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
     {%- endif -%}
-    {%- if item.caption and item.caption != "" -%}
+    {%- if item.caption and item.caption != '' -%}
       <div class="card-body">
         <p class="card-text">{{ item.caption }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
       </div>
     {%- endif -%}
   </div>

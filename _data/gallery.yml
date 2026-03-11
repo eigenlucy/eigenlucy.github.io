@@ -1,956 +1,313 @@
-- file: 5VSMUPowerTestResultsSummary.png
-  type: image
-  caption: 
-  tags: []
-- file: 748967.png
-  type: image
-  caption: 
-  tags: []
-- file: AgarLMERecipe.png
-  type: image
-  caption: 
-  tags: []
-- file: E22900M30STXPowerChart.png
-  type: image
-  caption: 
-  tags: []
-- file: E22-900M30S-TXPOWER-RESULTS.png
-  type: image
-  caption: 
-  tags: []
-- file: Enh_N_channel_Mosfet.svg.png
-  type: image
-  caption: 
-  tags: []
-- file: facecasting.png
-  type: image
-  caption: 
-  tags: []
-- file: femme.png
-  type: image
-  caption: 
-  tags: []
-- file: FemtofoxGatewayTestSetup.png
-  type: image
-  caption: 
-  tags: []
-- file: fet.png
-  type: image
-  caption: 
-  tags: []
-- file: flashlightpcb.png
-  type: image
-  caption: 
-  tags: []
-- file: FMTransmitterSchematic.png
-  type: image
-  caption: 
-  tags: []
-- file: HABBlockDiagram.png
-  type: image
-  caption: 
-  tags: []
-- file: HAB_daigram.png
-  type: image
-  caption: 
-  tags: []
-- file: individuation.png
-  type: image
-  caption: 
-  tags: []
-- file: izzymonitorrender.png
-  type: image
-  caption: 
-  tags: []
-- file: micrompptrender.png
-  type: image
-  caption: 
-  tags: []
-- file: MicroMPPTV2.png
-  type: image
-  caption: 
-  tags: []
-- file: Micrompptv2render.png
-  type: image
-  caption: 
-  tags: []
-- file: micrompptv3.png
-  type: image
-  caption: 
-  tags: []
-- file: micrompptV3.png
-  type: image
-  caption: 
-  tags: []
-- file: NFCimplant.png
-  type: image
-  caption: 
-  tags: []
-- file: nonhumanscent.png
-  type: image
-  caption: 
-  tags: []
-- file: OpenFlashlightAssembly.png
-  type: image
-  caption: 
-  tags: []
-- file: OpenFlashlightHeatsink.png
-  type: image
-  caption: 
-  tags: []
-- file: OpenFlashlightPCB2.png
-  type: image
-  caption: 
-  tags: []
-- file: openflashlightpcb.png
-  type: image
-  caption: 
-  tags: []
-- file: SpacebridgeHABPCBDiagram.png
-  type: image
-  caption: 
-  tags: []
-- file: spacebridgehabpcbrender.png
-  type: image
-  caption: 
-  tags: []
-- file: SpacebridgePCBBack.png
-  type: image
-  caption: 
-  tags: []
-- file: SputteringPSUs.png
-  type: image
-  caption: 
-  tags: []
-- file: TXPowerResults.png
-  type: image
-  caption: 
-  tags: []
-- file: waspbottom.png
-  type: image
-  caption: 
-  tags: []
-- file: wasppcbbottom.png
-  type: image
-  caption: 
-  tags: []
-- file: wasppcbtop.png
-  type: image
-  caption: 
-  tags: []
-- file: wasptop.png
-  type: image
-  caption: 
-  tags: []
-- file: waymomap.png
-  type: image
-  caption: 
-  tags: []
-- file: AttinyLEDDriver.JPEG
-  type: image
-  caption: 
-  tags: []
-- file: DiethylEtherHeptaneExtraction.JPEG
-  type: image
-  caption: 
-  tags: []
-- file: DiethylEther.JPEG
-  type: image
-  caption: 
-  tags: []
-- file: DRSSTCTesting.JPEG
-  type: image
-  caption: 
-  tags: []
-- file: PS_LC.JPEG
-  type: image
-  caption: 
-  tags: []
-- file: ImplantSurgery.PNG
-  type: image
-  caption: 
-  tags: []
-- file: airbrushcopperapplication.mp4
-  type: video
-  caption: 
-  tags: []
-- file: AKthermalcam.mp4
-  type: video
-  caption: 
-  tags: []
-- file: babylunamothcaterpillars.mp4
-  type: video
-  caption: 
-  tags: []
-- file: coppernanoparticleairbrushing.mp4
-  type: video
-  caption: 
-  tags: []
-- file: diethylethercollection.mp4
-  type: video
-  caption: 
-  tags: []
-- file: distillationapparatus.mp4
-  type: video
-  caption: 
-  tags: []
-- file: distillationshortvideo.mp4
-  type: video
-  caption: 
-  tags: []
-- file: flexarwiggle.mp4
-  type: video
-  caption: 
-  tags: []
-- file: ignitioncoilnokia2.mp4
-  type: video
-  caption: 
-  tags: []
-- file: ignitioncoilnokia3.mp4
-  type: video
-  caption: 
-  tags: []
-- file: ignitioncoilnokia.mp4
-  type: video
-  caption: 
-  tags: []
-- file: ignitioncoilstablearc.mp4
-  type: video
-  caption: 
-  tags: []
-- file: ImplantProcedureVideo.mp4
-  type: video
-  caption: 
-  tags: []
-- file: inkjetwelltheresyourproblem.mp4
-  type: video
-  caption: 
-  tags: []
-- file: laser.mp4
-  type: video
-  caption: 
-  tags: []
-- file: lissajouslaserprojector.mp4
-  type: video
-  caption: 
-  tags: []
-- file: lissajousmushroom.mp4
-  type: video
-  caption: 
-  tags: []
-- file: LorenzCannon.mp4
-  type: video
-  caption: 
-  tags: []
-- file: machinicgarden.mp4
-  type: video
-  caption: 
-  tags: []
-- file: MOT.mp4
-  type: video
-  caption: 
-  tags: []
-- file: nixonCarRadio.mp4
-  type: video
-  caption: 
-  tags: []
-- file: openbci2.mp4
-  type: video
-  caption: 
-  tags: []
-- file: openBCI.mp4
-  type: video
-  caption: 
-  tags: []
-- file: platingbathcurrent.mp4
-  type: video
-  caption: 
-  tags: []
-- file: poleslide.mp4
-  type: video
-  caption: 
-  tags: []
-- file: recorded-1278238723698.mp4
-  type: video
-  caption: 
-  tags: []
-- file: silvernecklacebaking.mp4
-  type: video
-  caption: 
-  tags: []
-- file: stereomicroscope.mp4
-  type: video
-  caption: 
-  tags: []
-- file: sulfuricacidCUSO4.mp4
-  type: video
-  caption: 
-  tags: []
-- file: SulfuricAcidDistillation.mp4
-  type: video
-  caption: 
-  tags: []
-- file: vinylcutter.mp4
-  type: video
-  caption: 
-  tags: []
-- file: voltagemultipliercropped.mp4
-  type: video
-  caption: 
-  tags: []
-- file: VoltageMultiplier.mp4
-  type: video
-  caption: 
-  tags: []
+# Gallery items - edit this file to add/remove/reorder gallery items
+# Fields:
+#   file: filename (images from assets/img/Gallery/, videos from assets/video/)
+#   type: image or video
+#   caption: description text (HTML links supported)
+#   tags: array of tag strings for filtering
+#   path: (optional) full path override for non-standard file locations
+
 - file: WardSGTC.mp4
   type: video
-  caption: 
-  tags: []
-- file: welding.mp4
-  type: video
-  caption: 
-  tags: []
+  caption: "MASSIVE spark gap tesla coil at LOD labs"
+  tags: [featured, hv, electrical engineering, electronics, systemantics]
+
 - file: wirelessbike.mp4
   type: video
-  caption: 
-  tags: []
-- file: 10kwmagnetron.jpg
-  type: image
-  caption: 
-  tags: []
-- file: 5VSMULORAPACKET.jpg
-  type: image
-  caption: 
-  tags: []
-- file: AgarPlates.jpg
-  type: image
-  caption: 
-  tags: []
-- file: AIDsmemorial.jpg
-  type: image
-  caption: 
-  tags: []
-- file: atopile.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BabyLunaMothCaterpillars.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BasilTankComplete.jpg
-  type: image
-  caption: 
-  tags: []
-- file: beautifulwoman.jpg
-  type: image
-  caption: 
-  tags: []
-- file: beautyineverybreathe.jpg
-  type: image
-  caption: 
-  tags: []
-- file: bikewirelesspowerreciever.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BioactiveTankConstructionBackglue.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BioactiveTankConstructionLayingOut.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BioactiveTankConstructionLayout.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BioactiveTankConstructionPlanning.jpg
-  type: image
-  caption: 
-  tags: []
-- file: BridgeSFmoMA.jpg
-  type: image
-  caption: 
-  tags: []
-- file: canmachinesthink.jpg
-  type: image
-  caption: 
-  tags: []
-- file: CCLplants.jpg
-  type: image
-  caption: 
-  tags: []
-- file: CleoWorkshop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: COWPALACE.jpg
-  type: image
-  caption: 
-  tags: []
-- file: CR95HFNFCTransponder.jpg
-  type: image
-  caption: 
-  tags: []
-- file: CR95HFNFCTransponderPCB.jpg
-  type: image
-  caption: 
-  tags: []
-- file: CR95HFNFCTransponderSchematic.jpg
-  type: image
-  caption: 
-  tags: []
-- file: cryo.jpg
-  type: image
-  caption: 
-  tags: []
-- file: crystalpurse.jpg
-  type: image
-  caption: 
-  tags: []
-- file: DinoCulture.jpg
-  type: image
-  caption: 
-  tags: []
-- file: DinoFlagCell.jpg
-  type: image
-  caption: 
-  tags: []
-- file: dinoflagellete.jpg
-  type: image
-  caption: 
-  tags: []
-- file: diyinsulin.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Dunemsla.jpg
-  type: image
-  caption: 
-  tags: []
-- file: EggPrinting.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Engraving.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ESP32S2MPPT.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ESP32S2MPPTPCB.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ESP32S2MPPTSchematic.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtofoxback.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtofoxgroundstation.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtofox.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Femtofox.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtofox-mppt-draft.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtorfchain.jpg
-  type: image
-  caption: 
-  tags: []
-- file: femtoS21measurement.jpg
-  type: image
-  caption: 
-  tags: []
-- file: FlashlightAssembly.jpg
-  type: image
-  caption: 
-  tags: []
-- file: FlashlightThreadingTests.jpg
-  type: image
-  caption: 
-  tags: []
-- file: flightin.jpg
-  type: image
-  caption: 
-  tags: []
-- file: FMtransmitter.jpg
-  type: image
-  caption: 
-  tags: []
-- file: FruitingOysters.jpg
-  type: image
-  caption: 
-  tags: []
-- file: geneticallymodifiedseeds.jpg
-  type: image
-  caption: 
-  tags: []
-- file: GoldenGate.jpg
-  type: image
-  caption: 
-  tags: []
-- file: goldenoysterplate.jpg
-  type: image
-  caption: 
-  tags: []
-- file: GrainSpawnJars.jpg
-  type: image
-  caption: 
-  tags: []
-- file: GrainspawnLoading.jpg
-  type: image
-  caption: 
-  tags: []
-- file: grossplate.jpg
-  type: image
-  caption: 
-  tags: []
-- file: HABLaunch.jpg
-  type: image
-  caption: 
-  tags: []
-- file: HABPCBbottom.jpg
-  type: image
-  caption: 
-  tags: []
-- file: HABPCBtop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: HelloSanFrancisco.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ImplantMissionAccomplished.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ImplantSnapStory.jpg
-  type: image
-  caption: 
-  tags: []
-- file: InfiniteBox.jpg
-  type: image
-  caption: 
-  tags: []
-- file: inkjetreair.jpg
-  type: image
-  caption: 
-  tags: []
-- file: izzymonitorback.jpg
-  type: image
-  caption: 
-  tags: []
-- file: izzymonitor.jpg
-  type: image
-  caption: 
-  tags: []
-- file: izzymonitorkeys.jpg
-  type: image
-  caption: 
-  tags: []
-- file: kboplate.jpg
-  type: image
-  caption: 
-  tags: []
-- file: KleesAngel.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lastminutechanges.jpg
-  type: image
-  caption: 
-  tags: []
-- file: leakychromium.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lightningdriver.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lightningtowerconstruction.jpg
-  type: image
-  caption: 
-  tags: []
-- file: LionsMane.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lmecontamination.jpg
-  type: image
-  caption: 
-  tags: []
-- file: LORATRANSMSSIONOSCOPE.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lorentzcannon.jpg
-  type: image
-  caption: 
-  tags: []
-- file: LostConveyerBelt.jpg
-  type: image
-  caption: 
-  tags: []
-- file: lucyresumepfp.jpg
-  type: image
-  caption: 
-  tags: []
-- file: LunaMothsCover.jpg
-  type: image
-  caption: 
-  tags: []
-- file: MacelleEgg.jpg
-  type: image
-  caption: 
-  tags: []
-- file: MarcelleDreammachine.jpg
-  type: image
-  caption: 
-  tags: []
-- file: MarcelleEgg.jpg
-  type: image
-  caption: 
-  tags: []
-- file: micromppt.jpg
-  type: image
-  caption: 
-  tags: []
-- file: MushroomTank.jpg
-  type: image
-  caption: 
-  tags: []
-- file: MusicalIgnitionCoil.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Nema23CrankGenerator.jpg
-  type: image
-  caption: 
-  tags: []
-- file: NFCImplantSuccess.jpg
-  type: image
-  caption: 
-  tags: []
-- file: nietzscheplating.jpg
-  type: image
-  caption: 
-  tags: []
-- file: noisebridge.jpg
-  type: image
-  caption: 
-  tags: []
-- file: NonHumanScent.jpg
-  type: image
-  caption: 
-  tags: []
-- file: nonhumanscentpcbbottom.jpg
-  type: image
-  caption: 
-  tags: []
-- file: nonhumanscentpcbtop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: OaklandPlanktonFarmers.jpg
-  type: image
-  caption: 
-  tags: []
-- file: OpenFlashLightRender.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PinkOysterJar.jpg
-  type: image
-  caption: 
-  tags: []
-- file: platednietzsche.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PlateSAB.jpg
-  type: image
-  caption: 
-  tags: []
-- file: pouredPlates.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PowerUsageTrackerATtiny.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PressureCooking2.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PressureCooking.jpg
-  type: image
-  caption: 
-  tags: []
-- file: prof_pic.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PSRiceSpawnJar.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PTCtesterFLIR.jpg
-  type: image
-  caption: 
-  tags: []
-- file: PumpkinGuts.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Pumpkin.jpg
-  type: image
-  caption: 
-  tags: []
-- file: RedLlamaPedal.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Redwoods.jpg
-  type: image
-  caption: 
-  tags: []
-- file: rotarysparkgap.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SABInnoculationBox.jpg
-  type: image
-  caption: 
-  tags: []
-- file: santransisco.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SCBank.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SFarrival.jpg
-  type: image
-  caption: 
-  tags: []
-- file: sgtc.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ShroomTank.jpg
-  type: image
-  caption: 
-  tags: []
-- file: singlecuvettescreen.jpg
-  type: image
-  caption: 
-  tags: []
-- file: Skull.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SnakeHeaterSchematicDraft.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SpawnBags.jpg
-  type: image
-  caption: 
-  tags: []
-- file: sporeplatecondensation.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SPV1040Testing.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapBackup2ngGenAssebled.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapBackup2ngGenCAD.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapBackup2ngGenRENDER.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapBackupPrizmacapBottom.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapBackupPrizmacapTop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: SupercapCrankGeneratorPrintedParts.jpg
-  type: image
-  caption: 
-  tags: []
-- file: testement.jpg
-  type: image
-  caption: 
-  tags: []
-- file: testsetupdrawing.jpg
-  type: image
-  caption: 
-  tags: []
-- file: TheOwlsAreNotWhatTheySeem.jpg
-  type: image
-  caption: 
-  tags: []
+  caption: "Wirelessly powered capacitively coupled wireless bike at LOD labs"
+  tags: [featured, hv, electrical engineering, electronics, systemantics]
+
+- file: nonhumanscent.png
+  type: image
+  caption: '<a href="https://github.com/eigenlucy/nonhumanscent">nonhumanscent</a>, ML-assisted gas composition sensing with BME688 and ESP32S3'
+  tags: [electrical engineering, electronics, systemantics]
+
+- file: micrompptv3.png
+  type: image
+  caption: '<a href="https://github.com/eigenlucy/micromppt">Micromppt V3</a>'
+  tags: [pcb design, electrical engineering, electronics]
+
 - file: txpowertest.jpg
   type: image
-  caption: 
-  tags: []
-- file: uvlampv1.jpg
+  caption: '<a href="https://hackaday.io/project/202604-femtofox-pro-tx-power-power-consumption-testing">Femtofox/E22-900M30S TX Power Testing</a>'
+  tags: [pcb design, electrical engineering, electronics]
+
+- file: blacksands_balloon.jpg
   type: image
-  caption: 
-  tags: []
-- file: veramonitor.jpg
+  caption: '<a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a>'
+  tags: [electrical engineering]
+
+- file: HABLaunch.jpg
   type: image
-  caption: 
-  tags: []
-- file: veramonitorrender.jpg
+  caption: '<a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a>'
+  tags: [pcb design, electrical engineering, electronics]
+
+- file: femtofoxgroundstation.jpg
   type: image
-  caption: 
-  tags: []
-- file: VoronAssembly.jpg
+  caption: '<a href="https://github.com/femtofox/femtofox">Femtofox Based Ground Station</a>'
+  tags: [pcb design, electrical engineering, electronics]
+
+- file: openflashlightpcb.png
   type: image
-  caption: 
-  tags: []
-- file: VoronAssemblyRails.jpg
+  caption: '<a href="https://hackaday.io/project/202611-openflashlight">OpenFlashlight</a>'
+  tags: [pcb design, electrical engineering, electronics]
+
+- file: dinoflagellete.jpg
   type: image
-  caption: 
-  tags: []
-- file: voronfini.jpg
+  caption: "Dinoflagelletes cell"
+  tags: [biology]
+
+- file: scintillatorcrystal.mp4
+  type: video
+  path: "assets/img/Gallery/scintillatorcrystal.mp4"
+  caption: "Gallium aluminum garnet scintilator crystals"
+  tags: [featured, electrical engineering, electronics, systemantics]
+
+- file: laser.mp4
+  type: video
+  caption: "200W UV laser diode lighting a log on fire without a lens"
+  tags: [featured, electronics, systemantics]
+
+- file: DiethylEtherHeptaneExtraction.JPEG
   type: image
-  caption: 
-  tags: []
-- file: VoronPrintingParts.jpg
-  type: image
-  caption: 
-  tags: []
-- file: waspbottom.jpg
-  type: image
-  caption: 
-  tags: []
-- file: waspmelted.jpg
-  type: image
-  caption: 
-  tags: []
-- file: wasppcbbottom.jpg
-  type: image
-  caption: 
-  tags: []
-- file: wasppcbtop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: wasptop.jpg
-  type: image
-  caption: 
-  tags: []
-- file: ZebraIsopodTerrarium.jpg
-  type: image
-  caption: 
-  tags: []
-- file: dth.png
-  type: image
-  caption: 
-  tags: []
-- file: image1-0.png
-  type: image
-  caption: 
-  tags: []
-- file: image1.png
-  type: image
-  caption: 
-  tags: []
-- file: malleo_rh570_web_white_2025.png
-  type: image
-  caption: 
-  tags: []
-- file: Marx-stage2.png
-  type: image
-  caption: 
-  tags: []
-- file: Marx-stage.png
-  type: image
-  caption: 
-  tags: []
-- file: path1.png
-  type: image
-  caption: 
-  tags: []
-- file: path29.png
-  type: image
-  caption: 
-  tags: []
+  caption: "short path distillation setup"
+  tags: [chemistry, distillation]
+
+- file: distillationapparatus.mp4
+  type: video
+  caption: "fractional distillation + condensor column"
+  tags: [chemistry, distillation]
+
 - file: distillationthermalcam.JPG
   type: image
-  caption: 
-  tags: []
-- file: DIYStirplate.JPG
+  caption: "fractional distillation setup (thermal camera)"
+  tags: [chemistry, distillation, thermal cam]
+
+- file: OpenFlashLightRender.jpg
   type: image
-  caption: 
-  tags: []
-- file: electroplatingbath.JPG
+  caption: '<a href="https://github.com/eigenlucy/uv-lamp">Open Flashlight</a> PCB Rendering'
+  tags: [pcb design, electrical engineering, attiny, electronics]
+
+- file: izzymonitor.jpg
   type: image
-  caption: 
-  tags: []
-- file: FLCLpcb.JPG
+  caption: '<a href="https://eigenlucy.github.io/projects/izzymonitor">Izzymonitor</a> HAOS panel'
+  tags: [pcb design, electrical engineering, attiny, electronics]
+
+- file: micromppt.jpg
   type: image
-  caption: 
-  tags: []
-- file: flexARZ0.JPG
+  caption: '<a href="https://eigenlucy.github.io/projects/micromppt/">MicroMPPT</a> test board'
+  tags: [pcb design, electrical engineering, electronics]
+
+- file: DiethylEther.JPEG
   type: image
-  caption: 
-  tags: []
-- file: ignitioncoil.JPG
+  caption: "diethyl ether extracted from starting fluid"
+  tags: [chemistry, distillation]
+
+- file: PinkOysterJar.jpg
   type: image
-  caption: 
-  tags: []
-- file: IMG_8608.JPG
+  caption: "Brain jar\U0001F9E0 (pink oyster rye berry grain spawn jar)"
+  tags: [mycology, oyster mushrooms, biology]
+
+- file: SupercapBackup2ngGenRENDER.jpg
   type: image
-  caption: 
-  tags: []
-- file: OsciliscopeWithCouplingError.JPG
+  caption: "rendering of the LTC3350 supercap bidirectional converter PCB"
+  tags: [pcb design, attiny, fusion360, electrical engineering, electronics, supercaps]
+
+- file: SupercapBackup2ngGenAssebled.jpg
   type: image
-  caption: 
-  tags: []
+  caption: "holding the first bidirectional converter prototype I assembled :)"
+  tags: [pcb design, electrical engineering, attiny, electronics, supercaps]
+
+- file: MOT.mp4
+  type: video
+  caption: "microwave oven transformer (MOT) arc"
+  tags: [hv, electrical engineering, electronics]
+
+- file: ignitioncoilnokia.mp4
+  type: video
+  caption: "IGBT singing ignition coil playing a nokia ring tone"
+  tags: [featured, hv, samd21, electrical engineering, electronics, systemantics]
+
+- file: MusicalIgnitionCoil.jpg
+  type: image
+  caption: "this is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jacob's ladder. here it is producing a heart around 20khz"
+  tags: [hv, samd21, electrical engineering, electronics]
+
+- file: LionsMane.jpg
+  type: image
+  caption: "this is a lion's mane that has begun to fruit in the grain spawn jar"
+  tags: [mycology, biology, grain spawn]
+
+- file: PowerUsageTrackerATtiny.jpg
+  type: image
+  caption: "attiny1627 (2-Series) based power usage tracker made to observe a power spike associated with a randomly triggered GSM module activation on a hydrogen gas meter. milled on an LPFK protomat."
+  tags: [pcb design, attiny, cnc, fusion360, electrical engineering]
+
+- file: SupercapBackupPrizmacapTop.jpg
+  type: image
+  caption: "LTC3110 based bidirectional converter with attiny1627 uC. produced in the process of testing kyocera-AVX prismatic caps for a variety of applications"
+  tags: [pcb design, attiny, electrical engineering, electronics, supercaps]
+
+- file: SupercapBackupPrizmacapBottom.jpg
+  type: image
+  caption: "underside of the LTC3110 PCB. off-the-shelf RF cans secure two prismatic caps securing and provide some protection. produced a version with a lower profile solid aluminum can in the same style"
+  tags: [pcb design, electrical engineering, electronics, supercaps]
+
+- file: VoltageMultiplier.mp4
+  type: video
+  caption: "voltage multiplier with ~100kV output"
+  tags: [hv, electrical engineering]
+
+- file: Nema23CrankGenerator.jpg
+  type: image
+  caption: "NEMA23 stepper motor converter to a crank generator supercap charger"
+  tags: [electrical engineering, electronics]
+
+- file: EggPrinting.jpg
+  type: image
+  caption: "printing an egg as a basking spot for one of my snakes with an MSLA resin 3D printer. she LOVES it"
+  tags: [3d printing, terrarium, biology]
+
+- file: MarcelleEgg.jpg
+  type: image
+  caption: "this is marcelle the red tail boa basking on her egg :) she's quite the hermeticist"
+  tags: [biology, 3d printing, terrarium]
+
 - file: POVglobe.JPG
   type: image
-  caption: 
-  tags: []
+  caption: "this is a POV globe made from an addressable LED strip and random brushless motor. the wood frame was a poor choice"
+  tags: [electronics, electrical engineering]
+
+- file: nietzscheplating.jpg
+  type: image
+  caption: "coating an mSLA printed part in a polyurethane/copper nanoparticle based conductive coating to prep for electroplating"
+  tags: [electroplating, 3d printing, chemistry]
+
+- file: electroplatingbath.JPG
+  type: image
+  caption: "electroplating setup where copper (CuSO4 + sulfuric acid + brightener solution) is deposited on the printed piece"
+  tags: [electroplating, chemistry]
+
+- file: platednietzsche.jpg
+  type: image
+  caption: "mSLA resin printed part after an electroplating procedure"
+  tags: [electroplating, chemistry, 3d printing]
+
+- file: individuation.png
+  type: image
+  caption: "individuation of the technical object ;)"
+  tags: [systemantics, simondon, individuation]
+
+- file: izzymonitorback.jpg
+  type: image
+  caption: "ROZ Wild Robot Back Silkscreen"
+  tags: [pcb design, electronics, electrical engineering]
+
+- file: PS_LC.JPEG
+  type: image
+  caption: "panellus stipticus liquid culture"
+  tags: [mycology, biology, agar plates, liquid culture]
+
+- file: DRSSTCTesting.JPEG
+  type: image
+  caption: "testing a DRSSTC driver"
+  tags: [electronics, electrical engineering, hv]
+
+- file: FLCLpcb.JPG
+  type: image
+  caption: "guitar pedal PCB with a FLCL graphic"
+  tags: [pcb design, electronics, electrical engineering]
+
+- file: TheOwlsAreNotWhatTheySeem.jpg
+  type: image
+  caption: "The Owls Are Not What They Seem"
+  tags: [pcb design, electronics, electrical engineering]
+
+- file: ShroomTank.jpg
+  type: image
+  caption: "golden oyster mushrooms taking over a tank of mulch"
+  tags: [mycology, biology, spawn bag, oyster mushrooms]
+
+- file: OsciliscopeWithCouplingError.JPG
+  type: image
+  caption: "dead analog oscilloscope running with the hood off"
+  tags: [electrical engineering, electronics, equipment, oscilloscope]
+
+- file: PressureCooking.jpg
+  type: image
+  caption: "loading up a pressure cooker with grain spawn jars to sterilize them for inoculation"
+  tags: [mycology, biology, grain spawn]
+
+- file: CCLplants.jpg
+  type: image
+  caption: "Greenhouse at Counter Culture Labs"
+  tags: [biology]
+
 - file: TableEngraving.JPG
   type: image
-  caption: 
-  tags: []
-- file: voron2_4belly.JPG
+  caption: "laser engraving a table my roommate and I built (image from Deleuze and Guattari's A Thousand Plateaus)"
+  tags: [laser, cnc, woodworking, systemantics]
+
+- file: MarcelleDreammachine.jpg
   type: image
-  caption: 
-  tags: []
+  caption: "Marcelle on a 3D printed recreation of William Burroughs' Dreamachine"
+  tags: [3d printing, biology, systemantics]
+
+- file: sulfuricacidCUSO4.mp4
+  type: video
+  caption: "Addition of concentrated sulfuric acid to CuSO4 based electroplating solution"
+  tags: [chemistry, electroplating]
+
+- file: PressureCooking2.jpg
+  type: image
+  caption: "using a pressure cooker as an autoclave for spawn bag sterilization"
+  tags: [mycology, biology, grain spawn]
+
+- file: DIYStirplate.JPG
+  type: image
+  caption: "DIY stirplate with a computer fan and printed parts"
+  tags: [diy, biology, chemistry, 3d printing]
+
+- file: AgarPlates.jpg
+  type: image
+  caption: "Agar/LME spore plates"
+  tags: [mycology, agar plates, biology]
+
+- file: LostConveyerBelt.jpg
+  type: image
+  caption: "sad PCB lost in the reflow conveyer belt :(("
+  tags: [pcb design, prototyping, electrical engineering]
+
+- file: Engraving.jpg
+  type: image
+  caption: "playing with digital art/laser engraving. the snakeskin pattern on the wood comes from the grain on the sycamore."
+  tags: [laser, cnc, woodworking]
+
+- file: ImplantProcedureVideo.mp4
+  type: video
+  caption: "xSIID self implant procedure"
+  tags: [implants, biohacking, nfc]
+
+- file: NFCimplant.png
+  type: image
+  caption: "LED visible in daylight after some healing"
+  tags: [implants, nfc, electrical engineering, biohacking]
+
+- file: BioactiveTankConstructionLayingOut.jpg
+  type: image
+  caption: "building a bioactive enclosure for my ball python Basil. made with gorilla glue, spray foam, DIY tropical ABG mix, and terrafirma"
+  tags: [terrarium, isopods, biology]
+
+- file: BasilTankComplete.jpg
+  type: image
+  caption: "completed bioactive setup for Basil :)"
+  tags: [terrarium, biology]
+
+- file: ImplantSurgery.PNG
+  type: image
+  caption: "DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet."
+  tags: [implants, biohacking]
+
+- file: ZebraIsopodTerrarium.jpg
+  type: image
+  caption: "zebra isopod terrarium setup"
+  tags: [isopods, biology, terrarium]
