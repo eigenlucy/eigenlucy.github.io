@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-11T22:41:03+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-11T22:50:12+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/"><![CDATA[<h1 id="anti-oedipus-intro--section-1-concept-map">Anti-Oedipus: Intro &amp; Section 1 Concept Map</h1>
 
 <p><em>WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members</em></p>
@@ -1085,7 +1085,61 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
   <li><a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier</li>
   <li><a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., “SPICE Electrical Models and Simulations of Silicon Photomultipliers”</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)</li>
   <li>Glenn F. Knoll, <em>Radiation Detection and Measurement</em> — The textbook on radiation detector physics</li>
-</ul>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Spacebridge HAB PCB Development</title><link href="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/" rel="alternate" type="text/html" title="Spacebridge HAB PCB Development" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/"><![CDATA[<p>I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I’ve gotten lot’s of help from some of the folks over at SF HAB, including some folks that put together the amazing <a href="https://www.picoballoons.net/">Pico Balloon Project</a>. I have a PCB in my hand now, which I’ll be testing in the upcoming weeks. You can follow my <a href="https://github.com/eigenlucy/spacebridgehabpcb">GitHub repo</a>.</p>
+</ul>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Iemanja</title><link href="https://eigenlucy.github.io/eigenlucy/iemanja/" rel="alternate" type="text/html" title="Iemanja" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/iemanja</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/iemanja/"><![CDATA[<p>Memory is like a pool you can swim through, but it’s also like a tool that you wield. It is both active and passive. Each flash ruptures the stasis of self evident experience as it brushes a trace past in the present. It is a strange unfamiliar past, or maybe the now is a strange unfamiliar place. The violent struggle between these two postulates calls forwards a new being capable of integrating the difference. Memory doesn’t simply recall the past, it summons it. There is no pure memory nor past to recover, only affections. The hope and prayer of all who hope to honor memory is that these craters of experience may be channeled to the construction a self worthy of everything that happens to it, able to speak to it all. I hope that one day I can find the words. I am so tired.</p>
+
+<p><a href="https://open.spotify.com/playlist/6RxBksPjPwYYKLjTdvzFxo?si=51803b0107514b97">Iemanja (Ode To Vera)</a></p>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Le Fin de Satan</title><link href="https://eigenlucy.github.io/eigenlucy/bastille/" rel="alternate" type="text/html" title="Le Fin de Satan" /><published>2025-06-13T00:00:00+00:00</published><updated>2025-06-13T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/the-end-of-satan</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/bastille/"><![CDATA[<p><a href="https://dyerenglish.weebly.com/uploads/2/4/5/8/24581384/hugoetnoxfactaest.pdf">And There Was Night</a></p>
+
+<p>In 1854, Victor Hugo began writing an epic poem titled “La Fin de Satan” (The End of Satan). This was one of the most interesting projects Hugo ever worked on, but tragically it was left unfinished. The themes are familiar, but far more metaphyscial and raw, far further from the light of grace than Hugo ever allowed himself to venture in his other pleas for <a href="https://en.wikipedia.org/wiki/The_Last_Day_of_a_Condemned_Man">lost souls</a>. In many ways the story resembles Milton’s Paradise Lost, but Hugo’s Satan is not a heroic rebel. He is ashamed. He is lonely. For this reason, the grace in this essay is far more potent that the transcendent, patriachal form of redemption offered to Jean. Hugo’s compassion for Satan required a total destitution of justice as such, which he planned to culminate in a storming of the Bastille as both a spiritually and politically necessicary revolt to realize a truer justice, not a mere succession of rights.</p>
+
+<ul>
+"A great deal of innocence or cunning is needed by a
+philosophy of communication that claims to restore the society of
+friends, or even of wise men, by forming a universal opinion as
+"consensus" able to moralize nations, States, and the markct.!"
+<a href="https://thoughtjam.wordpress.com/2009/01/02/wallerstein-immanuel-european-universalism-the-rhetoric-of-power/">Human rights</a> say nothing about the immanent modes of existence of
+people provided with rights. Nor is it only in the extreme situations
+described by Primo Levi that we experience the shame of being
+human. We also experience it in insignificant conditions, before the
+meanness and vulgarity of existence that haunts democracies, before
+the propagation of these modes of existence and of thought-for-the-
+market, and before the values, ideals, and opinions of our time. The
+ignominy of the possibilities of life that we are offered appears from
+within. We do not feel ourselves outside of our time but continue 10
+undergo shameful compromises with it. This feeling of shame is one
+of philosophy's most powerful motifs. We are not responsible lor (he
+victims but responsible before them. And there is no way to escape
+the ignoble but to play the part of the animal (to growl, burrow,
+snigger, distort ourselves): thought itself is sometimes closer to an
+animal that dies than to a living, even democratic, human being."
+</ul>
+<p>– G. Deleuze and Felix Guattari
+<a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://transversalinflections.wordpress.com/wp-content/uploads/2015/04/deleuze-3207-what_is_philosophy-fenomenologie-van-schilderkunst.pdf&amp;ved=2ahUKEwjah8f-y_yNAxUniO4BHXPJC4cQFnoECBkQAQ&amp;usg=AOvVaw0px4eJIuq7kvUlBwO_NGai">What Is Philosophy</a></p>
+
+<div>
+  <img src="/assets/img/Gallery/testement.jpg" alt="The Execution of the Testament of the Marquis de Sade by Jean Benoît" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+
+<div>
+  <img src="/assets/img/Gallery/DeportationMueseum.jpg" alt="Corridor of Lost Souls, Paris Deportation Mueseum" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/35966799/">What is the power of our Shame?</a></p>
+
+<p>I saw the Bastille last week. All that remains is the foundations. Some of the bricks were taken to be used for a bridge. Besides that, it is a playground now. A tree sprouts from the stubborn remnants of the original foundation. Someday we will win.</p>
+
+<p>I thought a lot about the necessity of Satan as we walked along the high rise. I remember being told all about the abstract theological necessities as a child, about how freedom was a necessary precondition of real grace. Unity which knows of no difference is simply a jail. I saw Hugo’s vision as children played on top of the rubble. I saw the necessity of Satan’s fall and ascension to transform the unitary grace of God from a prefigurative violence to a freely given act of love.</p>
+
+<p>Then, it makes sense this work went unfinished. The consciousness which made itself known for a brief moment amid the French Revolution faded out just as quickly as it arose. But what a gasp of relief to see how little remains of the old Bastille. Like a brief surfacing above the water, only to dive down again.</p>
+
+<div>
+  <img src="/assets/img/Gallery/BastilleTree.jpg" alt="What remains of the Bastille" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>
+
+<p>To find our way out of this maze, we have to hold onto our hatred and our solitary individuality. We have to have known aggression and defensiveness, we have to experience them for what they are and work through them without succumbing to them. The peace we win must be won on behalf of each element struggle against the whole. And at the same time, we have to believe in the possibility of an appeal to the whole. Not as an all encompassing transcendent perspective, not as a return to our origins, but as a struggle to be one in the name of grace. The turning of our stomachs reading the last pleas of a condemned man, an encounter with the serene violence underneath the hegemonic sensibility that directs punishment. We have to trace it all back to the love we have been denied, and then we can start asking the real questions. To see with all the eyes that one can hold. Our boundaries, our stubbornness, our hatred, our discontent; these cannot help but forward the coming of the kingdom. In the crater of each signifier, in the unassailability of the object of desire, there is the outline of a being capable of holding the weight of everything everywhere all at once. This latent thing is both the inevitable return of the repressed and the unstoppable march towards peace.</p>
+
+<div>
+  <img src="/assets/img/Gallery/klint_spirals.webp" alt="Hilma Klint, The Swan No. 17" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+</div>]]></content><author><name></name></author><summary type="html"><![CDATA[The End of Satan // The Storming of the Bastille]]></summary></entry><entry><title type="html">Spacebridge HAB PCB Development</title><link href="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/" rel="alternate" type="text/html" title="Spacebridge HAB PCB Development" /><published>2025-04-29T13:00:00+00:00</published><updated>2025-04-29T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/spacebridgeHABPCB/"><![CDATA[<p>I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I’ve gotten lot’s of help from some of the folks over at SF HAB, including some folks that put together the amazing <a href="https://www.picoballoons.net/">Pico Balloon Project</a>. I have a PCB in my hand now, which I’ll be testing in the upcoming weeks. You can follow my <a href="https://github.com/eigenlucy/spacebridgehabpcb">GitHub repo</a>.</p>
 
 <p>In this post I would just like to give and overview of the hardware and explain some of my design choices.</p>
 
@@ -1274,255 +1328,4 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
     <figcaption class="figure-caption">Dreaming of Earth’s Sphericity, I Would Offer My Love</figcaption>
     </figure>
   </swiper-slide>
-</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[A Variety of Fun Updates and Adventures]]></summary></entry><entry><title type="html">Origin is the Goal</title><link href="https://eigenlucy.github.io/blog/2025/origin-is-the-goal/" rel="alternate" type="text/html" title="Origin is the Goal" /><published>2025-01-06T23:55:18+00:00</published><updated>2025-01-06T23:55:18+00:00</updated><id>https://eigenlucy.github.io/blog/2025/origin-is-the-goal</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/origin-is-the-goal/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">The Trans Continental Exodus</title><link href="https://eigenlucy.github.io/blog/2024/the-trans-continental-exodus/" rel="alternate" type="text/html" title="The Trans Continental Exodus" /><published>2024-11-10T09:26:34+00:00</published><updated>2024-11-10T09:26:34+00:00</updated><id>https://eigenlucy.github.io/blog/2024/the-trans-continental-exodus</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2024/the-trans-continental-exodus/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">OpenSauce 2024</title><link href="https://eigenlucy.github.io/blog/2024/SF/" rel="alternate" type="text/html" title="OpenSauce 2024" /><published>2024-09-03T13:00:00+00:00</published><updated>2024-09-03T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2024/SF</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2024/SF/"><![CDATA[<p>Earlier this year I was fortunate enough to be accepted as an OpenSauce 2024 Exhibitor :)
-While I was there I got to check out some other fun spots, like Oakland’s Counter Culture Labs, Mission District’s noisebridge hackerspace, and Greg Leyh’s LOD Labs</p>
-
-<!--more-->
-
-<h2 id="misc">Misc</h2>
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>
-    <figure class="figure">
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/flightin.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/flightin.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/flightin.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/flightin.jpg.jpg-480.webp 480w,assets/img/Gallery/flightin.jpg.jpg-800.webp 800w,assets/img/Gallery/flightin.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/flightin.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/flightin.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">Flight Into SF</figcaption>
-    </figure>
-  </swiper-slide>
-  <swiper-slide>
-    <figure class="figure">  
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SFarrival.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SFarrival.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SFarrival.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SFarrival.jpg.jpg-480.webp 480w,assets/img/Gallery/SFarrival.jpg.jpg-800.webp 800w,assets/img/Gallery/SFarrival.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/SFarrival.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SFarrival.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">SF Arrival</figcaption>
-    </figure>
-  </swiper-slide>
-  <swiper-slide>
-    <figure class="figure">
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/beautifulwoman.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/beautifulwoman.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/beautifulwoman.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/beautifulwoman.jpg.jpg-480.webp 480w,assets/img/Gallery/beautifulwoman.jpg.jpg-800.webp 800w,assets/img/Gallery/beautifulwoman.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/beautifulwoman.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/beautifulwoman.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">Flight Into SF</figcaption>
-    </figure>
-  </swiper-slide>
-  <swiper-slide>
-    <figure class="figure">
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/AIDsmemorial.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/AIDsmemorial.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/AIDsmemorial.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/AIDsmemorial.jpg.jpg-480.webp 480w,assets/img/Gallery/AIDsmemorial.jpg.jpg-800.webp 800w,assets/img/Gallery/AIDsmemorial.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/AIDsmemorial.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/AIDsmemorial.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">Flight Into SF</figcaption>
-    </figure>
-  </swiper-slide>
-  <swiper-slide>
-    <figure class="figure">
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/BridgeSFmoMA.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/BridgeSFmoMA.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/BridgeSFmoMA.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/BridgeSFmoMA.jpg.jpg-480.webp 480w,assets/img/Gallery/BridgeSFmoMA.jpg.jpg-800.webp 800w,assets/img/Gallery/BridgeSFmoMA.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/BridgeSFmoMA.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/BridgeSFmoMA.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">Flight Into SF</figcaption>
-    </figure>
-  </swiper-slide>
-  <swiper-slide>
-    <figure class="figure">
-      <!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/beautyineverybreathe.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/beautyineverybreathe.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/beautyineverybreathe.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/beautyineverybreathe.jpg.jpg-480.webp 480w,assets/img/Gallery/beautyineverybreathe.jpg.jpg-800.webp 800w,assets/img/Gallery/beautyineverybreathe.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/beautyineverybreathe.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/beautyineverybreathe.jpg';" />
-    </picture>
-    
-  </figure>
-    <figcaption class="figure-caption">example</figcaption>
-    </figure>
-  </swiper-slide>
-</swiper-container>
-
-<h2 id="noise-bridge">Noise Bridge</h2>
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/SCBank.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/SCBank.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/SCBank.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SCBank.jpg.jpg-480.webp 480w,assets/img/Gallery/SCBank.jpg.jpg-800.webp 800w,assets/img/Gallery/SCBank.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/SCBank.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SCBank.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/canmachinesthink.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/canmachinesthink.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/canmachinesthink.jpg.jpg-480.webp 480w,assets/img/Gallery/canmachinesthink.jpg.jpg-800.webp 800w,assets/img/Gallery/canmachinesthink.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/canmachinesthink.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/canmachinesthink.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/noisebridge.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/noisebridge.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/noisebridge.jpg.jpg-480.webp 480w,assets/img/Gallery/noisebridge.jpg.jpg-800.webp 800w,assets/img/Gallery/noisebridge.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/noisebridge.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/noisebridge.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-</swiper-container>
-
-<h2 id="counter-culture-labs">Counter Culture Labs</h2>
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/singlecuvettescreen.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/singlecuvettescreen.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/singlecuvettescreen.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/singlecuvettescreen.jpg.jpg-480.webp 480w,assets/img/Gallery/singlecuvettescreen.jpg.jpg-800.webp 800w,assets/img/Gallery/singlecuvettescreen.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/singlecuvettescreen.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/singlecuvettescreen.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/diyinsulin.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/diyinsulin.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/diyinsulin.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/diyinsulin.jpg.jpg-480.webp 480w,assets/img/Gallery/diyinsulin.jpg.jpg-800.webp 800w,assets/img/Gallery/diyinsulin.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/diyinsulin.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/diyinsulin.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-</swiper-container>
-
-<h2 id="opensauce-2024">OpenSauce 2024</h2>
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/COWPALACE.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/COWPALACE.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/COWPALACE.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/COWPALACE.jpg.jpg-480.webp 480w,assets/img/Gallery/COWPALACE.jpg.jpg-800.webp 800w,assets/img/Gallery/COWPALACE.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/COWPALACE.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/COWPALACE.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lastminutechanges.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lastminutechanges.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lastminutechanges.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lastminutechanges.jpg.jpg-480.webp 480w,assets/img/Gallery/lastminutechanges.jpg.jpg-800.webp 800w,assets/img/Gallery/lastminutechanges.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/lastminutechanges.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lastminutechanges.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-</swiper-container>
-
-<h2 id="lightning-on-demand-labs">Lightning On Demand Labs</h2>
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lightningtowerconstruction.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lightningtowerconstruction.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lightningtowerconstruction.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lightningtowerconstruction.jpg.jpg-480.webp 480w,assets/img/Gallery/lightningtowerconstruction.jpg.jpg-800.webp 800w,assets/img/Gallery/lightningtowerconstruction.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/lightningtowerconstruction.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lightningtowerconstruction.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lightningdriver.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lightningdriver.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lightningdriver.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lightningdriver.jpg.jpg-480.webp 480w,assets/img/Gallery/lightningdriver.jpg.jpg-800.webp 800w,assets/img/Gallery/lightningdriver.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/lightningdriver.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lightningdriver.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/lorentzcannon.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/lorentzcannon.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/lorentzcannon.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/lorentzcannon.jpg.jpg-480.webp 480w,assets/img/Gallery/lorentzcannon.jpg.jpg-800.webp 800w,assets/img/Gallery/lorentzcannon.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/lorentzcannon.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/lorentzcannon.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/sgtc.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/sgtc.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/sgtc.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/sgtc.jpg.jpg-480.webp 480w,assets/img/Gallery/sgtc.jpg.jpg-800.webp 800w,assets/img/Gallery/sgtc.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/sgtc.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/sgtc.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><!-- DEBUG FIGURE.LIQUID: Raw include.path is [assets/img/Gallery/bikewirelesspowerreciever.jpg] --><!-- DEBUG FIGURE.LIQUID: full_relative_path is [/assets/img/Gallery/bikewirelesspowerreciever.jpg] --><!-- DEBUG FIGURE.LIQUID: base_path for srcset is [assets/img/Gallery/bikewirelesspowerreciever.jpg] -->
-
-  <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-480.webp 480w,assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-800.webp 800w,assets/img/Gallery/bikewirelesspowerreciever.jpg.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/bikewirelesspowerreciever.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/bikewirelesspowerreciever.jpg';" />
-    </picture>
-    
-  </figure></swiper-slide>
-</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Exhibiting at OpenSauce 2023 and Related SF Adventures]]></summary></entry></feed>
+</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[A Variety of Fun Updates and Adventures]]></summary></entry><entry><title type="html">Origin is the Goal</title><link href="https://eigenlucy.github.io/blog/2025/origin-is-the-goal/" rel="alternate" type="text/html" title="Origin is the Goal" /><published>2025-01-06T23:55:18+00:00</published><updated>2025-01-06T23:55:18+00:00</updated><id>https://eigenlucy.github.io/blog/2025/origin-is-the-goal</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/origin-is-the-goal/"><![CDATA[]]></content><author><name></name></author></entry></feed>
