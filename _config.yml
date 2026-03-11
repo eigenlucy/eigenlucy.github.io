@@ -169,7 +169,7 @@ external_sources:
 # Get your free API key at https://dev.hackaday.io
 # Set HACKADAY_API_KEY env var (don't put the key in this file)
 hackaday_source:
-  user_id: 1504185
+  t user_id: 1504185
   # Or list specific project IDs instead:
   # projects:
   #   - 202604
