@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const canvas = document.getElementById('pde-background-canvas');
     if (!canvas) {
         console.error('RD Script: Canvas not found!');
@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Canvas dimensions will still track window size for the drawing surface
     let canvasWidth = canvas.width = window.innerWidth;
     let canvasHeight = canvas.height = window.innerHeight;
+    offscreen.width = canvasWidth;
+    offscreen.height = canvasHeight;
 
     // ADDED: Dynamic cell drawing dimensions
     let cellDrawWidth = canvasWidth / SIM_COLS;
