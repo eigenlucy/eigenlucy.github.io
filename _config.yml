@@ -164,6 +164,17 @@ disqus_shortname: # put your disqus shortname
 external_sources:
   - name: medium.com
     rss_url: https://medium.com/@machinegirl/feed
+
+# Hackaday.io project logs → blog posts (via API)
+# Get your free API key at https://dev.hackaday.io
+# Set HACKADAY_API_KEY env var (don't put the key in this file)
+hackaday_source:
+  user_id: 1504185
+  # Or list specific project IDs instead:
+  # projects:
+  #   - 202604
+  #   - 202611
+
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------

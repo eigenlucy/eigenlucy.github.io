@@ -20,7 +20,7 @@ My areas of research are:
 
 * <a href="https://diyhrt.wiki">DIY.HRT</a> wiki for basic info on sourcing, dosage, and testing.
 * <a href="https://www.hrt.mom">HRT.MOM</a> for info on homebrewing vials. This is by far the best guide on aseptic technique and proper sterilization methods!
-* <a href="https://hrtcafe.net/index.html">HRT Cafe</a> has a great list of HRT sources. <a href="https://www.dragonordnance.com">DragonOrdinance</a> is my preferred site for sourcing raws to the US.
+* <a href="https://diyhrt.market/">dithrt.market</a> has a great list of HRT sources. <a href="https://www.dragonordnance.com">DragonOrdinance</a> is my preferred site for sourcing raws to the US.
 
 # Not medical advice but
 

@@ -78,6 +78,8 @@ jobs:
       - name: Clean and Recompile Gems
         run: bundle pristine # Corrected command
       - name: Install and Build 🔧
+        env:
+          HACKADAY_API_KEY: ${{ secrets.HACKADAY_API_KEY }}
         run: |
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
