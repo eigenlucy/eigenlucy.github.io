@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 Projects/research:
 <ul>
   <li>Geophysical surveying and mineral explorations at <a href="https://mithras.industries">Mithras</a></li>
-  <li>DIY Optical Emission Spectroscopy with Microwave Induced Plasma</li>
+  <li>DIY gamma spectroscopy (see my <a href="https://eigenlucy.com//blog/2026/gamma-spec-zine/">zine article</a> on the subject)</li>
   <li>Low-cost, maskless, DIY <a href="https://eigenlucy.com/projects/mea_arrays">microelectrode arrays</a> for cultured neuron headstages</li>
   <li>Micro-solar chargers, like  <a href="https://github.com/eigenlucy/micromppt">Micromppt</a></li>
   <li>Low power mesh network clients (BLE Mesh, LoRa, OpenWRT), like <a href="https://eigenlucy.com/projects/femtofox">Femtofox</a></li>

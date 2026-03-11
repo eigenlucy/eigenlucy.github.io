@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('RD Script: Canvas not found!');
         return;
     }
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: false });
     if (!ctx) {
         console.error('RD Script: Failed to get 2D context!');
         return;
     }
-    console.log('RD Script: Initialized with DYNAMIC cell drawing v10'); // Updated log
+
+    // Offscreen buffer to prevent partial-draw flicker
+    const offscreen = document.createElement('canvas');
+    const offCtx = offscreen.getContext('2d', { alpha: false });
+
+    console.log('RD Script: Initialized with DYNAMIC cell drawing v11');
 
     // === FIXED SIMULATION GRID SIZE (in cells) ===
     const SIM_COLS = 200; // Example: 200 cells wide
@@ -46,8 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initializeGrid() {
         // Update canvas and cell drawing dimensions
-        canvasWidth = canvas.width = window.innerWidth;
-        canvasHeight = canvas.height = window.innerHeight;
+        const newWidth = window.innerWidth;
+        const newHeight = window.innerHeight;
+        if (canvas.width !== newWidth || canvas.height !== newHeight) {
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            offscreen.width = newWidth;
+            offscreen.height = newHeight;
+        }
+        canvasWidth = newWidth;
+        canvasHeight = newHeight;
         cellDrawWidth = canvasWidth / SIM_COLS;
         cellDrawHeight = canvasHeight / SIM_ROWS;
         
@@ -130,25 +143,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function drawGrid() {
         if (isDrawingPaused) return;
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight); // Clear the VISIBLE canvas area
+
+        // Draw to offscreen buffer first to prevent partial-draw flicker
+        offCtx.fillStyle = 'black';
+        offCtx.fillRect(0, 0, canvasWidth, canvasHeight);
 
         for (let x = 0; x < SIM_COLS; x++) {
             for (let y = 0; y < SIM_ROWS; y++) {
-                // Calculate screen position using dynamic cell drawing sizes
                 const screenX = x * cellDrawWidth;
                 const screenY = y * cellDrawHeight;
 
                 if (!grid[x] || !grid[x][y]) continue;
                 const bVal = grid[x][y].b;
-                const baseGray = 20; 
-                const grayRange = 60; 
+                const baseGray = 20;
+                const grayRange = 60;
                 const grayLevel = Math.floor(baseGray + (bVal * grayRange));
-                ctx.fillStyle = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
-                // Draw the cell using dynamic cell drawing sizes
-                ctx.fillRect(screenX, screenY, cellDrawWidth, cellDrawHeight);
+                offCtx.fillStyle = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
+                offCtx.fillRect(screenX, screenY, cellDrawWidth, cellDrawHeight);
             }
         }
+
+        // Single blit to visible canvas — no partial draws visible
+        ctx.drawImage(offscreen, 0, 0);
     }
     
     let lastFrameTime = 0;
@@ -199,19 +215,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleResize() {
-        isDrawingPaused = true; 
-        canvasWidth = window.innerWidth;
-        canvasHeight = window.innerHeight;
-        canvas.width = canvasWidth;   
-        canvas.height = canvasHeight; 
-        
-        // Update cell drawing dimensions
+        isDrawingPaused = true;
+        const newWidth = window.innerWidth;
+        const newHeight = window.innerHeight;
+
+        // Only reset canvas dimensions if they actually changed
+        // (mobile browsers fire resize on scroll for address bar)
+        if (canvas.width !== newWidth || canvas.height !== newHeight) {
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            offscreen.width = newWidth;
+            offscreen.height = newHeight;
+        }
+        canvasWidth = newWidth;
+        canvasHeight = newHeight;
         cellDrawWidth = canvasWidth / SIM_COLS;
         cellDrawHeight = canvasHeight / SIM_ROWS;
-        
-        // REMOVED THE IMMEDIATE CLEAR TO BLACK TO REDUCE FLICKER
-        // ctx.fillStyle = 'black'; 
-        // ctx.fillRect(0, 0, canvasWidth, canvasHeight);
         
         clearTimeout(resizeDebounceTimer);
         resizeDebounceTimer = setTimeout(() => {
