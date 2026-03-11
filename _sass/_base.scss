@@ -48,7 +48,7 @@ table {
 
 a,
 table.table a {
-  font-family: 'Jacquard 24', cursive;
+  font-family: $link-font-family;
   color: #EAEAEA; /* Changed to off-white from var(--global-theme-color) */
 
   &:hover {
