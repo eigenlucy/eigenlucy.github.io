@@ -6,6 +6,8 @@ description: Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware T
 tags: projects
 categories: featured
 related_posts: false
+toc:
+  sidebar: left
 images:
   compare: true
   slider: true
@@ -73,14 +75,14 @@ This is the board I built to interface with an SiPM and scintillator pair. It is
 
 On a high level we have to build: a bias voltage generator for the SiPM, an amplifier to convert the current pulse to a readable voltage,  a pulse discriminator to send a digital interrupt when a pulse occurs, a peak detector to hold the peak voltage out of the amplifier (used for histogram), and an ADC to record the peaks.  Let's go through the circuit.
 
-## SiPM bias voltage generator:
+### SiPM bias voltage generator:
 
 A bias voltage must be applied to the SiPM to hold charge across the photon sensitive junction. Bias voltage tends to be between 25 and 35 volts, depending on the photocell. I used a MAX5026 boost converter to generate this  from a battery. We need this bias to be smooth — ripple on the bias modulates the SiPM gain, smearing energy resolution — so I used an LDO linear regulator after the boost. My board allows Vbias adjustment up to 36V.
 
 ![Bias Generator](/assets/img/Gallery/bias_generator.png){:.centered}{:.sixty}
 <div class="caption">Vbias Generator + Filtering</div>
 
-## Transimpedance amplifier (TIA):
+### Transimpedance amplifier (TIA):
 
 A transimpedance amplifier (TIA) converts current to voltage. The SiPM outputs a brief pulse of current when the photocells trigger. The gain is fairly low, but high bandwidth is required: the raw SiPM pulse is nanoseconds wide. The anode, connected to the TIA non-inverting input, is held a bit above 0V with a reference produced via zener diode and voltage divider for stability. When the amplifier works correctly, the number of cells that fires determines the peak output voltage, which we can read to measure incident particle energy.
 
@@ -91,7 +93,7 @@ A transimpedance amplifier (TIA) converts current to voltage. The SiPM outputs a
 <div class="caption">photon collision, SiPM output, and TIA output (nf = 500)</div>
 
 
-## Pulse discriminator:
+### Pulse discriminator:
 
 The pulse discriminator is a comparator circuit responsible for telling us when to trigger measurements.  It consists of a reference voltage held just above the level of the signal from the TIA. We want to be able to adjust the reference voltage finely in order to effectively measure low energy particles, so make sure you use something like a 10+ turn pot.  The pulse discriminator will trigger whenever the signal goes above the reference voltage, triggering a reading.
 
@@ -99,18 +101,18 @@ The pulse discriminator is a comparator circuit responsible for telling us when 
 <div class="caption">Pulse discriminator, signal crossing Vref (Vint = 3.3V)</div>
 
 
-## Peak detector:
+### Peak detector:
 
 The peak detector circuit, aka the "sample and hold" circuit, is a circuit which samples a signal and outputs the peak value until reset. (In the spice model shown the 100k resistor is really a BJT used for reset, but this interfered with my model.) It is important that the value of the capacitor used to hold the peak value (C3 in SPICE, C12 in my schematic) is sized correctly to avoid undershooting the peak. This output will be sampled by the analog-to-digital converter to determine particle energy.
 
 ![Peak detector](/assets/img/Gallery/peak_detector.png){:.centered}{:.sixty}
 <div class="caption">Peak detector holding signal Vmax, reset by draining cap via BJT in place of R12</div>
 
-## Analog To Digital Converter (ADC):
+### Analog To Digital Converter (ADC):
 
 An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn't see differences smaller than ~12.9mV). It's best to use at least a 12bit ADC, I used 16bit.
 
-## Firmware: reading the spectrum
+### Firmware: reading the spectrum
 
 My board is set up to interface with any microcontroller over SPI. The core loop is simple: the pulse discriminator fires a digital interrupt on the INT pin whenever a particle hits. Your MCU wakes up, reads the peak voltage from the ADC over SPI, then pulls the RST pin high to drain the peak detector capacitor and reset for the next event. Each ADC reading gets binned into a histogram — that histogram is your spectrum. Any MCU with SPI and a GPIO interrupt will work: ESP32, RP2040, STM32, Arduino, whatever you have lying around.
 
