@@ -65,6 +65,10 @@ Relevant passages:
 > "Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual, Anti-Oedipus seeks to discover the 'deterritorialized' flows of desire, the flows that have not been reduced to the Oedipal codes and the neuroticized territorialities, the desiring-machines that escape such codes as lines of escape leading elsewhere."
 >
 
+<div>
+  <img src="/assets/img/machines.png" alt="machines drawing" style="width: 20%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Machines making space by moi</div>
 ---
 
 ### Production / Desiring-Production
@@ -264,6 +268,11 @@ Relevant passages:
 
 > "The subject consumed and consummated each time the self is produced as an intensity on the body without organs, at the infinite speed of being a specific self, of being the self of a specific intensity—Joan of Arc, Heliogabalus, etc.—and then of losing that self as one passes beyond the intensity that produced it, to become another self corresponding to another intensity."
 >
+
+<div>
+  <img src="/assets/img/bwo.png" alt="bwo drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">BWO (Session One) by <a href="https://x.com/unleadedicedtea">Millie</a>)</div>
 
 ---
 
@@ -600,12 +609,12 @@ Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
 
 ---
 
-References::
+### References
 
-1.   https://files.libcom.org/files/Anti-Oedipus.pdf
-1.  https://realityspammer.fr/anti-oedipus/ 
-1. https://www.protevi.com/john/DG/AO_brief.html
-1. https://www.protevi.com/john/DG/AO1.html
-1. https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf
-1. "Capitalism and Schizophrenia" interview in Chaosophy: https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf
-
+1. https://files.libcom.org/files/Anti-Oedipus.pdf
+2. https://realityspammer.fr/anti-oedipus/ 
+3. https://www.protevi.com/john/DG/AO_brief.html
+4. https://www.protevi.com/john/DG/AO1.html
+5. https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf
+6. "Capitalism and Schizophrenia" interview in Chaosophy: https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf
+7. <a href="https://surrealism-plays.com/Artaud.html">to have done with the judgement of god by antonin artaud</a>
