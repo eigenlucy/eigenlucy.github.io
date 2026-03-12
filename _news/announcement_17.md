@@ -7,4 +7,5 @@ related_posts: false
 
 I am going back to Mexico City for a month or two this Friday (March 13th).
 
-Check ot my wife's new blog, <a href="https://wormnews.net">worm news</a>.
+
+Check out my wife's new blog, <a href="https://wormnews.net">worm news</a>.
