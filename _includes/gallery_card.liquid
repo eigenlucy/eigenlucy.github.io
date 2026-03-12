@@ -18,14 +18,14 @@
       {%- else -%}
         {%- assign media_path = 'assets/img/Gallery/' | append: item.file -%}
       {%- endif -%}
-      {% include figure.liquid loading="lazy" path=media_path class="img-fluid rounded z-depth-1" %}
+      {% include figure.liquid loading=include.loading path=media_path class="img-fluid rounded z-depth-1" %}
     {%- elsif item.type == 'video' -%}
       {%- if item.path -%}
         {%- assign media_path = item.path -%}
       {%- else -%}
         {%- assign media_path = 'assets/video/' | append: item.file -%}
       {%- endif -%}
-      {% include video.liquid loading="lazy" path=media_path class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
+      {% include video.liquid loading=include.loading path=media_path class="img-fluid rounded z-depth-1" type="video/mp4" controls=true %}
     {%- endif -%}
     {%- if item.caption and item.caption != '' -%}
       <div class="card-body">

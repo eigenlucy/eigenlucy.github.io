@@ -52,7 +52,11 @@ nav_order: 1
   <div class="container">
     <div class="row cards-container">
       {% for item in site.data.gallery %}
-        {% include gallery_card.liquid item=item %}
+        {% if forloop.index <= 10 %}
+          {% include gallery_card.liquid item=item loading="eager" %}
+        {% else %}
+          {% include gallery_card.liquid item=item %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
