@@ -23,9 +23,22 @@ $(document).ready(function () {
     $(".publications h2").each(function () {
       $(this).attr("data-toc-skip", "");
     });
+
+    // Include heading levels with >= 1 instance so a single h2 parent
+    // still appears above its h3 children in the TOC tree.
+    Toc.helpers.getTopLevel = function (e) {
+      for (var t = 1; t <= 6; t++) {
+        if (this.findOrFilter(e, "h" + t).length >= 1) return t;
+      }
+      return 1;
+    };
+
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
-    Toc.init($myNav);
+    // Scope to #markdown-content so the h1 page title is excluded
+    var $scope = $("#markdown-content");
+    if (!$scope.length) $scope = $(document.body);
+    Toc.init({ $nav: $myNav, $scope: $scope });
     $("body").scrollspy({
       target: navSelector,
     });
