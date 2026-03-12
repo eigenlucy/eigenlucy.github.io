@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jacquard+12&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
     {% include head.liquid %}
+    <!-- PDE background: in <head> with defer so download starts early, runs after DOM ready -->
+    <script src="{{ '/assets/js/pde-background.js' | relative_url }}" defer></script>
   </head>
 
   <!-- Body -->
@@ -85,7 +87,5 @@
     <!-- Tag filter script -->
     <script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
 
-    <!-- PDE Background Animation Script --><!-- ADDED -->
-    <script src="{{ '/assets/js/pde-background.js' | relative_url }}" defer></script><!-- ADDED -->
   </body>
 </html>
