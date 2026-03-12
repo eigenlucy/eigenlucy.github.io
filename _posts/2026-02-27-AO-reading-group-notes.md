@@ -15,13 +15,13 @@ images:
 
 
 
-# Key Terms: Intro & Section 1
+## Key Terms: Intro & Section 1
 
 *WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members. Each session, each member is assigned a concept they are chiefly responsible for tracking, and are encourged to diagram/sketch their concept as we read/discuss together.*
 
 ---
 
-## Machines / Desiring-Machines
+### Machines / Desiring-Machines
 
 Proximate terms: flows, production, synthesis, materialist psychiatry
 
@@ -67,7 +67,7 @@ Relevant passages:
 
 ---
 
-## Production / Desiring-Production
+### Production / Desiring-Production
 
 Proximate terms: Synthesis, mutation, circulation, fractalization, multiplication
 
@@ -110,7 +110,7 @@ Proximate terms: Synthesis, mutation, circulation, fractalization, multiplicatio
 
 ---
 
-## Intensity
+### Intensity
 
 Proximate terms: Passion, affect//affection, flow, drive, desire, instinct
 
@@ -164,7 +164,7 @@ Proximate terms: Passion, affect//affection, flow, drive, desire, instinct
 
 ---
 
-## Synthesis (Conjunctive / Disjunctive)
+### Synthesis (Conjunctive / Disjunctive)
 
 Proximate terms: Flow, stock, production, difference, novelty
 
@@ -206,7 +206,7 @@ Table of Contents, p. 1:
 
 ---
 
-## Body without Organs (BwO)
+### Body without Organs (BwO)
 
 Lucy's description: 
 
@@ -267,7 +267,7 @@ Relevant passages:
 
 ---
 
-## Desire
+### Desire
 
 Proximate terms: Immanence, delirium, liberation, emergence
 
@@ -308,7 +308,7 @@ Proximate terms: Immanence, delirium, liberation, emergence
 
 ---
 
-## Territory
+### Territory
 
 Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, stasis
 
