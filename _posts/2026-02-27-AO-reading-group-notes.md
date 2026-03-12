@@ -196,6 +196,10 @@ Table of Contents, p. 1:
 >
 
 <div>
+  <img src="/assets/img/synthesis_2.jpg" alt="second synthesis drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Synthesis (Conjunctive//Disjunctive<a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
+<div>
   <img src="/assets/img/third_synthesis.jpg" alt="third synthesis drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
 <div class="caption">Third Synthesis (So It's Me by <a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
@@ -337,6 +341,11 @@ Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, sta
 
 > "There is no doubt that at this point in history the neurotic, the pervert, and the psychotic cannot be adequately defined in terms of drives, for drives are simply the desiring-machines themselves. They must be defined in terms of modern territorialities. The neurotic is trapped within the residual or artificial territorialities of our society... The pervert is someone who takes the artifice seriously and plays the game to the hilt: if you want them, you can have them—territorialities infinitely more artificial than the ones that society offers us, totally artificial new families, secret lunar societies."
 >
+<div>
+<img src="/assets/img/territory.jpg" alt="territory" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Territory session one drawing by Izzy</div>
+
 
 ---
 
@@ -582,6 +591,12 @@ Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
 
 > "The body without organs is not a blank slate, but rather the place of production of production, the production of the production of desire."
 >
+
+<div>
+  <img src="/assets/img/vera.png" alt="Vera drawing" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Vera's session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
+
 
 ---
 
