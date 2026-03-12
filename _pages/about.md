@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: lucy moglia. hardware, cybernetics, general systemantics
+subtitle: lucy moglia. hardware, EE, philosophy, cybernetics, general systemantics
 
 profile:
   align: right
