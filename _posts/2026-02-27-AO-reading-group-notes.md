@@ -604,17 +604,17 @@ Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
 <div>
   <img src="/assets/img/vera.png" alt="Vera drawing" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
-<div class="caption">Vera's session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
+<div class="caption"><a href="https://wormnews.net">Vera's</a> session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
 
 
 ---
 
 ### References
 
-1. https://files.libcom.org/files/Anti-Oedipus.pdf
-2. https://realityspammer.fr/anti-oedipus/ 
-3. https://www.protevi.com/john/DG/AO_brief.html
-4. https://www.protevi.com/john/DG/AO1.html
-5. https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf
-6. "Capitalism and Schizophrenia" interview in Chaosophy: https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf
-7. <a href="https://surrealism-plays.com/Artaud.html">to have done with the judgement of god by antonin artaud</a>
+1. [Anti-Oedipus (PDF) — libcom.org](https://files.libcom.org/files/Anti-Oedipus.pdf)
+2. [Anti-Oedipus — realityspammer.fr](https://realityspammer.fr/anti-oedipus/)
+3. [AO Brief — Protevi](https://www.protevi.com/john/DG/AO_brief.html)
+4. [AO Part 1 — Protevi](https://www.protevi.com/john/DG/AO1.html)
+5. [Anti-Oedipus Part 2 (PDF) — Protevi](https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf)
+6. ["Capitalism and Schizophrenia" interview in Chaosophy (PDF)](https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf)
+7. [To Have Done with the Judgement of God — Antonin Artaud](https://surrealism-plays.com/Artaud.html)
