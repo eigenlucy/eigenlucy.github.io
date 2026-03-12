@@ -42,23 +42,9 @@
       "description": "Contracting and consulting work",
       "position": "Hardware Consultant",
       "url": "https://eigenlucy.com",
-      "startDate": "2025-01-01",
+      "startDate": "2024-10-01",
       "summary": "PCB design, rapid prototyping, embedded development, RF performance testing, and consulting for startups in the Bay Area.",
       "highlights": []
-    },
-    {
-      "name": "Atopile",
-      "location": "San Francisco, CA",
-      "description": "Developing hardware with the atopile toolchain.",
-      "position": "Research Fellow",
-      "url": "https://docs.atopile.io/latest/",
-      "startDate": "2024-11-01",
-      "summary": "Developing BLE geolocators, Meshtastic radios, flight controllers, home assistant control panels, solar chargers, and more with the atopile toolchain. Developing open-source projects for sale in small batches on platforms like Tindie with atopile, such as Linux Meshtastic solar charger hats.",
-      "highlights": [
-        "Developed MicroMPPT, a 5W autonomous multi-chemistry solar charger with autonomous perturb-and-observe, now distributed by a number of third-party sellers",
-        "Developed BLE geolocators, Meshtastic radios, flight controllers, home assistant control panels, and solar chargers",
-        "Developing open-source projects for sale in small batches on platforms like Tindie"
-      ]
     },
     {
       "name": "Kyocera-AVX",
@@ -125,6 +111,13 @@
     }
   ],
   "awards": [
+    {
+      "title": "Atopile Research Fellow",
+      "date": "2024-11-01",
+      "awarder": "Atopile, San Francisco, CA",
+      "url": "https://docs.atopile.io/latest/",
+      "summary": "Developing BLE geolocators, Meshtastic radios, flight controllers, home assistant control panels, solar chargers, and more with the atopile toolchain. Developing open-source projects for sale in small batches on platforms like Tindie with atopile, such as Linux Meshtastic solar charger hats."
+    },
     {
       "title": "OpenSauce 2025 Exhibitor",
       "date": "2024-06-14",
