@@ -1,4 +1,6 @@
-window.addEventListener('load', () => {
+// Run immediately — `defer` on the script tag guarantees DOM is ready.
+// Using 'load' would delay until every image/font finishes downloading.
+(function () {
     const canvas = document.getElementById('pde-background-canvas');
     if (!canvas) {
         console.error('RD Script: Canvas not found!');
@@ -259,4 +261,4 @@ window.addEventListener('load', () => {
     } else {
         drawStaticPattern();
     }
-});
+})();
