@@ -138,7 +138,7 @@ Bring your detector through the airport X-ray machine or to the dentist with you
 ![Xray](/assets/img/Gallery/dentist_spectrum.png){:.centered}{:.sixty}
 <div class="caption">X-ray pulses from a dentist's panoramic X-ray machine (captured with Radiacode 103)</div>
 
-Look for nearby uranium deposits on mined.org, grab a drone, and go prospecting!
+Look for nearby uranium deposits on minedat.org, grab a drone, and go prospecting!
 
 ![prospect](/assets/img/Gallery/prospect.png){:.centered}{:.sixty}
 <div class="caption">Radioactive hole!</div>

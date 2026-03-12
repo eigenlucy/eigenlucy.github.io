@@ -6,6 +6,8 @@ description: For an AO reading group
 tags: projects
 categories:
 related_posts: false
+toc:
+  sidebar: left
 images:
   compare: true
   slider: true
@@ -13,14 +15,13 @@ images:
 
 
 
-# Anti-Oedipus: Intro & Section 1 Concept Map
+## Key Terms: Intro & Section 1
 
-*WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members*
+*WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members. Each session, each member is assigned a concept they are chiefly responsible for tracking, and are encourged to diagram/sketch their concept as we read/discuss together.*
 
 ---
 
-<h4>MACHINES / DESIRING-MACHINES:</h4>
-(Machines / Desiring-machines)
+### Machines / Desiring-Machines
 
 Proximate terms: flows, production, synthesis, materialist psychiatry
 
@@ -66,8 +67,7 @@ Relevant passages:
 
 ---
 
-<h4>PRODUCTION/DESIRING-PRODUCTION</h4>
-(Production / Desiring-production)
+### Production / Desiring-Production
 
 Proximate terms: Synthesis, mutation, circulation, fractalization, multiplication
 
@@ -110,8 +110,7 @@ Proximate terms: Synthesis, mutation, circulation, fractalization, multiplicatio
 
 ---
 
-<h4>INTENSITY</h4>
-(Intensity)
+### Intensity
 
 Proximate terms: Passion, affect//affection, flow, drive, desire, instinct
 
@@ -165,8 +164,7 @@ Proximate terms: Passion, affect//affection, flow, drive, desire, instinct
 
 ---
 
-<h4>SYNTHESIS (CONJUNCTIVE//DISJUNCTIVE)</h4>
-(Synthesis (conjunctive//disjunctive))
+### Synthesis (Conjunctive / Disjunctive)
 
 Proximate terms: Flow, stock, production, difference, novelty
 
@@ -197,10 +195,14 @@ Table of Contents, p. 1:
 > "The subject spreads itself out along the entire circumference of the circle, the center of which has been abandoned by the ego. At the center is the desiring-machine."
 >
 
+<div>
+  <img src="/assets/img/third_synthesis.jpg" alt="third synthesis drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Third Synthesis (So It's Me by <a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
+
 ---
 
-<h4>BODY WITHOUT ORGANS (BWO)</h4>
-(Body without Organs (BwO))
+### Body without Organs (BwO)
 
 Lucy's description: 
 
@@ -261,8 +263,7 @@ Relevant passages:
 
 ---
 
-<h4>DESIRE</h4>
-(Desire)
+### Desire
 
 Proximate terms: Immanence, delirium, liberation, emergence
 
@@ -303,8 +304,7 @@ Proximate terms: Immanence, delirium, liberation, emergence
 
 ---
 
-<h4>TERRITORY</h4>
-(Territory)
+### Territory
 
 Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, stasis
 
@@ -340,8 +340,7 @@ Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, sta
 
 ---
 
-<h4>HOMO NATURA (SCHIZOPHRENIA)</h4>
-(Homo natura (schizophrenia))
+### Homo Natura (Schizophrenia)
 
 Proximate terms: Delirium, body-without-organs, desiring-production
 
@@ -401,8 +400,7 @@ Proximate terms: Delirium, body-without-organs, desiring-production
 
 ---
 
-<h4>PARANOIA</h4>
-(Paranoia)
+### Paranoia
 
 Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow
 
@@ -441,10 +439,12 @@ Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow
 > "Paranoia is a social formation, not a psychological formation. It is a formation of the unconscious as a whole, a group fantasy."
 >
 
+![sipm](/assets/img/petra.png){:.centered}{:.sixty}
+<div class="caption">Petra's session one sketch of Paranoia</div>
+
 ---
 
-<h4>NATURE // MACHINES</h4>
-(Nature // machines)
+### Nature / Machines
 
 Proximate terms: Desiring-machines, associative flows, universal production
 
@@ -488,8 +488,7 @@ Proximate terms: Desiring-machines, associative flows, universal production
 
 ---
 
-<h4>INVESTMENT</h4>
-(Investment)
+### Investment
 
 Proximate terms: Desire, stock, territory, identity
 
@@ -525,8 +524,7 @@ Proximate terms: Desire, stock, territory, identity
 
 ---
 
-<h4>REPRESSION</h4>
-(Repression)
+### Repression
 
 Proximate terms: Paranoia, territoriality, The State,  Oedipus
 
@@ -559,8 +557,7 @@ Proximate terms: Paranoia, territoriality, The State,  Oedipus
 
 ---
 
-<h4>ORGANISM // ORGAN</h4>
-(Organism // organ)
+### Organism / Organ
 
 Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
 

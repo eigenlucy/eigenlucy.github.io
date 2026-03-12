@@ -1167,8 +1167,20 @@ progress::-moz-progress-bar {
 nav[data-toggle="toc"] {
   top: 5rem;
 
+  .nav {
+    padding-left: 0 !important;
+  }
+
+  .nav > li > a,
+  .nav .nav > li > a,
+  .nav-link {
+    padding-left: 0.3rem !important;
+    padding-right: 0.1rem !important;
+  }
+
   .nav .nav > li > a {
     font-size: 1rem;
+    padding-left: 0.7rem !important;
   }
 
   .nav > li > a {
@@ -1246,7 +1258,16 @@ nav[data-toggle="toc"] {
 
 #toc-sidebar {
   z-index: 1;
-  max-width: 160px;
+  max-width: 220px;
+
+  // Pull TOC column flush to the left edge
+  margin-left: -15px;
+  padding-left: 0;
+}
+
+// Reduce left padding on pages with a TOC sidebar
+.container:has(#toc-sidebar) {
+  padding-left: 0;
 }
 
 .echarts {
