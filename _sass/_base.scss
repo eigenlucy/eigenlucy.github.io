@@ -1175,6 +1175,11 @@ nav[data-toggle="toc"] {
     padding-left: 0 !important;
   }
 
+  // Always show nested TOC items (bootstrap-toc hides them unless parent is active)
+  .nav-link + ul {
+    display: block !important;
+  }
+
   .nav > li > a,
   .nav .nav > li > a,
   .nav-link {

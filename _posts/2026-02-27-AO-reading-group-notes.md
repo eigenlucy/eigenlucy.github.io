@@ -349,7 +349,7 @@ Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, sta
 
 ---
 
-## Homo Natura (Schizophrenia)
+### Homo Natura (Schizophrenia)
 
 Proximate terms: Delirium, body-without-organs, desiring-production
 
@@ -409,7 +409,7 @@ Proximate terms: Delirium, body-without-organs, desiring-production
 
 ---
 
-## Paranoia
+### Paranoia
 
 Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow
 
@@ -453,7 +453,7 @@ Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow
 
 ---
 
-## Nature / Machines
+### Nature / Machines
 
 Proximate terms: Desiring-machines, associative flows, universal production
 
@@ -497,7 +497,7 @@ Proximate terms: Desiring-machines, associative flows, universal production
 
 ---
 
-## Investment
+### Investment
 
 Proximate terms: Desire, stock, territory, identity
 
@@ -533,7 +533,7 @@ Proximate terms: Desire, stock, territory, identity
 
 ---
 
-## Repression
+### Repression
 
 Proximate terms: Paranoia, territoriality, The State,  Oedipus
 
@@ -566,7 +566,7 @@ Proximate terms: Paranoia, territoriality, The State,  Oedipus
 
 ---
 
-## Organism / Organ
+### Organism / Organ
 
 Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
 
