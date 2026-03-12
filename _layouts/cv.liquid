@@ -22,11 +22,11 @@ layout: default
     </header>
 
     <article>
-      <div class="cv">
+      <div id="markdown-content" class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+            <h2 class="card-title font-weight-medium">{{ entry.title }}</h2>
             <div>
               {% if entry.type == 'list' %}
                 {% include cv/list.liquid %}
@@ -68,7 +68,7 @@ layout: default
     </header>
 
     <article>
-      <div class="cv">
+      <div id="markdown-content" class="cv">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
             {% unless site.jsonresume contains data[0] %}
@@ -78,7 +78,7 @@ layout: default
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
           <a class="anchor" id="{{ data[0] }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+            <h2 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h2>
             <div>
               {% case data[0] %}
                 {% when 'basics' %}

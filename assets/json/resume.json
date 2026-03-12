@@ -5,14 +5,8 @@
     "label": "Research Engineer",
     "image": "https://eigenlucy.com/assets/img/Gallery/lucyresumepfp.jpg",
     "email": "eigenlucy@proton.me",
-    "website": "https://eigenlucy.com",
-    "summary": "I am interested in how systems work and how they fail. Electrical engineering is my focus, following from an abiding interest in systems theory/control theory met with a concrete desire to build systems. At Kyocera-AVX I have been reverse engineering a wide array of products, evaluating prototype components, and researching emerging application areas to assist our product development and market engineering teams.",
-    "location": {
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California",
-      "postalCode": "94107"
-    },
+    "summary": "Electrical engineer with robust experience in full-stack electronics development, product development, and technical research. Proven ability to manage complex projects from concept to completion. Highly self-motivated, versatile. Experienced in embedded development, PCB design, prototype development/evaluation, reverse engineering, and technical writing.",
+    "location": "SF/CDMX",
     "profiles": [
       {
         "network": "github",
@@ -28,35 +22,42 @@
   },
   "work": [
     {
-      "name": "Self Employed Hardware Designer",
+      "name": "Mithras",
       "location": "San Francisco, CA",
-      "description": "Contracting and consulting work for an array of startups",
-      "position": "Engineer",
-      "url": "https://eigenlucy.com",
-      "startDate": "2024-10-15",
-      "summary": "PCB design, rapid prototyping, embedded devevlopment, RF performance testing, and more",
+      "description": "Hardware startup",
+      "position": "CTO",
+      "url": "https://mithras.industries",
+      "startDate": "2025-01-01",
+      "summary": "System design and integration, PCB and firmware design, prototype direction, hardware budgeting and scoping, sensor selection.",
       "highlights": [
-        "Developed a number of demos which helped secure startups funding",
-        "Provided rapid turnaround PCB design and testing services",
-        "Early-stage hardware consulting, assisting founders in understanding their products' technical requirements",
-        "Lab specification and equipment recommendations, process initialization and calibration",
-        "Performance analysis",
-        "Failure mode analysis"
+        "System design and integration",
+        "PCB and firmware design",
+        "Prototype direction and hardware budgeting",
+        "Sensor selection and scoping"
       ]
+    },
+    {
+      "name": "Self Employed Hardware Consultant",
+      "location": "San Francisco, CA",
+      "description": "Contracting and consulting work",
+      "position": "Hardware Consultant",
+      "url": "https://eigenlucy.com",
+      "startDate": "2025-01-01",
+      "summary": "PCB design, rapid prototyping, embedded development, RF performance testing, and consulting for startups in the Bay Area.",
+      "highlights": []
     },
     {
       "name": "Atopile",
       "location": "San Francisco, CA",
-      "description": "Developed software-defined hardware solutions.",
+      "description": "Developing hardware with the atopile toolchain.",
       "position": "Research Fellow",
       "url": "https://docs.atopile.io/latest/",
-      "startDate": "2024-10-15",
-      "summary": "Built hardware using Atopile's domain-specific language for PCB design.",
+      "startDate": "2024-11-01",
+      "summary": "Developing BLE geolocators, Meshtastic radios, flight controllers, home assistant control panels, solar chargers, and more with the atopile toolchain. Developing open-source projects for sale in small batches on platforms like Tindie with atopile, such as Linux Meshtastic solar charger hats.",
       "highlights": [
         "Developed MicroMPPT, a 5W autonomous multi-chemistry solar charger with autonomous perturb-and-observe, now distributed by a number of third-party sellers",
-        "Developed a series of home assistant control panels",
-        "Developed a high-altitude balloon payload with LoRa telemetry",
-        "Testing/debugging prototype features"
+        "Developed BLE geolocators, Meshtastic radios, flight controllers, home assistant control panels, and solar chargers",
+        "Developing open-source projects for sale in small batches on platforms like Tindie"
       ]
     },
     {
@@ -66,44 +67,44 @@
       "position": "Research Engineering",
       "url": "https://www.kyocera-avx.com/",
       "startDate": "2023-04-01",
-      "endDate": "2024-08-28",
-      "summary": "Kyocera-AVX is an American electronics component manufacturer specializing in passive components such as antennas, MLCCs, tantalum capacitors, supercapacitors, and varistors.",
+      "endDate": "2024-08-31",
+      "summary": "Performed teardowns on behalf of market research and engineering teams. Reverse engineered systems to produce schematics/models for engineering teams. Researched application areas and products and evaluated fitness of prototype components in target areas. Produced PCBs and demo boards for internal use by engineering staff in prototype evaluation and characterization.",
       "highlights": [
-        "Performed teardowns on a wide variety of products and systems on behalf of market research and engineering teams.",
-        "Reverse-engineered systems to assist product design and market research teams; produced schematics and component models from product samples; evaluated samples and prototype components to assess suitability for given products/applications of interest."
+        "Performed teardowns on behalf of market research and engineering teams",
+        "Reverse engineered systems to produce schematics/models for engineering teams",
+        "Researched application areas and evaluated fitness of prototype components in target areas",
+        "Produced PCBs and demo boards for internal use by engineering staff in prototype evaluation and characterization"
       ]
     },
     {
       "name": "Machinic Garden LLC",
       "location": "Liberty, SC",
-      "description": "Provided contract engineering and manufacturing services to startups and small businesses.",
-      "position": "Founder/Engineer",
+      "description": "Small scale production and manufacturing service.",
+      "position": "Cofounder",
       "url": "https://www.eigenlucy.com",
       "startDate": "2022-10-01",
       "endDate": "2023-05-01",
-      "summary": "Contract Engineering and Manufacturing Services, Small-Scale Manufacturing",
+      "summary": "Small scale production of electronics kits, 3D printing, vinyl printing, laser cutting, and manufacturing service. Designed hardware/software and produced a variety of products, such as guitar pedal kits and laser drivers. Small scale manufacturing, including various forms of 3D printing, CNC machining, electroplating, and wood working.",
       "highlights": [
-        "Designed prototype PCBs to client specifications and designed processes to address specialty needs (e.g., copper nanoparticle airbrush coating and electroplating of 3D-printed parts).",
-        "Acquisition and integration of a wide variety of small-scale manufacturing and test equipment including 3D printers, laser cutters, arc welders, drill presses, oscilloscopes, CNC mills, and reflow ovens.",
-        "(KiCAD, Fusion360)",
-        "Managed a shop website and several storefronts such as Etsy and Amazon; managed AdSense; and handled order processing and shipping for an array of products including t-shirts, laser-engraved coasters/signs, 3D prints, and electronics kits.",
-        "Full-stack Embedded Development (C/C++, MicroPython, Arduino, ATTiny, ARM Cortex-M, STM32, ESP32/8266, Teensy, RP2040, SAMD21/51)"
+        "Designed hardware/software and produced a variety of products, such as guitar pedal kits and laser drivers",
+        "Small scale manufacturing, including various forms of 3D printing, CNC machining, electroplating, and wood working",
+        "Managed storefronts and order processing for an array of products"
       ]
     },
     {
       "name": "Electrolux",
       "location": "Anderson, SC",
-      "description": "Electronics Lab Technician",
+      "description": "Home electronics manufacturer",
       "position": "Electronics Lab Technician",
       "url": "https://www.electrolux.com/en/",
       "startDate": "2022-05-01",
-      "endDate": "2022-10-31",
-      "summary": "Electrolux is an Swedish multinational home electronics manufacturer specializing in appliances such as fridges and washing machines.",
+      "endDate": "2023-02-28",
+      "summary": "Assisted engineers in PCB and firmware development and validation, built EOL testers, performed IEC testing, performed firmware testing with LabVIEW, NI embedded PCs and custom Arduino based test hardware.",
       "highlights": [
-        "Assisted engineers in PCB and firmware development and validation.",
-        "Performed IEC/UL compliance testing, evaluated hardware and firmware revisions with LabVIEW, NI embedded PCs, and custom Arduino-based test hardware.",
-        "Used OrCAD, LabVIEW, National Instruments PXI, and a wide array of electronics lab equipment.",
-        "Assisted in development of EOL test fixtures"
+        "Assisted engineers in PCB and firmware development and validation",
+        "Built EOL testers",
+        "Performed IEC testing",
+        "Performed firmware testing with LabVIEW, NI embedded PCs and custom Arduino based test hardware"
       ]
     }
   ],
@@ -246,13 +247,13 @@
     },
     {
       "keywords": [
-        "Maskless microelectrode array fabrication for low cost cultured neuron signal acquisiton headstages",
+        "Maskless microelectrode array fabrication for low cost cultured neuron signal acquisition headstages",
         "Mushroom Cultivation",
         "DIY TDCS/TEMS based on Howland Current pump",
         "Spore and Phage Culturing on Agar",
         "Fungal network mapping with diy EEG hardware",
         "Mushroom Identification",
-        "Biosensor fabricationw with laser induced graphene"
+        "Biosensor fabrication with laser induced graphene"
       ]
     }
   ],
@@ -273,7 +274,7 @@
   "projects": [
     {
       "name": "Spacebridge High Altitude Balloon PCB",
-      "description": "Designed a high altitude balloon payload for DIY weather/radioilogical surveying with Noisebridge's Spacebridge group",
+      "description": "Designed a high altitude balloon payload for DIY weather/radiological surveying with Noisebridge's Spacebridge group",
       "keywords": [
         "Ecological surveying",
         "DIY",
@@ -315,7 +316,7 @@
       "keywords": [
         "Biosystems",
         "DIYBIO",
-        "Biohhacking"
+        "Biohacking"
       ],
       "startDate": "2025-01-15",
       "url": "https://eigenlucy.com/projects/mea_arrays/",
