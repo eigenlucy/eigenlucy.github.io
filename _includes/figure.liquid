@@ -1,14 +1,12 @@
 {%- assign raw_path_from_include = include.path | default: "" | strip -%}
-<!-- DEBUG FIGURE.LIQUID: Raw include.path is [{{ raw_path_from_include }}] -->
-
 {%- if raw_path_from_include != "" -%}
   {%- assign full_relative_path = raw_path_from_include | relative_url -%}
-  <!-- DEBUG FIGURE.LIQUID: full_relative_path is [{{ full_relative_path }}] -->
-
   {%- assign last_dot = raw_path_from_include | split: '.' | last -%}
   {%- assign extension_with_dot = '.' | append: last_dot -%}
-  {%- assign base_path = raw_path_from_include | remove_last: extension_with_dot -%}
-  <!-- DEBUG FIGURE.LIQUID: base_path for srcset is [{{ base_path }}] -->
+  {%- assign ext_size = extension_with_dot | size -%}
+  {%- assign path_size = raw_path_from_include | size -%}
+  {%- assign base_size = path_size | minus: ext_size -%}
+  {%- assign base_path = raw_path_from_include | slice: 0, base_size -%}
 
   <figure
     {% if include.slot %}slot="{{ include.slot }}"{% endif %}
@@ -35,6 +33,5 @@
     {% if include.caption %}<figcaption class="caption">{{ include.caption | escape }}</figcaption>{% endif %}
   </figure>
 {%- else -%}
-  <!-- DEBUG FIGURE.LIQUID: include.path was empty or nil. Cannot generate image paths. -->
-  <p style="color:red; border:1px solid red; padding:5px;">Error: Image path not provided to figure.liquid for input [{{ include.path | default: 'NIL' }}].</p>
+  <p style="color:red; border:1px solid red; padding:5px;">Error: Image path not provided to figure.liquid.</p>
 {%- endif -%}
