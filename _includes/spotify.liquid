@@ -1,0 +1,26 @@
+{%- assign spotify_url = include.url | strip -%}
+{%- assign spotify_path = spotify_url | remove: "https://open.spotify.com/" -%}
+{%- assign spotify_parts = spotify_path | split: "/" -%}
+{%- assign spotify_type = spotify_parts[0] -%}
+{%- assign spotify_id = spotify_parts[1] -%}
+
+{%- if spotify_type == "track" or spotify_type == "episode" -%}
+  {%- assign default_height = "152" -%}
+{%- else -%}
+  {%- assign default_height = "352" -%}
+{%- endif -%}
+
+<figure class="spotify-embed">
+  <iframe
+    src="https://open.spotify.com/embed/{{ spotify_type }}/{{ spotify_id }}"
+    width="{{ include.width | default: '100%' }}"
+    height="{{ include.height | default: default_height }}"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+  {% if include.caption %}
+    <figcaption class="caption">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

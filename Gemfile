@@ -7,6 +7,7 @@ gem "csv"
 gem "feedjira"
 gem "httparty"
 gem "css_parser"
+gem "pdf-reader"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
