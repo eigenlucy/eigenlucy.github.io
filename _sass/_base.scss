@@ -829,6 +829,35 @@ footer.sticky-bottom {
     border: 1px solid var(--global-divider-color);
     border-radius: 3px;
   }
+
+  .pdf-search-sep {
+    width: 1px;
+    height: 1.5rem;
+    background: var(--global-divider-color);
+  }
+
+  #pdf-search {
+    width: 10rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 3px;
+    font-size: 0.85rem;
+  }
+
+  .pdf-search-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    #pdf-match-count {
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      min-width: 4rem;
+      text-align: center;
+    }
+  }
 }
 
 #pdf-container {
