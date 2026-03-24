@@ -5,7 +5,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
 const params = new URLSearchParams(window.location.search);
 const filePath = params.get("file");
 const startPage = parseInt(params.get("page"), 10) || 1;
-const highlightText = params.get("highlight") || "";
+const highlightParam = params.get("highlight") || "";
 
 if (!filePath) {
   document.getElementById("pdf-container").innerHTML =
@@ -22,10 +22,17 @@ const ctx = canvas.getContext("2d");
 const textLayerDiv = document.getElementById("pdf-text-layer");
 const pageInput = document.getElementById("pdf-page-input");
 const pageCount = document.getElementById("pdf-page-count");
+const searchInput = document.getElementById("pdf-search");
+const matchCountSpan = document.getElementById("pdf-match-count");
 
 let pdfDoc = null;
 let currentPage = startPage;
 let rendering = false;
+
+// Search state
+let searchQuery = "";
+let matches = []; // [{ page, index }]
+let currentMatchIdx = -1;
 
 async function renderPage(num) {
   if (rendering) return;
@@ -67,9 +74,9 @@ async function renderPage(num) {
     textLayerDiv.appendChild(span);
   });
 
-  // Highlight matching text
-  if (highlightText) {
-    const query = highlightText.toLowerCase();
+  // Highlight matching text using current search query
+  if (searchQuery) {
+    const query = searchQuery.toLowerCase();
     textLayerDiv.querySelectorAll("span").forEach((span) => {
       if (span.textContent.toLowerCase().includes(query)) {
         span.classList.add("pdf-highlight");
@@ -86,6 +93,97 @@ function gotoPage(num) {
   if (num < 1 || num > pdfDoc.numPages) return;
   renderPage(num);
 }
+
+// --- Full-text search ---
+
+async function searchAllPages(query) {
+  matches = [];
+  currentMatchIdx = -1;
+  searchQuery = query;
+
+  if (!query) {
+    updateMatchCounter();
+    renderPage(currentPage);
+    return;
+  }
+
+  const q = query.toLowerCase();
+
+  for (let p = 1; p <= pdfDoc.numPages; p++) {
+    const page = await pdfDoc.getPage(p);
+    const textContent = await page.getTextContent();
+    textContent.items.forEach((item, idx) => {
+      if (item.str.toLowerCase().includes(q)) {
+        matches.push({ page: p, index: idx });
+      }
+    });
+  }
+
+  updateMatchCounter();
+
+  if (matches.length > 0) {
+    currentMatchIdx = 0;
+    // Jump to first match on or after the current page, or first overall
+    const onOrAfter = matches.findIndex((m) => m.page >= currentPage);
+    if (onOrAfter !== -1) currentMatchIdx = onOrAfter;
+    jumpToCurrentMatch();
+  } else {
+    // Re-render to clear old highlights if query changed to no-match
+    renderPage(currentPage);
+  }
+}
+
+function jumpToCurrentMatch() {
+  if (currentMatchIdx < 0 || currentMatchIdx >= matches.length) return;
+  const match = matches[currentMatchIdx];
+  updateMatchCounter();
+  if (match.page !== currentPage) {
+    gotoPage(match.page);
+  } else {
+    // Already on the right page, just re-render to update highlights
+    renderPage(currentPage);
+  }
+}
+
+function nextMatch() {
+  if (matches.length === 0) return;
+  currentMatchIdx = (currentMatchIdx + 1) % matches.length;
+  jumpToCurrentMatch();
+}
+
+function prevMatch() {
+  if (matches.length === 0) return;
+  currentMatchIdx = (currentMatchIdx - 1 + matches.length) % matches.length;
+  jumpToCurrentMatch();
+}
+
+function updateMatchCounter() {
+  if (!searchQuery || matches.length === 0) {
+    matchCountSpan.textContent = searchQuery ? "0 of 0" : "";
+  } else {
+    matchCountSpan.textContent = `${currentMatchIdx + 1} of ${matches.length}`;
+  }
+}
+
+// Search event listeners
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    if (searchInput.value === searchQuery && matches.length > 0) {
+      // Same query — cycle to next match
+      nextMatch();
+    } else {
+      searchAllPages(searchInput.value.trim());
+    }
+  }
+  if (e.key === "Escape") {
+    searchInput.value = "";
+    searchAllPages("");
+  }
+});
+
+document.getElementById("pdf-search-next").addEventListener("click", nextMatch);
+document.getElementById("pdf-search-prev").addEventListener("click", prevMatch);
 
 // Controls
 document.getElementById("pdf-prev").addEventListener("click", () => {
@@ -118,4 +216,12 @@ pageCount.textContent = pdfDoc.numPages;
 pageInput.max = pdfDoc.numPages;
 
 const initialPage = Math.min(startPage, pdfDoc.numPages);
-renderPage(initialPage);
+
+// If ?highlight= param is set, pre-populate search and run it
+if (highlightParam) {
+  searchInput.value = highlightParam;
+  currentPage = initialPage;
+  searchAllPages(highlightParam);
+} else {
+  renderPage(initialPage);
+}
