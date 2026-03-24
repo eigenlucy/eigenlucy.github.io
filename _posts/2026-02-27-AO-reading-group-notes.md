@@ -112,6 +112,10 @@ Proximate terms: Synthesis, mutation, circulation, fractalization, multiplicatio
 > "Desire is the set of passive syntheses that engineer partial objects, flows, and bodies, and that function as units of production."
 >
 
+<div>
+  <img src="/assets/img/ProductionOfMilk.jpg" alt="Production of 'Milk" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<div class="caption">Lucy's drawing of the production of 'Milk', the consolidation of Almond juice and animal milk under industrial conditions</div>
 ---
 
 ### Intensity
@@ -605,7 +609,6 @@ Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit
   <img src="/assets/img/vera.png" alt="Vera drawing" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
 <div class="caption"><a href="https://wormnews.net">Vera's</a> session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
-
 
 ---
 
