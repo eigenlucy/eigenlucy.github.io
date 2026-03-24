@@ -46,8 +46,12 @@ async function renderPage(num) {
   const scale = container.clientWidth / viewport.width;
   const scaledViewport = page.getViewport({ scale });
 
-  canvas.width = scaledViewport.width;
-  canvas.height = scaledViewport.height;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = scaledViewport.width * dpr;
+  canvas.height = scaledViewport.height * dpr;
+  canvas.style.width = scaledViewport.width + "px";
+  canvas.style.height = scaledViewport.height + "px";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
   await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
 
