@@ -13,7 +13,7 @@ images:
   slider: true
 ---
 
-
+<a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf">Read Anti-Oedipus in the library</a>
 
 ## Key Terms: Intro & Section 1
 
