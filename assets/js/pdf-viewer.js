@@ -217,11 +217,9 @@ pageInput.max = pdfDoc.numPages;
 
 const initialPage = Math.min(startPage, pdfDoc.numPages);
 
-// If ?highlight= param is set, pre-populate search and run it
+// If ?highlight= param is set, pre-populate search and highlight on current page only
 if (highlightParam) {
   searchInput.value = highlightParam;
-  currentPage = initialPage;
-  searchAllPages(highlightParam);
-} else {
-  renderPage(initialPage);
+  searchQuery = highlightParam;
 }
+renderPage(initialPage);
