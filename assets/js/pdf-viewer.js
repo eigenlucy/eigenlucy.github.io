@@ -28,6 +28,7 @@ const matchCountSpan = document.getElementById("pdf-match-count");
 let pdfDoc = null;
 let currentPage = startPage;
 let rendering = false;
+let rotation = 0;
 
 // Search state
 let searchQuery = "";
@@ -39,12 +40,12 @@ async function renderPage(num) {
   rendering = true;
 
   const page = await pdfDoc.getPage(num);
-  const viewport = page.getViewport({ scale: 1 });
+  const viewport = page.getViewport({ scale: 1, rotation });
 
   // Scale to fit container width
   const container = document.getElementById("pdf-container");
   const scale = container.clientWidth / viewport.width;
-  const scaledViewport = page.getViewport({ scale });
+  const scaledViewport = page.getViewport({ scale, rotation });
 
   const dpr = window.devicePixelRatio || 1;
   canvas.width = scaledViewport.width * dpr;
@@ -198,6 +199,16 @@ document.getElementById("pdf-next").addEventListener("click", () => {
 });
 pageInput.addEventListener("change", () => {
   gotoPage(parseInt(pageInput.value, 10));
+});
+
+// Rotation
+document.getElementById("pdf-rotate-left").addEventListener("click", () => {
+  rotation = (rotation - 90 + 360) % 360;
+  renderPage(currentPage);
+});
+document.getElementById("pdf-rotate-right").addEventListener("click", () => {
+  rotation = (rotation + 90) % 360;
+  renderPage(currentPage);
 });
 
 // Keyboard navigation
