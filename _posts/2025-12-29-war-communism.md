@@ -5,6 +5,9 @@ author: "Lucy M."
 date: 2025-12-29
 description: "Proliferation of Eyes by Multiplication of Borders"
 permalink: /eigenlucy/warcommunism/
+images:
+  compare: true
+  slider: true
 ---
 
 When I was 19, I rented a house in Liberty, South Carolina. It was a small, rural town of around three thousand people. I rented a small 2.5 bedroom house plus a shed with a number of friends (~10 people rotated in and out over the years, most of them also transgender). I lived there for a bit over 3 years. I often struggle to explain this period. I speak of it in a confusing, traumatized, often paradoxical manner. There was so much magic. Every day was full of dozens of little miracles, miraculating forces swirling in the smoke. The ground is alive! It was so miserable. It was violent. It was volatile. It was overcrowded and also so lonely. I have never experienced the level of solidarity or grace that I felt there, and at the same time it was one of the most painful periods of my life defined by constant turbulence, precariousness, betrayal. We understood our situation in terms of a kind of sacred and profane division, constantly preoccupied by the quasi-Gnostic drive to escape what we understood to be a poisonous, hateful, cruel socius. The power derived from our otherness was commensurate with the pain inflicted on us by the big Other, by familial estrangement, by drug addiction, by religious queerphobia. We were on a kind of frontier, experimental family discovering what our bodies were really made for, carving out new selves from shambling accumulations of excess and disjunction. And, of course, the center could not hold.
@@ -18,5 +21,34 @@ Prior to this period, my best friend/housemate and I had spent some time living 
 In the Gnostic cosmology, there is a being on the edge of the world known as Sabaoth, lord of Forces. He is associated with both the ceaseless churning and binding of matter, with the immanence of movement, with the roaring of the sun and the movement of the ocean. He is, in some sense, the being which ensures <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&page=77&highlight=Base matter is external and foreign">"nature's restless nature-ing"</a> (Spinoza). Sabaoth is said to be the child of the Demiurge, the progenitor of this spoiled, wasted world defined by domination and foreclosure. In both texts concerning the origin of the world preserved at <a href="/viewer/?file=/assets/library/The Enthronement of Sabaoth. Jewish Elements in Gnostic Creation Myths - Fallon F.T. .pdf&page=20">Nag Hammadi</a> it is said that Sabaoth ultimately betrays his father, thus allowing Sophia, divine Grace, to reenter and persist in the world. The genesis of Grace is Restlessness. Grace is endless discourse, never relief. We still have faith in the world to come, and we have no need of a clean break. History speaks to us only when we cease to understand to whom it is addressed. We do not wish to place ourselves outside of time, outside of the social, outside of language; we only hope to find the Grace needed to commune with the Subaltern without violence. We believe that another world is already here, that it did not wait for us, that it is buzzing in-between frames of reference. We do not believe in a simple liberation of desire, we have tried it and we only found word salad. We do not lack for variety, we lack a body which can hold it all. We do not wish to be free from structure and we have no faith in simple emergence. We do not want to be aliens in our own world: we demand mediation. In our best moments we discovered, on the margins of the social and outside even ourselves, a grace capable of speaking to it all, of miraculating the bodies we needed. Being has no horizon, it isn't a frontier, it is the Ground. <a href="/viewer/?file=/assets/library/What-is-Grounding-Deleuze.pdf&page=30&highlight=whoever appeals to a ground makes a demand">Ground is a question, as well as a demand, not a given.</a> All we need is time, and we intend to win it.
 
 
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ShedChem.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Agar.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ArtStation.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/BasilParty.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Bench.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Bench2.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/CleoInterior.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/DogonEgg.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Gourds.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/JessCleo.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Mushrooms.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Planters.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ProjectTruck.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ResinNietzsche.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Shelf.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Shrine.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/SpawnJars.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ThereYouAre.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Truck.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/1000006941.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime"></video></swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000007518.mov" type="video/quicktime"></video></swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/Arm.mov" type="video/quicktime"></video></swiper-slide>
+</swiper-container>
+
 {% include spotify.liquid url="https://open.spotify.com/playlist/50hJ6M46dTa8DgYEXMtiPH" caption="The Power of the Veto" %}
-{% include spotify.liquid url="https://open.spotify.com/playlist/6dnlkQPwCXNHdxZcw4aXBl" caption="Eternal Return" %}
+{% include spotify.liquid url="https://open.spotify.com/playlist/72DPHn6Soln8gDjzsZEorl?si=fe4a07c16f574a66" caption="Morphospace" %}
+
+{% include spotify.liquid url="https://open.spotify.com/playlist/4fDawlOOoIOc4z39V9bTDr?si=5217aad25b8a4979" caption="Desiring-Machines" %}
+{% include spotify.liquid url="https://open.spotify.com/playlist/3YSiSAay8VIUtnrdqooLG0?si=7d88f6e5f72d4532" caption="bodies without organs" %}
