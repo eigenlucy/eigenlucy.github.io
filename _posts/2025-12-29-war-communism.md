@@ -22,11 +22,11 @@ In the Gnostic cosmology, there is a being on the edge of the world known as Sab
 
 
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/1000006941.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ShedChem.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Agar.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ArtStation.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/BasilParty.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Bench.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Bench2.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/CleoInterior.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/DogonEgg.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
@@ -41,7 +41,22 @@ In the Gnostic cosmology, there is a being on the edge of the world known as Sab
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/SpawnJars.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ThereYouAre.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Truck.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/1000006941.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/bus.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/chem.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/chem2.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/commune.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/heart.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/jessa.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/welding.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/woodfire.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Surgery.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/basilegg.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/cleo.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/makingtheegg.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/shelving.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/tv.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002380.mov" type="video/quicktime"></video></swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/party.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000007518.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/Arm.mov" type="video/quicktime"></video></swiper-slide>
