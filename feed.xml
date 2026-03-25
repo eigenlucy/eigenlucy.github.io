@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-25T01:23:24+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-25T01:40:07+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/"><![CDATA[<p><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf">Read Anti-Oedipus in the library</a></p>
 
 <h2 id="key-terms-intro--section-1">Key Terms: Intro &amp; Section 1</h2>
@@ -1102,6 +1102,15 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
   <swiper-slide><figure>
     <picture>
       
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/1000006941.webp-480.webp 480w,assets/img/WarCommunism/1000006941.webp-800.webp 800w,assets/img/WarCommunism/1000006941.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/1000006941.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/1000006941.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
         <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/ShedChem.webp-480.webp 480w,assets/img/WarCommunism/ShedChem.webp-800.webp 800w,assets/img/WarCommunism/ShedChem.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
       <img src="/assets/img/WarCommunism/ShedChem.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/ShedChem.webp';" />
@@ -1132,15 +1141,6 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
         <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/BasilParty.webp-480.webp 480w,assets/img/WarCommunism/BasilParty.webp-800.webp 800w,assets/img/WarCommunism/BasilParty.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
       <img src="/assets/img/WarCommunism/BasilParty.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/BasilParty.webp';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/Bench.webp-480.webp 480w,assets/img/WarCommunism/Bench.webp-800.webp 800w,assets/img/WarCommunism/Bench.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/WarCommunism/Bench.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/Bench.webp';" />
     </picture>
     
   </figure></swiper-slide>
@@ -1273,12 +1273,131 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
   <swiper-slide><figure>
     <picture>
       
-        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/1000006941.webp-480.webp 480w,assets/img/WarCommunism/1000006941.webp-800.webp 800w,assets/img/WarCommunism/1000006941.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/bus.webp-480.webp 480w,assets/img/WarCommunism/bus.webp-800.webp 800w,assets/img/WarCommunism/bus.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
-      <img src="/assets/img/WarCommunism/1000006941.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/1000006941.webp';" />
+      <img src="/assets/img/WarCommunism/bus.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/bus.webp';" />
     </picture>
     
   </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/chem.webp-480.webp 480w,assets/img/WarCommunism/chem.webp-800.webp 800w,assets/img/WarCommunism/chem.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/chem.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/chem.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/chem2.webp-480.webp 480w,assets/img/WarCommunism/chem2.webp-800.webp 800w,assets/img/WarCommunism/chem2.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/chem2.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/chem2.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/commune.webp-480.webp 480w,assets/img/WarCommunism/commune.webp-800.webp 800w,assets/img/WarCommunism/commune.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/commune.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/commune.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/heart.webp-480.webp 480w,assets/img/WarCommunism/heart.webp-800.webp 800w,assets/img/WarCommunism/heart.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/heart.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/heart.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/jessa.webp-480.webp 480w,assets/img/WarCommunism/jessa.webp-800.webp 800w,assets/img/WarCommunism/jessa.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/jessa.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/jessa.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/welding.webp-480.webp 480w,assets/img/WarCommunism/welding.webp-800.webp 800w,assets/img/WarCommunism/welding.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/welding.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/welding.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/woodfire.webp-480.webp 480w,assets/img/WarCommunism/woodfire.webp-800.webp 800w,assets/img/WarCommunism/woodfire.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/woodfire.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/woodfire.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/Surgery.webp-480.webp 480w,assets/img/WarCommunism/Surgery.webp-800.webp 800w,assets/img/WarCommunism/Surgery.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/Surgery.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/Surgery.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/basilegg.webp-480.webp 480w,assets/img/WarCommunism/basilegg.webp-800.webp 800w,assets/img/WarCommunism/basilegg.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/basilegg.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/basilegg.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/cleo.webp-480.webp 480w,assets/img/WarCommunism/cleo.webp-800.webp 800w,assets/img/WarCommunism/cleo.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/cleo.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/cleo.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/makingtheegg.webp-480.webp 480w,assets/img/WarCommunism/makingtheegg.webp-800.webp 800w,assets/img/WarCommunism/makingtheegg.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/makingtheegg.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/makingtheegg.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/shelving.webp-480.webp 480w,assets/img/WarCommunism/shelving.webp-800.webp 800w,assets/img/WarCommunism/shelving.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/shelving.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/shelving.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/tv.webp-480.webp 480w,assets/img/WarCommunism/tv.webp-800.webp 800w,assets/img/WarCommunism/tv.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/tv.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/tv.webp';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000002380.mov" type="video/quicktime" /></video></swiper-slide>
+  <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/party.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000007518.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/Arm.mov" type="video/quicktime" /></video></swiper-slide>
