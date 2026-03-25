@@ -14,6 +14,9 @@ nav: false
     <button id="pdf-next" title="Next page (→)">Next &rarr;</button>
     <a id="pdf-download" href="#" download title="Download PDF">Download</a>
     <span class="pdf-search-sep"></span>
+    <button id="pdf-rotate-left" title="Rotate left">&#x21BA;</button>
+    <button id="pdf-rotate-right" title="Rotate right">&#x21BB;</button>
+    <span class="pdf-search-sep"></span>
     <input id="pdf-search" type="text" placeholder="Search…" title="Search in PDF">
     <span class="pdf-search-nav">
       <button id="pdf-search-prev" title="Previous match">&uarr;</button>
