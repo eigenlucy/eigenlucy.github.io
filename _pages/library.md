@@ -17,10 +17,19 @@ nav: false
       <ul class="library-list">
         {% for item in site.data.library %}
           <li>
-            {% if item.ext == "pdf" %}
-              <a href="{{ '/viewer/?file=' | append: item.path | relative_url }}">{{ item.title }}</a>
+            {% assign title_parts = item.title | split: " — " %}
+            {% if title_parts.size > 1 %}
+              {% if item.ext == "pdf" %}
+                <a href="{{ '/viewer/?file=' | append: item.path | relative_url }}">{{ title_parts[0] }}</a> — {{ title_parts[1] }}
+              {% else %}
+                <a href="{{ item.path | relative_url }}">{{ title_parts[0] }}</a> — {{ title_parts[1] }}
+              {% endif %}
             {% else %}
-              <a href="{{ item.path | relative_url }}">{{ item.title }}</a>
+              {% if item.ext == "pdf" %}
+                <a href="{{ '/viewer/?file=' | append: item.path | relative_url }}">{{ item.title }}</a>
+              {% else %}
+                <a href="{{ item.path | relative_url }}">{{ item.title }}</a>
+              {% endif %}
             {% endif %}
             <span class="library-meta">{{ item.ext | upcase }}, {{ item.size }}</span>
           </li>

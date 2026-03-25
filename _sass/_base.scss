@@ -678,31 +678,14 @@ footer.sticky-bottom {
     }
   }
 
-  .grid-sizer {
-    display: none;
-  }
-
+  .grid-sizer,
   .grid-item {
-    width: calc(33.333% - 1.5rem);
-    margin-bottom: 0;
+    width: 250px;
+    margin-bottom: 20px;
   }
 
   .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .grid-sizer,
-    .grid-item {
-      width: calc(50% - 1rem);
-    }
-
-    .grid {
-      gap: 1rem;
-    }
+    margin: 0 auto;
   }
 
   // Fix video dimensions in masonry grid
