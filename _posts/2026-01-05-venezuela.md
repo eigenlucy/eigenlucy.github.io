@@ -9,6 +9,7 @@ related_posts: false
 images:
   compare: true
   slider: true
+giscus_comments: true
 ---
 
 

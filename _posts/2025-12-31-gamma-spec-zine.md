@@ -11,6 +11,7 @@ toc:
 images:
   compare: true
   slider: true
+giscus_comments: true
 ---
 
 This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.

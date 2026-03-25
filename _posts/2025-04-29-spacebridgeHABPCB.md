@@ -9,6 +9,7 @@ related_posts: false
 images:
   compare: true
   slider: true
+giscus_comments: true
 ---
 
 I have been spending a lot of time at Noisebridge. One of their many cool ongoing projects is <a href="https://www.noisebridge.net/wiki/Spacebridge:_The_Next_Generation">Spacebridge</a>, a DIY high altitude balloon group. We are using low cost LoRa/meshtastic hardware to send up, track, and recover our own weather balloons! I've gotten lot's of help from some of the folks over at SF HAB, including some folks that put together the amazing [Pico Balloon Project](https://www.picoballoons.net/). I have a PCB in my hand now, which I'll be testing in the upcoming weeks. You can follow my [GitHub repo](https://github.com/eigenlucy/spacebridgehabpcb).

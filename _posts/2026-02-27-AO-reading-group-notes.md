@@ -11,6 +11,7 @@ toc:
 images:
   compare: true
   slider: true
+giscus_comments: true
 ---
 
 <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf">Read Anti-Oedipus in the library</a>

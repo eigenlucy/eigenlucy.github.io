@@ -646,6 +646,8 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
+  width: 100%;
+
   a {
     text-decoration: none;
 
@@ -676,15 +678,31 @@ footer.sticky-bottom {
     }
   }
 
-  .grid-sizer,
+  .grid-sizer {
+    display: none;
+  }
+
   .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
+    width: calc(33.333% - 1.5rem);
+    margin-bottom: 0;
   }
 
   .grid {
-    // Ensure grid doesn't have conflicting CSS Grid properties
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .grid-sizer,
+    .grid-item {
+      width: calc(50% - 1rem);
+    }
+
+    .grid {
+      gap: 1rem;
+    }
   }
 
   // Fix video dimensions in masonry grid
