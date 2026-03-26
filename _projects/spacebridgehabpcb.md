@@ -6,6 +6,7 @@ img: assets/img/Gallery/spacebridgehabpcbrender.png
 importance: 1
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 <a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge</a> is a DIY high altitude ballooning group at Noisebridge Hackerspace. We are using low cost Meshtastic LoRa hardware and GPS modules for license free tracking and telemetry. Thus far, the each payload's been assembled on protoboard from a series of dev modules. This has created a number of issues with repeatability and last minute failures. So I am working on a new payload PCB :)
 

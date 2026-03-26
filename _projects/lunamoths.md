@@ -6,6 +6,7 @@ img: assets/img/Gallery/LunaMothsCover.jpg
 importance: 2
 category: biology
 related_publications: false
+giscus_comments: true
 ---
 I was fortuante enough to be sent some luna moth caterpillar eggs collected by my internet friend <a href="https://www.youtube.com/styropyro">Styropyro</a>. Here is the process of raising them from egg to adult and egg again :)
 

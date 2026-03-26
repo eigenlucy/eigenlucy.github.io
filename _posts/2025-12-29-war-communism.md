@@ -36,7 +36,6 @@ In the Gnostic cosmology, there is a being on the edge of the world known as Sab
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Planters.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ProjectTruck.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ResinNietzsche.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Shelf.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/Shrine.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/SpawnJars.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/ThereYouAre.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
@@ -55,11 +54,16 @@ In the Gnostic cosmology, there is a being on the edge of the world known as Sab
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/makingtheegg.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/shelving.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/tv.webp" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/MG.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/gardenbeds.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/cleooverhead.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002380.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/party.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000007518.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/Arm.mov" type="video/quicktime"></video></swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/IMG_3798.mov" type="video/quicktime"></video></swiper-slide>
+  <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000007702.mov" type="video/quicktime"></video></swiper-slide>
 </swiper-container>
 
 {% include spotify.liquid url="https://open.spotify.com/playlist/50hJ6M46dTa8DgYEXMtiPH" caption="The Power of the Veto" %}

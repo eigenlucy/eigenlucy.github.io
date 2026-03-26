@@ -6,6 +6,7 @@ img: assets/img/Gallery/DRSSTC3D.jpg
 importance: 3
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 
 A dual resonant telsa coil is a device that generates extremely high voltages (>1MV) with an air core resonant transformer, meaning both sides of the transformer are tuned to matching frequencies. These devices require careful design to cope with high power resonant operation. This build is designed to be compact, mains powered, and transportable. I took lots of inspiration from Steve Ward's incredible blog, [stevehv](https://www.stevehv.4hv.org), featuring many of his own DRSSTC builds. I am using one of Ward's UD1.3 drivers for now, tho I may soon upgrade to a UD2.7.

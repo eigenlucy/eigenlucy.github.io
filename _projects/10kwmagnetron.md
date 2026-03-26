@@ -6,6 +6,7 @@ img: assets/img/Gallery/10kwmagnetron.jpg
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 Check out this project's page on <a href="https://www.noisebridge.net/wiki/Microwave_furnace">the Noisebridge Wiki</a>
 

@@ -49,11 +49,11 @@ table {
 a,
 table.table a {
   font-family: $link-font-family;
-  color: #EAEAEA; /* Changed to off-white from var(--global-theme-color) */
+  color: #a8c8c8;
 
   &:hover {
-    color: #EAEAEA; /* Kept off-white for hover */
-    text-decoration: underline; /* Kept underline on hover */
+    color: #c0dede;
+    text-decoration: underline;
   }
 
   /* This existing rule seems to be for an underline effect/animation on hover. */

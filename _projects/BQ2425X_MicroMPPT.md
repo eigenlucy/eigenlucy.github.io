@@ -6,6 +6,7 @@ img: assets/img/Gallery/ESP32S2MPPT.jpg
 importance: 3
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 # This project was the first in a series of investigations into using Narrow VDC Dynamic Power Management featured in many modern low-cost USB battery charging ICs for low power solar MPPT Charging. This work has split into a variety of projects in the works., See info on my BQ2X based femtofox mppt hat, bq25x solar charging dev board, and MicroMPPT projects for newer endeavors relating to low power solar charging. This project will soon be revived for a HAOS plant monitor
 

@@ -7,6 +7,7 @@ img: assets/img/Gallery/NonHumanScent.jpg
 importance: 1
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 
 UPDATE 06/14/25: V2 PCBs Arrived!

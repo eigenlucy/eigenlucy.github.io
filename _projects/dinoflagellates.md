@@ -6,6 +6,7 @@ img: assets/img/Gallery/DinoFlagCell.jpg
 importance: 2
 category: biology
 related_publications: false
+giscus_comments: true
 ---
 These are cultures of bioluminescent dinoflagellates plankton made with the help of the nice folks at <a href="https://www.counterculturelabs.org/">Counter Culture Labs</a>.
 

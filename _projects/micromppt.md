@@ -6,6 +6,7 @@ img: assets/img/Gallery/micrompptv3.png
 importance: 1
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 UPDATE 4/22/25:
 Micromppt V3 has been release! This is the first relatively final build. The board is now configured for use with single cell lithium packs by default, and I have added a load output, and added battery and load protection circuitry.

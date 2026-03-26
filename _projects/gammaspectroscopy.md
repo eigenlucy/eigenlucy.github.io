@@ -6,6 +6,7 @@ img: assets/img/Gallery/GAGG.png
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 
 You can find files associated with this project [here](https://github.com/eigenlucy/gammadetector.git)

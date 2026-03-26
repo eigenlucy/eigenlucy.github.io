@@ -6,6 +6,7 @@ img: assets/img/Gallery/AgarPlates.jpg
 importance: 1
 category: mycology
 related_publications: false
+giscus_comments: true
 ---
 
 

@@ -6,6 +6,7 @@ img: assets/img/Gallery/wasppcbtop.jpg
 importance: 1
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 
 UPDATE 06/14/25, V1 PCBs arrived!

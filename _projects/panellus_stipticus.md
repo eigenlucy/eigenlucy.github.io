@@ -6,6 +6,7 @@ img: assets/img/PS2.jpg
 importance: 1
 category: mycology
 related_publications: false
+giscus_comments: true
 ---
 
 Panellus Stipticus (bitter oyster) is a species of fungus which exists across Asia, Australia, Europe and North America. They glow in the dark! The fruited mushrooms glow brightest at the gills supposedly, but I haven’t gotten any fruiting yet to see for myself. I wasn’t exactly sure how bright to expect them to be, but I am quite happy with the results. They require dark conditions to be visible, but one they are well established they can definitely be seen glowing across the room casting a glow on the wall on at night in my bedroom. As far as cultivation goes, these grow similarly to many other oyster species, but seem to be more sensitive to temperature changes. Agar plate and grain spawn (rye berry + rice) teks are detailed below.

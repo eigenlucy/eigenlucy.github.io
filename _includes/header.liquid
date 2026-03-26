@@ -107,7 +107,26 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          <!-- THEME TOGGLE BUTTON REMOVED -->
+          <!-- Settings -->
+          <li class="nav-item settings-nav">
+            <button class="nav-link settings-toggle" id="settings-toggle" aria-label="Settings" title="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="settings-panel" id="settings-panel">
+              <label class="settings-option">
+                <input type="checkbox" id="setting-light-mode"> Light mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-readable-fonts"> Readable fonts
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-low-data"> Low data mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-high-entropy"> High entropy
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </div>

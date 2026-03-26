@@ -6,6 +6,7 @@ img: assets/img/Gallery/veramonitor.jpg
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 For vera
 

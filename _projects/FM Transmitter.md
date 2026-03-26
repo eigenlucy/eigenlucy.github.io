@@ -6,6 +6,7 @@ img: assets/img/FMtransmitter.jpg
 importance: 3
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 This is an FM transmitter project based on the Silicon Labs <a href="https://dangerousthings.com/product/xsiid/">SI4713.</a> It uses an ESP32 microcontroller to receive bluetooth audio via A2DP using the <a href="https://github.com/pschatzmann/ESP32-A2DP">ESP32-A2DP Audio Library</a>. This project was designed in AUTODESK EAGLE/Fusion360. Here is a <a href="https://github.com/eigenlucy/ESP32-Bluetooth-FM-Transmitter">GitHub repo</a> containing the PCB files, codebase, and BOM.
 

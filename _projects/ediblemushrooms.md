@@ -6,6 +6,7 @@ img: assets/img/Gallery/LionsMane.jpg
 importance: 1
 category: mycology
 related_publications: false
+giscus_comments: true
 ---
 
 I used procedures based on guidelines in Paul Stamets' book Growing Gourmet and Medicinal Mushrooms refined by the advice provided by a variety of contemporary mycology forums and new materials. Jar are assembled by drilling two 3/8th - 1/2in holes (depending on the size of the jar) to be plugged with a silicone injection port and filter sticker. After applying the filter and port, the jars are fill with the substrate (rye berries, wood chips, straw, rice, etc) and autoclaved at 15PSI for 45 minutes in a pressure cooker. Liquid culture syringes are then used to inoculate the jars via the injection port. I use a metal pizza making table wiped down with bleach followed by 70% IPA (better than 90% for this application) directly before work begins, and continuosly sterilize work surfaces with IPA between inoculations. I use a propane torch as a sterile field as if it were a Bunsen Burner for the spawn jar inoculation and don't have issues with contamination if I work quickly and consciously.

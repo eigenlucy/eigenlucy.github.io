@@ -6,6 +6,7 @@ img: assets/img/Gallery/BasilTankComplete.jpg
 importance: 1
 category: biology
 related_publications: false
+giscus_comments: true
 ---
 The Voron project is a series of open source CoreXY 3D printer designs. This model is a 350mm 2.4v2. We sourced everything from scractch vs going with a kit, which was silly, but ultimately worth the pain for the repairability and configurability.
 <div class="row">

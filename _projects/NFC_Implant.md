@@ -6,6 +6,7 @@ img: assets/img/NFCImplantSuccess.jpg
 importance: 1
 category: general systemantics
 related_publications: false
+giscus_comments: true
 ---
 This project features <a href="https://dangerousthings.com/product/xsiid/">Dangerous Things' xSIID NFC+LED Implant.</a> I opted for the injectble style ("x-series") after finding other forms of implantation to be very stressful and involved for my tastes. With hindsight, I probably should have gone with the <a href="https://dangerousthings.com/product/next/">NExT chip,</a> which combines 125khz and 13.56mhz RFID protocols into one chip.  I opted for self implantation based on <a href="https://dangerousthings.com/wp-content/uploads/Introduction-to-Implantable-Transponders-for-Professionals.pdf">this guide from Dangerous Things</a> and <a href="https://www.youtube.com/watch?v=Gj5g454AD4E">this video from SparkFun Electronics</a> and I found the procedure quite easy. I chose to inject the chip into the webbing of my left hand. It's been about a year without issue at this point, somewhat suprisingly honestly! I go rock climbing quite a bit these days, and I am  suprised to  report I never even notice it.
 

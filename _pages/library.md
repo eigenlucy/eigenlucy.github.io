@@ -4,13 +4,18 @@ permalink: /library/
 title: Library
 description: PDFs and references
 nav: false
+sitemap: false
+noindex: true
 ---
+<meta name="robots" content="noindex, nofollow">
 
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
+
+  <p>These are the books and essays which have most impacted my intellectual development. They are included here for cross-referencing in my writing.</p>
 
   <div class="library">
     {% if site.data.library.size > 0 %}
@@ -39,4 +44,6 @@ nav: false
       <p>No files yet. Add PDFs or other documents to <code>assets/library/</code>.</p>
     {% endif %}
   </div>
+
+  <p class="library-notice"><em>Any content will be removed upon request. Contact <a href="mailto:lucy@sophia-labs.com">lucy@sophia-labs.com</a>.</em></p>
 </div>

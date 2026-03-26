@@ -6,6 +6,7 @@ img: assets/img/Gallery/MindInVitro.png
 importance: 1
 category: biology
 related_publications: false
+giscus_comments: true
 ---
 
 The original [Mind In Vitro](https://mindinvitro.illinois.edu) publication provides a low cost, open source headstage system to interface cultured neurons with a computer. I have recently been working on replicating and revising the system with the help of some folks at Frontier Tower and  Neuromorph VC.

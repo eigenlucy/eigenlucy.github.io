@@ -6,6 +6,7 @@ img: assets/img/Gallery/OpenFlashlightPCB2.png
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 Compact, high power, reliable open source flashlight. Designed with KiCAD, Atopile, and Fusion360
 

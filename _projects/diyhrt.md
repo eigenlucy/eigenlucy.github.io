@@ -6,6 +6,7 @@ img: assets/img/Gallery/femme.png
 importance: 1
 category: biology
 related_publications: false
+giscus_comments: true
 ---
 Being trans is all about being your own doctor/technician. This page will host my notes and methods on DIY HRT. I've been fully on DIY for about 3 years at this point, and I've collected lots of great resources I wanna share.
 

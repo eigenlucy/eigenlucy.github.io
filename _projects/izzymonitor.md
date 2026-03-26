@@ -6,6 +6,7 @@ img: assets/img/Gallery/izzymonitor.jpg
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 For izzy
 All of the design files and Gebers/BOM/CPL files for PCBA can be accessed <a href="https://github.com/eigenlucy/ESPHome-Panel/tree/izzymonitor/">here.</a> PCBA files are placed in the build artifacts with each Actions run.

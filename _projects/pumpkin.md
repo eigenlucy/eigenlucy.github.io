@@ -6,6 +6,7 @@ img: assets/img/Gallery/Pumpkin.jpg
 importance: 4
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 ATTiny85 NeoPixel Driver. Designed in KiCAD. mSLA Resin Printed Pumpkin.
 

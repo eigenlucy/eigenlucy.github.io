@@ -4,12 +4,12 @@ title: about
 permalink: /
 subtitle: lucy moglia. hardware, EE, philosophy, cybernetics, general systemantics
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
-  more_info: >
-    <p>Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
+# profile:
+#   align: right
+#   image: prof_pic.jpg
+#   image_circular: true
+#   more_info: >
+#     <p>Playing with an <a href='https://en.wikipedia.org/wiki/OpenBCI'>OpenBCI</a>:3</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"

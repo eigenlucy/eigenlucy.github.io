@@ -6,6 +6,7 @@ img: assets/img/Gallery/platednietzsche.jpg
 importance: 1
 category: general systemantics
 related_publications: false
+giscus_comments: true
 ---
 Conductive coating applied by airbrushing copper nanoparticle paint on the surface of printed parts. Plating solution composed of copper sulfate (root killer), sulfuric acid and water. 
 <div class="row">

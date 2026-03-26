@@ -6,6 +6,7 @@ img: assets/img/Gallery/NixonFace.jpeg
 importance: 2
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 
 <div>

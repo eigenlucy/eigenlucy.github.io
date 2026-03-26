@@ -10,4 +10,6 @@ Due to a number of immigration complications, my wife has had to self-deport and
 
 In other news, Vera has made some incredible progress on her research platform/agent memory system, <a href="https://sophia-labs.com">Sophia Labs</a>. Check it out and sign up for her demo!
 
-Also check out this geophysical survey simulator we made for a company I've been working on, <a href="mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)
+Also check out this geophysical survey simulator we made for a company I've
+
+been working on, <a href="mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)

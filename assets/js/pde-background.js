@@ -148,8 +148,10 @@
     function drawGrid() {
         if (isDrawingPaused) return;
 
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
         // Draw to offscreen buffer first to prevent partial-draw flicker
-        offCtx.fillStyle = 'black';
+        offCtx.fillStyle = isLight ? '#ffffff' : 'black';
         offCtx.fillRect(0, 0, canvasWidth, canvasHeight);
 
         for (let x = 0; x < SIM_COLS; x++) {
@@ -159,10 +161,19 @@
 
                 if (!grid[x] || !grid[x][y]) continue;
                 const bVal = grid[x][y].b;
-                const baseGray = 20;
-                const grayRange = 60;
-                const grayLevel = Math.floor(baseGray + (bVal * grayRange));
-                offCtx.fillStyle = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
+                if (isLight) {
+                    // White background, light grey diffusion cells
+                    const base = 245;
+                    const range = -55;
+                    const v = Math.floor(base + (bVal * range));
+                    offCtx.fillStyle = `rgb(${v}, ${v}, ${v})`;
+                } else {
+                    // Black background, muted cyan-grey diffusion cells
+                    const r = Math.floor(20 + bVal * 35);
+                    const g = Math.floor(20 + bVal * 70);
+                    const b = Math.floor(20 + bVal * 70);
+                    offCtx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                }
                 offCtx.fillRect(screenX, screenY, cellDrawWidth, cellDrawHeight);
             }
         }
@@ -172,10 +183,25 @@
     }
     
     let lastFrameTime = 0;
-    const frameInterval = 50; 
+    let frameInterval = 50;
     let simulationStepsPerFrame = 2;
     let isAnimating = false;
     let animationFrameId = null;
+
+    // Expose speed control for settings.js
+    window.setPDEHighEntropy = function(enabled) {
+        if (enabled) {
+            simulationStepsPerFrame = 20;
+            frameInterval = 16;
+        } else {
+            simulationStepsPerFrame = 2;
+            frameInterval = 50;
+        }
+    };
+    // Check on init
+    if (localStorage.getItem("setting-high-entropy") === "true") {
+        window.setPDEHighEntropy(true);
+    }
 
     function animate(currentTime) {
         isAnimating = true;

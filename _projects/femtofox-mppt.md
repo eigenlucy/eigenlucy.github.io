@@ -6,6 +6,7 @@ img: assets/img/Gallery/femtofox-mppt-draft.jpg
 importance: 3
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 # WIP
 

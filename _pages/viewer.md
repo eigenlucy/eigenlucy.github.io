@@ -3,7 +3,10 @@ layout: default
 permalink: /viewer/
 title: Document Viewer
 nav: false
+sitemap: false
+noindex: true
 ---
+<meta name="robots" content="noindex, nofollow">
 
 <div class="pdf-viewer-wrapper">
   <div class="pdf-controls">

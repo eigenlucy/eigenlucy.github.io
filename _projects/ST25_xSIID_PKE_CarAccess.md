@@ -6,6 +6,7 @@ img: assets/img/Gallery/CR95HFNFCTransponder.jpg
 importance: 3
 category: electrical engineering
 related_publications: false
+giscus_comments: true
 ---
 # This project was put on hold because my car got destroyed by a hurricane and the federal government doesn't disaster aid anymore apparently (womp womp)
 
