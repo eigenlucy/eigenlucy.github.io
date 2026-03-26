@@ -119,7 +119,7 @@
 <link rel="canonical" href="https://eigenlucy.github.io/news/announcement_1/">
 
 <!-- Theme JavaScript (applies dark theme to components) -->
-<script src="/assets/js/theme.js?aa2c13e44fadb3076a8e8e185e48e7ed"></script>
+<script src="/assets/js/theme.js?45790141e6a4db5674e5ba3a77260f39"></script>
 
 <!-- GeoJSON support via Leaflet -->
 
@@ -131,6 +131,8 @@
 
 
 
+    <!-- Settings: load early to prevent theme flicker -->
+    <script src="/assets/js/settings.js"></script>
     <!-- PDE background: in <head> with defer so download starts early, runs after DOM ready -->
     <script src="/assets/js/pde-background.js" defer></script>
   </head>
@@ -266,7 +268,26 @@
           
             
           
-          <!-- THEME TOGGLE BUTTON REMOVED -->
+          <!-- Settings -->
+          <li class="nav-item settings-nav">
+            <button class="nav-link settings-toggle" id="settings-toggle" aria-label="Settings" title="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="settings-panel" id="settings-panel">
+              <label class="settings-option">
+                <input type="checkbox" id="setting-light-mode"> Light mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-readable-fonts"> Readable fonts
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-low-data"> Low data mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-high-entropy"> High entropy
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </div>

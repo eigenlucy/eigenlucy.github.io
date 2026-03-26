@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: /assets/library/
+Disallow: /viewer/
 
 Sitemap: https://eigenlucy.github.io/sitemap.xml

@@ -118,7 +118,7 @@
 <link rel="canonical" href="https://eigenlucy.github.io/library/">
 
 <!-- Theme JavaScript (applies dark theme to components) -->
-<script src="/assets/js/theme.js?aa2c13e44fadb3076a8e8e185e48e7ed"></script>
+<script src="/assets/js/theme.js?45790141e6a4db5674e5ba3a77260f39"></script>
 
 <!-- GeoJSON support via Leaflet -->
 
@@ -130,6 +130,8 @@
 
 
 
+    <!-- Settings: load early to prevent theme flicker -->
+    <script src="/assets/js/settings.js"></script>
     <!-- PDE background: in <head> with defer so download starts early, runs after DOM ready -->
     <script src="/assets/js/pde-background.js" defer></script>
   </head>
@@ -265,7 +267,26 @@
           
             
           
-          <!-- THEME TOGGLE BUTTON REMOVED -->
+          <!-- Settings -->
+          <li class="nav-item settings-nav">
+            <button class="nav-link settings-toggle" id="settings-toggle" aria-label="Settings" title="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="settings-panel" id="settings-panel">
+              <label class="settings-option">
+                <input type="checkbox" id="setting-light-mode"> Light mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-readable-fonts"> Readable fonts
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-low-data"> Low data mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-high-entropy"> High entropy
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -277,11 +298,15 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       
-        <div class="post">
+        <meta name="robots" content="noindex, nofollow" />
+
+<div class="post">
   <header class="post-header">
     <h1 class="post-title">Library</h1>
     <p class="post-description">PDFs and references</p>
   </header>
+
+  <p>These are the books and essays which have most impacted my intellectual development. They are included here for cross-referencing in my writing.</p>
 
   <div class="library">
     
@@ -351,7 +376,7 @@
             
             
               
-                <a href="/viewer/?file=/assets/library/Benjamin%20contra%20Schmitt%20-%20A%20Reappraisal%20of%20Agamben.pdf">Benjamin contra Schmitt: A Reappraisal of Agamben</a>
+                <a href="/viewer/?file=/assets/library/Benjamin%20contra%20Schmitt%20-%20A%20Reappraisal%20of%20Agamben.pdf">Benjamin contra Schmitt: A Reappraisal of Agamben</a> — Erik Pomrenke
               
             
             <span class="library-meta">PDF, 350 KB</span>
@@ -365,6 +390,16 @@
               
             
             <span class="library-meta">PDF, 1.5 MB</span>
+          </li>
+        
+          <li>
+            
+            
+              
+                <a href="/viewer/?file=/assets/library/Building%20Scientific%20Apparatus%20-%20Moore,%20Davis,%20and%20Coplan.pdf">Building Scientific Apparatus (4th Edition)</a> — Moore, Davis &amp; Coplan (2009)
+              
+            
+            <span class="library-meta">PDF, 7.7 MB</span>
           </li>
         
           <li>
@@ -401,10 +436,30 @@
             
             
               
+                <a href="/viewer/?file=/assets/library/Difference%20and%20Repetition%20-%20Gilles%20Deleuze.pdf">Difference and Repetition</a> — Gilles Deleuze (1968)
+              
+            
+            <span class="library-meta">PDF, 12.8 MB</span>
+          </li>
+        
+          <li>
+            
+            
+              
                 <a href="/viewer/?file=/assets/library/Estranged%20Labour,%20Marx,%201844.pdf">Estranged Labour</a> — Karl Marx (1844)
               
             
             <span class="library-meta">PDF, 158 KB</span>
+          </li>
+        
+          <li>
+            
+            
+              
+                <a href="/viewer/?file=/assets/library/Et%20Nox%20Facta%20Est%20-%20Victor%20Hugo.pdf">Et Nox Facta Est (And There Was Night), from La Fin de Satan</a> — Victor Hugo (1854)
+              
+            
+            <span class="library-meta">PDF, 770 KB</span>
           </li>
         
           <li>
@@ -435,6 +490,16 @@
               
             
             <span class="library-meta">PDF, 92 KB</span>
+          </li>
+        
+          <li>
+            
+            
+              
+                <a href="/viewer/?file=/assets/library/Jewish%20Gnosticism,%20Merkabah%20Mysticism,%20and%20Talmudic%20Tradition%20-%20Gershom%20Scholem.pdf">Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition</a> — Gershom Scholem (1960)
+              
+            
+            <span class="library-meta">PDF, 6.9 MB</span>
           </li>
         
           <li>
@@ -635,6 +700,16 @@
               
             
             <span class="library-meta">PDF, 21.8 MB</span>
+          </li>
+        
+          <li>
+            
+            
+              
+                <a href="/viewer/?file=/assets/library/The%20Art%20of%20Electronics%20-%20Paul%20Horowitz.pdf">The Art of Electronics (3rd Edition)</a> — Paul Horowitz &amp; Winfield Hill (2015)
+              
+            
+            <span class="library-meta">PDF, 29.0 MB</span>
           </li>
         
           <li>
@@ -870,6 +945,8 @@
       </ul>
     
   </div>
+
+  <p class="library-notice"><em>Any content will be removed upon request. Contact <a href="mailto:lucy@sophia-labs.com">lucy@sophia-labs.com</a>.</em></p>
 </div>
 
       

@@ -118,7 +118,7 @@
 <link rel="canonical" href="https://eigenlucy.github.io/eigenlucy/warcommunism/">
 
 <!-- Theme JavaScript (applies dark theme to components) -->
-<script src="/assets/js/theme.js?aa2c13e44fadb3076a8e8e185e48e7ed"></script>
+<script src="/assets/js/theme.js?45790141e6a4db5674e5ba3a77260f39"></script>
 
 <!-- GeoJSON support via Leaflet -->
 
@@ -149,6 +149,8 @@
 
 
 
+    <!-- Settings: load early to prevent theme flicker -->
+    <script src="/assets/js/settings.js"></script>
     <!-- PDE background: in <head> with defer so download starts early, runs after DOM ready -->
     <script src="/assets/js/pde-background.js" defer></script>
   </head>
@@ -284,7 +286,26 @@
           
             
           
-          <!-- THEME TOGGLE BUTTON REMOVED -->
+          <!-- Settings -->
+          <li class="nav-item settings-nav">
+            <button class="nav-link settings-toggle" id="settings-toggle" aria-label="Settings" title="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="settings-panel" id="settings-panel">
+              <label class="settings-option">
+                <input type="checkbox" id="setting-light-mode"> Light mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-readable-fonts"> Readable fonts
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-low-data"> Low data mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-high-entropy"> High entropy
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -464,15 +485,6 @@
   <swiper-slide><figure>
     <picture>
       
-        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/Shelf.webp-480.webp 480w,assets/img/WarCommunism/Shelf.webp-800.webp 800w,assets/img/WarCommunism/Shelf.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/WarCommunism/Shelf.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/Shelf.webp';" />
-    </picture>
-    
-  </figure></swiper-slide>
-  <swiper-slide><figure>
-    <picture>
-      
         <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/Shrine.webp-480.webp 480w,assets/img/WarCommunism/Shrine.webp-800.webp 800w,assets/img/WarCommunism/Shrine.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
       
       <img src="/assets/img/WarCommunism/Shrine.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/Shrine.webp';" />
@@ -632,11 +644,40 @@
     </picture>
     
   </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/MG.jpg-480.webp 480w,assets/img/WarCommunism/MG.jpg-800.webp 800w,assets/img/WarCommunism/MG.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/MG.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/MG.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/gardenbeds.jpg-480.webp 480w,assets/img/WarCommunism/gardenbeds.jpg-800.webp 800w,assets/img/WarCommunism/gardenbeds.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/gardenbeds.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/gardenbeds.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
+  <swiper-slide><figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/WarCommunism/cleooverhead.jpg-480.webp 480w,assets/img/WarCommunism/cleooverhead.jpg-800.webp 800w,assets/img/WarCommunism/cleooverhead.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/WarCommunism/cleooverhead.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/WarCommunism/cleooverhead.jpg';" />
+    </picture>
+    
+  </figure></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000002380.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/party.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000007518.mov" type="video/quicktime" /></video></swiper-slide>
   <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/Arm.mov" type="video/quicktime" /></video></swiper-slide>
+  <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/IMG_3798.mov" type="video/quicktime" /></video></swiper-slide>
+  <swiper-slide><video controls="" playsinline=""><source src="/assets/img/WarCommunism/1000007702.mov" type="video/quicktime" /></video></swiper-slide>
 </swiper-container>
 
 <figure class="spotify-embed">

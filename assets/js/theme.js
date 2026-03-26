@@ -1,14 +1,17 @@
-// Theme script: Hardcoded to Dark Mode, ensuring global functions.
+// Theme script: Defaults to dark, respects settings.js localStorage overrides.
 
 // Globally available function, defined immediately
 window.determineComputedTheme = function() {
-  // console.log("WINDOW.determineComputedTheme: returning dark.");
+  var stored = localStorage.getItem("setting-light-mode");
+  if (stored !== null) return stored === "true" ? "light" : "dark";
+  // No explicit preference — follow OS preference
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
   return "dark";
 };
 
-// Main function to apply dark theme settings to various components
+// Main function to apply theme settings to various components
 window.applyDarkThemeToComponents = function() {
-  const theme = "dark"; // Ensure theme is always dark for component styling
+  const theme = window.determineComputedTheme();
   // console.log("THEME.JS: applyDarkThemeToComponents() running for theme: " + theme);
 
   // Set main data attributes on <html> - this is crucial for CSS variable scoping
@@ -19,19 +22,19 @@ window.applyDarkThemeToComponents = function() {
   const lightThemeElement = document.getElementById("highlight_theme_light");
   const darkThemeElement = document.getElementById("highlight_theme_dark");
   if (lightThemeElement) {
-    lightThemeElement.media = "none"; // Disable light syntax highlight stylesheet
+    lightThemeElement.media = theme === "light" ? "" : "none";
   }
   if (darkThemeElement) {
-    darkThemeElement.media = "";     // Enable dark syntax highlight stylesheet
+    darkThemeElement.media = theme === "dark" ? "" : "none";
   }
 
   // Giscus comments theme
   const giscusFrame = document.querySelector("iframe.giscus-frame");
   if (giscusFrame && giscusFrame.contentWindow) {
     try {
-        giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: "dark" } } }, "https://giscus.app");
+        giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, "https://giscus.app");
     } catch (e) {
-        console.warn("THEME.JS: Giscus postMessage failed (iframe might not be ready or from different origin if sandboxed too strictly):", e);
+        console.warn("THEME.JS: Giscus postMessage failed:", e);
     }
   }
 
@@ -45,18 +48,20 @@ window.applyDarkThemeToComponents = function() {
       }
     });
     try {
-      mermaid.initialize({ theme: "dark" });
+      mermaid.initialize({ theme: theme === "dark" ? "dark" : "default" });
       window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
     } catch (e) {
       console.warn("THEME.JS: Mermaid re-init error:", e);
     }
   }
 
-  // Bootstrap Tables - ensure .table-dark class is present
+  // Bootstrap Tables
   let tables = document.getElementsByTagName("table");
   for (let i = 0; i < tables.length; i++) {
-    if (!tables[i].classList.contains("table-dark")) {
-        tables[i].classList.add("table-dark");
+    if (theme === "dark") {
+      tables[i].classList.add("table-dark");
+    } else {
+      tables[i].classList.remove("table-dark");
     }
   }
 
@@ -129,11 +134,11 @@ window.applyDarkThemeToComponents = function() {
 }
 
 // Globally available function
-window.setThemeSetting = function(themeSetting) { // themeSetting arg is ignored, always dark
-  // console.log("Global setThemeSetting(), forcing dark.");
-  localStorage.setItem("theme", "dark");
-  document.documentElement.setAttribute("data-theme-setting", "dark"); // Ensure this is set too
-  window.applyDarkThemeToComponents(); // Call the global version
+window.setThemeSetting = function(themeSetting) {
+  const theme = window.determineComputedTheme();
+  localStorage.setItem("theme", theme);
+  document.documentElement.setAttribute("data-theme-setting", theme);
+  window.applyDarkThemeToComponents();
 };
 
 // Globally available function, called from head.liquid and end of this script
@@ -143,11 +148,11 @@ window.initTheme = function() {
 };
 
 // Initial setup when this script itself is parsed and executed.
-// This ensures functions are defined. The actual application to components
-// that might not exist yet is handled by DOMContentLoaded or the inline call in head.
-localStorage.setItem('theme', 'dark'); // Set early
-document.documentElement.setAttribute('data-theme-setting', 'dark');
-document.documentElement.setAttribute('data-theme', 'dark');
+// Respect settings.js localStorage values.
+const _initTheme = window.determineComputedTheme();
+localStorage.setItem('theme', _initTheme);
+document.documentElement.setAttribute('data-theme-setting', _initTheme);
+document.documentElement.setAttribute('data-theme', _initTheme);
 
 // Call initTheme when the DOM is fully loaded to ensure all elements are available for styling.
 if (document.readyState === 'loading') {  // Or use 'interactive' or 'complete' if issues persist

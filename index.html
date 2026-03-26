@@ -117,7 +117,7 @@
 <link rel="canonical" href="https://eigenlucy.github.io/">
 
 <!-- Theme JavaScript (applies dark theme to components) -->
-<script src="/assets/js/theme.js?aa2c13e44fadb3076a8e8e185e48e7ed"></script>
+<script src="/assets/js/theme.js?45790141e6a4db5674e5ba3a77260f39"></script>
 
 <!-- GeoJSON support via Leaflet -->
 
@@ -129,6 +129,8 @@
 
 
 
+    <!-- Settings: load early to prevent theme flicker -->
+    <script src="/assets/js/settings.js"></script>
     <!-- PDE background: in <head> with defer so download starts early, runs after DOM ready -->
     <script src="/assets/js/pde-background.js" defer></script>
   </head>
@@ -254,7 +256,26 @@
           
             
           
-          <!-- THEME TOGGLE BUTTON REMOVED -->
+          <!-- Settings -->
+          <li class="nav-item settings-nav">
+            <button class="nav-link settings-toggle" id="settings-toggle" aria-label="Settings" title="Settings">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="settings-panel" id="settings-panel">
+              <label class="settings-option">
+                <input type="checkbox" id="setting-light-mode"> Light mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-readable-fonts"> Readable fonts
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-low-data"> Low data mode
+              </label>
+              <label class="settings-option">
+                <input type="checkbox" id="setting-high-entropy"> High entropy
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -277,29 +298,6 @@
   </header>
 
   <article>
-    
-      <div class="profile float-right">
-        
-          
-          
-          
-          <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/prof_pic.jpg-480.webp 480w,assets/img/prof_pic.jpg-800.webp 800w,assets/img/prof_pic.jpg-1400.webp 1400w" sizes="(min-width: 85%) 16.5px, (min-width: 576px)
-      30vw, 95vw" type="image/webp">
-      
-      <img src="/assets/img/prof_pic.jpg" alt="prof_pic.jpg" style="width: 100%; height: auto;" class="img-fluid z-depth-1 rounded-circle" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/prof_pic.jpg';">
-    </source></picture>
-    
-  </figure>
-        
-        
-          <div class="more-info">
-<p>Playing with an <a href="https://en.wikipedia.org/wiki/OpenBCI">OpenBCI</a>:3</p>
-</div>
-        
-      </div>
     
 
     <div class="clearfix">
@@ -343,6 +341,16 @@
         
         
           <tr>
+            <th scope="row" style="width: 20%">Mar 26, 2026</th>
+            <td>
+              
+                Added comments to all my project pages and blog post via GitHub/Giscus. I will be filling back in some of the info missing on old projects in the upcoming months (firmware, updated schematics, post-project reflections, etc)
+
+              
+            </td>
+          </tr>
+        
+          <tr>
             <th scope="row" style="width: 20%">Mar 24, 2026</th>
             <td>
               
@@ -384,7 +392,9 @@ Due to a number of immigration complications, my wife has had to self-deport and
 
 In other news, Vera has made some incredible progress on her research platform/agent memory system, <a href="https://sophia-labs.com">Sophia Labs</a>. Check it out and sign up for her demo!
 
-Also check out this geophysical survey simulator we made for a company I’ve been working on, <a href="mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)
+Also check out this geophysical survey simulator we made for a company I’ve
+
+been working on, <a href="mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)
 
               
             </td>
@@ -796,7 +806,7 @@ Reworked resume page.
     
       <div class="social">
         <div class="contact-icons">
-  <a href="mailto:eigenlucy@proton.me" title="email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="mailto:lucy@sophia-labs.com" title="email"><i class="fa-solid fa-envelope"></i></a>
 
 
   <a href="https://telegram.me/eigenlucy" title="telegram"><i class="fa-brands fa-telegram"></i></a>
