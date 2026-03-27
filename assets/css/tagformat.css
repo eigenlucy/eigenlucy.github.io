@@ -29,6 +29,116 @@
 
 /* Tag list styles */
 
+/* Tag hierarchy breadcrumb + subcategories */
+.tag-breadcrumb {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.tag-breadcrumb a {
+  color: var(--global-text-color);
+  opacity: 0.6;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.tag-breadcrumb a:hover {
+  opacity: 1;
+  color: var(--global-theme-color);
+}
+
+.tag-breadcrumb .fa-chevron-right {
+  opacity: 0.4;
+  margin-left: 0.3rem;
+}
+
+.tag-children {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-children a {
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  opacity: 0.6;
+  text-decoration: none;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: 4px;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.tag-children a:hover {
+  opacity: 1;
+  color: var(--global-theme-color);
+}
+
+/* Tag subcategory grouping on parent pages */
+.tag-subcategory {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--global-theme-color);
+}
+
+.tag-subcategory h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.tag-subcategory h3 a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.tag-subcategory h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Tag archive entry styles */
+.tag-entry {
+  margin-bottom: 1.2rem;
+}
+
+.tag-entry-link {
+  text-decoration: none !important;
+}
+
+.tag-entry-title {
+  font-family: var(--link-font-family, 'Jacquard 12', serif);
+  color: var(--global-text-color) !important;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+
+.tag-entry-link:hover .tag-entry-title {
+  color: var(--global-theme-color) !important;
+}
+
+.tag-entry-title .fa-arrow-right,
+.tag-entry-title .fa-arrow-up-right-from-square {
+  font-size: 0.7rem;
+  vertical-align: middle;
+  opacity: 0.4;
+  margin-left: 0.3rem;
+}
+
+.tag-entry-link:hover .tag-entry-title .fa-arrow-right,
+.tag-entry-link:hover .tag-entry-title .fa-arrow-up-right-from-square {
+  opacity: 1;
+}
+
+.tag-entry-desc {
+  color: var(--global-text-color);
+  opacity: 0.7;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* Full-page canvas styles */
 html, body {
   width: 100%;

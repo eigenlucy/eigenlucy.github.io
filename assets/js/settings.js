@@ -134,7 +134,6 @@
     }
   });
 
-  var galleryObserver = null;
   var galleryLoadingCount = 0;
   var galleryQueue = [];
   var GALLERY_MAX_CONCURRENT = 10;
@@ -202,17 +201,9 @@
 
     if (deferred.length === 0) return;
 
-    galleryObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          galleryObserver.unobserve(entry.target);
-          galleryQueue.push(entry.target);
-          galleryLoadNext();
-        }
-      });
-    }, { rootMargin: "300% 0px" }); // 3 viewport heights ahead
-
-    deferred.forEach(function (img) { galleryObserver.observe(img); });
+    // Queue all deferred images immediately — just limit concurrency, not visibility
+    galleryQueue = galleryQueue.concat(deferred);
+    galleryLoadNext();
   }
 
   function updateThemeComponents(theme) {

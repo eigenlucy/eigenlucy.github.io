@@ -325,6 +325,10 @@
             
           
             
+          
+            
+          
+            
               
                 <li class="nav-item ">
                   
@@ -413,85 +417,193 @@
       
         <div class="post">
   <header class="post-header">
+    
+    
+    
+
+    
+      <p class="tag-breadcrumb">
+        <a href="/blog/tag/biology"><i class="fa-solid fa-hashtag fa-xs"></i> biology</a>
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+      </p>
+    
+
     <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> biohacking</h1>
+
+    
+    
+    
   </header>
 
   
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    <h4>Projects</h4>
+    
+      <div class="tag-entry">
+        <a class="tag-entry-link" href="/projects/NFC_Implant/">
+          <h2 class="tag-entry-title">NFC/LED Chip Implant <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+        </a>
+        <p class="tag-entry-desc">Notes on-Implanting an xSiiD NFC/LED Chip</p>
+      </div>
+    
+      <div class="tag-entry">
+        <a class="tag-entry-link" href="/projects/diyhrt/">
+          <h2 class="tag-entry-title">DIYHRT <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+        </a>
+        <p class="tag-entry-desc">Open source gender</p>
+      </div>
+    
+    
+
+    
+    
+    
+
+    
+    <h4>Gallery</h4>
+    <div class="row g-3" style="margin-bottom: 1.5rem;">
+      
+        <div class="col-md-3 card-item" data-tags="implants, biohacking, nfc, video">
+  <div class="card mb-4 shadow-sm">
+
+<figure>
   
+    <video
+      src="/assets/video/ImplantProcedureVideo.mp4"
+      
+        class="img-fluid rounded z-depth-1"
+      
+      
+        width="auto"
+      
+      
+        height="auto"
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        controls
+      
+      
+      
+      
+      loading="eager"
+    />
 
   
   
-  
+</figure>
 
-  
-  <h4>Projects</h4>
-  <article class="archive">
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var playButtons = document.querySelectorAll('.video-container .play-button');
+    playButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var video = button.parentElement.querySelector('video');
+        if (video) { 
+            video.style.display = 'block';
+            video.play();
+            if (button.previousElementSibling) { 
+                button.previousElementSibling.style.display = 'none'; 
+            }
+            button.style.display = 'none'; 
+        }
+      });
+    });
+  });
+</script>
+<div class="card-body">
+        <p class="card-text">xSIID self implant procedure</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div></div>
+</div>
+
+      
+        <div class="col-md-3 card-item" data-tags="implants, nfc, electrical engineering, biohacking, image">
+  <div class="card mb-4 shadow-sm"><figure
+    
+  >
+    <picture>
+      
+        <source
+          class="responsive-img-srcset"
+          srcset="assets/img/Gallery/NFCimplant.png-480.webp 480w,assets/img/Gallery/NFCimplant.png-800.webp 800w,assets/img/Gallery/NFCimplant.png-1400.webp 1400w"
+          sizes="95vw"
+          type="image/webp"
+        >
+      
+      <img
+        src="/assets/img/Gallery/NFCimplant.png"
+        alt="Gallery Image"
+        style="width: 100%; height: auto;"
+        class="img-fluid rounded z-depth-1"
+        loading="lazy"
+        onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/NFCimplant.png';"
         
-          <tr>
-            <th scope="row">general systemantics</th>
-            <td>
-              <a class="post-link" href="/projects/NFC_Implant/">NFC/LED Chip Implant</a>
-              <span class="post-meta"> — Notes on-Implanting an xSiiD NFC/LED Chip</span>
-            </td>
-          </tr>
+      >
+    </picture>
+    
+  </figure><div class="card-body">
+        <p class="card-text">LED visible in daylight after some healing</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div></div>
+</div>
+
+      
+        <div class="col-md-3 card-item" data-tags="implants, biohacking, image">
+  <div class="card mb-4 shadow-sm"><figure
+    
+  >
+    <picture>
+      
+        <source
+          class="responsive-img-srcset"
+          srcset="assets/img/Gallery/ImplantSurgery.PNG-480.webp 480w,assets/img/Gallery/ImplantSurgery.PNG-800.webp 800w,assets/img/Gallery/ImplantSurgery.PNG-1400.webp 1400w"
+          sizes="95vw"
+          type="image/webp"
+        >
+      
+      <img
+        src="/assets/img/Gallery/ImplantSurgery.PNG"
+        alt="Gallery Image"
+        style="width: 100%; height: auto;"
+        class="img-fluid rounded z-depth-1"
+        loading="lazy"
+        onerror="this.onerror=null; if (this.previousElementSibling && this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/ImplantSurgery.PNG';"
         
-          <tr>
-            <th scope="row">biology</th>
-            <td>
-              <a class="post-link" href="/projects/diyhrt/">DIYHRT</a>
-              <span class="post-meta"> — Open source gender</span>
-            </td>
-          </tr>
-        
-      </table>
+      >
+    </picture>
+    
+  </figure><div class="card-body">
+        <p class="card-text">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
+        <div class="d-flex justify-content-between align-items-center">
+        </div>
+      </div></div>
+</div>
+
+      
     </div>
-  </article>
-  
+    
+    
 
-  
-  
-  
-
-  
-  <h4>Gallery</h4>
-  <div class="row row-cols-2 row-cols-md-4 g-3" style="margin-bottom: 1.5rem;">
     
-      
-        
-        <div class="col">
-          <a href="/gallery/">
-            <video src="/assets/video/ImplantProcedureVideo.mp4" class="img-fluid rounded z-depth-1" style="width: 100%; height: 150px; object-fit: cover;" muted playsinline preload="metadata"></video>
-          </a>
-          <p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">xSIID self implant procedure</p>
-        </div>
-      
-    
-      
-        
-        <div class="col">
-          <a href="/gallery/">
-            <img src="/assets/img/Gallery/NFCimplant.png" alt="LED visible in daylight after some healing" class="img-fluid rounded z-depth-1" loading="lazy" style="width: 100%; height: 150px; object-fit: cover;">
-          </a>
-          <p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">LED visible in daylight after some healing</p>
-        </div>
-      
-    
-      
-        
-        <div class="col">
-          <a href="/gallery/">
-            <img src="/assets/img/Gallery/ImplantSurgery.PNG" alt="DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet." class="img-fluid rounded z-depth-1" loading="lazy" style="width: 100%; height: 150px; object-fit: cover;">
-          </a>
-          <p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">DIY magnet implant surgery. gave myself lidocaine injections in the base of my finger, cut a pocket, and inserted a parylene c coated neodymium magnet.</p>
-        </div>
-      
-    
-  </div>
-  
-  
-
   
 </div>
 
