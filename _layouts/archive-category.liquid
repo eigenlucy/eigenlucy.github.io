@@ -4,9 +4,9 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title"><i class="fa-solid fa-tag fa-sm"></i> {{ page.title }}</h1>
-    <p class="post-description">an archive of posts in this category</p>
   </header>
 
+  {% if page.posts.size > 0 %}
   <article class="archive">
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
@@ -21,10 +21,16 @@ layout: default
               {% else %}
                 <a class="post-link" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
               {% endif %}
+              {% if post.description %}<span class="post-meta"> — {{ post.description | truncate: 80 }}</span>{% endif %}
             </td>
           </tr>
         {% endfor %}
       </table>
     </div>
   </article>
+  {% endif %}
+
+  {% if page.posts.size == 0 %}
+    <p>No posts in this category yet.</p>
+  {% endif %}
 </div>

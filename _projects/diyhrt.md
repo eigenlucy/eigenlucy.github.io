@@ -5,6 +5,7 @@ description: Open source gender
 img: assets/img/Gallery/femme.png
 importance: 1
 category: biology
+tags: [biology, biohacking]
 related_publications: false
 giscus_comments: true
 ---

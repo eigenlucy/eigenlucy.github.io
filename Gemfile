@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-titles-from-headings"
   gem "jekyll-get-json"
+  gem "jekyll-archives"
   gem "bigdecimal"
   gem "faraday-retry"
 end

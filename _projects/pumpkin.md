@@ -5,6 +5,7 @@ description: 3D Printed Neopixel Halloween Pumpkin with ATTiny85
 img: assets/img/Gallery/Pumpkin.jpg
 importance: 4
 category: electrical engineering
+tags: [electronics]
 related_publications: false
 giscus_comments: true
 ---

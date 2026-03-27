@@ -5,6 +5,7 @@ description: Configuration guidelines, power usage testing, RF transmit power te
 img: assets/img/Gallery/Femtofox.jpg
 importance: 2
 category: electrical engineering
+tags: [electronics, meshtastic, rf]
 related_publications: false
 giscus_comments: true
 ---

@@ -491,9 +491,18 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  color: var(--global-text-color);
 
   .container {
     text-align: center;
+  }
+
+  a {
+    color: var(--global-theme-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
   }
 }
 
@@ -824,6 +833,26 @@ footer.sticky-bottom {
     .card-text {
       font-size: 0.8rem;
     }
+  }
+}
+
+// Low data mode
+.low-data-mode {
+  // Force smallest srcset variant via sizes attribute override
+  img {
+    sizes: 480px;
+  }
+
+  .gallery .card-item {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 150px;
+  }
+
+  // Indicate low-data search mode in PDF viewer
+  #pdf-search-all {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 

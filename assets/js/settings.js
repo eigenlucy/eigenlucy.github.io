@@ -153,6 +153,55 @@
     }
   }
 
+  // Low data mode state
+  var lowDataObserver = null;
+  var lowDataLoadingCount = 0;
+  var lowDataQueue = [];
+  var LOW_DATA_MAX_CONCURRENT = 5;
+  var PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+  function lowDataRestoreImage(img) {
+    var realSrc = img.getAttribute("data-lowdata-src");
+    var realSrcset = img.getAttribute("data-lowdata-srcset");
+    if (realSrc) {
+      img.src = realSrc;
+      img.removeAttribute("data-lowdata-src");
+    }
+    if (realSrcset) {
+      img.srcset = realSrcset;
+      img.removeAttribute("data-lowdata-srcset");
+    }
+    // Also restore <source> elements in <picture>
+    var picture = img.closest("picture");
+    if (picture) {
+      picture.querySelectorAll("source[data-lowdata-srcset]").forEach(function (source) {
+        source.srcset = source.getAttribute("data-lowdata-srcset");
+        source.removeAttribute("data-lowdata-srcset");
+      });
+    }
+  }
+
+  function lowDataLoadNext() {
+    while (lowDataQueue.length > 0 && lowDataLoadingCount < LOW_DATA_MAX_CONCURRENT) {
+      var img = lowDataQueue.shift();
+      // Only restore if it still has stashed src (not already restored)
+      if (img.getAttribute("data-lowdata-src")) {
+        lowDataLoadingCount++;
+        img.addEventListener("load", function onLoad() {
+          img.removeEventListener("load", onLoad);
+          lowDataLoadingCount--;
+          lowDataLoadNext();
+        }, { once: true });
+        img.addEventListener("error", function onError() {
+          img.removeEventListener("error", onError);
+          lowDataLoadingCount--;
+          lowDataLoadNext();
+        }, { once: true });
+        lowDataRestoreImage(img);
+      }
+    }
+  }
+
   function applyLowDataMode(enabled) {
     // Handle videos
     document.querySelectorAll("video").forEach(function (video) {
@@ -171,27 +220,6 @@
       }
     });
 
-    // Handle images: swap to smaller versions or add loading=lazy
-    document.querySelectorAll("img").forEach(function (img) {
-      if (enabled) {
-        // Use srcset smallest size if available, or add quality reduction via CSS
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("decoding", "async");
-        // Limit rendered size to reduce memory
-        if (!img.getAttribute("data-original-style")) {
-          img.setAttribute("data-original-style", img.style.cssText || "");
-        }
-        // Cap image width to reduce rendering cost
-        img.style.imageRendering = "auto";
-      } else {
-        img.removeAttribute("decoding");
-        var origStyle = img.getAttribute("data-original-style");
-        if (origStyle !== null) {
-          img.style.cssText = origStyle;
-        }
-      }
-    });
-
     // Handle swiper slides with videos
     document.querySelectorAll("swiper-slide video, swiper-container video").forEach(function (video) {
       if (enabled) {
@@ -200,5 +228,64 @@
         video.style.display = "";
       }
     });
+
+    // Handle images with IntersectionObserver gating
+    if (enabled) {
+      // Stash real src/srcset and replace with placeholder
+      document.querySelectorAll("img").forEach(function (img) {
+        if (img.getAttribute("data-lowdata-src")) return; // already stashed
+        var src = img.getAttribute("src");
+        var srcset = img.getAttribute("srcset");
+        if (src && src !== PLACEHOLDER) {
+          img.setAttribute("data-lowdata-src", src);
+          img.src = PLACEHOLDER;
+        }
+        if (srcset) {
+          img.setAttribute("data-lowdata-srcset", srcset);
+          img.removeAttribute("srcset");
+        }
+        // Stash <source> srcsets in <picture>
+        var picture = img.closest("picture");
+        if (picture) {
+          picture.querySelectorAll("source[srcset]").forEach(function (source) {
+            source.setAttribute("data-lowdata-srcset", source.srcset);
+            source.removeAttribute("srcset");
+          });
+        }
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("decoding", "async");
+      });
+
+      // Create observer to load images near viewport
+      lowDataQueue = [];
+      lowDataLoadingCount = 0;
+      if (lowDataObserver) lowDataObserver.disconnect();
+      lowDataObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            lowDataObserver.unobserve(img);
+            lowDataQueue.push(img);
+            lowDataLoadNext();
+          }
+        });
+      }, { rootMargin: "200% 0px" });
+
+      document.querySelectorAll("img[data-lowdata-src]").forEach(function (img) {
+        lowDataObserver.observe(img);
+      });
+    } else {
+      // Disable: disconnect observer and restore all images
+      if (lowDataObserver) {
+        lowDataObserver.disconnect();
+        lowDataObserver = null;
+      }
+      lowDataQueue = [];
+      lowDataLoadingCount = 0;
+      document.querySelectorAll("img[data-lowdata-src]").forEach(function (img) {
+        lowDataRestoreImage(img);
+        img.removeAttribute("decoding");
+      });
+    }
   }
 })();

@@ -4,9 +4,11 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> {{ page.title }}</h1>
-    <p class="post-description">an archive of posts with this tag</p>
   </header>
 
+  {% comment %} Posts with this tag {% endcomment %}
+  {% if page.posts.size > 0 %}
+  <h4>Posts</h4>
   <article class="archive">
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
@@ -27,4 +29,61 @@ layout: default
       </table>
     </div>
   </article>
+  {% endif %}
+
+  {% comment %} Projects with this tag {% endcomment %}
+  {% assign tagged_projects = "" | split: "" %}
+  {% for project in site.projects %}
+    {% if project.tags contains page.title %}
+      {% assign tagged_projects = tagged_projects | push: project %}
+    {% endif %}
+  {% endfor %}
+
+  {% if tagged_projects.size > 0 %}
+  <h4>Projects</h4>
+  <article class="archive">
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless">
+        {% for project in tagged_projects %}
+          <tr>
+            <th scope="row">{{ project.category }}</th>
+            <td>
+              <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+              {% if project.description %}<span class="post-meta"> — {{ project.description | truncate: 80 }}</span>{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </article>
+  {% endif %}
+
+  {% comment %} Gallery items with this tag {% endcomment %}
+  {% assign tagged_gallery = "" | split: "" %}
+  {% for item in site.data.gallery %}
+    {% if item.tags contains page.title %}
+      {% assign tagged_gallery = tagged_gallery | push: item %}
+    {% endif %}
+  {% endfor %}
+
+  {% if tagged_gallery.size > 0 %}
+  <h4>Gallery</h4>
+  <div class="row row-cols-2 row-cols-md-4 g-3" style="margin-bottom: 1.5rem;">
+    {% for item in tagged_gallery limit: 12 %}
+      <div class="col">
+        <a href="{{ '/gallery/' | relative_url }}">
+          <img src="{{ item.image_path | relative_url }}" alt="{{ item.caption | default: 'Gallery image' }}" class="img-fluid rounded z-depth-1" style="width: 100%; height: 150px; object-fit: cover;">
+        </a>
+        {% if item.caption %}<p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">{{ item.caption }}</p>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% if tagged_gallery.size > 12 %}
+    <p><a href="{{ '/gallery/' | relative_url }}">See all {{ tagged_gallery.size }} in gallery →</a></p>
+  {% endif %}
+  {% endif %}
+
+  {% if page.posts.size == 0 and tagged_projects.size == 0 and tagged_gallery.size == 0 %}
+    <p>No content tagged with "{{ page.title }}" yet.</p>
+  {% endif %}
 </div>

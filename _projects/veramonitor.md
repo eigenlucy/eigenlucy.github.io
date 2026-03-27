@@ -5,6 +5,7 @@ description: ESP32-S3 based ESPHome HAOS Panel
 img: assets/img/Gallery/veramonitor.jpg
 importance: 2
 category: electrical engineering
+tags: [electronics]
 related_publications: false
 giscus_comments: true
 ---

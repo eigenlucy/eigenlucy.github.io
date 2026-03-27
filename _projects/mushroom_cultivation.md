@@ -5,6 +5,7 @@ description: A wide array of spores on LME/Agar spore plates. Budget friendly ma
 img: assets/img/Gallery/AgarPlates.jpg
 importance: 1
 category: mycology
+tags: [biology, mycology]
 related_publications: false
 giscus_comments: true
 ---

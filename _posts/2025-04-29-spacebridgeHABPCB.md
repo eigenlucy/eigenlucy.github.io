@@ -3,8 +3,9 @@ layout: post
 title: Spacebridge HAB PCB Development
 date: 2025-04-29 09:00:00-0400
 description: Meshtastic DIY High Altitude Ballooning at Noisebridge Hackerspace
-tags: projects
-categories: featured
+tags: [electronics, meshtastic, pcb-design]
+categories: project
+featured: true
 related_posts: false
 images:
   compare: true

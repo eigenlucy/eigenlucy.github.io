@@ -5,6 +5,7 @@ description: Eggs to adults to eggs :)
 img: assets/img/Gallery/DinoFlagCell.jpg
 importance: 2
 category: biology
+tags: [biology]
 related_publications: false
 giscus_comments: true
 ---

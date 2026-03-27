@@ -27,9 +27,7 @@ Projects/research:
   <li>DIY high altitude ballooning with <a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge</a></li>
 </ul>
 
-Check out my [projects](/projects)
-
-You can see the source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>.
+Source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>. Knowledge graph <a href='https://garden.sophia-labs.com/public/eigenlucy?public_token=b0b4df33-c839-4e4f-a9c6-8b3f40fb2c74'>here</a> (graph view not accessible on mobile, yet).
 
 I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions.
 

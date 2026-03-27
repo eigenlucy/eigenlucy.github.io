@@ -5,6 +5,7 @@ description: Tiny Dual Resonant Solid State Telsa Coil
 img: assets/img/Gallery/DRSSTC3D.jpg
 importance: 3
 category: electrical engineering
+tags: [electronics, high-voltage]
 related_publications: false
 giscus_comments: true
 ---

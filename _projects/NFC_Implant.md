@@ -5,6 +5,7 @@ description: Notes on-Implanting an xSiiD NFC/LED Chip
 img: assets/img/NFCImplantSuccess.jpg
 importance: 1
 category: general systemantics
+tags: [electronics, biohacking]
 related_publications: false
 giscus_comments: true
 ---

@@ -5,6 +5,7 @@ description: CuSO4 electroplating on mSLA/FDM 3D printed parts
 img: assets/img/Gallery/platednietzsche.jpg
 importance: 1
 category: general systemantics
+tags: [electronics]
 related_publications: false
 giscus_comments: true
 ---

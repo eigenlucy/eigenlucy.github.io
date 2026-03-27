@@ -5,6 +5,7 @@ description: 350mm Self Sourced Voron V2.4r2
 img: assets/img/Gallery/voronfini.jpg
 importance: 1
 category: general systemantics
+tags: [electronics]
 related_publications: false
 giscus_comments: true
 ---

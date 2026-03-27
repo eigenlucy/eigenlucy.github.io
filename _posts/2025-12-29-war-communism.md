@@ -4,6 +4,8 @@ title: "War Communism"
 author: "Lucy M."
 date: 2025-12-29
 description: "Proliferation of Eyes by Multiplication of Borders"
+tags: [political-theology, marxism]
+categories: essay
 permalink: /eigenlucy/warcommunism/
 images:
   compare: true

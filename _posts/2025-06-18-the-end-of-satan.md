@@ -4,6 +4,8 @@ title: Le Fin de Satan
 date: 2025-06-13 # Today's date, you can change this
 permalink: /eigenlucy/bastille/
 description: "The End of Satan // The Storming of the Bastille"
+tags: political-theology
+categories: essay
 sitemap: false
 ---
 [And There Was Night](/viewer/?file=/assets/library/Et%20Nox%20Facta%20Est%20-%20Victor%20Hugo.pdf)

@@ -5,6 +5,7 @@ description: Grain spawn/spawn bag inoculation and collecting edible fruits
 img: assets/img/Gallery/LionsMane.jpg
 importance: 1
 category: mycology
+tags: [biology, mycology]
 related_publications: false
 giscus_comments: true
 ---

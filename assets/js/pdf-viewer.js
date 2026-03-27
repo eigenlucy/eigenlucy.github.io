@@ -34,6 +34,7 @@ let rotation = 0;
 let searchQuery = "";
 let matches = []; // [{ page, index }]
 let currentMatchIdx = -1;
+let lowDataSearch = false; // true when search was limited to current page
 
 async function renderPage(num) {
   if (rendering) return;
@@ -101,20 +102,9 @@ function gotoPage(num) {
 
 // --- Full-text search ---
 
-async function searchAllPages(query) {
-  matches = [];
-  currentMatchIdx = -1;
-  searchQuery = query;
-
-  if (!query) {
-    updateMatchCounter();
-    renderPage(currentPage);
-    return;
-  }
-
+async function searchPages(query, pageStart, pageEnd) {
   const q = query.toLowerCase();
-
-  for (let p = 1; p <= pdfDoc.numPages; p++) {
+  for (let p = pageStart; p <= pageEnd; p++) {
     const page = await pdfDoc.getPage(p);
     const textContent = await page.getTextContent();
     textContent.items.forEach((item, idx) => {
@@ -123,17 +113,40 @@ async function searchAllPages(query) {
       }
     });
   }
+}
+
+async function searchAllPages(query, forceAll) {
+  matches = [];
+  currentMatchIdx = -1;
+  searchQuery = query;
+  lowDataSearch = false;
+
+  if (!query) {
+    updateMatchCounter();
+    renderPage(currentPage);
+    return;
+  }
+
+  const isLowData = !forceAll && localStorage.getItem("setting-low-data") === "true";
+
+  if (isLowData) {
+    // Only search the current page
+    await searchPages(query, currentPage, currentPage);
+    lowDataSearch = true;
+  } else {
+    await searchPages(query, 1, pdfDoc.numPages);
+  }
 
   updateMatchCounter();
 
   if (matches.length > 0) {
     currentMatchIdx = 0;
-    // Jump to first match on or after the current page, or first overall
-    const onOrAfter = matches.findIndex((m) => m.page >= currentPage);
-    if (onOrAfter !== -1) currentMatchIdx = onOrAfter;
+    if (!isLowData) {
+      const onOrAfter = matches.findIndex((m) => m.page >= currentPage);
+      if (onOrAfter !== -1) currentMatchIdx = onOrAfter;
+    }
     jumpToCurrentMatch();
   } else {
-    // Re-render to clear old highlights if query changed to no-match
     renderPage(currentPage);
   }
 }
@@ -164,9 +177,21 @@ function prevMatch() {
 
 function updateMatchCounter() {
   if (!searchQuery || matches.length === 0) {
-    matchCountSpan.textContent = searchQuery ? "0 of 0" : "";
+    matchCountSpan.innerHTML = searchQuery ? "0 of 0" : "";
   } else {
-    matchCountSpan.textContent = `${currentMatchIdx + 1} of ${matches.length}`;
+    matchCountSpan.innerHTML = `${currentMatchIdx + 1} of ${matches.length}`;
+  }
+  if (lowDataSearch && searchQuery) {
+    const suffix = matches.length === 0 ? "0 on this page" : `${matches.length} on this page`;
+    matchCountSpan.innerHTML = suffix +
+      ' · <a href="#" id="pdf-search-all" style="font-size:0.75rem">search all</a>';
+    const searchAllLink = document.getElementById("pdf-search-all");
+    if (searchAllLink) {
+      searchAllLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        searchAllPages(searchQuery, true);
+      });
+    }
   }
 }
 

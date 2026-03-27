@@ -5,6 +5,7 @@ description: MPPT for the Femtofox Linux Meshtastic Client
 img: assets/img/Gallery/femtofox-mppt-draft.jpg
 importance: 3
 category: electrical engineering
+tags: [electronics, solar, meshtastic]
 related_publications: false
 giscus_comments: true
 ---

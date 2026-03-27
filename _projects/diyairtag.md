@@ -5,6 +5,7 @@ description: Low cost open-source Find My Network geolocator
 img: assets/img/Gallery/waymomap.png
 importance: 3
 category: electrical engineering
+tags: [electronics, rf]
 related_publications: false
 giscus_comments: true
 ---

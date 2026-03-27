@@ -6,6 +6,7 @@ description: Edge ML gas composition sensing with MOX arrays and ESP32-S3
 img: assets/img/Gallery/NonHumanScent.jpg
 importance: 1
 category: electrical engineering
+tags: [electronics, ai]
 related_publications: false
 giscus_comments: true
 ---

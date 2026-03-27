@@ -5,6 +5,7 @@ description: Installation, usage, and best-practices
 img: assets/img/Gallery/atopile.jpg
 importance: 5
 category: electrical engineering
+tags: [electronics, pcb-design]
 related_publications: false
 giscus_comments: true
 ---

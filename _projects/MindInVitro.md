@@ -5,6 +5,7 @@ description: Open source cultured neuron headstage
 img: assets/img/Gallery/MindInVitro.png
 importance: 1
 category: biology
+tags: [biology, neuroscience]
 related_publications: false
 giscus_comments: true
 ---
