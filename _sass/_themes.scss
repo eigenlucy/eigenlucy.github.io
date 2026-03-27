@@ -66,6 +66,18 @@ html[data-theme="light"] {
   a:hover, table.table a:hover {
     color: #126565 !important;
   }
+
+  // Ensure dark text on all common containers in light mode
+  .card, .list-group-item, table.table td, table.table th,
+  table.table-cv td, details td, details th,
+  .cv .card .list-group-item, .news td, .news th,
+  h6.title {
+    color: #{$black-color};
+  }
+  // Badge text stays white on teal bg
+  .cv .card .list-group-item .badge {
+    color: #{$white-color} !important;
+  }
 }
 
 /* Readable fonts override */

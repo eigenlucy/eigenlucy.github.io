@@ -497,6 +497,57 @@ footer.sticky-bottom {
   }
 }
 
+// AO tabs
+#ao-tabs {
+  border-bottom: 2px solid var(--global-divider-color);
+  margin-bottom: 1.5rem;
+
+  .nav-link {
+    color: var(--global-text-color);
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      border-bottom-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &.active {
+      color: var(--global-theme-color);
+      border-bottom-color: var(--global-theme-color);
+      background-color: transparent;
+    }
+  }
+}
+
+.tab-content {
+  .tab-pane {
+    padding-top: 0.5rem;
+  }
+
+  details {
+    margin: 1rem 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+
+    summary {
+      color: var(--global-theme-color);
+      padding: 0.25rem 0;
+    }
+
+    table {
+      margin-top: 0.5rem;
+
+      td, th {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
 // CV
 
 .cv {

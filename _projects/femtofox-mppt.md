@@ -14,4 +14,4 @@ giscus_comments: true
 
 See the <a href="https://github.com/eigenlucy/femtofox-mppt">project GitHub</a> for more info and updates.
 
-See the <a href="https://eigenlucy.github.io/projects/femotfox">FemtoFox</a> project page for more details on the FemtoFox project.
+See the <a href="https://eigenlucy.com/projects/femotfox">FemtoFox</a> project page for more details on the FemtoFox project.

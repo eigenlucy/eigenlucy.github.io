@@ -20,7 +20,7 @@ nav_order: 1
     <li>Teardowns/Reverse Engineering</li>
     <li>Rapid Prototyping</li>
     <li>Test Equipment Design and Construction, UI Design/Construction</li>
-    <li><a href="https://eigenlucy.github.io/projects/voron24/">FDM 3D printing (up to 350mm^3)</a> + mSLA Resin printing</li>
+    <li><a href="https://eigenlucy.com/projects/voron24/">FDM 3D printing (up to 350mm^3)</a> + mSLA Resin printing</li>
     <li>CAD Design</li>
     <li>Laser Engraving</li>
     <li>Small Scale Manufacturing Processes</li>

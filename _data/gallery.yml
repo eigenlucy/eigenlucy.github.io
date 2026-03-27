@@ -89,12 +89,12 @@
 
 - file: izzymonitor.jpg
   type: image
-  caption: '<a href="https://eigenlucy.github.io/projects/izzymonitor">Izzymonitor</a> HAOS panel'
+  caption: '<a href="https://eigenlucy.com/projects/izzymonitor">Izzymonitor</a> HAOS panel'
   tags: [pcb design, electrical engineering, attiny, electronics]
 
 - file: micromppt.jpg
   type: image
-  caption: '<a href="https://eigenlucy.github.io/projects/micromppt/">MicroMPPT</a> test board'
+  caption: '<a href="https://eigenlucy.com/projects/micromppt/">MicroMPPT</a> test board'
   tags: [pcb design, electrical engineering, electronics]
 
 - file: DiethylEther.JPEG

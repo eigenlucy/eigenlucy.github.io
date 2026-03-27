@@ -15,7 +15,7 @@ keywords: portfolio, engineer, resume, cv, tech, STEM # add your own keywords or
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://eigenlucy.github.io # the base hostname & protocol for your site
+url: https://eigenlucy.com # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 repository: eigenlucy/eigenlucy.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 last_updated: false # set to true if you want to display last updated in the footer
