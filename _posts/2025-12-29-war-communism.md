@@ -57,6 +57,9 @@ In the Gnostic cosmology, there is a being on the edge of the world known as Sab
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/MG.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/gardenbeds.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/cleooverhead.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/workshop.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/gardenfields.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/WarCommunism/biolumen.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002380.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/party.mov" type="video/quicktime"></video></swiper-slide>
   <swiper-slide><video controls playsinline><source src="/assets/img/WarCommunism/1000002531.mov" type="video/quicktime"></video></swiper-slide>
