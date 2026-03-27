@@ -470,17 +470,17 @@ footer.fixed-bottom {
   font-size: 0.75rem;
 
   .container {
-    color: white;
+    color: var(--global-footer-text-color);
     padding-top: 6px;
     padding-bottom: 4px;
     text-align: center;
   }
 
   a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--global-footer-link-color);
 
     &:hover {
-      color: white;
+      color: var(--global-footer-link-color);
       text-decoration: none;
     }
   }

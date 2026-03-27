@@ -57,7 +57,7 @@ body.sticky-bottom-footer {
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  background: rgb(20, 20, 20); // match the baseGray so no white flash before JS runs
+  background: var(--global-bg-color); // theme-aware: no dark flash in light mode
 }
 
 nav#navbar {
@@ -84,7 +84,7 @@ footer.sticky-bottom {
 
 // News date color fix
 .news table th {
-  color: #cccccc !important; // Light greyish off-white. Using !important to ensure override.
+  color: var(--global-text-color) !important;
 }
 
 img.centered {
