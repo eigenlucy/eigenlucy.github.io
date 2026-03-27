@@ -1,813 +1,1370 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-27T02:30:59+00:00</updated><id>https://eigenlucy.github.io/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
-</subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/AO-reading-group-notes/"><![CDATA[<p><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf">Read Anti-Oedipus in the library</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-27T21:21:35+00:00</updated><id>https://eigenlucy.com/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+</subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.com/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/AO-reading-group-notes/"><![CDATA[<p><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf">Read Anti-Oedipus in the library</a></p>
 
-<h2 id="key-terms-intro--section-1">Key Terms: Intro &amp; Section 1</h2>
+<ul class="nav nav-tabs" id="ao-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="concepts-tab" data-toggle="tab" href="#concepts" role="tab" aria-controls="concepts" aria-selected="true">Concept Map</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="notes-tab" data-toggle="tab" href="#notes" role="tab" aria-controls="notes" aria-selected="false">Session Notes</a>
+  </li>
+</ul>
 
-<p><em>WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members. Each session, each member is assigned a concept they are chiefly responsible for tracking, and are encourged to diagram/sketch their concept as we read/discuss together.</em></p>
+<div class="tab-content" id="ao-tab-content">
+<div class="tab-pane fade show active" id="concepts" role="tabpanel" aria-labelledby="concepts-tab">
 
-<hr />
+    <h2 id="key-terms-intro--section-1">Key Terms: Intro &amp; Section 1</h2>
 
-<h3 id="machines--desiring-machines">Machines / Desiring-Machines</h3>
+    <p><em>WIP, this will get updated as our reading group goes through the book to include descriptions, commentary, and drawings of concepts made by reading group members. Each session, each member is assigned a concept they are chiefly responsible for tracking, and are encouraged to diagram/sketch their concept as we read/discuss together.</em></p>
 
-<p>Proximate terms: flows, production, synthesis, materialist psychiatry</p>
+    <details>
+<summary style="cursor: pointer; font-weight: bold; margin-bottom: 0.5rem;">Concept Assignments</summary>
+<div style="margin-top: 0.5rem;">
 
-<p>Relevant passages:</p>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: left">Concept</th>
+              <th style="text-align: left">Tracker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left">Machines / Desiring-Machines</td>
+              <td style="text-align: left">Victoria / @victoriaposting</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Synthesis (Conjunctive / Disjunctive)</td>
+              <td style="text-align: left"><a href="https://eschatonjxp.bandcamp.com">eschaton</a> / @octaviav4820</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Body without Organs (BwO)</td>
+              <td style="text-align: left"><a href="https://x.com/unleadedicedtea">millie</a> / @millimill</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Production / Desiring-Production</td>
+              <td style="text-align: left">cassandra / @agliacci</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Intensity</td>
+              <td style="text-align: left">iris / @irislaboratories</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Desire</td>
+              <td style="text-align: left">adam / @norwegianwoods</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Territory</td>
+              <td style="text-align: left">Izzy / @sleepy_space_squid</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Homo Natura (Schizophrenia)</td>
+              <td style="text-align: left"><em>unassigned</em></td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Paranoia</td>
+              <td style="text-align: left">petra / @torble_</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Nature // Machines</td>
+              <td style="text-align: left">jess / @jessicavass</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Investment</td>
+              <td style="text-align: left"><em>unassigned</em></td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Repression</td>
+              <td style="text-align: left">Chris</td>
+            </tr>
+            <tr>
+              <td style="text-align: left">Organism // Organ</td>
+              <td style="text-align: left">@imperfectlibrarian</td>
+            </tr>
+          </tbody>
+        </table>
 
-<p><strong>Introduction, p. xvi:</strong></p>
+      </div>
+</details>
 
-<blockquote>
-  <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual, Anti-Oedipus seeks to discover the ‘deterritorialized’ flows of desire, the flows that have not been reduced to the Oedipal codes and the neuroticized territorialities, the desiring-machines that escape such codes as lines of escape leading elsewhere.”</p>
+    <hr />
 
-</blockquote>
+    <h3 id="machines--desiring-machines">Machines / Desiring-Machines</h3>
 
-<p><strong>Introduction, p. xvii:</strong></p>
+    <p>Proximate terms: flows, production, synthesis, materialist psychiatry</p>
 
-<blockquote>
-  <p>“Deleuze and Guattari, on the other hand, postulate one and the same economy, the economy of flows. The flows and productions of desire will simply be viewed as the most unconscious of the social productions.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 1:</strong></p>
-
-<blockquote>
-  <p>“It is at work everywhere, functioning smoothly at times, at other times in fits and starts. It breathes, it heats, it eats. It shits and fucks. What a mistake to have ever said the id. Everywhere it is machines—real ones, not figurative ones: machines driving other machines, machines being driven by other machines, with all the necessary couplings and connections.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 2:</strong></p>
-
-<blockquote>
-  <p>“Everything is a machine. Celestial machines, the stars or rainbows in the sky, alpine machines—all of them connected to those of his body. The continual whirr of machines.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 5:</strong></p>
-
-<blockquote>
-  <p>“Desiring-machines are binary machines, obeying a binary law or set of rules governing associations: one machine is always coupled with another. The productive synthesis, the production of production, is inherently connective in nature: ‘and . . .’ ‘and then . . .’”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring Production, p. 7:</strong></p>
-
-<blockquote>
-  <p>“Every ‘object’ presupposes the continuity of a flow; every flow, the fragmentation of the object.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 31-32:</strong></p>
-
-<blockquote>
-  <p>“Desiring-machines work only when they break down, and by continually breaking down.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual, Anti-Oedipus seeks to discover the ‘deterritorialized’ flows of desire, the flows that have not been reduced to the Oedipal codes and the neuroticized territorialities, the desiring-machines that escape such codes as lines of escape leading elsewhere.”</p>
-
-</blockquote>
-
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=Against%20the%20Oedipal%20and%20oedipalized">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual, Anti-Oedipus seeks to discover the ‘deterritorialized’ flows of desire, the flows that have not been reduced to the Oedipal codes and the neuroticized territorialities, the desiring-machines that escape such codes as lines of escape leading elsewhere.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=16&amp;highlight=Guattari%2C%20on%20the%20other%20hand">Introduction, p. xvii</a>:</strong></p>
+
+        <blockquote>
+          <p>“Deleuze and Guattari, on the other hand, postulate one and the same economy, the economy of flows. The flows and productions of desire will simply be viewed as the most unconscious of the social productions.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=24&amp;highlight=It%20is%20at%20work%20everywhere">1. Desiring-Production, p. 1</a>:</strong></p>
+
+        <blockquote>
+          <p>“It is at work everywhere, functioning smoothly at times, at other times in fits and starts. It breathes, it heats, it eats. It shits and fucks. What a mistake to have ever said the id. Everywhere it is machines—real ones, not figurative ones: machines driving other machines, machines being driven by other machines, with all the necessary couplings and connections.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=25&amp;highlight=Celestial%20machines%2C%20the%20stars%20or">1. Desiring-Production, p. 2</a>:</strong></p>
+
+        <blockquote>
+          <p>“Everything is a machine. Celestial machines, the stars or rainbows in the sky, alpine machines—all of them connected to those of his body. The continual whirr of machines.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=28&amp;highlight=Desiring-machines%20are%20binary%20machines%2C%20obeying">1. Desiring-Production, p. 5</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desiring-machines are binary machines, obeying a binary law or set of rules governing associations: one machine is always coupled with another. The productive synthesis, the production of production, is inherently connective in nature: ‘and . . .’ ‘and then . . .’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=30&amp;highlight=of%20the%20object">1. Desiring Production, p. 7</a>:</strong></p>
+
+        <blockquote>
+          <p>“Every ‘object’ presupposes the continuity of a flow; every flow, the fragmentation of the object.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=54&amp;highlight=down">4. A Materialist Psychiatry, p. 31-32</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desiring-machines work only when they break down, and by continually breaking down.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual, Anti-Oedipus seeks to discover the ‘deterritorialized’ flows of desire, the flows that have not been reduced to the Oedipal codes and the neuroticized territorialities, the desiring-machines that escape such codes as lines of escape leading elsewhere.”</p>
+
+        </blockquote>
+
+        <div>
   <img src="/assets/img/machines.png" alt="machines drawing" style="width: 20%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">Machines making space by moi</div>
-<hr />
+        <div class="caption">Machines making space by moi</div>
 
-<h3 id="production--desiring-production">Production / Desiring-Production</h3>
+      </div>
+</details>
 
-<p>Proximate terms: Synthesis, mutation, circulation, fractalization, multiplication</p>
+    <hr />
 
-<p>Relevant passages:</p>
+    <h3 id="production--desiring-production">Production / Desiring-Production</h3>
 
-<blockquote>
-  <p>“A subject-group, on the contrary, is a group whose libidinal investments are themselves revolutionary, it causes desire to penetrate into the social field, and subordinates the socius or the forms of power to desiring-production; productive of desire and a desire that produces…”</p>
+    <p>Proximate terms: Synthesis, mutation, circulation, fractalization, multiplication</p>
 
-</blockquote>
-
-<p><strong>Introduction, p. xxiii:</strong></p>
-
-<blockquote>
-  <p>“It is this process—of desiring-production—that Anti-Oedipus sets out to analyze.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“For if desire is repressed in a society, Deleuze and Guattari state, this is hardly because ‘it is a desire for the mother or for the death of the father; on the contrary, desire becomes that only because it is repressed, it takes that mask on under the reign of the repression that models the mask for it and plasters it on its face.’”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The real danger is elsewhere. If desire is repressed, it is because every position of desire, no matter how small, is capable of calling into question the established order of a society: not that desire is asocial; on the contrary. But it is explosive; there is no desiring-machine capable of being assembled without demolishing entire social sectors.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 4-5:</strong></p>
-
-<blockquote>
-  <p>“Hence everything is production: production of productions, of actions and of passions; productions of recording processes, of distributions and of co-ordinates that serve as points of reference; productions of consumptions, of sensual pleasures, of anxieties, and of pain. Everything is production, since the recording processes are immediately consumed, immediately consummated, and these consumptions directly reproduced.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Not man as the king of creation, but rather as the being who is in intimate contact with the profound life of all forms or all types of beings, who is responsible for even the stars and animal life, and who ceaselessly plugs an organ-machine into an energy-machine, a tree into his body, a breast into his mouth, the sun into his asshole: the eternal custodian of the machines of the universe.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 22:</strong></p>
-
-<blockquote>
-  <p>“The unconscious and the category of production. The unconscious is a factory, not a theater.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Desiring-production is the locus of a primal psychic repression, whereas social production is where social repression takes place.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 27:</strong></p>
-
-<blockquote>
-  <p>“Desire is the set of passive syntheses that engineer partial objects, flows, and bodies, and that function as units of production.”</p>
-
-</blockquote>
-
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <blockquote>
+          <p>“A subject-group, on the contrary, is a group whose libidinal investments are themselves revolutionary, it causes desire to penetrate into the social field, and subordinates the socius or the forms of power to desiring-production; productive of desire and a desire that produces…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=22">Introduction, p. xxiii</a>:</strong></p>
+
+        <blockquote>
+          <p>“It is this process—of desiring-production—that Anti-Oedipus sets out to analyze.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“For if desire is repressed in a society, Deleuze and Guattari state, this is hardly because ‘it is a desire for the mother or for the death of the father; on the contrary, desire becomes that only because it is repressed, it takes that mask on under the reign of the repression that models the mask for it and plasters it on its face.’”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The real danger is elsewhere. If desire is repressed, it is because every position of desire, no matter how small, is capable of calling into question the established order of a society: not that desire is asocial; on the contrary. But it is explosive; there is no desiring-machine capable of being assembled without demolishing entire social sectors.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=27&amp;highlight=Hence%20everything%20is%20production%3A%20production">1. Desiring-Production, p. 4-5</a>:</strong></p>
+
+        <blockquote>
+          <p>“Hence everything is production: production of productions, of actions and of passions; productions of recording processes, of distributions and of co-ordinates that serve as points of reference; productions of consumptions, of sensual pleasures, of anxieties, and of pain. Everything is production, since the recording processes are immediately consumed, immediately consummated, and these consumptions directly reproduced.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Not man as the king of creation, but rather as the being who is in intimate contact with the profound life of all forms or all types of beings, who is responsible for even the stars and animal life, and who ceaselessly plugs an organ-machine into an energy-machine, a tree into his body, a breast into his mouth, the sun into his asshole: the eternal custodian of the machines of the universe.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=45&amp;highlight=of%20production">4. A Materialist Psychiatry, p. 22</a>:</strong></p>
+
+        <blockquote>
+          <p>“The unconscious and the category of production. The unconscious is a factory, not a theater.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Desiring-production is the locus of a primal psychic repression, whereas social production is where social repression takes place.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=50&amp;highlight=of%20passive%20syntheses">4. A Materialist Psychiatry, p. 27</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desire is the set of passive syntheses that engineer partial objects, flows, and bodies, and that function as units of production.”</p>
+
+        </blockquote>
+
+        <div>
   <img src="/assets/img/ProductionOfMilk.jpg" alt="Production of 'Milk" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">Lucy's drawing of the production of 'Milk', the consolidation of Almond juice and animal milk under industrial conditions</div>
-<hr />
+        <div class="caption">Lucy's drawing of the production of 'Milk', the consolidation of Almond juice and animal milk under industrial conditions</div>
 
-<h3 id="intensity">Intensity</h3>
+      </div>
+</details>
 
-<p>Proximate terms: Passion, affect//affection, flow, drive, desire, instinct</p>
+    <hr />
 
-<p>Relevant passages:</p>
+    <h3 id="intensity">Intensity</h3>
 
-<p><strong>Introduction, p. xvi:</strong></p>
+    <p>Proximate terms: Passion, affect//affection, flow, drive, desire, instinct</p>
 
-<blockquote>
-  <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other, on a scale of intensity that goes from 0 (‘I never asked to be born… leave me in peace’), the body without organs, to the nth power (‘I am all that exists, all the names in history’), the schizophrenic process of desire.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xviii:</strong></p>
-
-<blockquote>
-  <p>“To Nietzsche, and the Nietzschean theory of affects and intensity, Anti-Oedipus suggests. For here, and especially in On the Genealogy of Morals, is a theory of desire and will, of the conscious and the unconscious forces, that relates desire directly to the social field and to a monetary system based on profit.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 17:</strong></p>
-
-<blockquote>
-  <p>“Matter, egg, and intensities: I feel. The subject is produced as an intensity on the body without organs.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The subject consumed and consummated each time the self is produced as an intensity on the body without organs, at the infinite speed of being a specific self, of being the self of a specific intensity—Joan of Arc, Heliogabalus, etc.—and then of losing that self as one passes beyond the intensity that produced it, to become another self corresponding to another intensity.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The basic phenomenon of hallucination (I see, I hear) and the basic phenomenon of delirium (I think…) presuppose an I feel at an even deeper level, which gives hallucinations their object and thought delirium its content—an ‘I feel that I am becoming a woman,’ ‘that I am becoming a god,’ and so on, which is neither delirious nor hallucinatory.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The answer would seem to be: intensive quantities. There is a schizophrenic experience of intensive quantities in their pure state, to a point that is almost unbearable—a celibate misery and glory experienced to the fullest, like a cry suspended between life and death, an intense feeling of transition, states of pure, naked intensity stripped of all shape and form.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 19:</strong></p>
-
-<blockquote>
-  <p>“The breasts on the judge’s naked torso are neither delirious nor hallucinatory phenomena: they designate, first of all, a band of intensity, a zone of intensity on his body without organs.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“It must not be thought that the intensities themselves are in opposition to one another, arriving at a state of balance around a neutral state. On the contrary, they are all positive in relationship to the zero intensity that designates the full body without organs.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The opposition of the forces of attraction and repulsion produces an open series of intensive elements, all of them positive, that are never an expression of the final equilibrium of a system, but consist, rather, of an unlimited number of stationary, metastable states through which a subject passes.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 19-20:</strong></p>
-
-<blockquote>
-  <p>“Nothing but bands of intensity, potentials, thresholds, and gradients. A harrowing, emotionally overwhelming experience, which brings the schizo as close as possible to matter, to a burning, living center of matter.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Nothing here is representative; rather, it is all life and lived experience: the actual, lived emotion of having breasts does not resemble breasts, it does not represent them, any more than a predestined zone in the egg resembles the organ that it is going to be stimulated to produce within itself.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The body without organs is an egg: it is crisscrossed with axes and thresholds, with latitudes and longitudes and geodesic lines, traversed by gradients marking the transitions and the becomings, the destinations of the subject developing along these particular vectors.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="synthesis-conjunctive--disjunctive">Synthesis (Conjunctive / Disjunctive)</h3>
-
-<p>Proximate terms: Flow, stock, production, difference, novelty</p>
-
-<p>Relevant passages:</p>
-
-<p>Table of Contents, p. 1:</p>
-
-<blockquote>
-  <p>“The first synthesis: the connective synthesis or production of production”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxii:</strong></p>
-
-<blockquote>
-  <p>“What is the function of desire, Anti-Oedipus asks, if not one of making connections? For to be bogged down in arrangements from which escape is possible is to be neurotic, seeing an irresolvable crisis where alternatives in fact exist.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 16:</strong></p>
-
-<blockquote>
-  <p>“It is this residual energy that is the motive force behind the third synthesis of the unconscious: the conjunctive synthesis ‘so it’s…,’ or the production of consumption.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 16-17:</strong></p>
-
-<blockquote>
-  <p>“Conforming to the meaning of the word ‘process,’ recording falls back on (se rabat sur) production, but the production of recording itself is produced by the production of production. Similarly, recording is followed by consumption, but the production of consumption is produced in and through the production of recording. This is because something on the order of a subject can be discerned on the recording surface. It is a strange subject, however, with no fixed identity, wandering about over the body without organs, but always remaining peripheral to the desiring-machines, being defined by the share of the product it takes for itself, garnering here, there, and everywhere a reward in the form of a becoming or an avatar, being born of the states that it consumes and being reborn with each new state. ‘It’s me, and so it’s mine.’”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 20:</strong></p>
-
-<blockquote>
-  <p>“The subject spreads itself out along the entire circumference of the circle, the center of which has been abandoned by the ego. At the center is the desiring-machine.”</p>
-
-</blockquote>
-
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=From%20paranoia%20to%20schizophrenia%2C%20from">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other, on a scale of intensity that goes from 0 (‘I never asked to be born… leave me in peace’), the body without organs, to the nth power (‘I am all that exists, all the names in history’), the schizophrenic process of desire.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=17&amp;highlight=To%20Nietzsche">Introduction, p. xviii</a>:</strong></p>
+
+        <blockquote>
+          <p>“To Nietzsche, and the Nietzschean theory of affects and intensity, Anti-Oedipus suggests. For here, and especially in On the Genealogy of Morals, is a theory of desire and will, of the conscious and the unconscious forces, that relates desire directly to the social field and to a monetary system based on profit.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=the%20body%20without%20organs">3. The Subject and Enjoyment, p. 17</a>:</strong></p>
+
+        <blockquote>
+          <p>“Matter, egg, and intensities: I feel. The subject is produced as an intensity on the body without organs.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The subject consumed and consummated each time the self is produced as an intensity on the body without organs, at the infinite speed of being a specific self, of being the self of a specific intensity—Joan of Arc, Heliogabalus, etc.—and then of losing that self as one passes beyond the intensity that produced it, to become another self corresponding to another intensity.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The basic phenomenon of hallucination (I see, I hear) and the basic phenomenon of delirium (I think…) presuppose an I feel at an even deeper level, which gives hallucinations their object and thought delirium its content—an ‘I feel that I am becoming a woman,’ ‘that I am becoming a god,’ and so on, which is neither delirious nor hallucinatory.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The answer would seem to be: intensive quantities. There is a schizophrenic experience of intensive quantities in their pure state, to a point that is almost unbearable—a celibate misery and glory experienced to the fullest, like a cry suspended between life and death, an intense feeling of transition, states of pure, naked intensity stripped of all shape and form.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=42&amp;highlight=The%20breasts%20on%20the%20judge%27s">3. The Subject and Enjoyment, p. 19</a>:</strong></p>
+
+        <blockquote>
+          <p>“The breasts on the judge’s naked torso are neither delirious nor hallucinatory phenomena: they designate, first of all, a band of intensity, a zone of intensity on his body without organs.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“It must not be thought that the intensities themselves are in opposition to one another, arriving at a state of balance around a neutral state. On the contrary, they are all positive in relationship to the zero intensity that designates the full body without organs.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The opposition of the forces of attraction and repulsion produces an open series of intensive elements, all of them positive, that are never an expression of the final equilibrium of a system, but consist, rather, of an unlimited number of stationary, metastable states through which a subject passes.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=42&amp;highlight=Nothing%20but%20bands%20of%20intensity">3. The Subject and Enjoyment, p. 19-20</a>:</strong></p>
+
+        <blockquote>
+          <p>“Nothing but bands of intensity, potentials, thresholds, and gradients. A harrowing, emotionally overwhelming experience, which brings the schizo as close as possible to matter, to a burning, living center of matter.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Nothing here is representative; rather, it is all life and lived experience: the actual, lived emotion of having breasts does not resemble breasts, it does not represent them, any more than a predestined zone in the egg resembles the organ that it is going to be stimulated to produce within itself.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The body without organs is an egg: it is crisscrossed with axes and thresholds, with latitudes and longitudes and geodesic lines, traversed by gradients marking the transitions and the becomings, the destinations of the subject developing along these particular vectors.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="synthesis-conjunctive--disjunctive">Synthesis (Conjunctive / Disjunctive)</h3>
+
+    <p>Proximate terms: Flow, stock, production, difference, novelty</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p>Table of Contents, p. 1:</p>
+
+        <blockquote>
+          <p>“The first synthesis: the connective synthesis or production of production”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=21&amp;highlight=of%20desire">Introduction, p. xxii</a>:</strong></p>
+
+        <blockquote>
+          <p>“What is the function of desire, Anti-Oedipus asks, if not one of making connections? For to be bogged down in arrangements from which escape is possible is to be neurotic, seeing an irresolvable crisis where alternatives in fact exist.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=39&amp;highlight=residual">3. The Subject and Enjoyment, p. 16</a>:</strong></p>
+
+        <blockquote>
+          <p>“It is this residual energy that is the motive force behind the third synthesis of the unconscious: the conjunctive synthesis ‘so it’s…,’ or the production of consumption.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=39&amp;highlight=Conforming%20to%20the%20meaning%20of">1. Desiring-Production, p. 16-17</a>:</strong></p>
+
+        <blockquote>
+          <p>“Conforming to the meaning of the word ‘process,’ recording falls back on (se rabat sur) production, but the production of recording itself is produced by the production of production. Similarly, recording is followed by consumption, but the production of consumption is produced in and through the production of recording. This is because something on the order of a subject can be discerned on the recording surface. It is a strange subject, however, with no fixed identity, wandering about over the body without organs, but always remaining peripheral to the desiring-machines, being defined by the share of the product it takes for itself, garnering here, there, and everywhere a reward in the form of a becoming or an avatar, being born of the states that it consumes and being reborn with each new state. ‘It’s me, and so it’s mine.’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=43&amp;highlight=of%20the%20circle">3. The Subject and Enjoyment, p. 20</a>:</strong></p>
+
+        <blockquote>
+          <p>“The subject spreads itself out along the entire circumference of the circle, the center of which has been abandoned by the ego. At the center is the desiring-machine.”</p>
+
+        </blockquote>
+
+        <div>
   <img src="/assets/img/synthesis_2.jpg" alt="second synthesis drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">Synthesis (Conjunctive//Disjunctive<a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
-<div>
+        <div class="caption">Synthesis (Conjunctive//Disjunctive<a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
+        <div>
   <img src="/assets/img/third_synthesis.jpg" alt="third synthesis drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">Third Synthesis (So It's Me by <a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
+        <div class="caption">Third Synthesis (So It's Me by <a href="https://eschatonjxp.bandcamp.com">EschatonJXP</a>)</div>
 
-<hr />
+      </div>
+</details>
 
-<h3 id="body-without-organs-bwo">Body without Organs (BwO)</h3>
+    <hr />
 
-<p>Lucy’s description:</p>
+    <h3 id="body-without-organs-bwo">Body without Organs (BwO)</h3>
 
-<p>The BwO is the transcendent object of Deleuze and Guattari’s system. It is the <em>creative nothing</em> in place of God, the unity of the Body (the object of psychoanalysis), and the stasis of the Law. Every social system requires structures which govern the flow of desire, with a corresponding teleology asserting what the proper object of desires ought to be. Everyone has a drive to know that it’s all going somewhere, that the territories constituted by the investments culminate in some great understanding. This is the desire at the center of the immortality of the soul, the persistence of cultural traditions, the “true self” pursued by analysis, Heaven as the rapture of the self, God’s plan always waiting for you.</p>
+    <p>Lucy’s description:</p>
 
-<p>The BwO says: there is such an immanence that it’s all going somewhere, but not in reference to the origins or the ends of drives. There simply is immanence, an underlying capacity for the production of domains which undergirds all intelligence and all social formations. The BwO is desire liberated, but not desire-in-itself. It would be better to say that the BwO is the impossibility of desire-in-itself. “There is no sexual relation,” and yet there are still pre-individual powers which are prior to (but not independent of) the field of identity relations.</p>
+    <p>The BwO is the transcendent object of Deleuze and Guattari’s system. It is the <em>creative nothing</em> in place of God, the unity of the Body (the object of psychoanalysis), and the stasis of the Law. Every social system requires structures which govern the flow of desire, with a corresponding teleology asserting what the proper object of desires ought to be. Everyone has a drive to know that it’s all going somewhere, that the territories constituted by the investments culminate in some great understanding. This is the desire at the center of the immortality of the soul, the persistence of cultural traditions, the “true self” pursued by analysis, Heaven as the rapture of the self, God’s plan always waiting for you.</p>
 
-<p>The BwO is the field the schizophrenic taps into when they stop understanding their body as a unity and begin to experience it as a basin of affects riding over them. It is the source of paranoia, disorganized catatonia, sadomasochism, drug addiction, and delirium; it is nonetheless also of the promise that the body can always be organized differently with no less a degree of immanent reality.</p>
+    <p>The BwO says: there is such an immanence that it’s all going somewhere, but not in reference to the origins or the ends of drives. There simply is immanence, an underlying capacity for the production of domains which undergirds all intelligence and all social formations. The BwO is desire liberated, but not desire-in-itself. It would be better to say that the BwO is the impossibility of desire-in-itself. “There is no sexual relation,” and yet there are still pre-individual powers which are prior to (but not independent of) the field of identity relations.</p>
 
-<p>Proximate terms: Production//consumption, flows, plane of immanence, intensity</p>
+    <p>The BwO is the field the schizophrenic taps into when they stop understanding their body as a unity and begin to experience it as a basin of affects riding over them. It is the source of paranoia, disorganized catatonia, sadomasochism, drug addiction, and delirium; it is nonetheless also of the promise that the body can always be organized differently with no less a degree of immanent reality.</p>
 
-<p>Relevant passages:</p>
+    <p>Proximate terms: Production//consumption, flows, plane of immanence, intensity</p>
 
-<p><strong>Introduction, p. xvi:</strong></p>
-
-<blockquote>
-  <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other, on a scale of intensity that goes from 0 (‘I never asked to be born… leave me in peace’), the body without organs…”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxii:</strong></p>
-
-<blockquote>
-  <p>“Ego-loss is the experience of all mankind, ‘of the primal man, of Adam and perhaps even [a journey] further into the beings of animals, vegetables and minerals.’”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 9:</strong></p>
-
-<blockquote>
-  <p>“The body without organs is an egg: it is crisscrossed with axes and thresholds, with latitudes and longitudes and geodesic lines, traversed by gradients marking the transitions and the becomings.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“There is a schizophrenic experience of intensive quantities in their pure state, to a point that is almost unbearable—a celibate misery and glory experienced to the fullest.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“An apparent conflict arises between desiring-machines and the body without organs. Every coupling of machines, every production of a machine, every sound of a machine running, becomes unbearable to the body without organs. Beneath its organs it senses there are larvae and loathsome worms, and a God at work messing it all up or strangling it by organizing it. ‘The body is the body/it is all by itself/and has no need of organs/the body is never an organism/organisms are the enemies of the body.’”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Desiring-machines are not fantasy-machines or dream-machines… fantasies are secondary expressions, deriving from the identical nature of the two sorts of machines.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 12-13:</strong></p>
-
-<blockquote>
-  <p>“As Artaud put it: I don’t believe in father in mother, got no papamummy. The full body without organs is produced as antiproduction, that is to say it intervenes within the process as such for the sole purpose of rejecting any attempt to impose on it any sort of triangulation implying that it was produced by parents. How could this body have been produced by parents, when by its very nature it is such eloquent witness of its own self-production, of its own engendering of itself?”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 15:</strong></p>
-
-<blockquote>
-  <p>“Although the organ-machines attach themselves to the body without organs, the latter continues nonetheless to be without organs and does not become an organism in the ordinary sense of the word. It remains fluid and slippery.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The surface of this uncreated body swarms with them, as a lion’s mane swarms with fleas.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 17:</strong></p>
-
-<blockquote>
-  <p>“Matter, egg, and intensities: I feel. The subject is produced as an intensity on the body without organs.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The subject consumed and consummated each time the self is produced as an intensity on the body without organs, at the infinite speed of being a specific self, of being the self of a specific intensity—Joan of Arc, Heliogabalus, etc.—and then of losing that self as one passes beyond the intensity that produced it, to become another self corresponding to another intensity.”</p>
-
-</blockquote>
-
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=From%20paranoia%20to%20schizophrenia%2C%20from">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other, on a scale of intensity that goes from 0 (‘I never asked to be born… leave me in peace’), the body without organs…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=21&amp;highlight=mankind">Introduction, p. xxii</a>:</strong></p>
+
+        <blockquote>
+          <p>“Ego-loss is the experience of all mankind, ‘of the primal man, of Adam and perhaps even [a journey] further into the beings of animals, vegetables and minerals.’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=The%20body%20without%20organs">2. The Body without Organs, p. 9</a>:</strong></p>
+
+        <blockquote>
+          <p>“The body without organs is an egg: it is crisscrossed with axes and thresholds, with latitudes and longitudes and geodesic lines, traversed by gradients marking the transitions and the becomings.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“There is a schizophrenic experience of intensive quantities in their pure state, to a point that is almost unbearable—a celibate misery and glory experienced to the fullest.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“An apparent conflict arises between desiring-machines and the body without organs. Every coupling of machines, every production of a machine, every sound of a machine running, becomes unbearable to the body without organs. Beneath its organs it senses there are larvae and loathsome worms, and a God at work messing it all up or strangling it by organizing it. ‘The body is the body/it is all by itself/and has no need of organs/the body is never an organism/organisms are the enemies of the body.’”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Desiring-machines are not fantasy-machines or dream-machines… fantasies are secondary expressions, deriving from the identical nature of the two sorts of machines.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=35&amp;highlight=body%20without%20organs">2. The Body without Organs, p. 12-13</a>:</strong></p>
+
+        <blockquote>
+          <p>“As Artaud put it: I don’t believe in father in mother, got no papamummy. The full body without organs is produced as antiproduction, that is to say it intervenes within the process as such for the sole purpose of rejecting any attempt to impose on it any sort of triangulation implying that it was produced by parents. How could this body have been produced by parents, when by its very nature it is such eloquent witness of its own self-production, of its own engendering of itself?”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=38&amp;highlight=Although%20the%20organ-machines%20attach%20themselves">2. The Body without Organs, p. 15</a>:</strong></p>
+
+        <blockquote>
+          <p>“Although the organ-machines attach themselves to the body without organs, the latter continues nonetheless to be without organs and does not become an organism in the ordinary sense of the word. It remains fluid and slippery.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The surface of this uncreated body swarms with them, as a lion’s mane swarms with fleas.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=the%20body%20without%20organs">3. The Subject and Enjoyment, p. 17</a>:</strong></p>
+
+        <blockquote>
+          <p>“Matter, egg, and intensities: I feel. The subject is produced as an intensity on the body without organs.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The subject consumed and consummated each time the self is produced as an intensity on the body without organs, at the infinite speed of being a specific self, of being the self of a specific intensity—Joan of Arc, Heliogabalus, etc.—and then of losing that self as one passes beyond the intensity that produced it, to become another self corresponding to another intensity.”</p>
+
+        </blockquote>
+
+        <div>
   <img src="/assets/img/bwo.png" alt="bwo drawing" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">BWO (Session One) by <a href="https://x.com/unleadedicedtea">Millie</a></div>
+        <div class="caption">BWO (Session One) by <a href="https://x.com/unleadedicedtea">Millie</a></div>
 
-<hr />
+      </div>
+</details>
 
-<h3 id="desire">Desire</h3>
+    <hr />
 
-<p>Proximate terms: Immanence, delirium, liberation, emergence</p>
+    <h3 id="desire">Desire</h3>
 
-<p>Relevant passages:</p>
+    <p>Proximate terms: Immanence, delirium, liberation, emergence</p>
 
-<p><strong>Introduction, p. xv:</strong></p>
-
-<blockquote>
-  <p>“Such a set of beliefs, Deleuze and Guattari demonstrate, such a herd instinct, is based on the desire to be led, the desire to have someone else legislate life. The very desire that was brought so glaringly into focus in Europe with Hitler, Mussolini, and fascism; the desire that is still at work, making us all sick, today.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xvii:</strong></p>
-
-<blockquote>
-  <p>“How does one introduce desire into thought, into discourse, into action? How can and must desire deploy its forces within the political domain and grow more intense in the process of overturning the established order?”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xix:</strong></p>
-
-<blockquote>
-  <p>“In addition to Nietzsche they also found it necessary to listen to others: to Miller and Lawrence and Kafka and Beckett, to Proust and Reich and Foucault, to Burroughs and Ginsberg, each of whom had different insights concerning madness and dissension, politics and desire.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xx:</strong></p>
-
-<blockquote>
-  <p>“Oedipus is belief injected into the unconscious, it is what gives us faith as it robs us of power, it is what teaches us to desire our own repression.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxiii:</strong></p>
-
-<blockquote>
-  <p>“Deleuze and Guattari conclude that desire, any desiring-machine, is always a combination of various elements and forces of all types.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 28:</strong></p>
-
-<blockquote>
-  <p>“Desire does not lack anything; it does not lack its object. It is, rather, the subject that is missing in desire.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The real is the end product, the result of the passive syntheses of desire as autoproduction of the unconscious.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="territory">Territory</h3>
-
-<p>Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, stasis</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>Introduction, p. xvi:</strong></p>
-
-<blockquote>
-  <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual…”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xx:</strong></p>
-
-<blockquote>
-  <p>“Such a politics dissolves the mystifications of power through the kindling, on all levels, of anti-oedipal forces—the schizzes-flows—forces that escape coding, scramble the codes, and flee in all directions: orphans (no daddy-mommy-me), atheists (no beliefs), and nomads (no habits, no territories).”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxi:</strong></p>
-
-<blockquote>
-  <p>“Groups must multiply and connect in ever new ways, freeing up territorialities for the construction of new social arrangements.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 16-17:</strong></p>
-
-<blockquote>
-  <p>“‘It’s me, and so it’s mine.’ Even suffering, as Marx says, is a form of self-enjoyment.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“It is a strange subject, however, with no fixed identity, wandering about over the body without organs, but always remaining peripheral to the desiring-machines, being defined by the share of the product it takes for itself, garnering here, there, and everywhere a reward in the form of a becoming or an avatar.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 35:</strong></p>
-
-<blockquote>
-  <p>“There is no doubt that at this point in history the neurotic, the pervert, and the psychotic cannot be adequately defined in terms of drives, for drives are simply the desiring-machines themselves. They must be defined in terms of modern territorialities. The neurotic is trapped within the residual or artificial territorialities of our society… The pervert is someone who takes the artifice seriously and plays the game to the hilt: if you want them, you can have them—territorialities infinitely more artificial than the ones that society offers us, totally artificial new families, secret lunar societies.”</p>
-
-</blockquote>
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=14&amp;highlight=Such%20a%20set%20of%20beliefs">Introduction, p. xv</a>:</strong></p>
+
+        <blockquote>
+          <p>“Such a set of beliefs, Deleuze and Guattari demonstrate, such a herd instinct, is based on the desire to be led, the desire to have someone else legislate life. The very desire that was brought so glaringly into focus in Europe with Hitler, Mussolini, and fascism; the desire that is still at work, making us all sick, today.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=16&amp;highlight=desire">Introduction, p. xvii</a>:</strong></p>
+
+        <blockquote>
+          <p>“How does one introduce desire into thought, into discourse, into action? How can and must desire deploy its forces within the political domain and grow more intense in the process of overturning the established order?”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=18&amp;highlight=they%20also">Introduction, p. xix</a>:</strong></p>
+
+        <blockquote>
+          <p>“In addition to Nietzsche they also found it necessary to listen to others: to Miller and Lawrence and Kafka and Beckett, to Proust and Reich and Foucault, to Burroughs and Ginsberg, each of whom had different insights concerning madness and dissension, politics and desire.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=19&amp;highlight=into%20the">Introduction, p. xx</a>:</strong></p>
+
+        <blockquote>
+          <p>“Oedipus is belief injected into the unconscious, it is what gives us faith as it robs us of power, it is what teaches us to desire our own repression.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=22&amp;highlight=that%20desire">Introduction, p. xxiii</a>:</strong></p>
+
+        <blockquote>
+          <p>“Deleuze and Guattari conclude that desire, any desiring-machine, is always a combination of various elements and forces of all types.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=51&amp;highlight=Desire">4. A Materialist Psychiatry, p. 28</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desire does not lack anything; it does not lack its object. It is, rather, the subject that is missing in desire.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The real is the end product, the result of the passive syntheses of desire as autoproduction of the unconscious.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="territory">Territory</h3>
+
+    <p>Proximate terms: Paranoia, sovereignty, capital, abstract value, repression, stasis</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=Against%20the%20Oedipal%20and%20oedipalized">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“Against the Oedipal and oedipalized territorialities (Family, Church, School, Nation, Party), and especially the territoriality of the individual…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=19&amp;highlight=politics%20dissolves%20the%20mystifications%20of">Introduction, p. xx</a>:</strong></p>
+
+        <blockquote>
+          <p>“Such a politics dissolves the mystifications of power through the kindling, on all levels, of anti-oedipal forces—the schizzes-flows—forces that escape coding, scramble the codes, and flee in all directions: orphans (no daddy-mommy-me), atheists (no beliefs), and nomads (no habits, no territories).”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=20&amp;highlight=Groups%20must%20multiply%20and%20connect">Introduction, p. xxi</a>:</strong></p>
+
+        <blockquote>
+          <p>“Groups must multiply and connect in ever new ways, freeing up territorialities for the construction of new social arrangements.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=39&amp;highlight=me%2C%20and%20so%20it%27s%20mine">3. The Subject and Enjoyment, p. 16-17</a>:</strong></p>
+
+        <blockquote>
+          <p>“‘It’s me, and so it’s mine.’ Even suffering, as Marx says, is a form of self-enjoyment.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“It is a strange subject, however, with no fixed identity, wandering about over the body without organs, but always remaining peripheral to the desiring-machines, being defined by the share of the product it takes for itself, garnering here, there, and everywhere a reward in the form of a becoming or an avatar.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=58&amp;highlight=There%20is%20no%20doubt%20that">4. A Materialist Psychiatry, p. 35</a>:</strong></p>
+
+        <blockquote>
+          <p>“There is no doubt that at this point in history the neurotic, the pervert, and the psychotic cannot be adequately defined in terms of drives, for drives are simply the desiring-machines themselves. They must be defined in terms of modern territorialities. The neurotic is trapped within the residual or artificial territorialities of our society… The pervert is someone who takes the artifice seriously and plays the game to the hilt: if you want them, you can have them—territorialities infinitely more artificial than the ones that society offers us, totally artificial new families, secret lunar societies.”</p>
+
+        </blockquote>
+        <div>
 <img src="/assets/img/territory.jpg" alt="territory" style="width: 30%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption">Territory session one drawing by Izzy</div>
+        <div class="caption">Territory session one drawing by Izzy</div>
 
-<hr />
+      </div>
+</details>
 
-<h3 id="homo-natura-schizophrenia">Homo Natura (Schizophrenia)</h3>
+    <hr />
 
-<p>Proximate terms: Delirium, body-without-organs, desiring-production</p>
+    <h3 id="homo-natura-schizophrenia">Homo Natura (Schizophrenia)</h3>
 
-<p>Relevant passages:</p>
+    <p>Proximate terms: Delirium, body-without-organs, desiring-production</p>
 
-<p><strong>Introduction, p. xvi:</strong></p>
-
-<blockquote>
-  <p>“Where the latter measures everything against neurosis and castration, schizoanalysis begins with the schizo, his breakdowns and his breakthroughs. For, they affirm, ‘a schizophrenic out for a walk is a better model than a neurotic lying on the analyst’s couch.’”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xix:</strong></p>
-
-<blockquote>
-  <p>“This political analysis of desire, this schizoanalysis, becomes a mighty tool where schizophrenia as a process—the schiz—serves as a point of departure as well as a point of destination.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xx:</strong></p>
-
-<blockquote>
-  <p>“Reversing the Freudian distinction between neurosis and psychosis that measures everything against the former, Anti-Oedipus concludes: the neurotic is the one on whom the Oedipal imprints take, whereas the psychotic is the one incapable of being oedipalized, even and especially by psychoanalysis.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxii:</strong></p>
-
-<blockquote>
-  <p>“Anti-Oedipus is an individual or a group that no longer functions in terms of beliefs and that comes to redeem mankind…”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 4-5:</strong></p>
-
-<blockquote>
-  <p>“The schizophrenic is the universal producer. There is no need to distinguish here between producing and its product. We need merely note that the pure ‘thisness’ of the object produced is carried over into a new act of producing.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 22-23:</strong></p>
-
-<blockquote>
-  <p>“The schizophrenic appears all the more specific and recognizable as a distinct personality if the process is halted, or if it is made an end and a goal in itself, or if it is allowed to go on and on endlessly in a void, so as to provoke that ‘horror of extremity wherein the soul and body ultimately perish’ (the autist).”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Before being a mental state of the schizophrenic who has made himself into an artificial person through autism, schizophrenia is the process of the production of desire and desiring-machines. How does one get from one to the other, and is this transition inevitable? This remains the crucial question.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“Every time that the problem of schizophrenia is explained in terms of the ego, all we can do is ‘sample’ a supposed essence or a presumed specific nature of the schizo, regardless of whether we do so with love and pity or disgustedly spit out the mouthful we have tasted. We have ‘sampled’ him once as a dissociated ego, another time as an ego cut off from the world, and yet again—most temptingly—as an ego that had not ceased to be, who was there in the most specific way, but in his very own world, though he might reveal himself to a clever psychiatrist, a sympathetic superobserver—in short, a phenomenologist.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 27:</strong></p>
-
-<blockquote>
-  <p>“The schizophrenic deliberately seeks out the very limit of capitalism: he is its inherent tendency brought to fulfillment, its surplus product, its proletariat, and its exterminating angel. He scrambles all the codes and is the transmitter of the decoded flows of desire.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 35-36:</strong></p>
-
-<blockquote>
-  <p>“Desire is the set of passive syntheses that engineer partial objects, flows, and bodies, and that function as units of production. The real is the end product, the result of the passive syntheses of desire as autoproduction of the unconscious. Desire does not lack anything; it does not lack its object. It is, rather, the subject that is missing in desire, or desire that lacks a fixed subject; there is no fixed subject unless there is repression.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“We can say that social production, under determinate conditions, derives primarily from desiring-production: which is to say that Homo natura comes first. But we must also say, more accurately, that desiring-production is first and foremost social in nature, and tends to free itself only at the end: which is to say that Homo historia comes first.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“As for the schizo, continually wandering about, migrating here, there, and everywhere as best he can, he plunges further and further into the realm of deterritorialization, reaching the furthest limits of the decomposition of the socius on the surface of his own body without organs. It may well be that these peregrinations are the schizo’s own particular way of rediscovering the earth.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="paranoia">Paranoia</h3>
-
-<p>Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>Introduction, p. xvi:</strong></p>
-
-<blockquote>
-  <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other…”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xix:</strong></p>
-
-<blockquote>
-  <p>“Depression and Oedipus are agencies of the State, agencies of paranoia, agencies of power, long before being delegated to the family.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 9:</strong></p>
-
-<blockquote>
-  <p>“The paranoiac machine is the first machine of the body without organs. It is a machine of repulsion.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 9-10:</strong></p>
-
-<blockquote>
-  <p>“In order to resist organ-machines, the body without organs presents its smooth, slippery, opaque, taut surface as a barrier. In order to resist linked, connected, and interrupted flows, it sets up a counterflow of amorphous, undifferentiated fluid. We are of the opinion that what is ordinarily referred to as ‘primary repression’ means precisely that: it is not a ‘countercathexis,’ but rather this repulsion of desiring-machines by the body without organs. This is the real meaning of the paranoiac machine.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The genesis of the machine lies precisely here: in the opposition of the process of production of the desiring-machines and the nonproductive stasis of the body without organs. The anonymous nature of the machine and the nondifferentiated nature of its surface are proof of this.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 12-13:</strong></p>
-
-<blockquote>
-  <p>“The schizo maintains a shaky balance for the simple reason that the result is always the same, no matter what the disjunctions. Although the organ-machines attach themselves to the body without organs, the latter continues nonetheless to be without organs and does not become an organism in the ordinary sense of the word. It remains fluid and slippery.”</p>
-
-</blockquote>
-
-<p><strong>3. The Problem of Oedipus, p. 53:</strong></p>
-
-<blockquote>
-  <p>“Paranoia is a social formation, not a psychological formation. It is a formation of the unconscious as a whole, a group fantasy.”</p>
-
-</blockquote>
-
-<p><img src="/assets/img/petra.png" alt="sipm" class="centered sixty" /></p>
-<div class="caption">Petra's session one sketch of Paranoia</div>
-
-<hr />
-
-<h3 id="nature--machines">Nature / Machines</h3>
-
-<p>Proximate terms: Desiring-machines, associative flows, universal production</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>1. Desiring-Production, p. 1:</strong></p>
-
-<blockquote>
-  <p>“Hence we are all handymen: each with his little machines. For every organ-machine, an energy-machine: all the time, flows and interruptions. Judge Schreber has sunbeams in his ass. A solar anus. And rest assured that it works.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring Production, p. 2:</strong></p>
-
-<blockquote>
-  <p>“Everything is a machine. Celestial machines, the stars or rainbows in the sky, alpine machines—all of them connected to those of his body. The continual whirr of machines.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“There is no such thing as either man or nature now, only a process that produces the one within the other and couples the machines together. Producing-machines, desiring-machines everywhere, schizophrenic machines, all of species life: the self and the non-self, outside and inside, no longer have any meaning whatsoever.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring Production, p. 2:</strong></p>
-
-<blockquote>
-  <p>“Lenz has projected himself back to a time before the man-nature dichotomy, before all the co-ordinates based on this fundamental dichotomy have been laid down. He does not live nature as nature, but as a process of production. There is no such thing as either man or nature now, only a process that produces the one within the other and couples the machines together.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 4-5:</strong></p>
-
-<blockquote>
-  <p>“It is probable that at a certain level nature and industry are two separate and distinct things: from one point of view, industry is the opposite of nature; from another, industry extracts its raw materials from nature; from yet another, it returns its refuse to nature. But this entire level of distinctions presupposes not only the existence of capital and the division of labor, but also the false consciousness that the capitalist being necessarily acquires.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“The human essence of nature and the natural essence of man become one within nature in the form of production or industry. We make no distinction between man and nature.”</p>
-
-</blockquote>
-
-<p><strong>1. Desiring-Production, p. 6:</strong></p>
-
-<blockquote>
-  <p>“The schizophrenic is the universal producer. There is no need to distinguish here between producing and its product. We need merely note that the pure ‘thisness’ of the object produced is carried over into a new act of producing. The schizophrenic table is a body without organs.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 31:</strong></p>
-
-<blockquote>
-  <p>“Technical machines work only if they are not out of order; they ordinarily stop working not because they break down but because they wear out. Desiring-machines, on the contrary, continually break down as they run, and in fact run only when they are not functioning properly.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="investment">Investment</h3>
-
-<p>Proximate terms: Desire, stock, territory, identity</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>Introduction, p. xvii:</strong></p>
-
-<blockquote>
-  <p>“Behind every investment of time and interest and capital, an investment of desire, and vice versa.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xx:</strong></p>
-
-<blockquote>
-  <p>“A subject-group, on the contrary, is a group whose libidinal investments are themselves revolutionary…”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 17:</strong></p>
-
-<blockquote>
-  <p>“The rate of cosmic sexual pleasure remains constant… But Schreber experiences only a residual share of this pleasure, as a recompense for his suffering or as a reward for his becoming-woman.”</p>
-
-</blockquote>
-
-<p><strong>3. The Subject and Enjoyment, p. 20:</strong></p>
-
-<blockquote>
-  <p>“The subject spreads itself out along the entire circumference of the circle, the center of which has been abandoned by the ego. At the center is the desiring-machine, the celibate machine of the Eternal Return. A residual subject of the machine, Nietzsche-as-subject garners a euphoric reward (Voluptas) from everything that this machine turns out.”</p>
-
-</blockquote>
-
-<blockquote>
-  <p>“It is this residual energy that is the motive force behind the third synthesis of the unconscious: the conjunctive synthesis ‘so it’s…,’ or the production of consumption.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 29:</strong></p>
-
-<blockquote>
-  <p>“There is only desire and the social, and nothing else.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="repression">Repression</h3>
-
-<p>Proximate terms: Paranoia, territoriality, The State,  Oedipus</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>Introduction, p. xv:</strong></p>
-
-<blockquote>
-  <p>“Anti-Oedipus starts by reviving Reich’s completely serious question with respect to the rise of fascism: ‘How could the masses be made to desire their own repression?’”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xx:</strong></p>
-
-<blockquote>
-  <p>“Oedipus is belief injected into the unconscious, it is what gives us faith as it robs us of power, it is what teaches us to desire our own repression.”</p>
-
-</blockquote>
-
-<p><strong>Introduction, p. xxiii:</strong></p>
-
-<blockquote>
-  <p>“For if desire is repressed in a society, Deleuze and Guattari state, this is hardly because ‘it is a desire for the mother or for the death of the father; on the contrary, desire becomes that only because it is repressed…’”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 10:</strong></p>
-
-<blockquote>
-  <p>“The socius may be the body of the earth, that of the tyrant, or capital. This is the body that Marx is referring to when he says that it is not the product of labor, but rather appears as its natural or divine presupposition. It falls back on (se rabat sur) all production, constituting a surface over which the forces and agents of production are distributed, thereby appropriating for itself all surplus production and arrogating to itself both the whole and the parts of the process.”</p>
-
-</blockquote>
-
-<p><strong>4. A Materialist Psychiatry, p. 29:</strong></p>
-
-<blockquote>
-  <p>“Why do men fight for their servitude as stubbornly as though it were their salvation? Even the most repressive and the most deadly forms of social reproduction are produced by desire within the organization that is the consequence of such production under various conditions that we must analyze.”</p>
-
-</blockquote>
-
-<hr />
-
-<h3 id="organism--organ">Organism / Organ</h3>
-
-<p>Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit</p>
-
-<p>Relevant passages:</p>
-
-<p><strong>1. Desiring Production, p. 8:</strong></p>
-
-<blockquote>
-  <p>“Desiring-machines make us an organism; but at the very heart of this production, within the very production of this production, the body suffers from being organized in this way, from not having some other sort of organization, or no organization at all.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 9:</strong></p>
-
-<blockquote>
-  <p>“An apparent conflict arises between desiring-machines and the body without organs. Every coupling of machines, every production of a machine, every sound of a machine running, becomes unbearable to the body without organs. Beneath its organs it senses there are larvae and loathsome worms, and a God at work messing it all up or strangling it by organizing it. ‘The body is the body/it is all by itself/and has no need of organs/the body is never an organism/organisms are the enemies of the body.’”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 9-10:</strong></p>
-
-<blockquote>
-  <p>“The body without organs is the surface of intensities. The organs are the intensities that populate this surface. But the body without organs is also the limit of the organism, the point where the organism breaks down and becomes something else.”</p>
-
-</blockquote>
-
-<p><strong>2. The Body without Organs, p. 10:</strong></p>
-
-<blockquote>
-  <p>“The body without organs is not a blank slate, but rather the place of production of production, the production of the production of desire.”</p>
-
-</blockquote>
-
+    <details>
+<summary>Relevant passages</summary>
 <div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=measures%20everything%20against%20neurosis%20and">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“Where the latter measures everything against neurosis and castration, schizoanalysis begins with the schizo, his breakdowns and his breakthroughs. For, they affirm, ‘a schizophrenic out for a walk is a better model than a neurotic lying on the analyst’s couch.’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=18&amp;highlight=of%20desire">Introduction, p. xix</a>:</strong></p>
+
+        <blockquote>
+          <p>“This political analysis of desire, this schizoanalysis, becomes a mighty tool where schizophrenia as a process—the schiz—serves as a point of departure as well as a point of destination.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=19&amp;highlight=against%20the%20former%2C%20Anti-Oedipus%20concludes">Introduction, p. xx</a>:</strong></p>
+
+        <blockquote>
+          <p>“Reversing the Freudian distinction between neurosis and psychosis that measures everything against the former, Anti-Oedipus concludes: the neurotic is the one on whom the Oedipal imprints take, whereas the psychotic is the one incapable of being oedipalized, even and especially by psychoanalysis.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=21&amp;highlight=Anti-Oedipus%20is%20an%20individual%20or">Introduction, p. xxii</a>:</strong></p>
+
+        <blockquote>
+          <p>“Anti-Oedipus is an individual or a group that no longer functions in terms of beliefs and that comes to redeem mankind…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=27&amp;highlight=There%20is">1. Desiring-Production, p. 4-5</a>:</strong></p>
+
+        <blockquote>
+          <p>“The schizophrenic is the universal producer. There is no need to distinguish here between producing and its product. We need merely note that the pure ‘thisness’ of the object produced is carried over into a new act of producing.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=45&amp;highlight=the%20process">4. A Materialist Psychiatry, p. 22-23</a>:</strong></p>
+
+        <blockquote>
+          <p>“The schizophrenic appears all the more specific and recognizable as a distinct personality if the process is halted, or if it is made an end and a goal in itself, or if it is allowed to go on and on endlessly in a void, so as to provoke that ‘horror of extremity wherein the soul and body ultimately perish’ (the autist).”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Before being a mental state of the schizophrenic who has made himself into an artificial person through autism, schizophrenia is the process of the production of desire and desiring-machines. How does one get from one to the other, and is this transition inevitable? This remains the crucial question.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“Every time that the problem of schizophrenia is explained in terms of the ego, all we can do is ‘sample’ a supposed essence or a presumed specific nature of the schizo, regardless of whether we do so with love and pity or disgustedly spit out the mouthful we have tasted. We have ‘sampled’ him once as a dissociated ego, another time as an ego cut off from the world, and yet again—most temptingly—as an ego that had not ceased to be, who was there in the most specific way, but in his very own world, though he might reveal himself to a clever psychiatrist, a sympathetic superobserver—in short, a phenomenologist.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=50&amp;highlight=the%20very">4. A Materialist Psychiatry, p. 27</a>:</strong></p>
+
+        <blockquote>
+          <p>“The schizophrenic deliberately seeks out the very limit of capitalism: he is its inherent tendency brought to fulfillment, its surplus product, its proletariat, and its exterminating angel. He scrambles all the codes and is the transmitter of the decoded flows of desire.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=58&amp;highlight=Desire">4. A Materialist Psychiatry, p. 35-36</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desire is the set of passive syntheses that engineer partial objects, flows, and bodies, and that function as units of production. The real is the end product, the result of the passive syntheses of desire as autoproduction of the unconscious. Desire does not lack anything; it does not lack its object. It is, rather, the subject that is missing in desire, or desire that lacks a fixed subject; there is no fixed subject unless there is repression.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“We can say that social production, under determinate conditions, derives primarily from desiring-production: which is to say that Homo natura comes first. But we must also say, more accurately, that desiring-production is first and foremost social in nature, and tends to free itself only at the end: which is to say that Homo historia comes first.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“As for the schizo, continually wandering about, migrating here, there, and everywhere as best he can, he plunges further and further into the realm of deterritorialization, reaching the furthest limits of the decomposition of the socius on the surface of his own body without organs. It may well be that these peregrinations are the schizo’s own particular way of rediscovering the earth.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="paranoia">Paranoia</h3>
+
+    <p>Proximate terms: Foreclosure, repression, territoriality, breakdown, overflow</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=15&amp;highlight=From%20paranoia%20to%20schizophrenia%2C%20from">Introduction, p. xvi</a>:</strong></p>
+
+        <blockquote>
+          <p>“From paranoia to schizophrenia, from fascism to revolution, from breakdowns to breakthroughs, what is investigated is the process of life flows as they oscillate from one extreme to the other…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=18&amp;highlight=Depression%20and%20Oedipus%20are%20agencies">Introduction, p. xix</a>:</strong></p>
+
+        <blockquote>
+          <p>“Depression and Oedipus are agencies of the State, agencies of paranoia, agencies of power, long before being delegated to the family.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=repulsion">2. The Body without Organs, p. 9</a>:</strong></p>
+
+        <blockquote>
+          <p>“The paranoiac machine is the first machine of the body without organs. It is a machine of repulsion.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=In%20order%20to%20resist%20organ-machines">2. The Body without Organs, p. 9-10</a>:</strong></p>
+
+        <blockquote>
+          <p>“In order to resist organ-machines, the body without organs presents its smooth, slippery, opaque, taut surface as a barrier. In order to resist linked, connected, and interrupted flows, it sets up a counterflow of amorphous, undifferentiated fluid. We are of the opinion that what is ordinarily referred to as ‘primary repression’ means precisely that: it is not a ‘countercathexis,’ but rather this repulsion of desiring-machines by the body without organs. This is the real meaning of the paranoiac machine.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The genesis of the machine lies precisely here: in the opposition of the process of production of the desiring-machines and the nonproductive stasis of the body without organs. The anonymous nature of the machine and the nondifferentiated nature of its surface are proof of this.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=35&amp;highlight=no%20matter%20what">2. The Body without Organs, p. 12-13</a>:</strong></p>
+
+        <blockquote>
+          <p>“The schizo maintains a shaky balance for the simple reason that the result is always the same, no matter what the disjunctions. Although the organ-machines attach themselves to the body without organs, the latter continues nonetheless to be without organs and does not become an organism in the ordinary sense of the word. It remains fluid and slippery.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=76&amp;highlight=of%20the%20unconscious%20as">3. The Problem of Oedipus, p. 53</a>:</strong></p>
+
+        <blockquote>
+          <p>“Paranoia is a social formation, not a psychological formation. It is a formation of the unconscious as a whole, a group fantasy.”</p>
+
+        </blockquote>
+
+        <p><img src="/assets/img/petra.png" alt="sipm" class="centered sixty" /></p>
+        <div class="caption">Petra's session one sketch of Paranoia</div>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="nature--machines">Nature / Machines</h3>
+
+    <p>Proximate terms: Desiring-machines, associative flows, universal production</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=24&amp;highlight=Hence%20we%20are%20all%20handymen">1. Desiring-Production, p. 1</a>:</strong></p>
+
+        <blockquote>
+          <p>“Hence we are all handymen: each with his little machines. For every organ-machine, an energy-machine: all the time, flows and interruptions. Judge Schreber has sunbeams in his ass. A solar anus. And rest assured that it works.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=25&amp;highlight=Celestial%20machines%2C%20the%20stars%20or">1. Desiring Production, p. 2</a>:</strong></p>
+
+        <blockquote>
+          <p>“Everything is a machine. Celestial machines, the stars or rainbows in the sky, alpine machines—all of them connected to those of his body. The continual whirr of machines.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“There is no such thing as either man or nature now, only a process that produces the one within the other and couples the machines together. Producing-machines, desiring-machines everywhere, schizophrenic machines, all of species life: the self and the non-self, outside and inside, no longer have any meaning whatsoever.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=25&amp;highlight=Lenz%20has%20projected%20himself%20back">1. Desiring Production, p. 2</a>:</strong></p>
+
+        <blockquote>
+          <p>“Lenz has projected himself back to a time before the man-nature dichotomy, before all the co-ordinates based on this fundamental dichotomy have been laid down. He does not live nature as nature, but as a process of production. There is no such thing as either man or nature now, only a process that produces the one within the other and couples the machines together.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=27&amp;highlight=point%20of%20view">1. Desiring-Production, p. 4-5</a>:</strong></p>
+
+        <blockquote>
+          <p>“It is probable that at a certain level nature and industry are two separate and distinct things: from one point of view, industry is the opposite of nature; from another, industry extracts its raw materials from nature; from yet another, it returns its refuse to nature. But this entire level of distinctions presupposes not only the existence of capital and the division of labor, but also the false consciousness that the capitalist being necessarily acquires.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“The human essence of nature and the natural essence of man become one within nature in the form of production or industry. We make no distinction between man and nature.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=29&amp;highlight=The%20schizophrenic">1. Desiring-Production, p. 6</a>:</strong></p>
+
+        <blockquote>
+          <p>“The schizophrenic is the universal producer. There is no need to distinguish here between producing and its product. We need merely note that the pure ‘thisness’ of the object produced is carried over into a new act of producing. The schizophrenic table is a body without organs.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=54&amp;highlight=if%20they%20are%20not%20out">4. A Materialist Psychiatry, p. 31</a>:</strong></p>
+
+        <blockquote>
+          <p>“Technical machines work only if they are not out of order; they ordinarily stop working not because they break down but because they wear out. Desiring-machines, on the contrary, continually break down as they run, and in fact run only when they are not functioning properly.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="investment">Investment</h3>
+
+    <p>Proximate terms: Desire, stock, territory, identity</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=16&amp;highlight=investment%20of%20time%20and%20interest">Introduction, p. xvii</a>:</strong></p>
+
+        <blockquote>
+          <p>“Behind every investment of time and interest and capital, an investment of desire, and vice versa.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=19&amp;highlight=A%20subject-group%2C%20on%20the%20contrary">Introduction, p. xx</a>:</strong></p>
+
+        <blockquote>
+          <p>“A subject-group, on the contrary, is a group whose libidinal investments are themselves revolutionary…”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=Schreber">3. The Subject and Enjoyment, p. 17</a>:</strong></p>
+
+        <blockquote>
+          <p>“The rate of cosmic sexual pleasure remains constant… But Schreber experiences only a residual share of this pleasure, as a recompense for his suffering or as a reward for his becoming-woman.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=43&amp;highlight=of%20the%20circle">3. The Subject and Enjoyment, p. 20</a>:</strong></p>
+
+        <blockquote>
+          <p>“The subject spreads itself out along the entire circumference of the circle, the center of which has been abandoned by the ego. At the center is the desiring-machine, the celibate machine of the Eternal Return. A residual subject of the machine, Nietzsche-as-subject garners a euphoric reward (Voluptas) from everything that this machine turns out.”</p>
+
+        </blockquote>
+
+        <blockquote>
+          <p>“It is this residual energy that is the motive force behind the third synthesis of the unconscious: the conjunctive synthesis ‘so it’s…,’ or the production of consumption.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=52&amp;highlight=else">4. A Materialist Psychiatry, p. 29</a>:</strong></p>
+
+        <blockquote>
+          <p>“There is only desire and the social, and nothing else.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="repression">Repression</h3>
+
+    <p>Proximate terms: Paranoia, territoriality, The State,  Oedipus</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=14&amp;highlight=Reich%27s%20completely%20serious%20question%20with">Introduction, p. xv</a>:</strong></p>
+
+        <blockquote>
+          <p>“Anti-Oedipus starts by reviving Reich’s completely serious question with respect to the rise of fascism: ‘How could the masses be made to desire their own repression?’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=19&amp;highlight=into%20the">Introduction, p. xx</a>:</strong></p>
+
+        <blockquote>
+          <p>“Oedipus is belief injected into the unconscious, it is what gives us faith as it robs us of power, it is what teaches us to desire our own repression.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=22&amp;highlight=desire">Introduction, p. xxiii</a>:</strong></p>
+
+        <blockquote>
+          <p>“For if desire is repressed in a society, Deleuze and Guattari state, this is hardly because ‘it is a desire for the mother or for the death of the father; on the contrary, desire becomes that only because it is repressed…’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=33&amp;highlight=socius%20may%20be%20the%20body">2. The Body without Organs, p. 10</a>:</strong></p>
+
+        <blockquote>
+          <p>“The socius may be the body of the earth, that of the tyrant, or capital. This is the body that Marx is referring to when he says that it is not the product of labor, but rather appears as its natural or divine presupposition. It falls back on (se rabat sur) all production, constituting a surface over which the forces and agents of production are distributed, thereby appropriating for itself all surplus production and arrogating to itself both the whole and the parts of the process.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=52&amp;highlight=Why%20do%20men%20fight%20for">4. A Materialist Psychiatry, p. 29</a>:</strong></p>
+
+        <blockquote>
+          <p>“Why do men fight for their servitude as stubbornly as though it were their salvation? Even the most repressive and the most deadly forms of social reproduction are produced by desire within the organization that is the consequence of such production under various conditions that we must analyze.”</p>
+
+        </blockquote>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="organism--organ">Organism / Organ</h3>
+
+    <p>Proximate terms: Nature//Machine, Schizophrenia, Delirium, Limit</p>
+
+    <details>
+<summary>Relevant passages</summary>
+<div>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=31&amp;highlight=Desiring-machines%20make%20us%20an%20organism">1. Desiring Production, p. 8</a>:</strong></p>
+
+        <blockquote>
+          <p>“Desiring-machines make us an organism; but at the very heart of this production, within the very production of this production, the body suffers from being organized in this way, from not having some other sort of organization, or no organization at all.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=An%20apparent%20conflict%20arises%20between">2. The Body without Organs, p. 9</a>:</strong></p>
+
+        <blockquote>
+          <p>“An apparent conflict arises between desiring-machines and the body without organs. Every coupling of machines, every production of a machine, every sound of a machine running, becomes unbearable to the body without organs. Beneath its organs it senses there are larvae and loathsome worms, and a God at work messing it all up or strangling it by organizing it. ‘The body is the body/it is all by itself/and has no need of organs/the body is never an organism/organisms are the enemies of the body.’”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=The%20body%20without%20organs">2. The Body without Organs, p. 9-10</a>:</strong></p>
+
+        <blockquote>
+          <p>“The body without organs is the surface of intensities. The organs are the intensities that populate this surface. But the body without organs is also the limit of the organism, the point where the organism breaks down and becomes something else.”</p>
+
+        </blockquote>
+
+        <p><strong><a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=33&amp;highlight=The%20body%20without%20organs">2. The Body without Organs, p. 10</a>:</strong></p>
+
+        <blockquote>
+          <p>“The body without organs is not a blank slate, but rather the place of production of production, the production of the production of desire.”</p>
+
+        </blockquote>
+
+        <div>
   <img src="/assets/img/vera.png" alt="Vera drawing" style="width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
-<div class="caption"><a href="https://wormnews.net">Vera's</a> session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
+        <div class="caption"><a href="https://wormnews.net">Vera's</a> session one drawing (inspired by Varela's diagram of "Structural Coupling")</div>
 
-<hr />
+      </div>
+</details>
 
-<h3 id="references">References</h3>
+    <hr />
 
-<ol>
-  <li><a href="https://files.libcom.org/files/Anti-Oedipus.pdf">Anti-Oedipus (PDF) — libcom.org</a></li>
-  <li><a href="https://realityspammer.fr/anti-oedipus/">Anti-Oedipus — realityspammer.fr</a></li>
-  <li><a href="https://www.protevi.com/john/DG/AO_brief.html">AO Brief — Protevi</a></li>
-  <li><a href="https://www.protevi.com/john/DG/AO1.html">AO Part 1 — Protevi</a></li>
-  <li><a href="https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf">Anti-Oedipus Part 2 (PDF) — Protevi</a></li>
-  <li><a href="https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf">“Capitalism and Schizophrenia” interview in Chaosophy (PDF)</a></li>
-  <li><a href="https://surrealism-plays.com/Artaud.html">To Have Done with the Judgement of God — Antonin Artaud</a></li>
-</ol>]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[For an AO reading group]]></summary></entry><entry><title type="html">Hello, CDMX</title><link href="https://eigenlucy.github.io/blog/2026/CDMX/" rel="alternate" type="text/html" title="Hello, CDMX" /><published>2026-02-20T13:00:00+00:00</published><updated>2026-02-20T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/CDMX</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/CDMX/"><![CDATA[<p>After a few months of bouncing between friends and family all over the world, going back adn forth to Mexico and Uruguay to work out visa situations, and signing a lease, my wife and I have now officially begun settling into Mexico City :)</p>
+    <h3 id="references">References</h3>
+
+    <ol>
+      <li><a href="https://files.libcom.org/files/Anti-Oedipus.pdf">Anti-Oedipus (PDF) — libcom.org</a></li>
+      <li><a href="https://realityspammer.fr/anti-oedipus/">Anti-Oedipus — realityspammer.fr</a></li>
+      <li><a href="https://www.protevi.com/john/DG/AO_brief.html">AO Brief — Protevi</a></li>
+      <li><a href="https://www.protevi.com/john/DG/AO1.html">AO Part 1 — Protevi</a></li>
+      <li><a href="https://www.protevi.com/john/DG/PDF/Anti-Oedipus_Part_2.pdf">Anti-Oedipus Part 2 (PDF) — Protevi</a></li>
+      <li><a href="https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf">“Capitalism and Schizophrenia” interview in Chaosophy (PDF)</a></li>
+      <li><a href="https://surrealism-plays.com/Artaud.html">To Have Done with the Judgement of God — Antonin Artaud</a></li>
+    </ol>
+
+  </div>
+<div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+
+    <h2 id="session-notes">Session Notes</h2>
+
+    <p><em>Schedule: Session 1 on Feb 19 (Thursday), then every Sunday starting Feb 22.</em></p>
+
+    <h3 id="session-1--feb-19-introduction--first-pages-pp-i-xxiii-1-5">Session 1 — Feb 19: Introduction &amp; First Pages (pp. i-xxiii, 1-5)</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p>Read Foucault preface + Mark Seem intro together. Motivated the historical context — fascism in France, the situation the book was addressing, its utility today. Concept assignments and sketching (<a href="https://happysleepy.com/art/drawing-thousand-plateaus/">Marc Ngui’s <em>ATP</em> illustrations</a> as inspiration). Started reading Section 1. Attendees: Lucy, Petra, Iris, Vera, Eschaton, Millie, Irene, Max, Jess, Cassandra, Izzy.</p>
+
+        <p>Paranoiac and neurotic: deeply related but not identical — paranoia is the machine of the BwO, neurosis is the Oedipal trap.</p>
+
+        <p><strong>On the BwO:</strong>
+Is there a “liberal turn” between AO and ATP? The BwO chapter in ATP focuses on anorexia, drug addiction, sadomasochism — possibly correcting the misreading that “schizo = ubermensch contra the social” (see <a href="https://www.thing.net/~rdom/ucsd/3somesPlus/Guattari_Chaosophy.pdf">Chaosophy interview</a>). The BwO is the source of paranoia insofar as the self that encounters it is constituted through castration — attached to language first — but the BwO isn’t inducing the catatonia by itself. The BwO as Stirner’s “creative nothing”: not actually nothing, but everything at once — it appears as nothing because it transcends words. Visions that transcend any kind of structure are certainly not nothing.</p>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="session-2--feb-22-re-read--1-desiring-production-pp-1-8">Session 2 — Feb 22: Re-read &amp; §1 Desiring-Production (pp. 1-8)</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p><strong>Historical context:</strong></p>
+        <ul>
+          <li>France thrust into fascism by occupation. Good vantage point to understand the continuity of liberal-colonial European democracy and fascism and sites of resistance.</li>
+          <li>Western Marxism sort of sucks tho, and no one in France has a great answer why. (The failure of the teleology of the revolution in Germany, Guattari was unsatisfied with falling in line behind the Soviet or Chinese Revolutions, + unsatisfied with the alternative Trotskyist and anarchist parties)</li>
+          <li>Guattari’s work at La Borde under Lacan</li>
+          <li>May ‘68</li>
+        </ul>
+
+        <p><strong>What is the subject composed in relation to?</strong></p>
+
+        <p>Three major breakthroughs in the theory of subjectivity which inform D&amp;G: Nietzsche’s genealogy of religious morality, Marx’s analysis of class conflict as the engine of history, and Freud’s discovery of the unconscious. Nietzsche exposes how religious morality and law serve to naturalize power relations, Marx demonstrates how relations of production / alienation of the bulk of society from the means of production drive historical processes, and Freud analyzes how people compose themselves in relation to the various constraints and repressions (“foreclosures” and “castrations”) which define a society as such.</p>
+
+        <ul>
+          <li>Great chain of being, Adam made in God’s “image”</li>
+          <li>German Idealism, Nature and Word as systems of evolution, Hegel’s Absolute</li>
+          <li>Genealogy of morals</li>
+          <li>Marxism, historical materialism, class analysis, religious caste systems, scientific racism</li>
+          <li>Anthropology, psychoanalysis / early psychiatry, ecology of mind</li>
+          <li>Kant’s categories of reason, comparative anthropology, drives, umwelt, structuralism, Freud and the unconscious, dreams, psychic metabolism, Bateson’s cybernetic theory of mind</li>
+          <li>Simondon’s theory of technical evolution, Ruyer’s analysis of morphogenesis</li>
+        </ul>
+
+        <p><strong>How is the subject composed?</strong></p>
+
+        <ul>
+          <li>What is the purpose of the body? Re: religious and psychoanalytic queerphobia, systemic racism, Marxist analysis of alienation</li>
+          <li>Behavioralism, structuralism, Lacan, disease model vs drug model in contemporary psych</li>
+          <li>How to make sense of extreme, self-destructive patterns of behavior (schizophrenia, anorexia)</li>
+        </ul>
+
+        <p><strong>Art referenced in §1 Desiring-Production:</strong></p>
+
+        <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/lindner-boy-with-machine.webp-480.webp 480w,assets/img/ao/lindner-boy-with-machine.webp-800.webp 800w,assets/img/ao/lindner-boy-with-machine.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/lindner-boy-with-machine.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/lindner-boy-with-machine.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Richard Lindner, <em>Boy with Machine</em> (1954). Oil on canvas, MoMA.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/michaux-mescaline.webp-480.webp 480w,assets/img/ao/michaux-mescaline.webp-800.webp 800w,assets/img/ao/michaux-mescaline.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/michaux-mescaline.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/michaux-mescaline.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Henri Michaux, mescaline drawing (c. 1956). Referenced re: the schizophrenic table.</figcaption>
+    </figure>
+  </swiper-slide>
+</swiper-container>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="session-3--mar-1-2-the-body-without-organs--3-the-subject-pp-9-22">Session 3 — Mar 1: §2 The Body without Organs &amp; §3 The Subject (pp. 9-22)</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p><strong>Draft notes — to be revised with Discord data.</strong></p>
+
+        <p>Central theme: the three stages of Schreber’s episode as a model for the three machines of the BwO.</p>
+
+        <p><strong>Stage 1 — Collapse: the desiring-machines break down.</strong>
+Schreber <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=31&amp;highlight=without%20a%20stomach">“lived for a long time without a stomach, without intestines, almost without lungs, with a torn oesophagus, without a bladder, and with shattered ribs”</a> (p. 8). The desiring-machines work only when they break down, and by continually breaking down. The subject cannot sustain itself — the unstable series of genealogy unleashed by the desiring-machines eat away at any stable identity. Schreber’s transsexuality is not a symptom to be interpreted but a becoming that traverses and composes the body in new ways.</p>
+
+        <p><strong>Stage 2 — Paranoia: the paranoiac machine / primary repression.</strong>
+<a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=paranoiac%20machine">“The paranoiac machine is the first machine of the body without organs. It is a machine of repulsion”</a> (p. 9). The BwO repels the desiring-machines — every coupling, every production becomes unbearable. This is what D&amp;G call “primary repression”: not a countercathexis but a <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=32&amp;highlight=resist%20organ-machines">repulsion of desiring-machines by the body without organs</a>. Schreber’s God persecutes him, tears at his organs — the paranoiac machine is the BwO defending its smooth surface against organization.</p>
+
+        <p><strong>Stage 3 — Celibate machine: the new alliance.</strong>
+Then something shifts. The organs are <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=34&amp;highlight=miraculated">“regenerated, ‘miraculated’ on the body of Judge Schreber, who attracts God’s rays to himself”</a> (p. 10-11). Repulsion gives way to attraction. The <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=celibate%20machine">“celibate machine”</a> succeeds the paranoiac machine, <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=new%20alliance">“forming a new alliance between the desiring-machines and the body without organs so as to give birth to a new humanity or a glorious organism”</a> (p. 17). Schreber’s <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=40&amp;highlight=becoming-woman">becoming-woman</a> is this process of self-cure — not a return to the old organism but the production of a new body.</p>
+
+        <p><strong>The key insight:</strong>
+The three stages are not sequential but coexist — <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=34&amp;highlight=coexist">“black humor does not attempt to resolve contradictions, but to make it so that there are none, and never were any”</a> (p. 11). The paranoiac machine, the miraculating machine, and the celibate machine are three aspects of the same process by which the BwO relates to the desiring-machines.</p>
+
+        <p><strong>Discussion topics:</strong></p>
+        <ul>
+          <li>How the subject “went all over” — composed himself on all kinds of other orders (God’s rays, the nerves, the birds, the cosmic order of pleasure)</li>
+          <li>Schreber’s transsexuality as genuine becoming, not Oedipal interpretation (contra Freud’s reading of discovering “daddy beneath his superior God”)</li>
+          <li>The celibate machine in Duchamp, Kafka, and the literary tradition (Carrouges)</li>
+        </ul>
+
+        <p><em>Full notes pending — will expand from Discord.</em></p>
+
+        <p><strong>Art referenced in §2-3:</strong></p>
+
+        <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/wolfli-drawing.webp-480.webp 480w,assets/img/ao/wolfli-drawing.webp-800.webp 800w,assets/img/ao/wolfli-drawing.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/wolfli-drawing.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/wolfli-drawing.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Adolf Wölfli, untitled drawing (c. 1910). Art Brut — referenced p. 14.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/duchamp-large-glass.webp-480.webp 480w,assets/img/ao/duchamp-large-glass.webp-800.webp 800w,assets/img/ao/duchamp-large-glass.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/duchamp-large-glass.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/duchamp-large-glass.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Marcel Duchamp, <em>The Bride Stripped Bare by Her Bachelors, Even</em> (The Large Glass, 1915-1923). Philadelphia Museum of Art.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/kafka-penal-colony1.webp-480.webp 480w,assets/img/ao/kafka-penal-colony1.webp-800.webp 800w,assets/img/ao/kafka-penal-colony1.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/kafka-penal-colony1.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/kafka-penal-colony1.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Franz Kafka, <em>In the Penal Colony</em> (1919). The writing machine — a celibate machine.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/kafka-penal-colony2.webp-480.webp 480w,assets/img/ao/kafka-penal-colony2.webp-800.webp 800w,assets/img/ao/kafka-penal-colony2.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/kafka-penal-colony2.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/kafka-penal-colony2.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Franz Kafka, <em>In the Penal Colony</em> — illustration.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/kafka-penal-colony3.webp-480.webp 480w,assets/img/ao/kafka-penal-colony3.webp-800.webp 800w,assets/img/ao/kafka-penal-colony3.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/kafka-penal-colony3.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/kafka-penal-colony3.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Franz Kafka, <em>In the Penal Colony</em> — illustration.</figcaption>
+    </figure>
+  </swiper-slide>
+</swiper-container>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="session-4--mar-8-4-a-materialist-psychiatry-pp-22-35">Session 4 — Mar 8: §4 A Materialist Psychiatry (pp. 22-35)</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p><strong>Draft notes — compiled from Discord discussion, to be revised.</strong></p>
+
+        <p><strong>Autism as symptom vs. diagnosis:</strong>
+Bleuler coined “autism” as a <em>symptom</em> of schizophrenia — the withdrawal into a private world — not a diagnostic category in its own right. D&amp;G pick this up: <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=45&amp;highlight=artificial%20person">“Before being a mental state of the schizophrenic who has made himself into an artificial person through autism, schizophrenia is the process of the production of desire and desiring-machines”</a> (p. 22-23). The “artificial person” produced through autism is the result of forcing the schizo back into familiar social categories — the organism insisting on reassembling itself. The question is: how does one get from the process to the clinical entity, and is this transition inevitable?</p>
+
+        <p><strong>The schizophrenic’s relation to discourse:</strong>
+The schizo’s inability to “rightfully posit their place at the center of their discourse” is not what <em>produces</em> psychosis — rather, psychosis produces the territories of reference. The ego doesn’t shatter first; the territories shift and the ego can’t sustain itself against the unstable series unleashed by the desiring-machines and repeatedly eaten away by the paranoiac machines. Every attempt to explain schizophrenia in terms of the ego — as a <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=45&amp;highlight=dissociated%20ego">“dissociated ego,” an “ego cut off from the world,”</a> or an ego hiding in “his very own world” — amounts to sampling a presumed essence rather than following the process.</p>
+
+        <p><strong>Artaud’s defense — “To Have Done with the Judgement of God”:</strong>
+<a href="https://surrealism-plays.com/Artaud.html">Artaud</a> articulates the BwO’s resistance to organization: “the body is the body / it is all by itself / and has no need of organs.” His fragmentation is not a failure to integrate but a <em>refusal</em> of the imposed totality — “it is the cart that submits to the horse, not the horse to the man.” The alienation comes from the imposition of the totalized self, not from its absence. D&amp;G draw on Artaud throughout Section 4 to show that what clinical psychiatry reads as deficit is actually a form of production.</p>
+
+        <p><strong>The neurotic, the pervert, and the schizo:</strong>
+D&amp;G’s <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=58&amp;highlight=There%20is%20no%20doubt%20that">typology in terms of modern territorialities rather than drives</a> (p. 35): the neurotic is trapped within residual/artificial territorialities; the pervert takes the artifice seriously and constructs “totally artificial new families, secret lunar societies”; the schizophrenic scrambles all the codes and reaches the furthest limits of deterritorialization on the surface of their own BwO.</p>
+
+        <p><strong>Desire, the social field, and repression:</strong>
+<a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=52&amp;highlight=nothing%20else">“There is only desire and the social, and nothing else”</a> (p. 29). Desire is not a private, interior force that must be disciplined by the social — desire <em>is</em> social production. Repression doesn’t target some pre-existing wild desire; desire becomes Oedipal only <em>because</em> it is repressed. The question is never “what does desire lack?” but rather how desire comes to invest its own repression — <a href="/viewer/?file=/assets/library/Anti-Oedipus Deleuze%26Guattari.pdf&amp;page=52&amp;highlight=Why%20do%20men%20fight%20for">“why do men fight for their servitude as stubbornly as though it were their salvation?”</a></p>
+
+        <p><strong>Mystical ascent and word salad:</strong>
+Discussion of the parallel between mystical ascent (the Merkabah tradition, Artaud’s encounters with peyote and the Tarahumara) and schizophrenic “word salad” — both encounter the limits of sense, where language breaks down not because meaning is absent but because it is superabundant. The division of the godhead (cf. Jaynes’ bicameral mind, Scholem on the Kabbalah) mirrors the division of the subject in psychosis.</p>
+
+        <p><strong>Liberated desire as process:</strong>
+“Liberated desire is the possibility of new forms of solidarity and new forms of the Body — a process not a state, like a limit function where there is an infinite approach.” Solidarity here = transversality (Guattari’s term from La Borde): connections that cut across institutional hierarchies and established group identities. Not virility (Bataille’s early position) but the composition of new collective arrangements.</p>
+
+        <p><strong>Questions raised:</strong></p>
+        <ul>
+          <li>How does the “artificial person through autism” relate to contemporary understandings of autism as neurodivergence rather than psychotic withdrawal?</li>
+          <li>What is the relationship between the schizo’s deterritorialization and capital’s own tendency to decode/deterritorialize? (D&amp;G: the schizo “seeks out the very limit of capitalism,” p. 27)</li>
+          <li>How does utility foreclose futures? If desire is always already social, what does it mean for desire to be “liberated” — liberated from what, toward what?</li>
+        </ul>
+
+        <p><strong>Art referenced in §4:</strong></p>
+
+        <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/dali-paranoiac-face.webp-480.webp 480w,assets/img/ao/dali-paranoiac-face.webp-800.webp 800w,assets/img/ao/dali-paranoiac-face.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/dali-paranoiac-face.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/dali-paranoiac-face.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Salvador Dalí, <em>Paranoiac Face</em> (1935). Oil on panel — Dalí's "critical paranoia" method referenced p. 30.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/cesar-compression.webp-480.webp 480w,assets/img/ao/cesar-compression.webp-800.webp 800w,assets/img/ao/cesar-compression.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/cesar-compression.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/cesar-compression.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">César Baldaccini, <em>Compression "Ricard"</em> (1962). Compressed car body — referenced p. 30.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/artaud-self-portrait1.webp-480.webp 480w,assets/img/ao/artaud-self-portrait1.webp-800.webp 800w,assets/img/ao/artaud-self-portrait1.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/artaud-self-portrait1.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/artaud-self-portrait1.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Antonin Artaud, self-portrait. Pencil and chalk, from the Rodez period.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/artaud-self-portrait2.webp-480.webp 480w,assets/img/ao/artaud-self-portrait2.webp-800.webp 800w,assets/img/ao/artaud-self-portrait2.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/artaud-self-portrait2.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/artaud-self-portrait2.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Antonin Artaud, self-portrait drawing.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/artaud-self-portrait3.webp-480.webp 480w,assets/img/ao/artaud-self-portrait3.webp-800.webp 800w,assets/img/ao/artaud-self-portrait3.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/artaud-self-portrait3.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/artaud-self-portrait3.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Antonin Artaud, self-portrait drawing.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/artaud-self-portrait4.webp-480.webp 480w,assets/img/ao/artaud-self-portrait4.webp-800.webp 800w,assets/img/ao/artaud-self-portrait4.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/artaud-self-portrait4.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/artaud-self-portrait4.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Antonin Artaud, self-portrait drawing.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/artaud-self-portrait5.webp-480.webp 480w,assets/img/ao/artaud-self-portrait5.webp-800.webp 800w,assets/img/ao/artaud-self-portrait5.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/artaud-self-portrait5.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/artaud-self-portrait5.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Antonin Artaud, self-portrait drawing.</figcaption>
+    </figure>
+  </swiper-slide>
+  <swiper-slide>
+    <figure class="figure">
+      <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/ao/van-gogh-self-portrait.webp-480.webp 480w,assets/img/ao/van-gogh-self-portrait.webp-800.webp 800w,assets/img/ao/van-gogh-self-portrait.webp-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/ao/van-gogh-self-portrait.webp" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/ao/van-gogh-self-portrait.webp';" />
+    </picture>
+    
+  </figure>
+      <figcaption class="figure-caption text-center">Vincent van Gogh, <em>Self-Portrait with Bandaged Ear</em> (1889). Referenced via Jaspers' <em>Strindberg und Van Gogh</em>.</figcaption>
+    </figure>
+  </swiper-slide>
+</swiper-container>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="session-5--mar-15">Session 5 — Mar 15</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p><em>Lucy calling in remotely from Mexico. Less structured than prior sessions — more ad hoc discussion with lighter prep.</em></p>
+
+        <p><em>Notes pending — will import from Discord.</em></p>
+
+      </div>
+</details>
+
+    <hr />
+
+    <h3 id="session-6--mar-22">Session 6 — Mar 22</h3>
+
+    <details>
+<summary>Notes</summary>
+<div>
+
+        <p><em>Continued remote/ad hoc format.</em></p>
+
+        <p><strong>Production of production — what does it mean?</strong></p>
+
+        <p>Extended discussion of how desiring-production is itself production of production, and what the three simultaneous dimensions (production of production, production of recording, production of consumption) map to. The three syntheses aren’t sequential stages but simultaneous aspects of every desiring-machine operation.</p>
+
+        <p><strong>The intangibility of needs and repoliticization of the psychic:</strong>
+Victoria (joining from an orthodox ML / Stalinist perspective) found useful the question of the intangibility of needs and the real abstractions governing capitalist social production. The repoliticization of the psychic — as opposed to the reification of symptoms of the mode of production — connects to the class consciousness vs. class composition debate: the givenness of “class interests” in the highly fractured, insular/imperial, post-industrial situation of the US. If desire is already social production, then the psychic isn’t a private retreat from politics but the very terrain where the reproduction of capital operates — and where it can be contested.</p>
+
+        <p><em>Full notes pending — will expand from Discord.</em></p>
+
+      </div>
+</details>
+
+    <hr />
+
+  </div>
+</div>]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[For an AO reading group]]></summary></entry><entry><title type="html">Hello, CDMX</title><link href="https://eigenlucy.com/blog/2026/CDMX/" rel="alternate" type="text/html" title="Hello, CDMX" /><published>2026-02-20T13:00:00+00:00</published><updated>2026-02-20T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/CDMX</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/CDMX/"><![CDATA[<p>After a few months of bouncing between friends and family all over the world, going back adn forth to Mexico and Uruguay to work out visa situations, and signing a lease, my wife and I have now officially begun settling into Mexico City :)</p>
 
 <p>It’s been a brutal process up to this point, but the city is sooo beautiful and I am so happy to finally be settling in. I am still in the process of learning Spanish, so it’s a little bit lonely. My wife does her best to translate for me, and plenty of people speak English, but it’s not really the same. So I’ve been spending a lot of time just exploring, going to various churches and museums. Here are some of the pictures I’ve taken so fars:</p>
 
@@ -943,7 +1500,7 @@
     </picture>
     
   </figure></swiper-slide>
-</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[On relocating to Mexico City]]></summary></entry><entry><title type="html">An Introduction to Gamma Spectroscopy</title><link href="https://eigenlucy.github.io/blog/2026/gamma-spec-zine/" rel="alternate" type="text/html" title="An Introduction to Gamma Spectroscopy" /><published>2026-01-06T13:00:00+00:00</published><updated>2026-01-06T13:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2026/gamma-spec-zine</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2026/gamma-spec-zine/"><![CDATA[<p>This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.</p>
+</swiper-container>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[On relocating to Mexico City]]></summary></entry><entry><title type="html">An Introduction to Gamma Spectroscopy</title><link href="https://eigenlucy.com/blog/2026/gamma-spec-zine/" rel="alternate" type="text/html" title="An Introduction to Gamma Spectroscopy" /><published>2026-01-06T13:00:00+00:00</published><updated>2026-01-06T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/gamma-spec-zine</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/gamma-spec-zine/"><![CDATA[<p>This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.</p>
 
 <h2 id="intro">Intro</h2>
 
@@ -1081,14 +1638,14 @@ The scintillator crystal needs to sit directly against the SiPM face, wrapped in
   <li><a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier</li>
   <li><a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., “SPICE Electrical Models and Simulations of Silicon Photomultipliers”</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)</li>
   <li>Glenn F. Knoll, <em>Radiation Detection and Measurement</em> — The textbook on radiation detector physics</li>
-</ul>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Iemanja</title><link href="https://eigenlucy.github.io/eigenlucy/iemanja/" rel="alternate" type="text/html" title="Iemanja" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/iemanja</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/iemanja/"><![CDATA[<p>Memory is like a pool you can swim through, but it’s also like a tool that you wield. It is both active and passive. Each flash ruptures the stasis of self evident experience as it brushes a trace past in the present. It is a strange unfamiliar past, or maybe the now is a strange unfamiliar place. The violent struggle between these two postulates calls forwards a new being capable of integrating the difference. Memory doesn’t simply recall the past, it summons it. There is no pure memory nor past to recover, only affections. The hope and prayer of all who hope to honor memory is that these craters of experience may be channeled to the construction a self worthy of everything that happens to it, able to speak to it all. I hope that one day I can find the words. I am so tired.</p>
+</ul>]]></content><author><name></name></author><category term="featured" /><category term="projects" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Iemanja</title><link href="https://eigenlucy.com/eigenlucy/iemanja/" rel="alternate" type="text/html" title="Iemanja" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/iemanja</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/iemanja/"><![CDATA[<p>Memory is like a pool you can swim through, but it’s also like a tool that you wield. It is both active and passive. Each flash ruptures the stasis of self evident experience as it brushes a trace past in the present. It is a strange unfamiliar past, or maybe the now is a strange unfamiliar place. The violent struggle between these two postulates calls forwards a new being capable of integrating the difference. Memory doesn’t simply recall the past, it summons it. There is no pure memory nor past to recover, only affections. The hope and prayer of all who hope to honor memory is that these craters of experience may be channeled to the construction a self worthy of everything that happens to it, able to speak to it all. I hope that one day I can find the words. I am so tired.</p>
 
 <figure class="spotify-embed">
   <iframe src="https://open.spotify.com/embed/playlist/6RxBksPjPwYYKLjTdvzFxo?si=51803b0107514b97" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
   
     <figcaption class="caption">Iemanja (Ode To Vera)</figcaption>
   
-</figure>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast]]></summary></entry><entry><title type="html">Kaddish</title><link href="https://eigenlucy.github.io/eigenlucy/kaddish/" rel="alternate" type="text/html" title="Kaddish" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/kaddish</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/kaddish/"><![CDATA[<p>The kaddish is a Jewish prayer said over the body of a deceased person. It affirms the absolute sovriengty and transcendence of God in the face of death. There is very little to be said for the dead themselves:</p>
+</figure>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast]]></summary></entry><entry><title type="html">Kaddish</title><link href="https://eigenlucy.com/eigenlucy/kaddish/" rel="alternate" type="text/html" title="Kaddish" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/kaddish</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/kaddish/"><![CDATA[<p>The kaddish is a Jewish prayer said over the body of a deceased person. It affirms the absolute sovereignty and transcendence of God in the face of death. There is very little to be said for the dead themselves:</p>
 
 <div class="row">
 <div class="col-sm-6" style="direction: rtl; text-align: right; font-size: 1.1rem; line-height: 1.8;">
@@ -1192,7 +1749,7 @@ and say, Amen.
   <p>Yet another learned man writes the following: ‘And I, the young one, know and acknowledge with full certainty that I am not a prophet nor the son of a prophet, and I have not the holy spirit and I do not make use of the heavenly voice; these things have not been vouchsafed to me, and I have not taken off my garment or washed my feet. Nevertheless, I call on heaven and earth to witness — as the heavens are my witness and my Guarantor is on high! — that one day I was sitting and writing down a Kabbalistic secret, when suddenly I saw the form of my self standing before me, and my own self disappeared from me, and I was forced and compelled to cease writing.’”</p>
 </blockquote>
 
-<p>“Nothing Human Is Alien to Me” (taken at the summit above Bascilica de Guadelupe in Mexico City)</p>
+<p>“Nothing Human Is Alien to Me” (taken at the summit above Basilica de Guadalupe in Mexico City)</p>
 <div class="row justify-content-center">
     <div class="col-sm-4 mt-3 mt-md-0">
         <figure>
@@ -1232,7 +1789,7 @@ and say, Amen.
   <li>Gershom Scholem, diary entry (early 1915), quoted in David Ohana, <a href="/viewer/?file=/assets/library/Trailing Nietzsche - Scholem and the Sabbatean Dialectics - David Ohana.pdf&amp;page=7"><em>Trailing Nietzsche: Scholem and the Sabbatean Dialectics</em></a>, p. 229</li>
   <li>Georges Bataille, <em>Sacrifices</em> (1936), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=159">p. 134</a> — the will to purify love posed God as the object of rapturous escape</li>
   <li>Georges Bataille &amp; Raymond Queneau, <em>The Critique of the Foundations of the Hegelian Dialectic</em> (1932), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=136">p. 111</a> — the dialectic applies to the agent, not the object</li>
-</ol>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Funeral for Justice]]></summary></entry><entry><title type="html">War Communism</title><link href="https://eigenlucy.github.io/eigenlucy/warcommunism/" rel="alternate" type="text/html" title="War Communism" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/war-communism</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/warcommunism/"><![CDATA[<p>When I was 19, I rented a house in Liberty, South Carolina. It was a small, rural town of around three thousand people. I rented a small 2.5 bedroom house plus a shed with a number of friends (~10 people rotated in and out over the years, most of them also transgender). I lived there for a bit over 3 years. I often struggle to explain this period. I speak of it in a confusing, traumatized, often paradoxical manner. There was so much magic. Every day was full of dozens of little miracles, miraculating forces swirling in the smoke. The ground is alive! It was so miserable. It was violent. It was volatile. It was overcrowded and also so lonely. I have never experienced the level of solidarity or grace that I felt there, and at the same time it was one of the most painful periods of my life defined by constant turbulence, precariousness, betrayal. We understood our situation in terms of a kind of sacred and profane division, constantly preoccupied by the quasi-Gnostic drive to escape what we understood to be a poisonous, hateful, cruel socius. The power derived from our otherness was commensurate with the pain inflicted on us by the big Other, by familial estrangement, by drug addiction, by religious queerphobia. We were on a kind of frontier, experimental family discovering what our bodies were really made for, carving out new selves from shambling accumulations of excess and disjunction. And, of course, the center could not hold.</p>
+</ol>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Funeral for Justice]]></summary></entry><entry><title type="html">War Communism</title><link href="https://eigenlucy.com/eigenlucy/warcommunism/" rel="alternate" type="text/html" title="War Communism" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/war-communism</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/warcommunism/"><![CDATA[<p>When I was 19, I rented a house in Liberty, South Carolina. It was a small, rural town of around three thousand people. I rented a small 2.5 bedroom house plus a shed with a number of friends (~10 people rotated in and out over the years, most of them also transgender). I lived there for a bit over 3 years. I often struggle to explain this period. I speak of it in a confusing, traumatized, often paradoxical manner. There was so much magic. Every day was full of dozens of little miracles, miraculating forces swirling in the smoke. The ground is alive! It was so miserable. It was violent. It was volatile. It was overcrowded and also so lonely. I have never experienced the level of solidarity or grace that I felt there, and at the same time it was one of the most painful periods of my life defined by constant turbulence, precariousness, betrayal. We understood our situation in terms of a kind of sacred and profane division, constantly preoccupied by the quasi-Gnostic drive to escape what we understood to be a poisonous, hateful, cruel socius. The power derived from our otherness was commensurate with the pain inflicted on us by the big Other, by familial estrangement, by drug addiction, by religious queerphobia. We were on a kind of frontier, experimental family discovering what our bodies were really made for, carving out new selves from shambling accumulations of excess and disjunction. And, of course, the center could not hold.</p>
 
 <p>I have come to understand this paradox to be an expression of the contradictions underlying the autopoietic foundations of trans existence, and more broadly of the impossibility of an Outside. I see the same patterns repeat across countless contexts in every place I’ve lived. We made some really beautiful things together. But <a href="/viewer/?file=/assets/library/transgender-marxism-gleeson.pdf&amp;page=99&amp;highlight=keeping one another alive cannot be collapsed with revolutionary change">keeping each other alive</a>, or even building a common infrastructure to advance our lives, cannot be conflated with overcoming the foreclosure of our lives. Composing a subject capable of even expressing its needs is no small task in the face of such a collapse as estrangement from the people who always claimed to love you most, coupled with the broader material and social fallout of transition. I will refrain from the gory details, but so often we hurt each other so badly. So often it was the wounds that formed the basis of solidarity that led to the breakdown, but it would be too simplistic to reduce it all back to this. Drug addiction is never really about the wound, nor the addiction itself; the knot takes on its own complex life which is irreducible to the conditions of its existence. What can be said is that the paradox of transsubstantiation of a life lived only on the margins is a volatile, fragile, tortured process which struggles to avoid collapsing into interpersonal violence when put up against the imperatives of the Outside (rent, family, transphobia, etc). So how do we escape the accumulation of petty resentment, bitterness, and external crises which relentlessly haunt our attempts to claw a way Outside? Even more complicated, these crises often accumulated not due to runaway misplaced aggression, but a stifling of aggression and self assertion within the sacred interior counterposed only to a totalizing Outside. There is no simple computation of individual or collective need, there is no eliminating aggression. So how do we summon the grace required for negation of negation under wartime conditions, with the pressure of the epoch pushing so hard against us it risks dissolving us to nothing. This is not some hypothetical, we watched countless friends be ground to dust, lost to ODs, pushed to homelessness and disappeared one day, stolen from themselves in countless ways. So we built a kind of war machine, a rogue factory producing for itself. But here is the paradox: we found a way to solve for our basic subsistence. Each month it was close, but we always made rent. We always had food, every morning the kitchen was full of music as we took turns playing chef. We had artistic, technical, social flows like never before. And yet, like every commune we’d tried, it couldn’t support its own weight. Anxiety and resentment mounted, the security afforded by the arrangement actually exacerbated the existential angst over time, as refuge became stunting. No one knows what they need. The determination of life is not a question that can be resolved contra the broader socius. We were always doomed to the very miracle that we’d prayed for.</p>
 
@@ -1620,7 +2177,7 @@ and say, Amen.
   
     <figcaption class="caption">bodies without organs</figcaption>
   
-</figure>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Proliferation of Eyes by Multiplication of Borders]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Femtofox Pro TX Power + Power Consumption Testing</title><link href="https://eigenlucy.github.io/blog/2025/femtofox-tx-power-testing/" rel="alternate" type="text/html" title="Femtofox Pro TX Power + Power Consumption Testing" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/femtofox-tx-power-testing</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/femtofox-tx-power-testing/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[E22-900M-30S boosted LoRa gateway TX power testing + Femtofox Pro Linux Meshtastic Node power usage testing]]></summary></entry><entry><title type="html">OpenFlashlight</title><link href="https://eigenlucy.github.io/blog/2025/openflashlight/" rel="alternate" type="text/html" title="OpenFlashlight" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.github.io/blog/2025/openflashlight</id><content type="html" xml:base="https://eigenlucy.github.io/blog/2025/openflashlight/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[Open source flashlight/handheld laser kit with ATTiny816 CC driver + battery charger PCB]]></summary></entry><entry><title type="html">multiplicity</title><link href="https://eigenlucy.github.io/eigenlucy/multiplicity/" rel="alternate" type="text/html" title="multiplicity" /><published>2025-06-13T00:00:00+00:00</published><updated>2025-06-13T00:00:00+00:00</updated><id>https://eigenlucy.github.io/eigenlucy/multiplicity</id><content type="html" xml:base="https://eigenlucy.github.io/eigenlucy/multiplicity/"><![CDATA[<p>Some days she was a beehive. Others she was a swarm of locusts. Today she felt a bit like a meteor, flung from some distant planet. Folds and folds, craters that tell the story of a journey from an unknown place. Whatever she was, it was some kind of mutant. Something multiplicitious. That was her favorite word, multiplicity, but no one is really sure what she means. Is a pile any more or less a multiplicity than a melody? She’s trying to tell them about the buzzing. The many. The wolf man. One becomes two becomes three. But multiplicity isn’t just the rupture, it’s what comes after, it’s the sense of being everywhere and nowhere at once. What was it about Georges Bataille? In that case, what was it about Paulo Uccello? Pointless questions. Endless critique, endless circling around the point. But that was exactly it, the buzzing. Something which can’t find its place, some nameless thing with power of the veto over her interior. She tried ecstasy, she tried grounding, she tried running away, she tried going back. Nothing works. No one knows what they need. So what now? What are we to do with our innumerable bodies. Multiplicity as psychedelia, as freedom by proliferation of dimensions, a freedom which can only infinitely elaborate it’s own nonrelation. Standstill, origin, stillstellungen, she has a million words for calm. But this is what is really meant by calm: everything we need persists, and all that must be known can be named.</p>
+</figure>]]></content><author><name>Lucy M.</name></author><summary type="html"><![CDATA[Proliferation of Eyes by Multiplication of Borders]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Femtofox Pro TX Power + Power Consumption Testing</title><link href="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/" rel="alternate" type="text/html" title="Femtofox Pro TX Power + Power Consumption Testing" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/femtofox-tx-power-testing</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[E22-900M-30S boosted LoRa gateway TX power testing + Femtofox Pro Linux Meshtastic Node power usage testing]]></summary></entry><entry><title type="html">OpenFlashlight</title><link href="https://eigenlucy.com/blog/2025/openflashlight/" rel="alternate" type="text/html" title="OpenFlashlight" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/openflashlight</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/openflashlight/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[Open source flashlight/handheld laser kit with ATTiny816 CC driver + battery charger PCB]]></summary></entry><entry><title type="html">multiplicity</title><link href="https://eigenlucy.com/eigenlucy/multiplicity/" rel="alternate" type="text/html" title="multiplicity" /><published>2025-06-13T00:00:00+00:00</published><updated>2025-06-13T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/multiplicity</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/multiplicity/"><![CDATA[<p>Some days she was a beehive. Others she was a swarm of locusts. Today she felt a bit like a meteor, flung from some distant planet. Folds and folds, craters that tell the story of a journey from an unknown place. Whatever she was, it was some kind of mutant. Something multiplicitious. That was her favorite word, multiplicity, but no one is really sure what she means. Is a pile any more or less a multiplicity than a melody? She’s trying to tell them about the buzzing. The many. The wolf man. One becomes two becomes three. But multiplicity isn’t just the rupture, it’s what comes after, it’s the sense of being everywhere and nowhere at once. What was it about Georges Bataille? In that case, what was it about Paulo Uccello? Pointless questions. Endless critique, endless circling around the point. But that was exactly it, the buzzing. Something which can’t find its place, some nameless thing with power of the veto over her interior. She tried ecstasy, she tried grounding, she tried running away, she tried going back. Nothing works. No one knows what they need. So what now? What are we to do with our innumerable bodies. Multiplicity as psychedelia, as freedom by proliferation of dimensions, a freedom which can only infinitely elaborate it’s own nonrelation. Standstill, origin, stillstellungen, she has a million words for calm. But this is what is really meant by calm: everything we need persists, and all that must be known can be named.</p>
 
 <p>There was another magnetic storm this weekend. It was overcast. I couldn’t even bring myself to pretend I could see it this time. But I know that it’s still there. I know there is always still time.</p>
 

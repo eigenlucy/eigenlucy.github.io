@@ -112,6 +112,13 @@
   ],
   "awards": [
     {
+      "title": "Platform Co-Director, Mind Ex Vivo Accelerator",
+      "date": "2026-03-01",
+      "awarder": "Neuromorph",
+      "url": "",
+      "summary": ""
+    },
+    {
       "title": "Atopile Research Fellow",
       "date": "2024-11-01",
       "awarder": "Atopile, San Francisco, CA",
@@ -266,20 +273,20 @@
   ],
   "projects": [
     {
-      "name": "Spacebridge High Altitude Balloon PCB",
-      "description": "Designed a high altitude balloon payload for DIY weather/radiological surveying with Noisebridge's Spacebridge group",
+      "name": "Cultured Neurons / Microelectrode Arrays",
+      "description": "Developing techniques for Frontier Tower's neurotech floor to read and stimulate cultured neurons, including maskless MEA fabrication, biocompatible fluid exchange systems, and custom signal acquisition boards.",
       "keywords": [
-        "Ecological surveying",
-        "DIY",
-        "Solar"
+        "Neurotech",
+        "DIYBIO",
+        "Signal acquisition"
       ],
-      "startDate": "2025-01-05",
-      "url": "https://eigenlucy.com/projects/spacebridhehabpcb/",
+      "startDate": "2025-01-15",
+      "url": "/projects/mea_arrays/",
       "type": "application"
     },
     {
       "name": "Micromppt",
-      "description": "Low-cost 5W autonomous solar charger with embedded perturb-and-observe setpoint adjustment. Designed for use with Meshtastic and other low power embedded devices. Now sold and distributed by a number of Meshtastic community hardware developers.",
+      "description": "Low-cost 5W autonomous solar charger with embedded perturb-and-observe setpoint adjustment. Designed for Meshtastic and other low power embedded devices. Now sold and distributed by a number of Meshtastic community hardware developers.",
       "keywords": [
         "Power converters",
         "Open source hardware",
@@ -287,56 +294,104 @@
       ],
       "startDate": "2024-11-05",
       "endDate": "2025-04-05",
-      "url": "https://eigenlucy.com/projects/micromppt/",
+      "url": "/projects/micromppt/",
+      "type": "application"
+    },
+    {
+      "name": "Femtofox",
+      "description": "Tiny, inexpensive Linux-based Meshtastic client. Configuration, power usage testing, RF transmit power characterization, and custom MPPT solar charger design.",
+      "keywords": [
+        "Meshtastic",
+        "Embedded Linux",
+        "RF"
+      ],
+      "startDate": "2025-02-01",
+      "url": "/projects/femtofox/",
       "type": "application"
     },
     {
       "name": "NonHumanScent, Artificial Olfaction",
-      "description": "Designed electronic olfaction gas composition sensors and developed open-source edge ML electronic olfaction dev kits.",
+      "description": "Designed electronic olfaction gas composition sensors and developed open-source edge ML electronic olfaction dev kits with MOX sensor arrays and ESP32-S3.",
       "keywords": [
-        "Open source hardware",
-        "Open Science",
-        "Material science",
-        "Edge ML"
+        "Edge ML",
+        "Sensor design",
+        "Open source hardware"
       ],
       "startDate": "2024-10-05",
-      "url": "https://eigenlucy.com/projects/NonHumanScent/",
+      "url": "/projects/nonhumanscent/",
       "type": "application"
     },
     {
-      "name": "Cultured Neurons at Frontier Tower",
-      "description": "Developing techniques for Frontier Tower's neurotech floor to read and stimulate cultured neurons, including maskless MEA fabrication process, biocompatible fluid exchange systems, and custom signal acquisition boards",
+      "name": "Gamma Spectroscopy",
+      "description": "Modeling and building scintillator + SiPM gamma spectroscopes for radioisotope identification. Custom signal conditioning and pulse height analysis.",
       "keywords": [
-        "Biosystems",
-        "DIYBIO",
-        "Biohacking"
+        "Nuclear instrumentation",
+        "Signal processing",
+        "Sensor design"
       ],
-      "startDate": "2025-01-15",
-      "url": "https://eigenlucy.com/projects/mea_arrays/",
+      "startDate": "2025-06-01",
+      "url": "/projects/gammaspectroscopy/",
       "type": "application"
     },
     {
-      "name": "NFC/LED Chip Implant",
-      "description": "Self-surgery to install an xSIID NFC/LED chip in the webbing of my left hand",
+      "name": "Spacebridge High Altitude Balloon PCB",
+      "description": "High altitude balloon payload PCB with LoRa, GPS, heating, environmental sensing, and a cutoff mechanism. Built with Noisebridge's Spacebridge group.",
       "keywords": [
-        "RFID/NFC Hacking",
-        "Biohacking"
+        "LoRa",
+        "PCB design",
+        "Embedded systems"
       ],
-      "startDate": "2022-11-30",
-      "url": "https://eigenlucy.com/projects/NFC_Implant/",
+      "startDate": "2025-01-05",
+      "url": "/projects/spacebridgehabpcb/",
       "type": "application"
     },
     {
-      "name": "Voices In The Radio",
-      "description": "OS-agnostic GPT fine-tuning toolchain used in my OpenSauce 2024 exhibit. Automates scraping and processing large quantities of text from a variety of source file types, filtering this data with chunk distinctiveness scoring, and automating the fine-tuning process via OpenAI's API. Additionally, provides tools to automate the assignment of fine-tuned models to Discord bots and the assignment of a voice via the Eleven Labs TTS API. Our OpenSauce booth included a terminal to interact with the models we trained this way, which would then speak to the user through a suite of FM radios with the use of an ESP32 and SI4713 FM Transmitter IC.",
+      "name": "DRSSTC Tesla Coil",
+      "description": "Dual resonant solid state Tesla coil. Gate driver, interrupter, and full-bridge inverter design and construction.",
       "keywords": [
-        "LLM Fine tuning",
-        "ChatGPT",
-        "Python"
+        "High voltage",
+        "Power electronics",
+        "Resonant converters"
+      ],
+      "startDate": "2023-06-01",
+      "url": "/projects/drsstc/",
+      "type": "application"
+    },
+    {
+      "name": "Head In A Jar (OpenSauce 2025)",
+      "description": "Interactive animatronic robot head with silicone skin, fine-tuned LLM with knowledge graph integration, and custom voice model. Exhibited at OpenSauce 2025.",
+      "keywords": [
+        "LLM",
+        "Robotics",
+        "Animatronics"
       ],
       "startDate": "2024-04-12",
-      "endDate": "2024-06-18",
-      "url": "https://github.com/eigenlucy/Voices-In-The-Radio-PUBLIC-",
+      "endDate": "2025-06-14",
+      "url": "/projects/nixonbot/",
+      "type": "application"
+    },
+    {
+      "name": "10kW Microwave Furnace",
+      "description": "10kW 2.4GHz RF microwave furnace using repurposed magnetrons. High power waveguide design, interlock systems, and thermal management.",
+      "keywords": [
+        "High power RF",
+        "Waveguide design",
+        "High voltage"
+      ],
+      "startDate": "2024-01-01",
+      "url": "/projects/10kwmagnetron/",
+      "type": "application"
+    },
+    {
+      "name": "Voron 2.4 Build",
+      "description": "350mm self-sourced Voron V2.4r2 CoreXY 3D printer. Full mechanical and electrical assembly, Klipper firmware configuration.",
+      "keywords": [
+        "3D printing",
+        "CNC",
+        "Mechanical design"
+      ],
+      "startDate": "2023-09-01",
+      "url": "/projects/voron24/",
       "type": "application"
     }
   ],
