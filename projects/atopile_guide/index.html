@@ -106,6 +106,9 @@
 >
 
 
+  <!-- Sidebar Table of Contents -->
+  <link defer href="/assets/css/bootstrap-toc.min.css?6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet">
+
 
 <!-- Styles -->
 
@@ -180,6 +183,82 @@
 
           <!-- Other pages -->
           
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
           
             
           
@@ -332,7 +411,14 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       
-        <div class="post">
+        
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-2">
+              <nav id="toc-sidebar" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-10"><div class="post">
   <header class="post-header">
     <h1 class="post-title">Intro to Atopile</h1>
     <p class="post-description">Installation, usage, and best-practices</p>
@@ -351,8 +437,661 @@
   </header>
 
   <article>
-    <p>Over the last year, I’ve spent a lot of time using Atopile for my PCB designs.</p>
+    <p>Over the last year, I’ve spent a lot of time using <a href="https://atopile.io">Atopile</a> for my PCB designs. It’s a code-first EDA tool — you describe circuits in <code class="language-plaintext highlighter-rouge">.ato</code> files (a Python-inspired DSL), and the compiler handles component selection, constraint validation, and KiCad project generation. See the <a href="https://docs.atopile.io/atopile/introduction">atopile docs</a> for the full reference. This page covers the language fundamentals and my install/build workflow.</p>
 
+<p>Example projects to reference alongside this guide:</p>
+<ul>
+  <li><a href="https://github.com/eigenlucy/ncp1529asnt1g">eigenlucy/ncp1529asnt1g</a> — a reusable NCP1529 buck converter package</li>
+  <li><a href="https://github.com/eigenlucy/wasp">eigenlucy/wasp</a> — a BLE wearable that imports the NCP1529 package</li>
+</ul>
+
+<h1 id="atopile-usage-101">Atopile Usage 101</h1>
+
+<h2 id="the-ato-language">The .ato Language</h2>
+
+<p>Atopile uses an indentation-based syntax (like Python). Comments start with <code class="language-plaintext highlighter-rouge">#</code>.</p>
+
+<h3 id="types">Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">module</code></td>
+      <td>Container for signals, variables, and connections. The fundamental building block.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">component</code></td>
+      <td>Subclass of module representing a physical part on the PCB. Has footprint/symbol/BOM data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">interface</code></td>
+      <td>Connection point type (e.g., <code class="language-plaintext highlighter-rouge">Electrical</code>, <code class="language-plaintext highlighter-rouge">ElectricPower</code>, <code class="language-plaintext highlighter-rouge">I2C</code>).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">signal</code></td>
+      <td>Named electrical connection within a component.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pin</code></td>
+      <td>Physical pad on a footprint.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can subclass a module as a component, but NOT a component as a module.</p>
+
+<h3 id="modules-and-inheritance">Modules and Inheritance</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module SomeModule:
+    some_signal = new ElectricSignal
+    gnd = new Electrical
+    some_signal.reference.lv ~ gnd
+    some_variable = "some value"
+
+# Inherit with the 'from' keyword
+module SubclassedModule from SomeModule:
+    some_variable = "overridden value"
+</code></pre></div></div>
+
+<p>Instantiation uses the <code class="language-plaintext highlighter-rouge">new</code> keyword. Attributes are assigned directly in scope.</p>
+
+<h3 id="units-and-tolerances">Units and Tolerances</h3>
+
+<p>Units are written immediately after numbers with no space:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.23ohm       # or 1.23Ω
+4.56Kohm      # kilohms
+100nF         # nanofarads
+4.7uF         # microfarads
+3.3V          # volts
+600mV         # millivolts
+18pF          # picofarads
+2.2uH         # microhenries
+400kHz        # kilohertz
+</code></pre></div></div>
+
+<p>Three tolerance forms:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1V to 2V                  # range
+3uF +/- 1uF              # absolute
+4Kohm +/- 1%             # percentage
+</code></pre></div></div>
+
+<h3 id="connections">Connections</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">~</code> operator connects interfaces of the same type:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>power.hv ~ r_top.p1
+r_top.p2 ~ output.line
+</code></pre></div></div>
+
+<p>Multiple connections can be chained with semicolons on one line:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vout.gnd ~ Vin.gnd; ic.GND ~ Vin.gnd
+</code></pre></div></div>
+
+<h3 id="imports">Imports</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Standard library (no path needed)
+import Resistor, Capacitor, ElectricPower, ElectricSignal
+
+# From a local file in the same project
+from "ncp1529asnt1g.ato" import NCP1529ASNT1G
+
+# From an installed package dependency
+from "eigenlucy/ncp1529asnt1g/main.ato" import Regulator
+</code></pre></div></div>
+
+<p>Paths are relative to the project root (where <code class="language-plaintext highlighter-rouge">ato.yaml</code> lives). The legacy <code class="language-plaintext highlighter-rouge">import X from "file.ato"</code> syntax is deprecated.</p>
+
+<h2 id="writing-interfaces">Writing Interfaces</h2>
+
+<p>Interfaces define the connection contract for a module — what signals it exposes and how they relate. The standard library provides the common ones, but understanding how they’re built helps you write your own.</p>
+
+<h3 id="standard-library-interfaces">Standard Library Interfaces</h3>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Electrical</code></strong> — a single electrical net. The most fundamental interface, no sub-signals.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ElectricPower</code></strong> — a power rail:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">hv</code> / <code class="language-plaintext highlighter-rouge">vcc</code> (Electrical) — high voltage</li>
+  <li><code class="language-plaintext highlighter-rouge">lv</code> / <code class="language-plaintext highlighter-rouge">gnd</code> (Electrical) — ground</li>
+  <li>Parameters: <code class="language-plaintext highlighter-rouge">voltage</code> (volt), <code class="language-plaintext highlighter-rouge">max_current</code> (ampere)</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ElectricSignal</code></strong> — a signal referenced to a power rail:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">line</code> (Electrical) — the signal line</li>
+  <li><code class="language-plaintext highlighter-rouge">reference</code> (ElectricPower) — defines the voltage domain</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ElectricLogic</code></strong> — a two-state logic signal:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">line</code> (Electrical) — the logic line</li>
+  <li><code class="language-plaintext highlighter-rouge">reference</code> (ElectricPower) — voltage reference</li>
+  <li>Parameter: <code class="language-plaintext highlighter-rouge">push_pull</code> (dimensionless)</li>
+</ul>
+
+<p><strong><code class="language-plaintext highlighter-rouge">I2C</code></strong> — <code class="language-plaintext highlighter-rouge">scl</code>, <code class="language-plaintext highlighter-rouge">sda</code> (ElectricLogic), <code class="language-plaintext highlighter-rouge">frequency</code>, <code class="language-plaintext highlighter-rouge">address</code> parameters. Has <code class="language-plaintext highlighter-rouge">requires_pulls</code> trait (needs pull-up resistors).</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SPI</code></strong> — <code class="language-plaintext highlighter-rouge">miso</code>, <code class="language-plaintext highlighter-rouge">mosi</code>, <code class="language-plaintext highlighter-rouge">sclk</code> (ElectricLogic).</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">UART</code></strong> — <code class="language-plaintext highlighter-rouge">base_uart</code> (UART_Base), plus flow control signals (<code class="language-plaintext highlighter-rouge">cts</code>, <code class="language-plaintext highlighter-rouge">rts</code>, etc.).</p>
+
+<p>Others: <code class="language-plaintext highlighter-rouge">USB2_0</code>, <code class="language-plaintext highlighter-rouge">USB_C</code>, <code class="language-plaintext highlighter-rouge">HDMI</code>, <code class="language-plaintext highlighter-rouge">CAN</code>, <code class="language-plaintext highlighter-rouge">JTAG</code>, <code class="language-plaintext highlighter-rouge">SWD</code>, <code class="language-plaintext highlighter-rouge">DifferentialPair</code>, etc.</p>
+
+<h3 id="writing-custom-interfaces">Writing Custom Interfaces</h3>
+
+<p>If your IC has a non-standard bus or you want to group signals semantically, define your own interface:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interface MyBus:
+    clk = new Electrical
+    data = new Electrical
+    reference = new ElectricPower
+</code></pre></div></div>
+
+<p>Then use it in modules and connect with <code class="language-plaintext highlighter-rouge">~</code> — the compiler ensures both sides have matching structure.</p>
+
+<h2 id="workflow-from-datasheet-to-reusable-package">Workflow: From Datasheet to Reusable Package</h2>
+
+<p>This is the full pipeline for turning an IC into a reusable atopile package, using the NCP1529 buck converter as a worked example.</p>
+
+<h3 id="step-1-define-the-component--map-pins-to-signals">Step 1: Define the component — map pins to signals</h3>
+
+<p>Start from the datasheet. The NCP1529ASNT1G has 5 pins. Create a component definition that maps each physical pin to a named signal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>component NCP1529ASNT1G:
+    """onsemi NCP1529ASNT1G buck converter"""
+    lcsc_id = "C23902"
+    manufacturer = "onsemi"
+    mpn = "NCP1529ASNT1G"
+    datasheet_url = "https://..."
+    designator_prefix = "U"
+
+    # Map signals to physical pins
+    signal EN ~ pin 1
+    signal GND ~ pin 2
+    signal SW ~ pin 3
+    signal VIN ~ pin 4
+    signal FB ~ pin 5
+</code></pre></div></div>
+
+<p>You can also generate this with <code class="language-plaintext highlighter-rouge">ato create part</code> by entering the JLCPCB part number (C23902). It auto-generates the component definition with traits, pin mappings, footprint, symbol, and 3D model.</p>
+
+<p>Key attributes: <code class="language-plaintext highlighter-rouge">lcsc_id</code> (JLCPCB part number), <code class="language-plaintext highlighter-rouge">manufacturer</code>, <code class="language-plaintext highlighter-rouge">mpn</code>, <code class="language-plaintext highlighter-rouge">designator_prefix</code> (U, R, C, L, etc.), <code class="language-plaintext highlighter-rouge">package</code> (e.g. “0402”, “SOT-23”).</p>
+
+<h3 id="step-2-construct-the-circuit--connect-interfaces-and-components">Step 2: Construct the circuit — connect interfaces and components</h3>
+
+<p>Now wrap the IC in a module with the required external components (caps, inductors, resistor divider) and expose standard interfaces (<code class="language-plaintext highlighter-rouge">ElectricPower</code>) for other modules to connect to. This is where the circuit design lives:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Capacitor, Resistor, ElectricPower, Inductor
+from "ncp1529asnt1g.ato" import NCP1529ASNT1G
+from "swpa3015s2r2nt.ato" import SWPA3015S2R2NT
+
+module Regulator:
+    ic = new NCP1529ASNT1G
+    L = new SWPA3015S2R2NT    # 2.2uH inductor
+
+    # Expose standard power interfaces
+    Vin = new ElectricPower
+    Vout = new ElectricPower
+    Vout.gnd ~ Vin.gnd; ic.GND ~ Vin.gnd
+
+    # Input decoupling cap
+    Cin = new Capacitor; Cin.value = 4.7uF +/- 20%; Cin.package = "C0603"
+    Cin.power ~ Vin; Vin.vcc ~ ic.VIN
+
+    # Output cap
+    Cout = new Capacitor; Cout.value = 10uF +/- 20%; Cout.package = "C0603"
+    Cout.power ~ Vout
+
+    # Inductor on the switch node
+    ic.SW ~ L.p1; L.p2 ~ Vout.vcc
+
+    # Feedback voltage divider
+    Rtop = new Resistor; Rtop.package = "R0402"
+    Rbottom = new Resistor; Rbottom.package = "R0402"
+    Rbottom.resistance = 200kohm +/- 20%
+
+    Rtop.p1 ~ Vout.vcc; Rtop.p2 ~ ic.FB
+    ic.FB ~ Rbottom.p1; Rbottom.p2 ~ Vout.gnd
+
+    # Feedforward cap across Rtop
+    Cfl = new Capacitor; Cfl.value = 18pF +/- 20%; Cfl.package = "C0402"
+    Cfl.p1 ~ Rtop.p1; Cfl.p2 ~ Rtop.p2
+</code></pre></div></div>
+
+<p>Notice the pattern: you instantiate the IC and passives, wire everything together with <code class="language-plaintext highlighter-rouge">~</code>, and expose <code class="language-plaintext highlighter-rouge">Vin</code>/<code class="language-plaintext highlighter-rouge">Vout</code> as the module’s public interfaces. Anyone importing this module only needs to connect those power interfaces and set the configurable assertions — the internal circuit is encapsulated.</p>
+
+<h3 id="step-3-add-assertions-for-configurable-parameters">Step 3: Add assertions for configurable parameters</h3>
+
+<p>This is what makes the package reusable. Declare typed variables for the parameters a user should configure, add assertions to bound them to the IC’s valid range, and write the equation that ties them to component values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ## ASSERTIONS ##
+    Vfb = 600mV                        # IC internal reference
+
+    INPUT_VOLTAGE: voltage
+    VIN_MIN = 2.7V; VIN_MAX = 5.5V
+    assert INPUT_VOLTAGE &lt; VIN_MAX
+    assert INPUT_VOLTAGE &gt; VIN_MIN
+
+    OUTPUT_VOLTAGE: voltage
+    VOUT_MIN = 900mV; VOUT_MAX = 3.9V
+    assert OUTPUT_VOLTAGE &lt; VOUT_MAX
+    assert OUTPUT_VOLTAGE &gt; VOUT_MIN
+
+    # The key equation: compute Rtop from desired Vout
+    Rtop.resistance = ((OUTPUT_VOLTAGE / Vfb) - 1) * Rbottom.resistance
+</code></pre></div></div>
+
+<p>When someone sets <code class="language-plaintext highlighter-rouge">OUTPUT_VOLTAGE = 3.3V</code>, the compiler solves for <code class="language-plaintext highlighter-rouge">Rtop.resistance = ((3.3V / 0.6V) - 1) * 200kohm = 900kohm</code>, then auto-picks a resistor from JLCPCB that falls within tolerance. If <code class="language-plaintext highlighter-rouge">OUTPUT_VOLTAGE</code> is set outside the 900mV–3.9V range, the build fails with an assertion error.</p>
+
+<p>Available dimension types for typed variables: <code class="language-plaintext highlighter-rouge">voltage</code>, <code class="language-plaintext highlighter-rouge">current</code>, <code class="language-plaintext highlighter-rouge">resistance</code>, <code class="language-plaintext highlighter-rouge">capacitance</code>, <code class="language-plaintext highlighter-rouge">inductance</code>, <code class="language-plaintext highlighter-rouge">frequency</code>, <code class="language-plaintext highlighter-rouge">power</code>, <code class="language-plaintext highlighter-rouge">dimensionless</code>.</p>
+
+<h3 id="step-4-publish-the-package">Step 4: Publish the package</h3>
+
+<p>Set up <code class="language-plaintext highlighter-rouge">ato.yaml</code> with the package metadata and entry point:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">requires-atopile</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.6.0"</span>
+
+<span class="na">paths</span><span class="pi">:</span>
+  <span class="na">src</span><span class="pi">:</span> <span class="s">./</span>
+  <span class="na">layout</span><span class="pi">:</span> <span class="s">./layouts</span>
+  <span class="na">footprints</span><span class="pi">:</span> <span class="s">./footprints</span>
+
+<span class="na">builds</span><span class="pi">:</span>
+  <span class="na">default</span><span class="pi">:</span>
+    <span class="na">entry</span><span class="pi">:</span> <span class="s">main.ato:Regulator</span>
+
+<span class="na">package</span><span class="pi">:</span>
+  <span class="na">identifier</span><span class="pi">:</span> <span class="s">eigenlucy/ncp1529asnt1g</span>
+  <span class="na">repository</span><span class="pi">:</span> <span class="s">https://github.com/eigenlucy/ncp1529asnt1g</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.1.0"</span>
+  <span class="na">authors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">lucy moglia</span>
+      <span class="na">email</span><span class="pi">:</span> <span class="s">eigenlucy@proton.me</span>
+  <span class="na">summary</span><span class="pi">:</span> <span class="s">900mV-3.9Vout DC-DC Converter</span>
+  <span class="na">license</span><span class="pi">:</span> <span class="s">GNU General Public License v3</span>
+</code></pre></div></div>
+
+<h3 id="step-5-import-into-another-project">Step 5: Import into another project</h3>
+
+<p>In the WASP project, the NCP1529 regulator package is added as a dependency and configured with a single line to set the output voltage:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># wasp ato.yaml (excerpt)</span>
+<span class="na">dependencies</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">registry</span>
+  <span class="na">identifier</span><span class="pi">:</span> <span class="s">eigenlucy/ncp1529asnt1g</span>
+  <span class="na">release</span><span class="pi">:</span> <span class="s">0.1.2</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># wasp main.ato
+from "eigenlucy/ncp1529asnt1g/main.ato" import Regulator
+
+module Wasp:
+    power_batt = new ElectricPower
+    power_3V3 = new ElectricPower
+    power_batt.gnd ~ power_3V3.gnd
+
+    # Instantiate the regulator and set output voltage
+    ldo = new Regulator
+    ldo.OUTPUT_VOLTAGE = 3.3V +/- 5%
+    ldo.Vin ~ power_batt
+    ldo.Vout ~ power_3V3
+
+    # Access internal IC signals when needed (e.g. enable pin)
+    ldo.ic.EN ~ uc.gpios[5]
+    ldo_pullup = new Resistor
+    ldo_pullup.value = 100kohm; ldo_pullup.package = "R0201"
+    ldo_pullup.p1 ~ ldo.ic.EN; ldo_pullup.p2 ~ power_3V3.vcc
+</code></pre></div></div>
+
+<p>That’s the whole flow: <code class="language-plaintext highlighter-rouge">OUTPUT_VOLTAGE = 3.3V +/- 5%</code> is all it takes to configure the regulator. The compiler propagates that through the feedback divider equation, picks appropriate resistors, and validates everything is within the IC’s operating range. If you wanted 1.8V instead, change one line. The assertion system catches invalid configurations at build time.</p>
+
+<h2 id="traits-and-the-bridge-operator">Traits and the Bridge Operator</h2>
+
+<p>Traits are an experimental feature that extend module behavior. Enable them with pragma directives at the top of your file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#pragma experiment("TRAITS")
+</code></pre></div></div>
+
+<h3 id="the-bridge-operator-">The Bridge Operator <code class="language-plaintext highlighter-rouge">~&gt;</code></h3>
+
+<p>The bridge operator lets you chain a signal through a module without manually wiring both sides. Instead of:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input ~ filter.input
+filter.output ~ output
+</code></pre></div></div>
+
+<p>You write:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input ~&gt; filter ~&gt; output
+</code></pre></div></div>
+
+<p>To use it, you need <strong>both</strong> pragmas and the trait on the module being bridged:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#pragma experiment("TRAITS")
+#pragma experiment("BRIDGE_CONNECT")
+import can_bridge_by_name
+
+module LowPassFilter:
+    input = new ElectricLogic
+    output = new ElectricLogic
+    trait can_bridge_by_name&lt;input_name="input", output_name="output"&gt;
+
+    # ... filter circuit internals ...
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">can_bridge_by_name</code> trait tells the compiler which interfaces are the input and output for bridging. The bridge operator only works on modules that have this trait — it’s not a generic passthrough. Typical use cases are filters, level shifters, buffers, and other signal-conditioning modules where you’re chaining a signal through a series of processing stages:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mic_signal ~&gt; preamp ~&gt; low_pass ~&gt; adc_input
+</code></pre></div></div>
+
+<p>Each module in the chain must have the <code class="language-plaintext highlighter-rouge">can_bridge_by_name</code> trait with its input/output interfaces named.</p>
+
+<h3 id="other-useful-traits">Other Useful Traits</h3>
+
+<p><strong><code class="language-plaintext highlighter-rouge">has_single_electric_reference_shared</code></strong> — auto-connects all electric references (power/ground) within a module. Saves you from manually wiring every ground together:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module MyBoard:
+    logic_a = new ElectricLogic
+    logic_b = new ElectricLogic
+    power = new ElectricPower
+    trait has_single_electric_reference_shared
+    # All .reference.lv nets are now connected automatically
+</code></pre></div></div>
+
+<p>Use <code class="language-plaintext highlighter-rouge">&lt;gnd_only=true&gt;</code> to only share ground, not the power rail.</p>
+
+<h2 id="key-components-standard-library">Key Components (Standard Library)</h2>
+
+<p><strong>Resistor</strong> — <code class="language-plaintext highlighter-rouge">resistance</code> (ohm), <code class="language-plaintext highlighter-rouge">max_power</code> (watt). Terminals: <code class="language-plaintext highlighter-rouge">p1</code>, <code class="language-plaintext highlighter-rouge">p2</code>. Auto-pickable.</p>
+
+<p><strong>Capacitor</strong> — <code class="language-plaintext highlighter-rouge">capacitance</code> / <code class="language-plaintext highlighter-rouge">value</code> (farad), <code class="language-plaintext highlighter-rouge">max_voltage</code> (volt). Terminals: <code class="language-plaintext highlighter-rouge">p1</code>, <code class="language-plaintext highlighter-rouge">p2</code> or <code class="language-plaintext highlighter-rouge">power</code> (ElectricPower for bypass caps). Auto-pickable.</p>
+
+<p><strong>Inductor</strong> — <code class="language-plaintext highlighter-rouge">inductance</code> (henry), <code class="language-plaintext highlighter-rouge">current</code> (ampere). Terminals: <code class="language-plaintext highlighter-rouge">p1</code>, <code class="language-plaintext highlighter-rouge">p2</code>.</p>
+
+<p><strong>LED</strong> — <code class="language-plaintext highlighter-rouge">current</code>, <code class="language-plaintext highlighter-rouge">forward_voltage</code>, <code class="language-plaintext highlighter-rouge">color</code>. Terminals: <code class="language-plaintext highlighter-rouge">anode</code>, <code class="language-plaintext highlighter-rouge">cathode</code>.</p>
+
+<p><strong>MOSFET / NFET / PFET</strong> — <code class="language-plaintext highlighter-rouge">gate_source_threshold_voltage</code>, <code class="language-plaintext highlighter-rouge">max_continuous_drain_current</code>, <code class="language-plaintext highlighter-rouge">on_resistance</code>. Terminals: <code class="language-plaintext highlighter-rouge">gate</code>, <code class="language-plaintext highlighter-rouge">drain</code>, <code class="language-plaintext highlighter-rouge">source</code>.</p>
+
+<p><strong>LDO</strong> — <code class="language-plaintext highlighter-rouge">output_voltage</code>, <code class="language-plaintext highlighter-rouge">dropout_voltage</code>, <code class="language-plaintext highlighter-rouge">output_current</code>. Interfaces: <code class="language-plaintext highlighter-rouge">power_in</code>, <code class="language-plaintext highlighter-rouge">power_out</code>, <code class="language-plaintext highlighter-rouge">enable</code>.</p>
+
+<p><strong>ResistorVoltageDivider</strong> — <code class="language-plaintext highlighter-rouge">v_in</code>, <code class="language-plaintext highlighter-rouge">v_out</code>, <code class="language-plaintext highlighter-rouge">ratio</code>, <code class="language-plaintext highlighter-rouge">max_current</code>. Interfaces: <code class="language-plaintext highlighter-rouge">power</code>, <code class="language-plaintext highlighter-rouge">output</code>.</p>
+
+<p>For passives, set <code class="language-plaintext highlighter-rouge">package</code> (e.g. <code class="language-plaintext highlighter-rouge">"0402"</code>, <code class="language-plaintext highlighter-rouge">"0603"</code>) and constraints, and the compiler auto-selects from JLCPCB:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cin = new Capacitor; Cin.value = 4.7uF +/- 20%; Cin.package = "C0603"
+Rbottom = new Resistor; Rbottom.package = "R0402"; Rbottom.resistance = 200kohm +/- 20%
+</code></pre></div></div>
+
+<h2 id="adding-components-four-methods">Adding Components (Four Methods)</h2>
+
+<p><strong>Auto-pick passives</strong> — just set constraints and package. The compiler selects from JLCPCB inventory.</p>
+
+<p><strong>CLI part creation</strong> — <code class="language-plaintext highlighter-rouge">ato create part</code>, enter a JLCPCB part number (e.g. C23902) or MPN (e.g. NCP1529ASNT1G). Generates the component definition with traits, pin mappings, footprint, symbol, and 3D model.</p>
+
+<p><strong>Registry packages</strong> — <code class="language-plaintext highlighter-rouge">ato add atopile/rp2040</code>, then import. Browse packages at <a href="https://packages.atopile.io/">packages.atopile.io</a>.</p>
+
+<p><strong>Manual custom parts</strong> — create a folder in <code class="language-plaintext highlighter-rouge">parts/</code> with KiCad footprint (.kicad_mod), 3D STEP model, and a matching .ato file.</p>
+
+<h2 id="packages">Packages</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ato add eigenlucy/ncp1529asnt1g    <span class="c"># add a dependency</span>
+ato remove eigenlucy/ncp1529asnt1g <span class="c"># remove</span>
+ato <span class="nb">sync</span>                           <span class="c"># install all from ato.yaml</span>
+</code></pre></div></div>
+
+<p>Dependencies appear in <code class="language-plaintext highlighter-rouge">ato.yaml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">registry</span>
+  <span class="na">identifier</span><span class="pi">:</span> <span class="s">eigenlucy/ncp1529asnt1g</span>
+  <span class="na">release</span><span class="pi">:</span> <span class="s">0.1.2</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">registry</span>
+  <span class="na">identifier</span><span class="pi">:</span> <span class="s">atopile/usb-connectors</span>
+  <span class="na">release</span><span class="pi">:</span> <span class="s">0.1.0</span>
+</code></pre></div></div>
+
+<h2 id="project-structure">Project Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project_name/
+├── .ato/                  # dependency cache (gitignored)
+├── build/                 # build outputs (gitignored)
+├── ato.yaml               # project manifest
+├── layouts/               # KiCad board layouts
+├── footprints/            # custom footprints (if any)
+├── main.ato               # top-level module
+└── parts/                 # custom part definitions
+    └── my_ic.ato
+</code></pre></div></div>
+
+<h3 id="atoyaml">ato.yaml</h3>
+
+<p>Key fields:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">builds.default.entry</code> — entry point as <code class="language-plaintext highlighter-rouge">filename.ato:ModuleName</code></li>
+  <li><code class="language-plaintext highlighter-rouge">paths.src</code> — where .ato source files live (often <code class="language-plaintext highlighter-rouge">./</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">paths.layout</code> — where KiCad layout files live</li>
+  <li><code class="language-plaintext highlighter-rouge">dependencies</code> — list of package dependencies</li>
+  <li><code class="language-plaintext highlighter-rouge">package</code> — metadata for publishing this project as a package</li>
+</ul>
+
+<h2 id="full-example-wasp-main-module">Full Example: WASP Main Module</h2>
+
+<p>The complete WASP <code class="language-plaintext highlighter-rouge">main.ato</code> showing how multiple packages and local components come together. The NCP1529 regulator is imported from the registry, configured with one line, and wired to the battery and 3.3V rails:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import ElectricPower, USB2_0_IF, Resistor, Capacitor
+from "pb03.ato" import PB03
+from "atopile/usb-connectors/usb-connectors.ato" import USBCConn
+from "atopile/ti-bq2404x/bq2404x.ato" import BQ24045DSQR
+from "eigenlucy/ncp1529asnt1g/main.ato" import Regulator
+from "lsm6dsltr.ato" import LSM6DSL
+from "mmict39020001.ato" import MMICT390200012
+
+module Wasp:
+    power_batt = new ElectricPower
+    power_3V3 = new ElectricPower
+    power_5V = new ElectricPower
+    power_batt.gnd ~ power_3V3.gnd
+
+    usb = new USBCConn
+    usb.conn.VBUS ~ power_5V.vcc; usb.conn.GND ~ power_5V.gnd
+
+    uc = new PB03
+    uc.power ~ power_3V3
+    uc.usb2 ~ usb.usb2
+    C1 = new Capacitor; C1.value = 100nF +/- 10%; C1.package = "C0402"
+    C1.power ~ power_3V3
+    C2 = new Capacitor; C2.value = 2.2uF +/- 10%; C2.package = "C0603"
+    C2.power ~ power_3V3
+
+    mic = new MMICT390200012
+    mic.power ~ power_3V3
+    mic.i2s ~ uc.i2s
+    Cmic = new Capacitor; Cmic.value = 100nF +/- 10%; Cmic.package = "C0402"
+    Cmic.power ~ mic.power
+
+    imu = new LSM6DSL
+    imu.power ~ power_3V3
+    imu.i2c ~ uc.i2c
+
+    bms = new BQ24045DSQR
+    power_batt ~ bms.power_batt
+    power_5V ~ bms.power_in
+
+    # Buck converter — one line to set output voltage
+    ldo = new Regulator
+    ldo.OUTPUT_VOLTAGE = 3.3V +/- 5%
+    ldo.Vin ~ power_batt
+    ldo.Vout ~ power_3V3
+    ldo.ic.EN ~ uc.gpios[5]
+    ldo_pullup = new Resistor; ldo_pullup.value = 100kohm; ldo_pullup.package = "R0201"
+    ldo_pullup.p1 ~ ldo.ic.EN; ldo_pullup.p2 ~ power_3V3.vcc
+</code></pre></div></div>
+
+<h2 id="projects-built-with-atopile">Projects Built with Atopile</h2>
+
+<p>Here are some of my projects designed with atopile — each one uses the package/assertion workflow described above.</p>
+
+<h3 id="micromppt-v3--solar-charge-controller">MicroMPPT V3 — Solar charge controller</h3>
+<div class="row justify-content-center">
+    <div class="col-sm-5 mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/micrompptV3.png-480.webp 480w,assets/img/Gallery/micrompptV3.png-800.webp 800w,assets/img/Gallery/micrompptV3.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/micrompptV3.png" alt="MicroMPPT V3 PCB render" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/micrompptV3.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<p>Tiny MPPT solar charge controller. V3 was the first version fully designed in atopile. Uses auto-picked passives and constraint assertions for the feedback divider and current sense resistors. <a href="/projects/micromppt">Project page</a> | <a href="https://github.com/eigenlucy/BQ2425X_MicroMPPT">GitHub</a></p>
+
+<h3 id="wasp--wearable-ai-synthesis-platform">WASP — Wearable AI Synthesis Platform</h3>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/wasppcbtop.jpg-480.webp 480w,assets/img/Gallery/wasppcbtop.jpg-800.webp 800w,assets/img/Gallery/wasppcbtop.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/wasppcbtop.jpg" alt="WASP PCB top" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/wasppcbtop.jpg';" />
+    </picture>
+    
+  </figure>
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/wasptop.png-480.webp 480w,assets/img/Gallery/wasptop.png-800.webp 800w,assets/img/Gallery/wasptop.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/wasptop.png" alt="WASP 3D render" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/wasptop.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<p>BLE 5.2 wearable with IMU, MEMS mic, and BQ24045 battery management. Imports the NCP1529 regulator package shown above — <code class="language-plaintext highlighter-rouge">ldo.OUTPUT_VOLTAGE = 3.3V +/- 5%</code> configures the whole power supply. <a href="/projects/wasp">Project page</a> | <a href="https://github.com/eigenlucy/wasp">GitHub</a></p>
+
+<h3 id="open-flashlight--uvvisible-led-driver">Open Flashlight — UV/visible LED driver</h3>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/OpenFlashlightPCB2.png-480.webp 480w,assets/img/Gallery/OpenFlashlightPCB2.png-800.webp 800w,assets/img/Gallery/OpenFlashlightPCB2.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/OpenFlashlightPCB2.png" alt="Open Flashlight PCB" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/OpenFlashlightPCB2.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/OpenFlashLightRender.jpg-480.webp 480w,assets/img/Gallery/OpenFlashLightRender.jpg-800.webp 800w,assets/img/Gallery/OpenFlashLightRender.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/OpenFlashLightRender.jpg" alt="Open Flashlight CC driver render" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/OpenFlashLightRender.jpg';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<p>Modular constant-current LED driver with ATtiny816 control. Multiple atopile submodules (<code class="language-plaintext highlighter-rouge">ccdriver.ato</code>, <code class="language-plaintext highlighter-rouge">uv-lamp.ato</code>, <code class="language-plaintext highlighter-rouge">attiny816.ato</code>). <a href="/projects/openflashlight">Project page</a> | <a href="https://github.com/eigenlucy/openflashlight">GitHub</a></p>
+
+<h3 id="izzy-monitor--custom-macro-keyboard--sensor-hub">Izzy Monitor — Custom macro keyboard + sensor hub</h3>
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/izzymonitor.jpg-480.webp 480w,assets/img/Gallery/izzymonitor.jpg-800.webp 800w,assets/img/Gallery/izzymonitor.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/izzymonitor.jpg" alt="Izzy Monitor assembled" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/izzymonitor.jpg';" />
+    </picture>
+    
+  </figure>
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/izzymonitorrender.png-480.webp 480w,assets/img/Gallery/izzymonitorrender.png-800.webp 800w,assets/img/Gallery/izzymonitorrender.png-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/izzymonitorrender.png" alt="Izzy Monitor 3D render" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="lazy" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/izzymonitorrender.png';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<p>ESP32-S3 macro keyboard with environmental sensors and e-ink display. <a href="/projects/izzymonitor">Project page</a></p>
+
+<h2 id="installation">Installation</h2>
+
+<p><strong>Mac</strong></p>
+<ol>
+  <li>Install <a href="https://brew.sh/">Homebrew</a></li>
+  <li>Install <a href="https://formulae.brew.sh/cask/kicad">KiCad 9</a></li>
+  <li>Install atopile with Homebrew: <code class="language-plaintext highlighter-rouge">brew install atopile/tap/atopile</code></li>
+  <li>Configure the atopile plugin: <code class="language-plaintext highlighter-rouge">ato configure</code></li>
+</ol>
+
+<p><strong>Linux (Ubuntu, Debian, Arch, NixOS)</strong></p>
+<ol>
+  <li>Install <a href="https://github.com/astral-sh/uv">uv</a></li>
+  <li>Install KiCad with your preferred package manager (apt for Debian, pacman for Arch, etc)</li>
+  <li>Install atopile as a tool with uv. As of writing this, you should be using Python 3.13.2:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ uv tool install atopile
+</code></pre></div>    </div>
+  </li>
+  <li>Check your version: <code class="language-plaintext highlighter-rouge">ato --version</code></li>
+  <li>Configure the atopile plugin: <code class="language-plaintext highlighter-rouge">ato configure</code></li>
+</ol>
+
+<p><strong>Alternative Linux install</strong> (my preferred method, easier to debug and manage versions):</p>
+<ol>
+  <li>Clone the main <a href="https://github.com/atopile/atopile">atopile repo</a></li>
+  <li>Remove the uv lock file: <code class="language-plaintext highlighter-rouge">rm uv.lock</code></li>
+  <li>Sync repo to dev release: <code class="language-plaintext highlighter-rouge">uv sync --dev</code></li>
+  <li>Compile atopile: <code class="language-plaintext highlighter-rouge">uv build</code></li>
+  <li>Install the binary: <code class="language-plaintext highlighter-rouge">uv tool install atopile-0.3.XX-cp313-cp313-linux-_x86_64.whl</code></li>
+  <li>Add the uv tools binary directory to your PATH (command depends on your shell, e.g. with fish):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ fish_add_path /home/user/.local/share/uv/tools/atopile/
+</code></pre></div>    </div>
+  </li>
+  <li>Check your version: <code class="language-plaintext highlighter-rouge">ato --version</code></li>
+  <li>Configure the atopile plugin: <code class="language-plaintext highlighter-rouge">ato configure</code></li>
+</ol>
+
+<p><strong>VS Code / Cursor Extension</strong></p>
+
+<p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=atopile.atopile">atopile extension</a> into Cursor or VS Code for syntax highlighting and language support.</p>
+
+<p><strong>Building a Project</strong></p>
+<ol>
+  <li>Install dependencies from <code class="language-plaintext highlighter-rouge">ato.yaml</code>: <code class="language-plaintext highlighter-rouge">ato sync</code>
+    <ul>
+      <li>If the project also uses git submodules (e.g. for the ESPHome-Panel), run <code class="language-plaintext highlighter-rouge">git submodule update --init --recursive</code> too — make sure you’re on the specific commit hash the project was built around</li>
+    </ul>
+  </li>
+  <li>Build the project to select components based on JLCPCB availability and load them into the KiCad PCB: <code class="language-plaintext highlighter-rouge">ato build -t all</code></li>
+  <li>Complete/review the layout with KiCad Standalone PCB editor</li>
+  <li>Gerbers/PCBA files are generated through an Actions run on a commit and placed in the build artifacts folder</li>
+</ol>
 
   </article>
 
@@ -387,7 +1126,9 @@
 </div>
 
   
-</div>
+</div></div>
+          </div>
+        
       
     </div>
 
@@ -468,6 +1209,9 @@
   ></script>
   <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script>
 
+
+  <!-- Sidebar Table of Contents -->
+  <script defer src="/assets/js/bootstrap-toc.min.js?c82ff4de8b0955d6ff14f5b05eed7eb6"></script>
 
 
 <!-- Bootstrap Table -->

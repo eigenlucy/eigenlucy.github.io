@@ -108,6 +108,10 @@
       localStorage.setItem("setting-low-data", this.checked);
       applySettings();
       applyLowDataMode(this.checked);
+      // When disabling low data mode, re-apply gallery throttle
+      if (!this.checked) {
+        initGalleryThrottle();
+      }
     });
 
     // High entropy
@@ -122,7 +126,94 @@
     if (lowDataBox.checked) {
       applyLowDataMode(true);
     }
+
+    // Gallery image throttle — always active (browser lazy loading is too aggressive)
+    // Low data mode has its own stricter gate, so skip if already active
+    if (!lowDataBox.checked) {
+      initGalleryThrottle();
+    }
   });
+
+  var galleryObserver = null;
+  var galleryLoadingCount = 0;
+  var galleryQueue = [];
+  var GALLERY_MAX_CONCURRENT = 10;
+  var GALLERY_EAGER_COUNT = 10; // first N images load immediately
+
+  function galleryLoadNext() {
+    while (galleryQueue.length > 0 && galleryLoadingCount < GALLERY_MAX_CONCURRENT) {
+      var img = galleryQueue.shift();
+      if (img.getAttribute("data-gallery-src")) {
+        galleryLoadingCount++;
+        img.addEventListener("load", function onLoad() {
+          img.removeEventListener("load", onLoad);
+          galleryLoadingCount--;
+          galleryLoadNext();
+        }, { once: true });
+        img.addEventListener("error", function onError() {
+          img.removeEventListener("error", onError);
+          galleryLoadingCount--;
+          galleryLoadNext();
+        }, { once: true });
+        // Restore real src/srcset
+        var realSrc = img.getAttribute("data-gallery-src");
+        if (realSrc) { img.src = realSrc; img.removeAttribute("data-gallery-src"); }
+        var realSrcset = img.getAttribute("data-gallery-srcset");
+        if (realSrcset) { img.srcset = realSrcset; img.removeAttribute("data-gallery-srcset"); }
+        var picture = img.closest("picture");
+        if (picture) {
+          picture.querySelectorAll("source[data-gallery-srcset]").forEach(function (source) {
+            source.srcset = source.getAttribute("data-gallery-srcset");
+            source.removeAttribute("data-gallery-srcset");
+          });
+        }
+      }
+    }
+  }
+
+  function initGalleryThrottle() {
+    var gallery = document.querySelector(".gallery");
+    if (!gallery) return;
+
+    var imgs = gallery.querySelectorAll("img");
+    var deferred = [];
+
+    imgs.forEach(function (img, i) {
+      if (i < GALLERY_EAGER_COUNT) return; // let first N load normally
+      var src = img.getAttribute("src");
+      var srcset = img.getAttribute("srcset");
+      if (src && src !== PLACEHOLDER) {
+        img.setAttribute("data-gallery-src", src);
+        img.src = PLACEHOLDER;
+      }
+      if (srcset) {
+        img.setAttribute("data-gallery-srcset", srcset);
+        img.removeAttribute("srcset");
+      }
+      var picture = img.closest("picture");
+      if (picture) {
+        picture.querySelectorAll("source[srcset]").forEach(function (source) {
+          source.setAttribute("data-gallery-srcset", source.srcset);
+          source.removeAttribute("srcset");
+        });
+      }
+      deferred.push(img);
+    });
+
+    if (deferred.length === 0) return;
+
+    galleryObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          galleryObserver.unobserve(entry.target);
+          galleryQueue.push(entry.target);
+          galleryLoadNext();
+        }
+      });
+    }, { rootMargin: "300% 0px" }); // 3 viewport heights ahead
+
+    deferred.forEach(function (img) { galleryObserver.observe(img); });
+  }
 
   function updateThemeComponents(theme) {
     // Syntax highlighting
@@ -202,6 +293,20 @@
     }
   }
 
+  function addVideoPlaceholder(video) {
+    var ph = document.createElement("div");
+    ph.className = "lowdata-video-placeholder";
+    ph.textContent = "video hidden (low data mode)";
+    video.parentNode.insertBefore(ph, video.nextSibling);
+  }
+
+  function removeVideoPlaceholder(video) {
+    var next = video.nextElementSibling;
+    if (next && next.classList.contains("lowdata-video-placeholder")) {
+      next.remove();
+    }
+  }
+
   function applyLowDataMode(enabled) {
     // Handle videos
     document.querySelectorAll("video").forEach(function (video) {
@@ -211,7 +316,9 @@
         video.removeAttribute("src");
         video.load();
         video.style.display = "none";
+        addVideoPlaceholder(video);
       } else {
+        removeVideoPlaceholder(video);
         var orig = video.getAttribute("data-original-src");
         if (orig) {
           video.src = orig;
@@ -224,7 +331,9 @@
     document.querySelectorAll("swiper-slide video, swiper-container video").forEach(function (video) {
       if (enabled) {
         video.style.display = "none";
+        addVideoPlaceholder(video);
       } else {
+        removeVideoPlaceholder(video);
         video.style.display = "";
       }
     });
