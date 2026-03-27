@@ -1,20 +1,23 @@
 /* tagformat.css */
 /* Tag button styles */
+.tag-filter-container {
+  text-align: center;
+}
+
 .tag-filter-container button {
   background-color: transparent;
-  border: 1px solid #007bff;
-  color: #007bff;
+  border: 1px solid var(--global-theme-color);
+  color: var(--global-theme-color);
   padding: 5px 10px;
   margin: 5px;
   cursor: pointer;
   border-radius: 5px;
-  font-family: 'Arial', sans-serif; /* Change this to your desired font */
   transition: background-color 0.3s, color 0.3s;
 }
 
 .tag-filter-container button:hover,
 .tag-filter-container button.active {
-  background-color: #007bff;
+  background-color: var(--global-theme-color);
   color: white;
 }
 
