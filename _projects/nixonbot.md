@@ -5,7 +5,7 @@ description: Nixon Tulpa, Robot Head with Silicone Skin, Interactive LLM with Kn
 img: assets/img/Gallery/NixonFace.jpeg
 importance: 2
 category: electrical engineering
-tags: [electronics, ai]
+tags: [electrical engineering, ai]
 related_publications: false
 giscus_comments: true
 ---

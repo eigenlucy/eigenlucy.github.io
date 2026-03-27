@@ -5,7 +5,7 @@ description: DIY SI4712/ESP32 Base Bluetooth->FM Transmitter
 img: assets/img/FMtransmitter.jpg
 importance: 3
 category: electrical engineering
-tags: [electronics, rf]
+tags: [electrical engineering, rf]
 related_publications: false
 giscus_comments: true
 ---

@@ -5,7 +5,7 @@ description: 800mV-5.5Vin MPPT Boost Charger with Autonomous Perturb-and-Observe
 img: assets/img/Gallery/micrompptv3.png
 importance: 1
 category: electrical engineering
-tags: [electronics, solar]
+tags: [electrical engineering, solar]
 related_publications: false
 giscus_comments: true
 ---

@@ -5,7 +5,7 @@ description: BQ2425X Dynamic Power Management as Low cost Solar MPPT/BMS
 img: assets/img/Gallery/ESP32S2MPPT.jpg
 importance: 3
 category: electrical engineering
-tags: [electronics, solar]
+tags: [electrical engineering, solar]
 related_publications: false
 giscus_comments: true
 ---

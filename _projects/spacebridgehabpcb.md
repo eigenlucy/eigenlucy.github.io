@@ -5,7 +5,7 @@ description: High altitude balloon payload PCB with LoRa, GPS, heating, envirome
 img: assets/img/Gallery/spacebridgehabpcbrender.png
 importance: 1
 category: electrical engineering
-tags: [electronics, meshtastic, pcb-design]
+tags: [electrical engineering, meshtastic, pcb-design]
 related_publications: false
 giscus_comments: true
 ---

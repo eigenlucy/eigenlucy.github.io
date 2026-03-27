@@ -3,106 +3,235 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
+    {% comment %} Find parent tag from hierarchy {% endcomment %}
+    {% assign parent_tag = nil %}
+    {% for group in site.data.tag_hierarchy %}
+      {% for child in group[1] %}
+        {% if child == page.title %}
+          {% assign parent_tag = group[0] %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    {% if parent_tag %}
+      <p class="tag-breadcrumb">
+        <a href="{{ parent_tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-hashtag fa-xs"></i> {{ parent_tag }}</a>
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+      </p>
+    {% endif %}
+
     <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> {{ page.title }}</h1>
+
+    {% comment %} Show subcategories if this is a parent tag {% endcomment %}
+    {% assign children = site.data.tag_hierarchy[page.title] %}
+    {% if children and children.size > 0 %}
+      <p class="tag-children">
+        {% for child in children %}
+          <a href="{{ child | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-hashtag fa-xs"></i> {{ child }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
   </header>
 
-  {% comment %} Posts with this tag {% endcomment %}
-  {% if page.posts.size > 0 %}
-  <h4>Posts</h4>
-  <article class="archive">
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        {% for post in page.posts %}
-          <tr>
-            <th scope="row">{{ post.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if post.redirect == blank %}
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              {% elsif post.redirect contains '://' %}
-                <a class="post-link" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-              {% else %}
-                <a class="post-link" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
-  </article>
-  {% endif %}
+  {% if children and children.size > 0 %}
+    {% comment %} ===== PARENT TAG PAGE: group by subcategory ===== {% endcomment %}
 
-  {% comment %} Projects with this tag {% endcomment %}
-  {% assign tagged_projects = "" | split: "" %}
-  {% for project in site.projects %}
-    {% if project.tags contains page.title %}
-      {% assign tagged_projects = tagged_projects | push: project %}
+    {% comment %} First show items tagged directly with the parent tag {% endcomment %}
+    {% assign direct_posts = "" | split: "" %}
+    {% if page.posts.size > 0 %}
+      {% for post in page.posts %}
+        {% assign direct_posts = direct_posts | push: post %}
+      {% endfor %}
     {% endif %}
-  {% endfor %}
+    {% for post in site.posts %}
+      {% if post.tags contains page.title %}
+        {% assign already = false %}
+        {% for p in direct_posts %}{% if p.url == post.url %}{% assign already = true %}{% endif %}{% endfor %}
+        {% unless already %}{% assign direct_posts = direct_posts | push: post %}{% endunless %}
+      {% endif %}
+    {% endfor %}
 
-  {% if tagged_projects.size > 0 %}
-  <h4>Projects</h4>
-  <article class="archive">
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        {% for project in tagged_projects %}
-          <tr>
-            <th scope="row">{{ project.category }}</th>
-            <td>
-              <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-              {% if project.description %}<span class="post-meta"> — {{ project.description | truncate: 80 }}</span>{% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
-  </article>
-  {% endif %}
+    {% assign direct_projects = "" | split: "" %}
+    {% for project in site.projects %}
+      {% if project.tags contains page.title %}
+        {% assign direct_projects = direct_projects | push: project %}
+      {% endif %}
+    {% endfor %}
 
-  {% comment %} Gallery items with this tag {% endcomment %}
-  {% assign tagged_gallery = "" | split: "" %}
-  {% for item in site.data.gallery %}
-    {% if item.tags contains page.title %}
-      {% assign tagged_gallery = tagged_gallery | push: item %}
-    {% endif %}
-  {% endfor %}
+    {% assign direct_gallery = "" | split: "" %}
+    {% for item in site.data.gallery %}
+      {% if item.tags contains page.title %}
+        {% assign direct_gallery = direct_gallery | push: item %}
+      {% endif %}
+    {% endfor %}
 
-  {% if tagged_gallery.size > 0 %}
-  <h4>Gallery</h4>
-  <div class="row row-cols-2 row-cols-md-4 g-3" style="margin-bottom: 1.5rem;">
-    {% for item in tagged_gallery limit: 12 %}
-      {% if item.type == 'image' %}
-        {% if item.path %}
-          {% assign media_path = item.path %}
-        {% else %}
-          {% assign media_path = 'assets/img/Gallery/' | append: item.file %}
-        {% endif %}
-        <div class="col">
-          <a href="{{ '/gallery/' | relative_url }}">
-            <img src="{{ media_path | relative_url }}" alt="{{ item.caption | default: 'Gallery image' | strip_html | escape }}" class="img-fluid rounded z-depth-1" loading="lazy" style="width: 100%; height: 150px; object-fit: cover;">
-          </a>
-          {% if item.caption %}<p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">{{ item.caption }}</p>{% endif %}
+    {% if direct_posts.size > 0 or direct_projects.size > 0 or direct_gallery.size > 0 %}
+      {% for post in direct_posts %}
+        <div class="tag-entry">
+          {% if post.redirect == blank %}
+            <a class="tag-entry-link" href="{{ post.url | relative_url }}">
+              <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+            </a>
+          {% elsif post.redirect contains '://' %}
+            <a class="tag-entry-link" href="{{ post.redirect }}" target="_blank">
+              <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></h2>
+            </a>
+          {% else %}
+            <a class="tag-entry-link" href="{{ post.redirect | relative_url }}">
+              <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+            </a>
+          {% endif %}
+          {% if post.description %}<p class="tag-entry-desc">{{ post.description }}</p>{% endif %}
         </div>
-      {% elsif item.type == 'video' %}
-        {% if item.path %}
-          {% assign media_path = item.path %}
-        {% else %}
-          {% assign media_path = 'assets/video/' | append: item.file %}
-        {% endif %}
-        <div class="col">
-          <a href="{{ '/gallery/' | relative_url }}">
-            <video src="{{ media_path | relative_url }}" class="img-fluid rounded z-depth-1" style="width: 100%; height: 150px; object-fit: cover;" muted playsinline preload="metadata"></video>
+      {% endfor %}
+      {% for project in direct_projects %}
+        <div class="tag-entry">
+          <a class="tag-entry-link" href="{{ project.url | relative_url }}">
+            <h2 class="tag-entry-title">{{ project.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
           </a>
-          {% if item.caption %}<p class="post-meta text-center" style="font-size: 0.75rem; margin-top: 0.25rem;">{{ item.caption }}</p>{% endif %}
+          {% if project.description %}<p class="tag-entry-desc">{{ project.description }}</p>{% endif %}
+        </div>
+      {% endfor %}
+      {% if direct_gallery.size > 0 %}
+        <div class="row g-3" style="margin-bottom: 1.5rem;">
+          {% for item in direct_gallery limit: 8 %}
+            {% include gallery_card.liquid item=item loading="lazy" %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% comment %} Then show each subcategory with its content {% endcomment %}
+    {% for child in children %}
+      {% assign child_posts = "" | split: "" %}
+      {% for post in site.posts %}
+        {% if post.tags contains child %}
+          {% assign child_posts = child_posts | push: post %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign child_projects = "" | split: "" %}
+      {% for project in site.projects %}
+        {% if project.tags contains child %}
+          {% assign child_projects = child_projects | push: project %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign child_gallery = "" | split: "" %}
+      {% for item in site.data.gallery %}
+        {% if item.tags contains child %}
+          {% assign child_gallery = child_gallery | push: item %}
+        {% endif %}
+      {% endfor %}
+
+      {% if child_posts.size > 0 or child_projects.size > 0 or child_gallery.size > 0 %}
+        <div class="tag-subcategory">
+          <h3><a href="{{ child | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-hashtag fa-xs"></i> {{ child }}</a></h3>
+          {% for post in child_posts %}
+            <div class="tag-entry">
+              {% if post.redirect == blank %}
+                <a class="tag-entry-link" href="{{ post.url | relative_url }}">
+                  <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+                </a>
+              {% elsif post.redirect contains '://' %}
+                <a class="tag-entry-link" href="{{ post.redirect }}" target="_blank">
+                  <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></h2>
+                </a>
+              {% else %}
+                <a class="tag-entry-link" href="{{ post.redirect | relative_url }}">
+                  <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+                </a>
+              {% endif %}
+              {% if post.description %}<p class="tag-entry-desc">{{ post.description }}</p>{% endif %}
+            </div>
+          {% endfor %}
+          {% for project in child_projects %}
+            <div class="tag-entry">
+              <a class="tag-entry-link" href="{{ project.url | relative_url }}">
+                <h2 class="tag-entry-title">{{ project.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+              </a>
+              {% if project.description %}<p class="tag-entry-desc">{{ project.description }}</p>{% endif %}
+            </div>
+          {% endfor %}
+          {% if child_gallery.size > 0 %}
+            <div class="row g-3" style="margin-bottom: 1rem;">
+              {% for item in child_gallery limit: 4 %}
+                {% include gallery_card.liquid item=item loading="lazy" %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       {% endif %}
     {% endfor %}
-  </div>
-  {% if tagged_gallery.size > 12 %}
-    <p><a href="{{ '/gallery/' | relative_url }}">See all {{ tagged_gallery.size }} in gallery →</a></p>
-  {% endif %}
-  {% endif %}
 
-  {% if page.posts.size == 0 and tagged_projects.size == 0 and tagged_gallery.size == 0 %}
-    <p>No content tagged with "{{ page.title }}" yet.</p>
+  {% else %}
+    {% comment %} ===== LEAF TAG PAGE: flat listing ===== {% endcomment %}
+
+    {% comment %} Posts with this tag {% endcomment %}
+    {% if page.posts.size > 0 %}
+    <h4>Posts</h4>
+    {% for post in page.posts %}
+      <div class="tag-entry">
+        {% if post.redirect == blank %}
+          <a class="tag-entry-link" href="{{ post.url | relative_url }}">
+            <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+          </a>
+        {% elsif post.redirect contains '://' %}
+          <a class="tag-entry-link" href="{{ post.redirect }}" target="_blank">
+            <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></h2>
+          </a>
+        {% else %}
+          <a class="tag-entry-link" href="{{ post.redirect | relative_url }}">
+            <h2 class="tag-entry-title">{{ post.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+          </a>
+        {% endif %}
+        {% if post.description %}<p class="tag-entry-desc">{{ post.description }}</p>{% endif %}
+      </div>
+    {% endfor %}
+    {% endif %}
+
+    {% comment %} Projects with this tag {% endcomment %}
+    {% assign tagged_projects = "" | split: "" %}
+    {% for project in site.projects %}
+      {% if project.tags contains page.title %}
+        {% assign tagged_projects = tagged_projects | push: project %}
+      {% endif %}
+    {% endfor %}
+
+    {% if tagged_projects.size > 0 %}
+    <h4>Projects</h4>
+    {% for project in tagged_projects %}
+      <div class="tag-entry">
+        <a class="tag-entry-link" href="{{ project.url | relative_url }}">
+          <h2 class="tag-entry-title">{{ project.title }} <i class="fa-solid fa-arrow-right fa-xs"></i></h2>
+        </a>
+        {% if project.description %}<p class="tag-entry-desc">{{ project.description }}</p>{% endif %}
+      </div>
+    {% endfor %}
+    {% endif %}
+
+    {% comment %} Gallery items with this tag {% endcomment %}
+    {% assign tagged_gallery = "" | split: "" %}
+    {% for item in site.data.gallery %}
+      {% if item.tags contains page.title %}
+        {% assign tagged_gallery = tagged_gallery | push: item %}
+      {% endif %}
+    {% endfor %}
+
+    {% if tagged_gallery.size > 0 %}
+    <h4>Gallery</h4>
+    <div class="row g-3" style="margin-bottom: 1.5rem;">
+      {% for item in tagged_gallery limit: 12 %}
+        {% include gallery_card.liquid item=item loading="lazy" %}
+      {% endfor %}
+    </div>
+    {% if tagged_gallery.size > 12 %}
+      <p><a href="{{ '/gallery/' | relative_url }}">See all {{ tagged_gallery.size }} in gallery →</a></p>
+    {% endif %}
+    {% endif %}
+
+    {% if page.posts.size == 0 and tagged_projects.size == 0 and tagged_gallery.size == 0 %}
+      <p>No content tagged with "{{ page.title }}" yet.</p>
+    {% endif %}
   {% endif %}
 </div>

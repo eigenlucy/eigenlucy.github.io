@@ -1,0 +1,40 @@
+# Tag hierarchy: parent → children
+# Subcategory tag pages show a link back to the parent tag page
+
+electrical engineering:
+  - pcb-design
+  - rf
+  - high-voltage
+  - solar
+  - meshtastic
+  - supercaps
+  - samd21
+  - attiny
+  - nfc
+
+cybernetics:
+  - ai
+  - neuroscience
+
+biology:
+  - mycology
+  - biohacking
+  - isopods
+  - terrarium
+
+chemistry:
+  - distillation
+  - electroplating
+
+philosophy:
+  - simondon
+  - individuation
+  - deleuze-guattari
+  - political-theology
+  - marxism
+
+fabrication:
+  - 3d printing
+  - cnc
+  - laser
+  - woodworking

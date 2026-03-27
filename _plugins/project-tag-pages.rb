@@ -7,7 +7,7 @@ module Jekyll
     def initialize(site, base, tag)
       @site = site
       @base = base
-      @dir = File.join("blog", "tag", tag)
+      @dir = File.join("blog", "tag", Utils.slugify(tag))
       @name = "index.html"
 
       self.process(@name)
@@ -45,16 +45,26 @@ module Jekyll
         end
       end
 
+      # Also include parent tags from hierarchy (they need pages even if
+      # nothing is directly tagged with them, e.g. "cybernetics", "fabrication")
+      if site.data["tag_hierarchy"].is_a?(Hash)
+        site.data["tag_hierarchy"].each_key { |parent| collection_tags.add(parent) }
+      end
+
       # Find which tags already have pages (from jekyll-archives)
-      existing = Set.new
+      # Compare using slugified names so "electrical engineering" matches "electrical-engineering"
+      existing_slugs = Set.new
       site.pages.each do |page|
         if page.dir =~ %r{^/blog/tag/(.+)/$}
-          existing.add($1)
+          existing_slugs.add($1)
         end
       end
 
-      # Generate pages for missing tags
-      (collection_tags - existing).each do |tag|
+      # Generate pages for missing tags (compare slugified versions)
+      collection_tags.each do |tag|
+        slug = Utils.slugify(tag)
+        next if existing_slugs.include?(slug)
+        existing_slugs.add(slug) # prevent duplicates from different casings
         site.pages << ProjectTagPage.new(site, site.source, tag)
       end
     end

@@ -5,7 +5,7 @@ description: Modeling and buidling scintillator + SiPM gamma spectroscopes for r
 img: assets/img/Gallery/GAGG.png
 importance: 2
 category: electrical engineering
-tags: [electronics, nuclear]
+tags: [electrical engineering, nuclear]
 related_publications: false
 giscus_comments: true
 ---

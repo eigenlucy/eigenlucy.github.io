@@ -7,10 +7,12 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
     {% if page.tags.size > 0 %}
       <p class="post-tags">
-        {% if page.category %}<i class="fa-solid fa-tag fa-sm"></i> {{ page.category }} &nbsp; &middot; &nbsp;{% endif %}
+        {% if page.category %}<a href="{{ page.category | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-tag fa-sm"></i> {{ page.category }}</a> &nbsp; &middot; &nbsp;{% endif %}
         {% for tag in page.tags %}
-          <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-          &nbsp;
+          {% unless tag == page.category %}
+            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"><i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
+            &nbsp;
+          {% endunless %}
         {% endfor %}
       </p>
     {% endif %}

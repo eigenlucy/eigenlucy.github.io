@@ -5,7 +5,7 @@ description: BLE 5.2 module for wearable conversation transcription and analysis
 img: assets/img/Gallery/wasppcbtop.jpg
 importance: 1
 category: electrical engineering
-tags: [electronics, ai]
+tags: [electrical engineering, ai]
 related_publications: false
 giscus_comments: true
 ---

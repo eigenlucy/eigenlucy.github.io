@@ -5,7 +5,7 @@ description: 10kW of 2.4GHz RF :3
 img: assets/img/Gallery/10kwmagnetron.jpg
 importance: 2
 category: electrical engineering
-tags: [electronics, high-voltage, rf]
+tags: [electrical engineering, high-voltage, rf]
 related_publications: false
 giscus_comments: true
 ---

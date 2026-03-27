@@ -5,7 +5,7 @@ description: Constructing microelectrode arrays for cultured neurons for Frontie
 img: assets/img/Gallery/MEA_Array_Test.jpeg
 importance: 1
 category: biology
-tags: [biology, neuroscience, electronics]
+tags: [biology, neuroscience, electrical engineering]
 related_publications: false
 giscus_comments: true
 ---

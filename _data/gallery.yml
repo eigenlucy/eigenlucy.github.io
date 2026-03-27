@@ -9,27 +9,27 @@
 - file: WardSGTC.mp4
   type: video
   caption: "MASSIVE spark gap tesla coil at LOD labs"
-  tags: [featured, hv, electrical engineering, electronics, systemantics]
+  tags: [featured, hv, electrical engineering, systemantics]
 
 - file: wirelessbike.mp4
   type: video
   caption: "Wirelessly powered capacitively coupled wireless bike at LOD labs"
-  tags: [featured, hv, electrical engineering, electronics, systemantics]
+  tags: [featured, hv, electrical engineering, systemantics]
 
 - file: nonhumanscent.png
   type: image
   caption: '<a href="https://github.com/eigenlucy/nonhumanscent">nonhumanscent</a>, ML-assisted gas composition sensing with BME688 and ESP32S3'
-  tags: [electrical engineering, electronics, systemantics]
+  tags: [electrical engineering, systemantics]
 
 - file: micrompptv3.png
   type: image
   caption: '<a href="https://github.com/eigenlucy/micromppt">Micromppt V3</a>'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: txpowertest.jpg
   type: image
   caption: '<a href="https://hackaday.io/project/202604-femtofox-pro-tx-power-power-consumption-testing">Femtofox/E22-900M30S TX Power Testing</a>'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: blacksands_balloon.jpg
   type: image
@@ -39,17 +39,17 @@
 - file: HABLaunch.jpg
   type: image
   caption: '<a href="https://www.noisebridge.net/wiki/Spacebridge">Spacebridge HAB Launch</a>'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: femtofoxgroundstation.jpg
   type: image
   caption: '<a href="https://github.com/femtofox/femtofox">Femtofox Based Ground Station</a>'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: openflashlightpcb.png
   type: image
   caption: '<a href="https://hackaday.io/project/202611-openflashlight">OpenFlashlight</a>'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: dinoflagellete.jpg
   type: image
@@ -60,12 +60,12 @@
   type: video
   path: "assets/img/Gallery/scintillatorcrystal.mp4"
   caption: "Gallium aluminum garnet scintilator crystals"
-  tags: [featured, electrical engineering, electronics, systemantics]
+  tags: [featured, electrical engineering, systemantics]
 
 - file: laser.mp4
   type: video
   caption: "200W UV laser diode lighting a log on fire without a lens"
-  tags: [featured, electronics, systemantics]
+  tags: [featured, electrical engineering, systemantics]
 
 - file: DiethylEtherHeptaneExtraction.JPEG
   type: image
@@ -85,17 +85,17 @@
 - file: OpenFlashLightRender.jpg
   type: image
   caption: '<a href="https://github.com/eigenlucy/uv-lamp">Open Flashlight</a> PCB Rendering'
-  tags: [pcb design, electrical engineering, attiny, electronics]
+  tags: [pcb design, electrical engineering, attiny]
 
 - file: izzymonitor.jpg
   type: image
   caption: '<a href="https://eigenlucy.com/projects/izzymonitor">Izzymonitor</a> HAOS panel'
-  tags: [pcb design, electrical engineering, attiny, electronics]
+  tags: [pcb design, electrical engineering, attiny]
 
 - file: micromppt.jpg
   type: image
   caption: '<a href="https://eigenlucy.com/projects/micromppt/">MicroMPPT</a> test board'
-  tags: [pcb design, electrical engineering, electronics]
+  tags: [pcb design, electrical engineering]
 
 - file: DiethylEther.JPEG
   type: image
@@ -110,27 +110,27 @@
 - file: SupercapBackup2ngGenRENDER.jpg
   type: image
   caption: "rendering of the LTC3350 supercap bidirectional converter PCB"
-  tags: [pcb design, attiny, fusion360, electrical engineering, electronics, supercaps]
+  tags: [pcb design, attiny, fusion360, electrical engineering, supercaps]
 
 - file: SupercapBackup2ngGenAssebled.jpg
   type: image
   caption: "holding the first bidirectional converter prototype I assembled :)"
-  tags: [pcb design, electrical engineering, attiny, electronics, supercaps]
+  tags: [pcb design, electrical engineering, attiny, supercaps]
 
 - file: MOT.mp4
   type: video
   caption: "microwave oven transformer (MOT) arc"
-  tags: [hv, electrical engineering, electronics]
+  tags: [hv, electrical engineering]
 
 - file: ignitioncoilnokia.mp4
   type: video
   caption: "IGBT singing ignition coil playing a nokia ring tone"
-  tags: [featured, hv, samd21, electrical engineering, electronics, systemantics]
+  tags: [featured, hv, samd21, electrical engineering, systemantics]
 
 - file: MusicalIgnitionCoil.jpg
   type: image
   caption: "this is an ignition coil driven by an IGBT half bridge by an arduino designed to play music on a jacob's ladder. here it is producing a heart around 20khz"
-  tags: [hv, samd21, electrical engineering, electronics]
+  tags: [hv, samd21, electrical engineering]
 
 - file: LionsMane.jpg
   type: image
@@ -145,12 +145,12 @@
 - file: SupercapBackupPrizmacapTop.jpg
   type: image
   caption: "LTC3110 based bidirectional converter with attiny1627 uC. produced in the process of testing kyocera-AVX prismatic caps for a variety of applications"
-  tags: [pcb design, attiny, electrical engineering, electronics, supercaps]
+  tags: [pcb design, attiny, electrical engineering, supercaps]
 
 - file: SupercapBackupPrizmacapBottom.jpg
   type: image
   caption: "underside of the LTC3110 PCB. off-the-shelf RF cans secure two prismatic caps securing and provide some protection. produced a version with a lower profile solid aluminum can in the same style"
-  tags: [pcb design, electrical engineering, electronics, supercaps]
+  tags: [pcb design, electrical engineering, supercaps]
 
 - file: VoltageMultiplier.mp4
   type: video
@@ -160,7 +160,7 @@
 - file: Nema23CrankGenerator.jpg
   type: image
   caption: "NEMA23 stepper motor converter to a crank generator supercap charger"
-  tags: [electrical engineering, electronics]
+  tags: [electrical engineering]
 
 - file: EggPrinting.jpg
   type: image
@@ -175,7 +175,7 @@
 - file: POVglobe.JPG
   type: image
   caption: "this is a POV globe made from an addressable LED strip and random brushless motor. the wood frame was a poor choice"
-  tags: [electronics, electrical engineering]
+  tags: [electrical engineering]
 
 - file: nietzscheplating.jpg
   type: image
@@ -200,7 +200,7 @@
 - file: izzymonitorback.jpg
   type: image
   caption: "ROZ Wild Robot Back Silkscreen"
-  tags: [pcb design, electronics, electrical engineering]
+  tags: [pcb design, electrical engineering]
 
 - file: PS_LC.JPEG
   type: image
@@ -210,17 +210,17 @@
 - file: DRSSTCTesting.JPEG
   type: image
   caption: "testing a DRSSTC driver"
-  tags: [electronics, electrical engineering, hv]
+  tags: [electrical engineering, hv]
 
 - file: FLCLpcb.JPG
   type: image
   caption: "guitar pedal PCB with a FLCL graphic"
-  tags: [pcb design, electronics, electrical engineering]
+  tags: [pcb design, electrical engineering]
 
 - file: TheOwlsAreNotWhatTheySeem.jpg
   type: image
   caption: "The Owls Are Not What They Seem"
-  tags: [pcb design, electronics, electrical engineering]
+  tags: [pcb design, electrical engineering]
 
 - file: ShroomTank.jpg
   type: image
@@ -230,7 +230,7 @@
 - file: OsciliscopeWithCouplingError.JPG
   type: image
   caption: "dead analog oscilloscope running with the hood off"
-  tags: [electrical engineering, electronics, equipment, oscilloscope]
+  tags: [electrical engineering, equipment, oscilloscope]
 
 - file: PressureCooking.jpg
   type: image
