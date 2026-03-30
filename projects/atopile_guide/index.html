@@ -140,14 +140,14 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav "}>
+  <body class="fixed-top-nav  "}>
     <!-- Background Canvas --><!-- ADDED -->
     <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
 
     <!-- Header -->
     <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand fixed-top" role="navigation">
     <div class="container">
       
         <a class="navbar-brand title font-weight-lighter" href="/">
@@ -183,12 +183,6 @@
 
           <!-- Other pages -->
           
-          
-            
-          
-            
-          
-            
           
             
           
@@ -703,7 +697,7 @@ module Regulator:
 
 <p>Set up <code class="language-plaintext highlighter-rouge">ato.yaml</code> with the package metadata and entry point:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">requires-atopile</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.6.0"</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">requires-atopile</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&gt;=0.6.0"</span>
 
 <span class="na">paths</span><span class="pi">:</span>
   <span class="na">src</span><span class="pi">:</span> <span class="s">./</span>
@@ -989,7 +983,7 @@ module Wasp:
 
 <p>BLE 5.2 wearable with IMU, MEMS mic, and BQ24045 battery management. Imports the NCP1529 regulator package shown above — <code class="language-plaintext highlighter-rouge">ldo.OUTPUT_VOLTAGE = 3.3V +/- 5%</code> configures the whole power supply. <a href="/projects/wasp">Project page</a> | <a href="https://github.com/eigenlucy/wasp">GitHub</a></p>
 
-<h3 id="open-flashlight--uvvisible-led-driver">Open Flashlight — UV/visible LED driver</h3>
+<h3 id="open-flashlight--ledlaser-driver">Open Flashlight — LED/Laser driver</h3>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
         <figure>
@@ -1015,7 +1009,7 @@ module Wasp:
     </div>
 </div>
 
-<p>Modular constant-current LED driver with ATtiny816 control. Multiple atopile submodules (<code class="language-plaintext highlighter-rouge">ccdriver.ato</code>, <code class="language-plaintext highlighter-rouge">uv-lamp.ato</code>, <code class="language-plaintext highlighter-rouge">attiny816.ato</code>). <a href="/projects/openflashlight">Project page</a> | <a href="https://github.com/eigenlucy/openflashlight">GitHub</a></p>
+<p>Modular constant-current LED/laser driver with ATtiny816 control. Multiple atopile submodules (<code class="language-plaintext highlighter-rouge">ccdriver.ato</code>, <code class="language-plaintext highlighter-rouge">uv-lamp.ato</code>, <code class="language-plaintext highlighter-rouge">attiny816.ato</code>). <a href="/projects/openflashlight">Project page</a> | <a href="https://github.com/eigenlucy/openflashlight">GitHub</a></p>
 
 <h3 id="izzy-monitor--custom-macro-keyboard--sensor-hub">Izzy Monitor — Custom macro keyboard + sensor hub</h3>
 <div class="row">
