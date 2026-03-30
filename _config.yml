@@ -293,7 +293,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["electrical engineering", "philosophy", "political-theology", "marxism", "meshtastic", "nuclear"] # these tags will be displayed on the front page of your blog
-display_categories: ["project", "essay", "blog"] # these categories will be displayed on the front page of your blog
+display_categories: ["essay", "blog"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -894,6 +894,7 @@ footer.sticky-bottom {
 }
 
 // PDF Viewer
+
 .pdf-viewer-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -901,9 +902,10 @@ footer.sticky-bottom {
 
 .pdf-controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--global-divider-color);
@@ -1555,4 +1557,48 @@ swiper-container {
       display: block;
     }
   }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Navbar flex-wrap for narrow screens
+.navbar-collapse {
+  flex-wrap: wrap;
+}
+
+// Reference system (academic citations)
+.ref-link {
+  font-family: $body-font-family;
+  color: var(--global-theme-color);
+  text-decoration: none;
+  font-size: 0.75em;
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
+}
+
+.ref-back {
+  font-family: $body-font-family;
+  color: var(--global-theme-color);
+  text-decoration: none;
+  margin-left: 0.3em;
+  font-size: 0.85em;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+.references ol li {
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 80px;
+}
+
+[id^="cite-"] {
+  scroll-margin-top: 80px;
 }

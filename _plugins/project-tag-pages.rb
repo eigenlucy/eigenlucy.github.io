@@ -45,10 +45,13 @@ module Jekyll
         end
       end
 
-      # Also include parent tags from hierarchy (they need pages even if
-      # nothing is directly tagged with them, e.g. "cybernetics", "fabrication")
+      # Include all tags from hierarchy (parents and children) so every tag
+      # in the hierarchy gets a page even if nothing is tagged with it yet
       if site.data["tag_hierarchy"].is_a?(Hash)
-        site.data["tag_hierarchy"].each_key { |parent| collection_tags.add(parent) }
+        site.data["tag_hierarchy"].each do |parent, children|
+          collection_tags.add(parent)
+          children.each { |child| collection_tags.add(child) } if children.is_a?(Array)
+        end
       end
 
       # Find which tags already have pages (from jekyll-archives)

@@ -4,7 +4,6 @@ title: Anti-Oedipus Concept Map
 date: 2026-02-27 09:00:00-0400
 description: For an AO reading group
 tags: [philosophy, deleuze-guattari]
-categories: project
 related_posts: false
 toc:
   sidebar: left

@@ -4,7 +4,6 @@ title: An Introduction to Gamma Spectroscopy
 date: 2026-01-06 09:00:00-0400
 description: Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X
 tags: [electrical engineering, nuclear]
-categories: project
 featured: true
 related_posts: false
 toc:

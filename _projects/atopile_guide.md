@@ -253,7 +253,7 @@ Available dimension types for typed variables: `voltage`, `current`, `resistance
 Set up `ato.yaml` with the package metadata and entry point:
 
 ```yaml
-requires-atopile: "0.6.0"
+requires-atopile: ">=0.6.0"
 
 paths:
   src: ./
@@ -526,7 +526,7 @@ Tiny MPPT solar charge controller. V3 was the first version fully designed in at
 
 BLE 5.2 wearable with IMU, MEMS mic, and BQ24045 battery management. Imports the NCP1529 regulator package shown above — `ldo.OUTPUT_VOLTAGE = 3.3V +/- 5%` configures the whole power supply. [Project page](/projects/wasp) &#124; [GitHub](https://github.com/eigenlucy/wasp)
 
-### Open Flashlight — UV/visible LED driver
+### Open Flashlight — LED/Laser driver
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
         {% include figure.liquid loading="lazy" path="assets/img/Gallery/OpenFlashlightPCB2.png" alt="Open Flashlight PCB" class="img-fluid rounded z-depth-1" %}
@@ -536,7 +536,7 @@ BLE 5.2 wearable with IMU, MEMS mic, and BQ24045 battery management. Imports the
     </div>
 </div>
 
-Modular constant-current LED driver with ATtiny816 control. Multiple atopile submodules (`ccdriver.ato`, `uv-lamp.ato`, `attiny816.ato`). [Project page](/projects/openflashlight) &#124; [GitHub](https://github.com/eigenlucy/openflashlight)
+Modular constant-current LED/laser driver with ATtiny816 control. Multiple atopile submodules (`ccdriver.ato`, `uv-lamp.ato`, `attiny816.ato`). [Project page](/projects/openflashlight) &#124; [GitHub](https://github.com/eigenlucy/openflashlight)
 
 ### Izzy Monitor — Custom macro keyboard + sensor hub
 <div class="row">

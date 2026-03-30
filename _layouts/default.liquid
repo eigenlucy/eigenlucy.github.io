@@ -25,7 +25,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}"}>
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if page.permalink == '/viewer/' %}viewer-page{% endif %}"}>
     <!-- Background Canvas --><!-- ADDED -->
     <canvas id="pde-background-canvas"></canvas><!-- ADDED -->
 
