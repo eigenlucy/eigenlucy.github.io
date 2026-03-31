@@ -425,8 +425,8 @@ Micromppt V3 has been release! This is the first relatively final build. The boa
 
 <p>Micromppt is one of the first third-party packages on the <a href="https://packages.atopile.io/packages/eigenlucy/micromppt">Atopile Packages repo</a>, so you can now easily install it into other atopile projects. I am working on setting up a way to order boards from me directly. Incoming updates will be focused on finalizing a more cost optimized base build and instructions on configuration for other cell chemistries.</p>
 
-<div class="row">
-    <div class="col-sm mt-2 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-5 mt-2 mt-md-0">
         <figure>
     <picture>
       
@@ -438,6 +438,95 @@ Micromppt V3 has been release! This is the first relatively final build. The boa
   </figure>
     </div>
 </div>
+
+<div class="kicanvas-wrapper"><kicanvas-embed src="https://raw.githubusercontent.com/eigenlucy/micromppt/main/elec/layout/default/default.kicad_pcb" controls="full"></kicanvas-embed></div>
+<script type="module" src="/assets/js/kicanvas.js"></script>
+
+<script type="module">
+  requestAnimationFrame(() => {
+    const embed = document.querySelector('.kicanvas-wrapper:last-of-type kicanvas-embed');
+    if (!embed) return;
+    const poll = setInterval(() => {
+      const viewerEl = embed.shadowRoot?.querySelector('kc-board-viewer, kc-schematic-viewer');
+      if (viewerEl?.viewer?.loaded) {
+        clearInterval(poll);
+        if (viewerEl.viewer.zoom_to_board) {
+          viewerEl.viewer.zoom_to_board();
+        }
+        viewerEl.viewer.zone_opacity = 0.7;
+        viewerEl.viewer.via_opacity = 0.7;
+      }
+    }, 200);
+    setTimeout(() => clearInterval(poll), 10000);
+  });
+</script>
+
+<p><a href="https://github.com/eigenlucy/micromppt/blob/main/elec/src/micromppt.ato">micromppt.ato</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">#pragma experiment("BRIDGE_CONNECT")
+</span>
+<span class="kn">import</span> <span class="n">ElectricPower</span><span class="p">,</span> <span class="n">ElectricSignal</span><span class="p">,</span> <span class="n">ElectricLogic</span>
+<span class="kn">import</span> <span class="n">Inductor</span><span class="p">,</span> <span class="n">Capacitor</span><span class="p">,</span> <span class="n">Resistor</span><span class="p">,</span> <span class="n">Diode</span><span class="p">,</span> <span class="n">Fuse</span>
+
+<span class="n">module</span> <span class="n">Micromppt</span><span class="p">:</span>
+    <span class="c1"># Based on STEVAL-ISV006V2 schematic
+</span>    <span class="n">power</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ElectricPower</span>
+    <span class="n">Vpv</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ElectricPower</span>
+    <span class="n">Vpvr</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ElectricPower</span>
+    <span class="n">Vbat</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ElectricPower</span>
+
+    <span class="c1"># Components
+</span>    <span class="n">ic</span> <span class="o">=</span> <span class="n">new</span> <span class="n">STMicroelectronics_SPV1040T_package</span>
+    <span class="n">R1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">R1</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">Mohm</span> <span class="o">+/-</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span> <span class="n">R1</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">R2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">R2</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">423</span><span class="n">kohm</span> <span class="o">+/-</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span> <span class="n">R2</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">R3</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">kohm</span> <span class="o">+/-</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span> <span class="n">R3</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">Rf1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">Rf1</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">kohm</span> <span class="o">+/-</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span> <span class="n">Rf1</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">Rf2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">Rf2</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">kohm</span> <span class="o">+/-</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span> <span class="n">Rf2</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">Rs</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Resistor</span><span class="p">;</span> <span class="n">Rs</span><span class="p">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="mi">10</span><span class="n">mohm</span> <span class="o">+/-</span> <span class="mi">5</span><span class="o">%</span><span class="p">;</span> <span class="n">Rs</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">R1206</span><span class="sh">"</span>
+    <span class="n">Cin</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Cin</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mi">10</span><span class="n">uF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Cin</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0603</span><span class="sh">"</span>
+    <span class="n">Cout1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Cout1</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mf">4.7</span><span class="n">uF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Cout1</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0603</span><span class="sh">"</span>
+    <span class="n">Cout2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Cout2</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mi">10</span><span class="n">uF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Cout2</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0603</span><span class="sh">"</span>
+    <span class="n">Cinsns</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Cinsns</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mi">100</span><span class="n">nF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Cinsns</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">Coutsns</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Coutsns</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">nF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Coutsns</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">Cf</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Capacitor</span><span class="p">;</span> <span class="n">Cf</span><span class="p">.</span><span class="n">capacitance</span> <span class="o">=</span> <span class="mi">1</span><span class="n">uF</span> <span class="o">+/-</span> <span class="mi">20</span><span class="o">%</span><span class="p">;</span> <span class="n">Cf</span><span class="p">.</span><span class="n">package</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0402</span><span class="sh">"</span>
+    <span class="n">SW_L</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Inductor</span><span class="p">;</span> <span class="n">SW_L</span><span class="p">.</span><span class="n">lcsc_id</span> <span class="o">=</span> <span class="sh">"</span><span class="s">C5329540</span><span class="sh">"</span>
+    <span class="n">Dout</span> <span class="o">=</span> <span class="n">new</span> <span class="n">TECH_PUBLIC_SRV05_4_P_T7_package</span>
+
+    <span class="c1"># Connectors
+</span>    <span class="n">Vpv_Conn</span> <span class="o">=</span> <span class="n">new</span> <span class="n">JST_Sales_America_B2B_PH_K_S_LF__SN_package</span>
+    <span class="n">Vbat_Conn</span> <span class="o">=</span> <span class="n">new</span> <span class="n">JST_Sales_America_B2B_PH_K_S_LF__SN_package</span>
+    <span class="n">Vload_Conn</span> <span class="o">=</span> <span class="n">new</span> <span class="n">JST_Sales_America_B2B_PH_K_S_LF__SN_package</span>
+
+    <span class="c1"># SPV1040 boost converter topology
+</span>    <span class="n">ic</span><span class="p">.</span><span class="n">GND</span> <span class="o">~</span> <span class="n">power</span><span class="p">.</span><span class="n">lv</span>
+    <span class="n">Vpvr</span><span class="p">.</span><span class="n">hv</span> <span class="o">~&gt;</span> <span class="n">Cin</span> <span class="o">~&gt;</span> <span class="n">power</span><span class="p">.</span><span class="n">lv</span>
+    <span class="n">Vpvr</span><span class="p">.</span><span class="n">hv</span> <span class="o">~&gt;</span> <span class="n">R3</span> <span class="o">~&gt;</span> <span class="n">ic</span><span class="p">.</span><span class="n">MPP_SET</span>
+    <span class="n">ic</span><span class="p">.</span><span class="n">MPP_SET</span> <span class="o">~&gt;</span> <span class="n">Cinsns</span> <span class="o">~&gt;</span> <span class="n">power</span><span class="p">.</span><span class="n">lv</span>
+    <span class="n">XSHUT</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ElectricLogic</span><span class="p">;</span> <span class="n">XSHUT</span><span class="p">.</span><span class="n">line</span> <span class="o">~</span> <span class="n">ic</span><span class="p">.</span><span class="n">XSHUT</span>
+    <span class="n">ic</span><span class="p">.</span><span class="n">XSHUT</span> <span class="o">~</span> <span class="n">ic</span><span class="p">.</span><span class="n">MPP_SET</span>
+    <span class="n">Vpvr</span><span class="p">.</span><span class="n">hv</span> <span class="o">~&gt;</span> <span class="n">SW_L</span> <span class="o">~&gt;</span> <span class="n">ic</span><span class="p">.</span><span class="n">LX</span>
+    <span class="n">ic</span><span class="p">.</span><span class="n">VCTRL</span> <span class="o">~&gt;</span> <span class="n">Coutsns</span> <span class="o">~&gt;</span> <span class="n">power</span><span class="p">.</span><span class="n">lv</span>
+    <span class="n">ic</span><span class="p">.</span><span class="n">VOUT</span> <span class="o">~</span> <span class="n">Rs</span><span class="p">.</span><span class="n">p1</span>
+
+    <span class="c1"># Current sensing + output voltage divider
+</span>    <span class="n">ic</span><span class="p">.</span><span class="n">ICTRL_PLUS</span> <span class="o">~</span> <span class="n">Cf</span><span class="p">.</span><span class="n">p1</span><span class="p">;</span> <span class="n">ic</span><span class="p">.</span><span class="n">ICTRL_PLUS</span> <span class="o">~</span> <span class="n">Rf1</span><span class="p">.</span><span class="n">p1</span><span class="p">;</span> <span class="n">Rf1</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">Rs</span><span class="p">.</span><span class="n">p1</span>
+    <span class="n">ic</span><span class="p">.</span><span class="n">ICTRL_MINUS</span> <span class="o">~</span> <span class="n">Cf</span><span class="p">.</span><span class="n">p2</span><span class="p">;</span> <span class="n">ic</span><span class="p">.</span><span class="n">ICTRL_MINUS</span> <span class="o">~</span> <span class="n">Rf2</span><span class="p">.</span><span class="n">p1</span><span class="p">;</span> <span class="n">Rf2</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">Rs</span><span class="p">.</span><span class="n">p2</span>
+    <span class="n">Rs</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">R1</span><span class="p">.</span><span class="n">p1</span><span class="p">;</span> <span class="n">R1</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">ic</span><span class="p">.</span><span class="n">VCTRL</span>
+    <span class="n">R1</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">R2</span><span class="p">.</span><span class="n">p1</span><span class="p">;</span> <span class="n">R2</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">power</span><span class="p">.</span><span class="n">lv</span>
+    <span class="n">Rs</span><span class="p">.</span><span class="n">p2</span> <span class="o">~</span> <span class="n">Vbat</span><span class="p">.</span><span class="n">hv</span><span class="p">;</span> <span class="n">Vbat</span> <span class="o">~</span> <span class="n">Cout2</span><span class="p">.</span><span class="n">power</span>
+
+    <span class="c1"># Battery protection (XB3306D)
+</span>    <span class="n">bpc</span> <span class="o">=</span> <span class="n">new</span> <span class="n">XySemi_XB3306D_package</span>
+    <span class="n">bpc</span><span class="p">.</span><span class="n">VDD</span> <span class="o">~</span> <span class="n">Vbatr</span><span class="p">.</span><span class="n">hv</span><span class="p">;</span> <span class="n">bpc</span><span class="p">.</span><span class="n">VM</span> <span class="o">~</span> <span class="n">Vbat</span><span class="p">.</span><span class="n">lv</span><span class="p">;</span> <span class="n">bpc</span><span class="p">.</span><span class="n">GND</span> <span class="o">~</span> <span class="n">Vbatr</span><span class="p">.</span><span class="n">lv</span>
+
+    <span class="c1"># Load output with PTC fuse + reverse polarity diode
+</span>    <span class="n">Load_D</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Diode</span><span class="p">;</span> <span class="n">Load_D</span><span class="p">.</span><span class="n">lcsc_id</span> <span class="o">=</span> <span class="sh">"</span><span class="s">C2943878</span><span class="sh">"</span>
+    <span class="n">ptc</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Littelfuse_0603L150SLYR_package</span>
+    <span class="n">Vload_Conn</span><span class="p">.</span><span class="mi">1</span> <span class="o">~</span> <span class="n">ptc</span><span class="p">.</span><span class="mi">2</span><span class="p">;</span> <span class="n">ptc</span><span class="p">.</span><span class="mi">1</span> <span class="o">~&gt;</span> <span class="n">Vbat</span><span class="p">.</span><span class="n">hv</span>
+    <span class="n">Vload_Conn</span><span class="p">.</span><span class="mi">2</span> <span class="o">~&gt;</span> <span class="n">Load_D</span> <span class="o">~&gt;</span> <span class="n">Vbatr</span><span class="p">.</span><span class="n">lv</span>
+
+</code></pre></div></div>
 
 <p>To do:</p>
 <ul>
@@ -482,23 +571,6 @@ Gerbers/PCBA files are now built by running <code class="language-plaintext high
 </div>
 <div class="caption">
 SPV1040 MicroMPPT V2
-</div>
-
-<div class="row">
-    <div class="col-sm mt-2 mt-md-0">
-        <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/SPV1040Testing.jpg-480.webp 480w,assets/img/Gallery/SPV1040Testing.jpg-800.webp 800w,assets/img/Gallery/SPV1040Testing.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/SPV1040Testing.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/SPV1040Testing.jpg';" />
-    </picture>
-    
-  </figure>
-    </div>
-</div>
-<div class="caption">
-SPV1040 MicroMPPT V1 solar charging test
 </div>
 
 <div class="row">
@@ -649,7 +721,7 @@ SPV1040 MicroMPPT V1
 
 
 <!-- Load Common JS -->
-<script src="/assets/js/no_defer.js?d395a69d145f0f3971a8f849ad81e077"></script>
+<script src="/assets/js/no_defer.js?53d1cf2543c306b3e8fa079d639f8afb"></script>
 <script defer src="/assets/js/common.js?216398229e1165c26f17a333de18369d"></script>
 <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script>
 

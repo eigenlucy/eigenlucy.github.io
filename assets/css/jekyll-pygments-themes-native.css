@@ -43,20 +43,44 @@
 .highlight .c1 {
   color: #999999;
   font-style: italic;
-} /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */
+} /* Comment.Single */
+.highlight .cs {
+  color: #e50808;
+  font-weight: bold;
+  background-color: #520000;
+} /* Comment.Special */ /* Generic.Deleted */
 .highlight .ge {
   color: #d0d0d0;
   font-style: italic;
-} /* Generic.Emph */ /* Generic.Error */ /* Generic.Heading */
+} /* Generic.Emph */
+.highlight .gr {
+  color: #d22323;
+} /* Generic.Error */ /* Generic.Heading */
 .highlight .gi {
   color: #589819;
 } /* Generic.Inserted */
 .highlight .go {
   color: #cccccc;
-} /* Generic.Output */ /* Generic.Prompt */ /* Generic.Strong */ /* Generic.Subheading */
+} /* Generic.Output */ /* Generic.Prompt */
+.highlight .gs {
+  color: #d0d0d0;
+  font-weight: bold;
+} /* Generic.Strong */ /* Generic.Subheading */
 .highlight .gt {
   color: #d22323;
-} /* Generic.Traceback */ /* Keyword.Constant */ /* Keyword.Declaration */ /* Keyword.Namespace */ /* Keyword.Pseudo */ /* Keyword.Reserved */
+} /* Generic.Traceback */
+.highlight .kc {
+  color: #6ab825;
+  font-weight: bold;
+} /* Keyword.Constant */ /* Keyword.Declaration */
+.highlight .kn {
+  color: #6ab825;
+  font-weight: bold;
+} /* Keyword.Namespace */ /* Keyword.Pseudo */
+.highlight .kr {
+  color: #6ab825;
+  font-weight: bold;
+} /* Keyword.Reserved */
 .highlight .kt {
   color: #6ab825;
   font-weight: bold;
@@ -112,7 +136,10 @@
 } /* Operator.Word */
 .highlight .w {
   color: #666666;
-} /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */
+} /* Text.Whitespace */
+.highlight .mf {
+  color: #3677a9;
+} /* Literal.Number.Float */ /* Literal.Number.Hex */
 .highlight .mi {
   color: #3677a9;
 } /* Literal.Number.Integer */
@@ -130,7 +157,13 @@
 } /* Literal.String.Heredoc */
 .highlight .si {
   color: #ed9d13;
-} /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */
+} /* Literal.String.Interpol */ /* Literal.String.Other */
+.highlight .sr {
+  color: #ed9d13;
+} /* Literal.String.Regex */ /* Literal.String.Single */
+.highlight .ss {
+  color: #ed9d13;
+} /* Literal.String.Symbol */
 .highlight .bp {
   color: #24909d;
 } /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */

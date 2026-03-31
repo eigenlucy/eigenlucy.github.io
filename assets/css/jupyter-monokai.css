@@ -405,6 +405,21 @@ textarea {
   border: 1px solid rgba(93, 92, 82, 0.25);
 }
 
+.toolbar select,
+.toolbar label {
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  display: inline;
+  font-size: 92%;
+  margin-left: 10px;
+  padding: 0px;
+  background: #2f2f2f !important;
+  background-color: #2f2f2f !important;
+  border: 2px solid #2f2f2f !important;
+}
+
 ::-webkit-input-placeholder {
   color: #75715e;
 }
