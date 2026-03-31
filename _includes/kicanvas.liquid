@@ -1,0 +1,29 @@
+{%- assign kc_src = include.src -%}
+{%- assign kc_controls = include.controls | default: "full" -%}
+
+<div class="kicanvas-wrapper">
+  {%- if kc_src contains "://" -%}
+  <kicanvas-embed src="{{ kc_src }}" controls="{{ kc_controls }}"></kicanvas-embed>
+  {%- else -%}
+  <kicanvas-embed src="{{ kc_src | relative_url }}" controls="{{ kc_controls }}"></kicanvas-embed>
+  {%- endif -%}
+</div>
+<script type="module" src="{{ '/assets/js/kicanvas.js' | relative_url }}"></script>
+<script type="module">
+  requestAnimationFrame(() => {
+    const embed = document.querySelector('.kicanvas-wrapper:last-of-type kicanvas-embed');
+    if (!embed) return;
+    const poll = setInterval(() => {
+      const viewerEl = embed.shadowRoot?.querySelector('kc-board-viewer, kc-schematic-viewer');
+      if (viewerEl?.viewer?.loaded) {
+        clearInterval(poll);
+        if (viewerEl.viewer.zoom_to_board) {
+          viewerEl.viewer.zoom_to_board();
+        }
+        viewerEl.viewer.zone_opacity = 0.7;
+        viewerEl.viewer.via_opacity = 0.7;
+      }
+    }, 200);
+    setTimeout(() => clearInterval(poll), 10000);
+  });
+</script>
