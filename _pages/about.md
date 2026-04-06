@@ -20,11 +20,11 @@ social: true # includes social icons at the bottom of the page
 Projects/research:
 <ul>
   <li>Geophysical surveying and mineral explorations at <a href="https://mithras.industries">Mithras</a></li>
-  <li>DIY gamma spectroscopy (see my <a href="https://eigenlucy.com//blog/2026/gamma-spec-zine/">zine article</a> on the subject)</li>
-  <li>Low-cost, maskless, DIY <a href="https://eigenlucy.com/projects/mea_arrays">microelectrode arrays</a> for cultured neuron headstages</li>
-  <li>Micro-solar chargers, like  <a href="https://github.com/eigenlucy/micromppt">Micromppt</a></li>
-  <li>Low power mesh network clients (BLE Mesh, LoRa, OpenWRT), like <a href="https://eigenlucy.com/projects/femtofox">Femtofox</a></li>
-  <li>DIY high altitude ballooning with <a href="https://github.com/eigenlucy/spacebridgehabpcb">Spacebridge</a></li>
+  <li>DIY <a href="/projects/gammaspectroscopy/">gamma spectroscopy</a> (see my <a href="/blog/2026/gamma-spec-zine/">zine article</a> on the subject)</li>
+  <li>Low-cost, maskless, DIY <a href="/projects/mea_arrays/">microelectrode arrays</a> for cultured neuron headstages</li>
+  <li>Micro-solar chargers, like <a href="/projects/micromppt/">Micromppt</a></li>
+  <li>Low power mesh network clients (BLE Mesh, LoRa, OpenWRT), like <a href="/projects/femtofox/">Femtofox</a></li>
+  <li>DIY high altitude ballooning with <a href="/projects/spacebridgehabpcb/">Spacebridge</a></li>
 </ul>
 
 Source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>. Knowledge graph <a href='https://garden.sophia-labs.com/public/eigenlucy?public_token=b0b4df33-c839-4e4f-a9c6-8b3f40fb2c74'>here</a> (graph view not accessible on mobile, yet).
