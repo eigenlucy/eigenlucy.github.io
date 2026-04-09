@@ -7,7 +7,8 @@ nav_order: 5
 sitemap: false
 ---
 
-[library](/library/)
+## [library](/library/)
+*collection of reference materials and inspiration*
 
 ## [anti-oedipus concept map](/blog/2026/AO-reading-group-notes/)
 *Feb 2026 — for an AO reading group*
@@ -47,7 +48,7 @@ sitemap: false
 ## sister sites:
 
 - [wormnews.net](https://wormnews.net) — *my wife Vera's blog*
-- [eschatonjxp.neocities.com](https://eschatonjxp.neocities.com) — *eschaton's site with her art, music, and writings*
+- [eschatonjxp.neocities.org](https://eschatonjxp.neocities.org) — *eschaton's site with her art, music, and writings*
 - [punishedfelix.com](https://punishedfelix.com) — *my friend felix's amazing theory/accessibility/guattari focused website*
 - [markhansen.com](https://markhansen.com) — *my cofounder at Mithras' website with lots of cool DIYBIO resources*
 - [garden.sophia-labs.com](https://garden.sophia-labs.com) — *Vera and Eschaton's agent memory, collaborative editing, and knowledge sharing platform*
