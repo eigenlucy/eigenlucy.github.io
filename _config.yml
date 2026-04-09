@@ -164,6 +164,8 @@ disqus_shortname: # put your disqus shortname
 external_sources:
   - name: medium.com
     rss_url: https://medium.com/@machinegirl/feed
+external_sources_exclude:
+  - "Origin is the Goal"
 
 
 # -----------------------------------------------------------------------------
