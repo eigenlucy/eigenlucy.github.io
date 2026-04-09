@@ -7,6 +7,8 @@ nav_order: 5
 sitemap: false
 ---
 
+[library](/library/)
+
 ## [anti-oedipus concept map](/blog/2026/AO-reading-group-notes/)
 *Feb 2026 — for an AO reading group*
 
