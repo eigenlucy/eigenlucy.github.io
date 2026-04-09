@@ -27,7 +27,7 @@ These were my notes from around when I first moved to SF in the aftermath of the
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 1em;">
   <div style="flex: 0 0 40%;">
-    <img src="/assets/img/angelusnovus.png" alt="Klee's Angel" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; border: none; outline: none; text-decoration: none;">
+    <img id="angelus-novus" src="/assets/img/angelusnovus.png" alt="Klee's Angel" class="invert-light" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; border: none; outline: none; text-decoration: none; transition: opacity 0.5s;">
   </div>
   <div style="flex: 1; text-align: center;">
     <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -61,3 +61,19 @@ These were my notes from around when I first moved to SF in the aftermath of the
 *   The moment of suspension of life at the moment of falling in love
 *   "Historicism contents itself with establishing a causal nexus of various moments of history. But no state of affairs is, as a cause, already a historical one. It becomes this, posthumously, through eventualities which may be separated from it by millennia. The historian who starts from this, ceases to permit the consequences of eventualities to run through the fingers like the beads of a rosary. He records [*erfasst*] the constellation in which his own epoch comes into contact with that of an earlier one. He thereby establishes a concept of the present as that of the here-and-now, in which splinters of messianic time are shot through."
 *   The suspension of the territories of life / standstill as one of the fundamental components of the transgender experience, the realization of a virtual world opposed to the homogeneous and empty time of the cis-sexed body; the inescapability of the biunivocal logic of self as an intervention of the imperative heterogeneity common to every familiar fascist impulse (see Bataille's psychological structure of fascism). This rupture of life fulfills a truer life slumbering in the wreckage of the self.
+
+<script>
+(function() {
+  var angel = document.getElementById('angelus-novus');
+  if (!angel) return;
+  var forward = new Image();
+  forward.src = '/assets/img/angelusnovus-forward.png';
+  setTimeout(function() {
+    angel.style.opacity = '0';
+    setTimeout(function() {
+      angel.src = forward.src;
+      angel.style.opacity = '1';
+    }, 500);
+  }, 120000);
+})();
+</script>

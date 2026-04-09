@@ -166,6 +166,7 @@ external_sources:
     rss_url: https://medium.com/@machinegirl/feed
 external_sources_exclude:
   - "Origin is the Goal"
+  - "The Trans Continental Exodus"
 
 
 # -----------------------------------------------------------------------------

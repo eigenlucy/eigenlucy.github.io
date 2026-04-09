@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 11th May 2001
     - name: Languages
-      value: English, C++, Python
+      value: English, Spanish (WIP), C++, Python
 
 - title: Education
   type: time_table

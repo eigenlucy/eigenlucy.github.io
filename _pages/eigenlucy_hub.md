@@ -1,34 +1,51 @@
 ---
 layout: page
-title: hold fast to what remains of you
+title: eigenlucy
 permalink: /eigenlucy/
-nav_exclude: true
+nav: true
+nav_order: 5
 sitemap: false
 ---
 
-##   [stillstellung](/eigenlucy/stillstellung/)
-* reflections on the Standstill, critique of violence, theses on the concept of history
+## [anti-oedipus concept map](/blog/2026/AO-reading-group-notes/)
+*Feb 2026 — for an AO reading group*
 
-##   [origin is the goal](/eigenlucy/origin/)
-* memory, fragmentation, reflections on a life interrupted, profession of faith
-
-##   [multiplicity](/eigenlucy/multiplicity/)
-* what are we to do with our innumerable bodies
-
-##   [le fin de satan](/eigenlucy/bastille/)
-* hugo's unfinished epic, the redemption of Justice
-
-##   [las  vegas, the crater](/eigenlucy/lasvegas/)
-* fragments from a diary in hell
-
-##   [kaddish](/eigenlucy/kaddish)
-* the murdered absolute
-
-##   [iemanja (ode to vera)](/eigenlucy/iemanja)
-* only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast
-
-##   [garden](/eigenlucy/garden)
-* wasted youth, appeals to the Outside, experimental protocols for Life
+## [hello, cdmx](/blog/2026/CDMX/)
+*Feb 2026 — on relocating to Mexico City*
 
 ## [war communism](/eigenlucy/warcommunism)
-* the communism of destitution, experimental family
+*Dec 2025 — proliferation of eyes by multiplication of borders*
+
+## [kaddish](/eigenlucy/kaddish)
+*Dec 2025 — funeral for justice*
+
+## [iemanja (ode to vera)](/eigenlucy/iemanja)
+*Dec 2025 — only as a picture, which flashes its farewell in the moment of its recognizability, is the past to be held fast*
+
+## [le fin de satan](/eigenlucy/bastille/)
+*Jun 2025 — the end of satan // the storming of the bastille*
+
+## [multiplicity](/eigenlucy/multiplicity/)
+*Jun 2025 — history is what hurts*
+
+## [hello, san francisco](/blog/2025/SF/)
+*Jan 2025 — a variety of fun updates and adventures*
+
+## [notes on stillstellung](/eigenlucy/stillstellung/)
+*Jan 2025 — reflections on the standstill, critique of violence, theses on the concept of history*
+
+## [origin is the goal](/eigenlucy/origin/)
+*Jan 2025 — memory, fragmentation, reflections on a life interrupted, profession of faith*
+
+## [the trans continental exodus](/eigenlucy/exodus/)
+*Nov 2024 — it's been a wild month and a half*
+
+---
+
+## sister sites:
+
+- [wormnews.net](https://wormnews.net) — *my wife Vera's blog*
+- [eschatonjxp.neocities.com](https://eschatonjxp.neocities.com) — *eschaton's site with her art, music, and writings*
+- [punishedfelix.com](https://punishedfelix.com) — *my friend felix's amazing theory/accessibility/guattari focused website*
+- [markhansen.com](https://markhansen.com) — *my cofounder at Mithras' website with lots of cool DIYBIO resources*
+- [garden.sophia-labs.com](https://garden.sophia-labs.com) — *Vera and Eschaton's agent memory, collaborative editing, and knowledge sharing platform*

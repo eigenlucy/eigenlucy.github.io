@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: lucy moglia. hardware, EE, philosophy, cybernetics, general systemantics
 

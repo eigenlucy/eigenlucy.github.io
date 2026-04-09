@@ -60,6 +60,8 @@ html[data-theme="light"] {
   .repo-img-light { display: block; }
   .repo-img-dark { display: none; }
 
+  .invert-light { filter: invert(1); }
+
   a, table.table a {
     color: #1a8a8a !important;
   }
