@@ -59,6 +59,7 @@ sitemap: false
 (function() {
   var angel = document.getElementById('angelus-novus');
   if (!angel) return;
+  var original = angel.src;
   var forward = new Image();
   forward.src = '/assets/img/angelusnovus-forward.png';
   setTimeout(function() {
@@ -66,7 +67,24 @@ sitemap: false
     setTimeout(function() {
       angel.src = forward.src;
       angel.style.opacity = '1';
+      setTimeout(function() {
+        angel.style.transition = 'opacity 0.15s';
+        var flicker = 0;
+        var shimmer = setInterval(function() {
+          angel.style.opacity = flicker % 2 === 0 ? '0.4' : '1';
+          flicker++;
+          if (flicker >= 6) {
+            clearInterval(shimmer);
+            angel.style.opacity = '0';
+            setTimeout(function() {
+              angel.src = original;
+              angel.style.transition = 'opacity 0.5s';
+              angel.style.opacity = '1';
+            }, 200);
+          }
+        }, 150);
+      }, 3000);
     }, 500);
-  }, 120000);
+  }, 12000);
 })();
 </script>
