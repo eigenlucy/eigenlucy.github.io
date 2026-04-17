@@ -12,6 +12,8 @@ toc:
   sidebar: left
 ---
 
+*Note: this post was largely AI-written based on a number of my projects and atopile's most recent documentation.*
+
 Over the last year, I've spent a lot of time using [Atopile](https://atopile.io) for my PCB designs. It's a code-first EDA tool — you describe circuits in `.ato` files (a Python-inspired DSL), and the compiler handles component selection, constraint validation, and KiCad project generation. See the [atopile docs](https://docs.atopile.io/atopile/introduction) for the full reference. This page covers the language fundamentals and my install/build workflow.
 
 Example projects to reference alongside this guide:
