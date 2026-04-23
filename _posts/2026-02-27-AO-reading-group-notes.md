@@ -991,7 +991,7 @@ Discussion of the parallel between mystical ascent (the Merkabah tradition, Arta
 
 ---
 
-### Session 5 — Mar 15
+### Session 5 — Mar 15 §5 The Machines
 
 <details>
 <summary>Notes</summary>
@@ -1007,7 +1007,7 @@ Discussion of the parallel between mystical ascent (the Merkabah tradition, Arta
 
 ---
 
-### Session 6 — Mar 22
+### Session 6 — Mar 22 §6 The Whole and It's Parts
 
 <details>
 <summary>Notes</summary>
