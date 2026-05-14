@@ -15,7 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p>I am a 24 year old self taught engineer split between San Francisco and Mexico City</p>
+<p>I am a 25 year old self taught engineer split between San Francisco and Mexico City</p>
 
 Projects/research:
 <ul>
@@ -31,5 +31,4 @@ Source code for this website <a href='https://github.com/eigenlucy/eigenlucy.git
 
 I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions.
 
-If you are interested in contracting me for your hardware project, email me at lucy@sophia-labs.com
-
+If you are interested in contracting me for your hardware project, use one of the contact methods below.
