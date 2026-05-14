@@ -50,11 +50,83 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+    inputs:
+      graph_id:
+        description: "Mnemosyne graph_id"
+        required: false
+        default: "lucy"
+      folder_name:
+        description: "Mnemosyne folder name to sync"
+        required: false
+        default: "moments"
+      collection:
+        description: "Target Jekyll collection"
+        required: false
+        default: "moments"
+  schedule:
+    # Daily at 10:00 UTC.
+    - cron: "0 10 * * *"
 
 permissions:
   contents: write
 
 jobs:
+  sync-mnemosyne-folder:
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GRAPH_ID: ${{ github.event.inputs.graph_id || 'lucy' }}
+      FOLDER_NAME: ${{ github.event.inputs.folder_name || 'moments' }}
+      COLLECTION: ${{ github.event.inputs.collection || 'moments' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python deps
+        run: pip install pyyaml
+      - name: Configure git identity
+        run: |
+          git config user.name "mnemosyne-bot"
+          git config user.email "mnemosyne-bot@users.noreply.github.com"
+      - name: Sync folder from Mnemosyne
+        id: sync
+        env:
+          MNEMOSYNE_URL: ${{ secrets.MNEMOSYNE_URL }}
+          MNEMOSYNE_API_KEY: ${{ secrets.MNEMOSYNE_API_KEY }}
+        run: |
+          set -euo pipefail
+          SUMMARY=$(python3 .github/scripts/sync_from_mnemosyne.py \
+            --graph-id "$GRAPH_ID" \
+            --folder-name "$FOLDER_NAME" \
+            --collection "$COLLECTION")
+          echo "summary<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$SUMMARY" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "$SUMMARY"
+      - name: Commit and push
+        env:
+          SUMMARY: ${{ steps.sync.outputs.summary }}
+        run: |
+          set -euo pipefail
+          git add -A "_${COLLECTION}"
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          ADDED=$(echo "$SUMMARY" | python3 -c "import json,sys;print(json.load(sys.stdin)['added'])")
+          MODIFIED=$(echo "$SUMMARY" | python3 -c "import json,sys;print(json.load(sys.stdin)['modified'])")
+          UNCHANGED=$(echo "$SUMMARY" | python3 -c "import json,sys;print(json.load(sys.stdin)['unchanged'])")
+          REMOVED=$(echo "$SUMMARY" | python3 -c "import json,sys;print(json.load(sys.stdin)['removed'])")
+          WARNINGS=$(echo "$SUMMARY" | python3 -c "import json,sys;print(json.load(sys.stdin)['warnings'])")
+          MSG="mnemosyne: sync ${FOLDER_NAME} folder (${ADDED} added, ${MODIFIED} modified, ${REMOVED} removed, ${UNCHANGED} unchanged, ${WARNINGS} warnings)"
+          git commit -m "$MSG"
+          git push
+
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
