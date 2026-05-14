@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="moment">
+  <header class="moment-header">
+    {% if page.title %}
+      <h2 class="moment-title">{{ page.title }}</h2>
+    {% endif %}
+    <p class="moment-meta">
+      <i class="fa-solid fa-calendar fa-sm"></i>
+      {{ page.date | date: '%b %d, %Y · %-I:%M %p' }}
+      {% if page.tags and page.tags != empty %}
+        {% for tag in page.tags %}
+          &nbsp;<i class="fa-solid fa-hashtag fa-sm"></i>{{ tag }}
+        {% endfor %}
+      {% endif %}
+    </p>
+  </header>
+  <article class="moment-content">
+    {{ content }}
+  </article>
+</div>

@@ -187,6 +187,12 @@ collections:
     defaults:
       layout: post
       sitemap: false
+  moments:
+    output: true
+    permalink: /moments/:path/
+    defaults:
+      layout: moment
+      sitemap: true
 
 announcements:
   enabled: true
