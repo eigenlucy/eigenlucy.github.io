@@ -10,11 +10,8 @@ sitemap: false
 ## [library](/library/)
 *collection of reference materials and inspiration*
 
-## [anti-oedipus concept map](/blog/2026/AO-reading-group-notes/)
-*Feb 2026 — for an AO reading group*
-
-## [hello, cdmx](/blog/2026/CDMX/)
-*Feb 2026 — on relocating to Mexico City*
+## [moments](/eigenlucy/moments/)
+*candles*
 
 ## [war communism](/eigenlucy/warcommunism)
 *Dec 2025 — proliferation of eyes by multiplication of borders*
@@ -30,9 +27,6 @@ sitemap: false
 
 ## [multiplicity](/eigenlucy/multiplicity/)
 *Jun 2025 — history is what hurts*
-
-## [hello, san francisco](/blog/2025/SF/)
-*Jan 2025 — a variety of fun updates and adventures*
 
 ## [notes on stillstellung](/eigenlucy/stillstellung/)
 *Jan 2025 — reflections on the standstill, critique of violence, theses on the concept of history*

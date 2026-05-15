@@ -6,7 +6,8 @@ pagination:
 ---
 
 <div class="post-list">
-  {% for post in paginator.posts %}
+  {% assign blog_posts = paginator.posts | where_exp: "p", "p.url contains '/blog/'" %}
+  {% for post in blog_posts %}
     <article class="post-preview">
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
