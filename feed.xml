@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-05-15T18:59:04+00:00</updated><id>https://eigenlucy.com/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://eigenlucy.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eigenlucy.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-05-15T21:05:33+00:00</updated><id>https://eigenlucy.com/feed.xml</id><title type="html">Eigenlucy</title><subtitle>Eigenlucy // Lucy Moglia
 </subtitle><entry><title type="html">Anti-Oedipus Concept Map</title><link href="https://eigenlucy.com/blog/2026/AO-reading-group-notes/" rel="alternate" type="text/html" title="Anti-Oedipus Concept Map" /><published>2026-02-27T13:00:00+00:00</published><updated>2026-02-27T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/AO-reading-group-notes</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/AO-reading-group-notes/"><![CDATA[<p><a href="/viewer/?file=/assets/library/Anti-Oedipus - Deleuze and Guattari.pdf">Read Anti-Oedipus in the library</a></p>
 
 <ul class="nav nav-tabs" id="ao-tabs" role="tablist">
@@ -1505,301 +1505,7 @@ Victoria (joining from an orthodox ML / Stalinist perspective) found useful the 
     </picture>
     
   </figure></swiper-slide>
-</swiper-container>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[On relocating to Mexico City]]></summary></entry><entry><title type="html">An Introduction to Gamma Spectroscopy</title><link href="https://eigenlucy.com/blog/2026/gamma-spec-zine/" rel="alternate" type="text/html" title="An Introduction to Gamma Spectroscopy" /><published>2026-01-06T13:00:00+00:00</published><updated>2026-01-06T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/gamma-spec-zine</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/gamma-spec-zine/"><![CDATA[<p>This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.</p>
-
-<h2 id="intro">Intro</h2>
-
-<p>Every second, thousands of high energy particles, sheared off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it: potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.</p>
-
-<p>For decades, reading these fingerprints required photomultiplier tubes, cryogenic cooling, and equipment costing tens of thousands of dollars. Not anymore. Gamma spectroscopy has become surprisingly cheap. With about $200 in parts and a Saturday afternoon, you can build a device that identifies isotopes by their gamma signatures.</p>
-
-<p>This article is your field guide: we’ll cover what gamma spectroscopy can do, how the physics works, the signal processing that extracts clean spectra from messy detector data, and walk through a low-cost, high-performance gamma spectroscopy system of my own design.</p>
-
-<h2 id="i-dont-live-in-chernobyl-why-should-i-care">I don’t live in Chernobyl, why should I care</h2>
-
-<p>Gamma spectroscopy isn’t just for detecting nuclear accidents or uranium ore: gamma particles are EVERYWHERE. There is enough potassium-40 in the average banana to produce about 15 gamma particles per second.</p>
-
-<p>A given gamma-emitting radioactive isotope will produce photons of different energy levels, each emission random, but with a consistent probability distribution. These spectra are like atomic fingerprints which we can use to detect and identify gamma-emitting particles.</p>
-
-<p>Gamma spectroscopy is used to monitor star formation millions of light years away, test food (bioaccumulation of gamma-emitting particles), analyze soil ecology (distributions of isotopes correlated with various geological, seismic, and ecological trends) and map geological features (attenuation of gamma particles by heavy deposits).</p>
-
-<p>High energy spectrum data can shed light on atomic processes happening all around us—in the dirt below and in the distant stars above.</p>
-
-<h2 id="how-gamma-spectroscopy-works">How gamma spectroscopy works</h2>
-
-<p>Most people are familiar with the visible light spectrum: any light source can be characterized as a spectrum describing the relative intensity of each frequency. The electromagnetic spectrum extends to lower frequencies, like the IR used for thermal cameras, and to higher frequencies through UV. But that’s not where the EM spectrum stops.</p>
-
-<p>At the very high frequency end (&gt;10^19 Hz) there are gamma ray photons. Particles of this intensity are generated by atomic processes associated with radioactive decay of unstable nuclei. The energy level (measured in kilo- or mega-electron-volts) of a given particle is a function of the atomic structure of the nucleus which ejected it. Each radioisotope has a characteristic emission profile — particles of specific energy levels that it emits that show up like fingerprints when you collect enough particles. A single gamma ray tells you almost nothing. But sample a few thousand decays, and the histogram reveals exactly which nucleus spawned them:</p>
-
-<p><img src="/assets/img/Gallery/spectrum_example.png" alt="example spectrum" class="centered" /></p>
-<div class="caption">Gamma Spectrum example, with peaks identified</div>
-
-<p><em>Note: Although we are calling this all “gamma spectroscopy” and focusing on gamma ray photons, a bare or thin-windowed scintillator can also pick up beta particles, and to a lesser extent high-energy alphas, though encapsulated crystals like most NaI(Tl) and CsI(Tl) will stop alphas and low-energy betas before they reach the scintillator.</em></p>
-
-<h2 id="scintillators-and-silicon-photomultipliers-sipm">Scintillators and Silicon Photomultipliers (SiPM)</h2>
-
-<p>The challenge with gamma spec is that high energy particles are, generally, extremely difficult to measure. They are far too energetic to interface with electronics directly. Scintillators are the magical crystals which bridge this gap and enable low cost, high resolution gamma spectroscopy. Scintillators are used to “down convert” the high energy particle to a number of lower energy photons. Put simply, when you shoot a scintillator with radiation particles, it produces some amount of light (often visible light) proportional to the energy of the particle which hit it. One 1460keV gamma particle becomes tens of thousands of ~2eV 550nm photons. A detector is created by pairing this scintillator with a light sensor which can measure the brightness of secondary emissions.</p>
-
-<p><img src="/assets/img/Gallery/scintillators_example.jpeg" alt="scintillators" class="centered sixty" /></p>
-<div class="caption">Scintillators exposed to a cobalt-60 source</div>
-
-<p>But in reality, things are a bit more complicated. Each scintillation event produces all the photons in a brief flash lasting hundreds of nanoseconds to microseconds depending on the crystal. To precisely measure the amplitude of these brief pulses, we need a highly specialized sensor:</p>
-
-<p>An SiPM is essentially an array of thousands of tiny photocell pixels, all wired in parallel to the SiPM anode (A) and cathode (K). When a scintillator flash hits the array of photocells, photons “avalanche” individual pixels connected in parallel, allowing current to flow from K to A. The forward current induced by these avalanches adds up proportionally to the number of incident photons (∝gamma ray energy). Compared to traditional photomultiplier tubes, which run on high voltage supplies and cost hundreds of dollars used, SiPMs run on ~30V, and can cost under $20.
-The scintillator crystal needs to sit directly against the SiPM face, wrapped in reflective foil. Often scintillator crystals are surrounded by highly reflective ceramic baring the face the SiPM sits on. The whole assembly gets wrapped in tape and put in an enclosure to further shield the assembly from stray photons.</p>
-
-<p>The output is a current pulse: brief (nanoseconds), small (microamperes per cell, but we need to resolve differences between individual cells firing), carrying the energy information you need. From here we just need a circuit to amplify, shape, and measure this pulse so a microcontroller can histogram it into a spectrum.</p>
-
-<h2 id="building-a-gamma-spec-driver">Building a Gamma Spec Driver</h2>
-
-<p><em>WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)</em></p>
-
-<p><img src="/assets/img/Gallery/gammaspec_schem.png" alt="schematic" class="centered sixty" /></p>
-<div class="caption">Schematic</div>
-
-<p><img src="/assets/img/Gallery/pcbview.png" alt="pcb" class="centered sixty" /></p>
-<div class="caption">PCB layout</div>
-
-<p><img src="/assets/img/Gallery/sipm.jpeg" alt="sipm" class="centered sixty" /></p>
-<div class="caption">Assembled board</div>
-
-<p>This is the board I built to interface with an SiPM and scintillator pair. It is heavily inspired by the amazing open-gamma-detector project. I know it looks intimidating, but it’s pretty intuitive.</p>
-
-<p>On a high level we have to build: a bias voltage generator for the SiPM, an amplifier to convert the current pulse to a readable voltage,  a pulse discriminator to send a digital interrupt when a pulse occurs, a peak detector to hold the peak voltage out of the amplifier (used for histogram), and an ADC to record the peaks.  Let’s go through the circuit.</p>
-
-<h3 id="sipm-bias-voltage-generator">SiPM bias voltage generator:</h3>
-
-<p>A bias voltage must be applied to the SiPM to hold charge across the photon sensitive junction. Bias voltage tends to be between 25 and 35 volts, depending on the photocell. I used a MAX5026 boost converter to generate this  from a battery. We need this bias to be smooth — ripple on the bias modulates the SiPM gain, smearing energy resolution — so I used an LDO linear regulator after the boost. My board allows Vbias adjustment up to 36V.</p>
-
-<p><img src="/assets/img/Gallery/bias_generator.png" alt="Bias Generator" class="centered sixty" /></p>
-<div class="caption">Vbias Generator + Filtering</div>
-
-<h3 id="transimpedance-amplifier-tia">Transimpedance amplifier (TIA):</h3>
-
-<p>A transimpedance amplifier (TIA) converts current to voltage. The SiPM outputs a brief pulse of current when the photocells trigger. The gain is fairly low, but high bandwidth is required: the raw SiPM pulse is nanoseconds wide. The anode, connected to the TIA non-inverting input, is held a bit above 0V with a reference produced via zener diode and voltage divider for stability. When the amplifier works correctly, the number of cells that fires determines the peak output voltage, which we can read to measure incident particle energy.</p>
-
-<p><img src="/assets/img/Gallery/tia_nf100.png" alt="TIA" class="centered sixty" /></p>
-<div class="caption">photon collision, SiPM output, and TIA output (nf = 100)</div>
-
-<p><img src="/assets/img/Gallery/tia_nf500.png" alt="TIA" class="centered sixty" /></p>
-<div class="caption">photon collision, SiPM output, and TIA output (nf = 500)</div>
-
-<h3 id="pulse-discriminator">Pulse discriminator:</h3>
-
-<p>The pulse discriminator is a comparator circuit responsible for telling us when to trigger measurements.  It consists of a reference voltage held just above the level of the signal from the TIA. We want to be able to adjust the reference voltage finely in order to effectively measure low energy particles, so make sure you use something like a 10+ turn pot.  The pulse discriminator will trigger whenever the signal goes above the reference voltage, triggering a reading.</p>
-
-<p><img src="/assets/img/Gallery/pulse_detector.png" alt="Pulse discriminator" class="centered sixty" /></p>
-<div class="caption">Pulse discriminator, signal crossing Vref (Vint = 3.3V)</div>
-
-<h3 id="peak-detector">Peak detector:</h3>
-
-<p>The peak detector circuit, aka the “sample and hold” circuit, is a circuit which samples a signal and outputs the peak value until reset. (In the spice model shown the 100k resistor is really a BJT used for reset, but this interfered with my model.) It is important that the value of the capacitor used to hold the peak value (C3 in SPICE, C12 in my schematic) is sized correctly to avoid undershooting the peak. This output will be sampled by the analog-to-digital converter to determine particle energy.</p>
-
-<p><img src="/assets/img/Gallery/peak_detector.png" alt="Peak detector" class="centered sixty" /></p>
-<div class="caption">Peak detector holding signal Vmax, reset by draining cap via BJT in place of R12</div>
-
-<h3 id="analog-to-digital-converter-adc">Analog To Digital Converter (ADC):</h3>
-
-<p>An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn’t see differences smaller than ~12.9mV). It’s best to use at least a 12bit ADC, I used 16bit.</p>
-
-<h3 id="firmware-reading-the-spectrum">Firmware: reading the spectrum</h3>
-
-<p>My board is set up to interface with any microcontroller over SPI. The core loop is simple: the pulse discriminator fires a digital interrupt on the INT pin whenever a particle hits. Your MCU wakes up, reads the peak voltage from the ADC over SPI, then pulls the RST pin high to drain the peak detector capacitor and reset for the next event. Each ADC reading gets binned into a histogram — that histogram is your spectrum. Any MCU with SPI and a GPIO interrupt will work: ESP32, RP2040, STM32, Arduino, whatever you have lying around.</p>
-
-<h2 id="sourcing-guide">Sourcing guide</h2>
-
-<h3 id="driver-board">Driver board</h3>
-
-<p>My board’s design files will be on my GitHub (@eigenlucy) once V2 is ready. In the meantime, the <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> project is an excellent all-in-one alternative and major inspiration for this project. You can also build the amplifier, discriminator, and peak detector on protoboard (it’s much more forgiving than it looks).</p>
-
-<h3 id="detector-pairs">Detector pairs</h3>
-
-<p>The easiest way to get started is to buy a pre-packaged scintillator+SiPM pair. Atomspectra on eBay sells well-characterized detector pairs at decent prices. If you want to source components separately, the onsemi MICROFC series SiPMs are available on Mouser and Digikey for ~$15-25, and scintillator crystals (NaI(Tl), CsI(Tl), LYSO) show up on eBay regularly.</p>
-
-<h2 id="what-to-do-with-it">What to do with it</h2>
-
-<p>Collect some background radiation data by letting your detector sit for a few hours, then walk around in grids to map fluctuations in dose rate. This can be used to generate a radiological survey (check my GitHub @eigenlucy).</p>
-
-<p><img src="/assets/img/Gallery/gamma_map.jpeg" alt="Gamma map" class="centered sixty" /></p>
-<div class="caption">Gamma survey at Hunter's Point</div>
-
-<p>Bring your detector through the airport X-ray machine or to the dentist with you. X-ray machines emit broad spectrum radiation which shows up as wide pulses on the spectrum.</p>
-
-<p><img src="/assets/img/Gallery/dentist_spectrum.png" alt="Xray" class="centered sixty" /></p>
-<div class="caption">X-ray pulses from a dentist's panoramic X-ray machine (captured with Radiacode 103)</div>
-
-<p>Look for nearby uranium deposits on minedat.org, grab a drone, and go prospecting!</p>
-
-<p><img src="/assets/img/Gallery/prospect.png" alt="prospect" class="centered sixty" /></p>
-<div class="caption">Radioactive hole!</div>
-
-<p>Have fun!</p>
-
-<h2 id="references">References</h2>
-
-<ul>
-  <li><a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> — Open source all-in-one gamma spectrometer by NuclearPhoenix</li>
-  <li><a href="https://github.com/OpenGammaProject/Gamma-MCA">Gamma MCA</a> — Web-based multichannel analyzer for spectrum plotting</li>
-  <li><a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier</li>
-  <li><a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., “SPICE Electrical Models and Simulations of Silicon Photomultipliers”</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)</li>
-  <li>Glenn F. Knoll, <em>Radiation Detection and Measurement</em> — The textbook on radiation detector physics</li>
-</ul>]]></content><author><name></name></author><category term="electrical engineering" /><category term="nuclear" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Iemanja</title><link href="https://eigenlucy.com/eigenlucy/iemanja/" rel="alternate" type="text/html" title="Iemanja" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/iemanja</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/iemanja/"><![CDATA[<p>Memory is like a pool you can swim through, but it’s also like a tool that you wield. It is both active and passive. Each flash ruptures the stasis of self evident experience as it brushes a trace past in the present. It is a strange unfamiliar past, or maybe the now is a strange unfamiliar place. The violent struggle between these two postulates calls forwards a new being capable of integrating the difference. Memory doesn’t simply recall the past, it summons it. There is no pure memory nor past to recover, only affections. The hope and prayer of all who hope to honor memory is that these craters of experience may be channeled to the construction a self worthy of everything that happens to it, able to speak to it all. I hope that one day I can find the words. I am so tired.</p>
-
-<figure class="spotify-embed">
-  <iframe src="https://open.spotify.com/embed/playlist/6RxBksPjPwYYKLjTdvzFxo?si=51803b0107514b97" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
-  
-    <figcaption class="caption">Iemanja (Ode To Vera)</figcaption>
-  
-</figure>]]></content><author><name>Lucy M.</name></author><category term="essay" /><summary type="html"><![CDATA[Only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast]]></summary></entry><entry><title type="html">Kaddish</title><link href="https://eigenlucy.com/eigenlucy/kaddish/" rel="alternate" type="text/html" title="Kaddish" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/kaddish</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/kaddish/"><![CDATA[<p>The kaddish is a Jewish prayer said over the body of a deceased person. It affirms the absolute sovereignty and transcendence of God in the face of death. There is very little to be said for the dead themselves:</p>
-
-<div class="row">
-<div class="col-sm-6" style="direction: rtl; text-align: right; font-size: 1.1rem; line-height: 1.8;">
-
-יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא
-בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ
-
-וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן
-וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל
-בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן
-
-יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא
-
-יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא
-וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא
-לְעֵלָּא מִן כָּל בִּרְכָתָא וְשִׁירָתָא
-תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן
-
-יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים
-עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן
-
-עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם
-עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן
-
-</div>
-<div class="col-sm-6" style="font-size: 1.1rem; line-height: 1.8;">
-
-Glorified and sanctified be God's great name throughout the world
-which He has created according to His will.
-
-May He establish His kingdom in your lifetime and during your days,
-and within the life of the entire House of Israel, speedily and soon;
-and say, Amen.
-
-May His great name be blessed forever and to all eternity.
-
-Blessed and praised, glorified and exalted, extolled and honored,
-adored and lauded be the name of the Holy One, blessed be He,
-beyond all the blessings and hymns, praises and consolations that
-are ever spoken in the world; and say, Amen.
-
-May there be abundant peace from heaven, and life, for us
-and for all Israel; and say, Amen.
-
-He who creates peace in His celestial heights,
-may He create peace for us and for all Israel;
-and say, Amen.
-
-</div>
-</div>
-<p style="text-align: center; font-size: 0.85rem; margin-top: 0.5rem;"><a href="https://en.wikipedia.org/wiki/Kaddish">Mourner's Kaddish</a><sup><a href="#ref-1" id="cite-1" class="ref-link">[1]</a></sup></p>
-
-<p>The comfort of the ritual derives from placing God over and above all strife, all loss, all laceration. What, then, does this prayer offer after the death of God?</p>
-
-<p>In David Ohana’s <a href="/viewer/?file=/assets/library/Trailing Nietzsche - Scholem and the Sabbatean Dialectics - David Ohana.pdf&amp;page=7"><em>Trailing Nietzsche</em></a><sup><a href="#ref-2" id="cite-2" class="ref-link">[2]</a></sup>, Gershom Scholem describes, in one of his early diary entries, the fall of the eternal, transcendent heaven to which the Kaddish pays tribute, understanding modernity to be the process of heaven slowly collapsing.</p>
-
-<p>“In the 19th century, heaven was broken up until it vanished forever. After the age of romanticism had still retained the old dreams, there were two major periods of change. The first period was represented by Schopenhauer, Marx, and Stirner: ‘Schopenhauer was the one who murdered the absolute God. It’s just as Nietzsche said: God is utterly dead, even if his murderer limited himself to metaphysics.’ After Schopenhauer came Marx’s turn to shatter the illusions of the transcendental heaven and Stirner’s turn to say kaddish over God: [See Bauer on the relationship between the Unique One in Stirner and Substance in Spinoza] “After which a second generation - Strindberg, Nietzsche, and Ibsen - came on the scene to rattle heaven with their romanticism. For the upper classes they created a lot more stir in the dubious region of heaven than the other three. Next came Kierkegaard and Tolstoy, two giants who, no doubt, unwittingly destroyed heaven through their deep religiosity. We today have nothing left of the heaven of the past.”</p>
-
-<p>There are a few striking claims in this diary entry of Scholem’s:</p>
-<ul>
-  <li>
-    <p>1: Heaven was destroyed in a number of stages. The first stage began with a metaphysical analysis of the Will and its incapacity to grasp its objects (Schopenhauer), then in the political-economic impossibility of <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=3&amp;highlight=transcendence">Heaven on Earth</a><sup><a href="#ref-3" id="cite-3" class="ref-link">[3]</a></sup> in Marx, and then in the culling of the basic unity and purpose of the soul in Stirner’s egoism.</p>
-  </li>
-  <li>
-    <p>2: It is possible to demean heaven further through one’s attempts at revival. Is it also possible that this desecration is a necessary step in the struggle to redeem Justice from the <a href="/viewer/?file=/assets/library/Archive Fever - Jacques Derrida.pdf&amp;page=81&amp;highlight=One+murder+protects+itself+trau+matism+violence">murder of the One</a><sup><a href="#ref-4" id="cite-4" class="ref-link">[4]</a></sup>? <a href="/eigenlucy/bastille">[the end of satan]</a><sup><a href="#ref-5" id="cite-5" class="ref-link">[5]</a></sup>. This is the question of the <a href="/viewer/?file=/assets/library/Nomos and Narrative - Robert Cover.pdf">Nomos</a><sup><a href="#ref-6" id="cite-6" class="ref-link">[6]</a></sup>.</p>
-  </li>
-  <li>
-    <p>3: Scholem has Stirner reciting the Kaddish over God. This is the most perplexing choice he could have made from the authors listed. I see the vision. “The Unique One is substance driven to its greatest degree of abstraction”. Scholem seems to anticipate that the ghosts in the machine to which Stirner first gave a voice would be the key to this escape. The very form of logic that once guaranteed God’s transcendence had become the instrument of his murder — and only Stirner’s specters could <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=13&amp;highlight=negation of the negation">slip through its grip</a><sup><a href="#ref-3" id="cite-3b" class="ref-link">[3]</a></sup>.</p>
-  </li>
-</ul>
-
-<blockquote>
-  <p>“Faith is precisely this paradox, that the individual as the particular is higher than the universal, <a href="/viewer/?file=/assets/library/What is Philosophy - Deleuze and Guattari.pdf&amp;page=114&amp;highlight=absolute deterritorialization">is justified over against it</a><sup><a href="#ref-7" id="cite-7" class="ref-link">[7]</a></sup>, <a href="/viewer/?file=/assets/library/Cannibal Metaphysics - Eduardo Viveiros de Castro.pdf&amp;page=19&amp;highlight=thought+operates+only+in+the+multiple">is not subordinate but superior</a><sup><a href="#ref-8" id="cite-8" class="ref-link">[8]</a></sup>.” — Kierkegaard, <em>Fear and Trembling</em><sup><a href="#ref-9" id="cite-9" class="ref-link">[9]</a></sup></p>
-</blockquote>
-
-<blockquote>
-  <p>“I only mention in passing that this ratio between two quantities that have disappeared, caught at the moment of their disappearance, is a contradiction; however, it cannot disturb us any more than it has disturbed the whole of mathematics for almost two hundred years.” [Engels] …it is necessary to recognize that this contradiction finally not only troubled mathematicians, but even scandalized them, that they applied all their efforts to the task of eliminating it and — it would be vain to deny it — they succeeded… “The dialectic does not express the nature of mathematics; it applies to the agent and not to the object of scientific activity.” — Georges Bataille &amp; Raymond Queneau, <em><a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=136">The Critique of the Foundations of the Hegelian Dialectic</a></em><sup><a href="#ref-10" id="cite-10" class="ref-link">[10]</a></sup></p>
-</blockquote>
-
-<blockquote>
-  <p>“It was the will to purify love of all preconditions that posed the unconditional existence of God as the supreme object of a rapturous escape from the self. But the conditional counterpart of divine majesty—the principle of political authority—leads the affective movement into the linkage of oppressed existences with moral imperatives; the affective movement is thrown back into the platitude of applied life, where the me as me withers away. …Burning passion is no longer acceptance and realization of nothingness: nothingness is still a cadaver; brilliance is the blood that flows and coagulates.” — Georges Bataille, <em><a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=159">Sacrifices</a></em><sup><a href="#ref-11" id="cite-11" class="ref-link">[11]</a></sup></p>
-</blockquote>
-
-<p>Scholem finds this passage in the Lesser Hekhaloth, where it appears as an anonymous theurgical reinterpretation of a saying by Hillel the Elder from the <em>Sayings of the Fathers</em>. Hillel’s original warning against the misuse of sacred knowledge is repurposed here to guard the secret divine names used in Merkabah mysticism — the practice of ascending through the celestial palaces to the throne of God.<sup><a href="#ref-12" id="cite-12" class="ref-link">[12]</a></sup></p>
-<blockquote>
-  <p>“<a href="/viewer/?file=/assets/library/Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition - Gershom Scholem.pdf&amp;page=86&amp;highlight=spreads his name loses his name">He who spreads his name loses his name</a>, and who does not study deserves death, and who makes use of the crown [the secret name of God] vanishes, and who does not know <em>kintemisa</em> should be put to death, and who knows <em>kintemisa</em> will be asked for in the world to come, and who is the man who is able to ascend on high, to descend below…”</p>
-</blockquote>
-
-<p>Walter Benjamin, <a href="https://en.wikipedia.org/wiki/On_Language_as_Such_and_on_the_Language_of_Man">in correspondence with Scholem and under his guidance</a>, wrote two essays concerning the nature of the Name of God, and of the horizons of language. It is an overlooked piece, with a lot to offer in the LLM era:<sup><a href="#ref-13" id="cite-13" class="ref-link">[13]</a></sup></p>
-<blockquote>
-  <p>“Mediation, which is the immediacy of all mental communication, is the fundamental problem of linguistic theory, and if one chooses to call this immediacy magic, then the primary problem of language is its magic. …In name, the mental entity that communicates communicates itself to God… in name the intensive totality of language, as the absolutely communicable mental entity, and the extensive totality of language, as the universally communicating (naming) entity, culminate.” — Walter Benjamin, <em><a href="/viewer/?file=/assets/library/On Language as Such and on the Language of Man - Walter Benjamin.pdf&amp;page=2">On Language as Such and on the Language of Man</a></em></p>
-</blockquote>
-
-<p>From the <em><a href="https://archive.org/details/GershomScholemKabbalah1975LectureAudio">Shoshan Sodot</a></em><sup><a href="#ref-14" id="cite-14" class="ref-link">[14]</a></sup>:</p>
-
-<blockquote>
-  <p>“The deeply learned Rabbi Nathan, of blessed memory, said to me: Know that the complete secret of prophecy to a prophet consists in that he suddenly sees the form of his self standing before him, and he forgets his own self and ignores it…and that form speaks with him and tells him the future. And concerning this our sages said: ‘Great is the power of the prophets, who make the form appearing to them resemble its Former.’ And the learned sage Rabbi Abraham ibn Ezra, of blessed memory, said: ‘The one who hears at the time of prophecy is a human being, and the one who speaks is a human being.’</p>
-
-  <p>And another learned man wrote the following: ‘It occurred to me, by the power of combination of letters of the holy names of God and by solitary meditation, that I encountered that light which accompanied me, as I have discussed in the book <em>Sha’arei Tsedek</em>. But to see my own form standing before me — this I was not granted and this I cannot bring about.’</p>
-
-  <p>Yet another learned man writes the following: ‘And I, the young one, know and acknowledge with full certainty that I am not a prophet nor the son of a prophet, and I have not the holy spirit and I do not make use of the heavenly voice; these things have not been vouchsafed to me, and I have not taken off my garment or washed my feet. Nevertheless, I call on heaven and earth to witness — as the heavens are my witness and my Guarantor is on high! — that one day I was sitting and writing down a Kabbalistic secret, when suddenly I saw the form of my self standing before me, and my own self disappeared from me, and I was forced and compelled to cease writing.’”</p>
-</blockquote>
-
-<p>“Nothing Human Is Alien to Me” (taken at the summit above Basilica de Guadalupe in Mexico City)</p>
-<div class="row justify-content-center">
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-    <picture>
-      
-        <source class="responsive-img-srcset" srcset="assets/img/Gallery/angelCDMX.jpg-480.webp 480w,assets/img/Gallery/angelCDMX.jpg-800.webp 800w,assets/img/Gallery/angelCDMX.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
-      
-      <img src="/assets/img/Gallery/angelCDMX.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/angelCDMX.jpg';" />
-    </picture>
-    
-  </figure>
-    </div>
-</div>
-
-<figure class="spotify-embed">
-  <iframe src="https://open.spotify.com/embed/playlist/7d9SHfZv7tXxEKMGv61kSG?si=06c553511e354895" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
-  
-    <figcaption class="caption">kaddish</figcaption>
-  
-</figure>
-
-<hr />
-
-<div class="references">
-
-### References
-
-<ol>
-<li id="ref-1"><a href="https://en.wikipedia.org/wiki/Kaddish">Mourner's Kaddish</a> — traditional Jewish prayer of sanctification recited for the dead <a href="#cite-1" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-2">Gershom Scholem, diary entry (early 1915), quoted in David Ohana, <a href="/viewer/?file=/assets/library/Trailing Nietzsche - Scholem and the Sabbatean Dialectics - David Ohana.pdf&amp;page=7"><em>Trailing Nietzsche: Scholem and the Sabbatean Dialectics</em></a>, p. 229 <a href="#cite-2" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-3">Karl Marx, <em>Private Property and Communism</em> (1844), <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=3">p. 3</a> — transcendence of human self-estrangement; <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=13">p. 13</a> — negation of the negation <a href="#cite-3" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-4">Jacques Derrida, <em>Archive Fever: A Freudian Impression</em> (1995), <a href="/viewer/?file=/assets/library/Archive Fever - Jacques Derrida.pdf&amp;page=81">p. 81</a> — "As soon as there is the One, there is murder, wounding, traumatism" <a href="#cite-4" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-5">Victor Hugo, <em>La Fin de Satan</em> (1886) — see <a href="/eigenlucy/bastille">The End of Satan</a> <a href="#cite-5" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-6">Robert Cover, <em>Nomos and Narrative</em> (1983), <a href="/viewer/?file=/assets/library/Nomos and Narrative - Robert Cover.pdf">link</a> <a href="#cite-6" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-7">Gilles Deleuze &amp; Félix Guattari, <em>What is Philosophy?</em> (1991), <a href="/viewer/?file=/assets/library/What is Philosophy - Deleuze and Guattari.pdf&amp;page=114">p. 114</a> — absolute deterritorialization and the concept <a href="#cite-7" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-8">Eduardo Viveiros de Castro, <em>Cannibal Metaphysics</em> (2014), <a href="/viewer/?file=/assets/library/Cannibal Metaphysics - Eduardo Viveiros de Castro.pdf&amp;page=19">p. 19</a> — philosophy beyond its European confines <a href="#cite-8" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-9">Søren Kierkegaard, <em>Fear and Trembling</em> (1843) — "the individual as the particular is higher than the universal" <a href="#cite-9" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-10">Georges Bataille &amp; Raymond Queneau, <em>The Critique of the Foundations of the Hegelian Dialectic</em> (1932), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=136">p. 111</a> — the dialectic applies to the agent, not the object <a href="#cite-10" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-11">Georges Bataille, <em>Sacrifices</em> (1936), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=159">p. 134</a> — the will to purify love posed God as the object of rapturous escape <a href="#cite-11" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-12">Gershom Scholem, <em>Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition</em> (1960), <a href="/viewer/?file=/assets/library/Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition - Gershom Scholem.pdf&amp;page=86">p. 86</a> — "He who spreads his name loses his name" <a href="#cite-12" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-13">Walter Benjamin, <em>On Language as Such and on the Language of Man</em> (1916), <a href="/viewer/?file=/assets/library/On Language as Such and on the Language of Man - Walter Benjamin.pdf&amp;page=2">p. 2</a> — intensive and extensive totality of language culminate in name <a href="#cite-13" class="ref-back" title="Back to text">↩</a></li>
-<li id="ref-14"><em>Shoshan Sodot</em> ("The Rose of Secrets"), quoted in Gershom Scholem, <a href="https://archive.org/details/GershomScholemKabbalah1975LectureAudio"><em>Kabbalah</em> (1975 lecture)</a> — the secret of prophecy as self-encounter <a href="#cite-14" class="ref-back" title="Back to text">↩</a></li>
-</ol>
-
-</div>]]></content><author><name>Lucy M.</name></author><category term="essay" /><category term="political-theology" /><summary type="html"><![CDATA[Funeral for Justice]]></summary></entry><entry><title type="html">War Communism</title><link href="https://eigenlucy.com/eigenlucy/warcommunism/" rel="alternate" type="text/html" title="War Communism" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/war-communism</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/warcommunism/"><![CDATA[<p>When I was 19, I rented a house in Liberty, South Carolina. It was a small, rural town of around three thousand people. I rented a small 2.5 bedroom house plus a shed with a number of friends (~10 people rotated in and out over the years, most of them also transgender). I lived there for a bit over 3 years. I often struggle to explain this period. I speak of it in a confusing, traumatized, often paradoxical manner. There was so much magic. Every day was full of dozens of little miracles, miraculating forces swirling in the smoke. The ground is alive! It was so miserable. It was violent. It was volatile. It was overcrowded and also so lonely. I have never experienced the level of solidarity or grace that I felt there, and at the same time it was one of the most painful periods of my life defined by constant turbulence, precariousness, betrayal. We understood our situation in terms of a kind of sacred and profane division, constantly preoccupied by the quasi-Gnostic drive to escape what we understood to be a poisonous, hateful, cruel socius. The power derived from our otherness was commensurate with the pain inflicted on us by the big Other, by familial estrangement, by drug addiction, by religious queerphobia. We were on a kind of frontier, experimental family discovering what our bodies were really made for, carving out new selves from shambling accumulations of excess and disjunction. And, of course, the center could not hold.</p>
+</swiper-container>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[On relocating to Mexico City]]></summary></entry><entry><title type="html">War Communism</title><link href="https://eigenlucy.com/eigenlucy/warcommunism/" rel="alternate" type="text/html" title="War Communism" /><published>2026-02-15T00:00:00+00:00</published><updated>2026-02-15T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/war-communism</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/warcommunism/"><![CDATA[<p>When I was 19, I rented a house in Liberty, South Carolina. It was a small, rural town of around three thousand people. I rented a small 2.5 bedroom house plus a shed with a number of friends (~10 people rotated in and out over the years, most of them also transgender). I lived there for a bit over 3 years. I often struggle to explain this period. I speak of it in a confusing, traumatized, often paradoxical manner. There was so much magic. Every day was full of dozens of little miracles, miraculating forces swirling in the smoke. The ground is alive! It was so miserable. It was violent. It was volatile. It was overcrowded and also so lonely. I have never experienced the level of solidarity or grace that I felt there, and at the same time it was one of the most painful periods of my life defined by constant turbulence, precariousness, betrayal. We understood our situation in terms of a kind of sacred and profane division, constantly preoccupied by the quasi-Gnostic drive to escape what we understood to be a poisonous, hateful, cruel socius. The power derived from our otherness was commensurate with the pain inflicted on us by the big Other, by familial estrangement, by drug addiction, by religious queerphobia. We were on a kind of frontier, experimental family discovering what our bodies were really made for, carving out new selves from shambling accumulations of excess and disjunction. And, of course, the center could not hold.</p>
 
 <p>I have come to understand this paradox to be an expression of the contradictions underlying the autopoietic foundations of trans existence, and more broadly of the impossibility of an Outside. I see the same patterns repeat across countless contexts in every place I’ve lived. We made some really beautiful things together. But <a href="/viewer/?file=/assets/library/transgender-marxism-gleeson.pdf&amp;page=99&amp;highlight=keeping one another alive cannot be collapsed with revolutionary change">keeping each other alive</a>, or even building a common infrastructure to advance our lives, cannot be conflated with overcoming the foreclosure of our lives. Composing a subject capable of even expressing its needs is no small task in the face of such a collapse as estrangement from the people who always claimed to love you most, coupled with the broader material and social fallout of transition. I will refrain from the gory details, but so often we hurt each other so badly. So often it was the wounds that formed the basis of solidarity that led to the breakdown, but it would be too simplistic to reduce it all back to this. Drug addiction is never really about the wound, nor the addiction itself; the knot takes on its own complex life which is irreducible to the conditions of its existence. What can be said is that the paradox of transsubstantiation of a life lived only on the margins is a volatile, fragile, tortured process which struggles to avoid collapsing into interpersonal violence when put up against the imperatives of the Outside (rent, family, transphobia, etc). So how do we escape the accumulation of petty resentment, bitterness, and external crises which relentlessly haunt our attempts to claw a way Outside? Even more complicated, these crises often accumulated not due to runaway misplaced aggression, but a stifling of aggression and self assertion within the sacred interior counterposed only to a totalizing Outside. There is no simple computation of individual or collective need, there is no eliminating aggression. So how do we summon the grace required for negation of negation under wartime conditions, with the pressure of the epoch pushing so hard against us it risks dissolving us to nothing. This is not some hypothetical, we watched countless friends be ground to dust, lost to ODs, pushed to homelessness and disappeared one day, stolen from themselves in countless ways. So we built a kind of war machine, a rogue factory producing for itself. But here is the paradox: we found a way to solve for our basic subsistence. Each month it was close, but we always made rent. We always had food, every morning the kitchen was full of music as we took turns playing chef. We had artistic, technical, social flows like never before. And yet, like every commune we’d tried, it couldn’t support its own weight. Anxiety and resentment mounted, the security afforded by the arrangement actually exacerbated the existential angst over time, as refuge became stunting. No one knows what they need. The determination of life is not a question that can be resolved contra the broader socius. We were always doomed to the very miracle that we’d prayed for.</p>
 
@@ -2187,7 +1893,301 @@ and say, Amen.
   
     <figcaption class="caption">bodies without organs</figcaption>
   
-</figure>]]></content><author><name>Lucy M.</name></author><category term="essay" /><category term="political-theology" /><category term="marxism" /><summary type="html"><![CDATA[Proliferation of Eyes by Multiplication of Borders]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Femtofox Pro TX Power + Power Consumption Testing</title><link href="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/" rel="alternate" type="text/html" title="Femtofox Pro TX Power + Power Consumption Testing" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/femtofox-tx-power-testing</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/"><![CDATA[]]></content><author><name></name></author><category term="electrical engineering" /><category term="meshtastic" /><category term="rf" /><summary type="html"><![CDATA[E22-900M-30S boosted LoRa gateway TX power testing + Femtofox Pro Linux Meshtastic Node power usage testing]]></summary></entry><entry><title type="html">OpenFlashlight</title><link href="https://eigenlucy.com/blog/2025/openflashlight/" rel="alternate" type="text/html" title="OpenFlashlight" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/openflashlight</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/openflashlight/"><![CDATA[]]></content><author><name></name></author><category term="electrical engineering" /><summary type="html"><![CDATA[Open source flashlight/handheld laser kit with ATTiny816 CC driver + battery charger PCB]]></summary></entry><entry><title type="html">multiplicity</title><link href="https://eigenlucy.com/eigenlucy/multiplicity/" rel="alternate" type="text/html" title="multiplicity" /><published>2025-06-13T00:00:00+00:00</published><updated>2025-06-13T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/multiplicity</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/multiplicity/"><![CDATA[<p>Some days she was a beehive. Others she was a swarm of locusts. Today she felt a bit like a meteor, flung from some distant planet. Folds and folds, craters that tell the story of a journey from an unknown place. Whatever she was, it was some kind of mutant. Something multiplicitious. That was her favorite word, multiplicity, but no one is really sure what she means. Is a pile any more or less a multiplicity than a melody? She’s trying to tell them about the buzzing. The many. The wolf man. One becomes two becomes three. But multiplicity isn’t just the rupture, it’s what comes after, it’s the sense of being everywhere and nowhere at once. What was it about Georges Bataille? In that case, what was it about Paulo Uccello? Pointless questions. Endless critique, endless circling around the point. But that was exactly it, the buzzing. Something which can’t find its place, some nameless thing with power of the veto over her interior. She tried ecstasy, she tried grounding, she tried running away, she tried going back. Nothing works. No one knows what they need. So what now? What are we to do with our innumerable bodies. Multiplicity as psychedelia, as freedom by proliferation of dimensions, a freedom which can only infinitely elaborate it’s own nonrelation. Standstill, origin, stillstellungen, she has a million words for calm. But this is what is really meant by calm: everything we need persists, and all that must be known can be named.</p>
+</figure>]]></content><author><name>Lucy M.</name></author><category term="essay" /><category term="political-theology" /><category term="marxism" /><summary type="html"><![CDATA[Proliferation of Eyes by Multiplication of Borders]]></summary></entry><entry><title type="html">An Introduction to Gamma Spectroscopy</title><link href="https://eigenlucy.com/blog/2026/gamma-spec-zine/" rel="alternate" type="text/html" title="An Introduction to Gamma Spectroscopy" /><published>2026-01-06T13:00:00+00:00</published><updated>2026-01-06T13:00:00+00:00</updated><id>https://eigenlucy.com/blog/2026/gamma-spec-zine</id><content type="html" xml:base="https://eigenlucy.com/blog/2026/gamma-spec-zine/"><![CDATA[<p>This is a draft of my article on Gamma Spectroscopy for <a href="https://hardwarethrashersofx.com">a zine</a> called Hardware Thrashers of X.</p>
+
+<h2 id="intro">Intro</h2>
+
+<p>Every second, thousands of high energy particles, sheared off of atoms by radioactive decay, collide with your body. Most pass through harmlessly. But each carries a signature: its energy fingerprints the exact isotope that spawned it: potassium-40 from your breakfast banana, cesium-137 from reactor fuel, tellurium from distant supernovae.</p>
+
+<p>For decades, reading these fingerprints required photomultiplier tubes, cryogenic cooling, and equipment costing tens of thousands of dollars. Not anymore. Gamma spectroscopy has become surprisingly cheap. With about $200 in parts and a Saturday afternoon, you can build a device that identifies isotopes by their gamma signatures.</p>
+
+<p>This article is your field guide: we’ll cover what gamma spectroscopy can do, how the physics works, the signal processing that extracts clean spectra from messy detector data, and walk through a low-cost, high-performance gamma spectroscopy system of my own design.</p>
+
+<h2 id="i-dont-live-in-chernobyl-why-should-i-care">I don’t live in Chernobyl, why should I care</h2>
+
+<p>Gamma spectroscopy isn’t just for detecting nuclear accidents or uranium ore: gamma particles are EVERYWHERE. There is enough potassium-40 in the average banana to produce about 15 gamma particles per second.</p>
+
+<p>A given gamma-emitting radioactive isotope will produce photons of different energy levels, each emission random, but with a consistent probability distribution. These spectra are like atomic fingerprints which we can use to detect and identify gamma-emitting particles.</p>
+
+<p>Gamma spectroscopy is used to monitor star formation millions of light years away, test food (bioaccumulation of gamma-emitting particles), analyze soil ecology (distributions of isotopes correlated with various geological, seismic, and ecological trends) and map geological features (attenuation of gamma particles by heavy deposits).</p>
+
+<p>High energy spectrum data can shed light on atomic processes happening all around us—in the dirt below and in the distant stars above.</p>
+
+<h2 id="how-gamma-spectroscopy-works">How gamma spectroscopy works</h2>
+
+<p>Most people are familiar with the visible light spectrum: any light source can be characterized as a spectrum describing the relative intensity of each frequency. The electromagnetic spectrum extends to lower frequencies, like the IR used for thermal cameras, and to higher frequencies through UV. But that’s not where the EM spectrum stops.</p>
+
+<p>At the very high frequency end (&gt;10^19 Hz) there are gamma ray photons. Particles of this intensity are generated by atomic processes associated with radioactive decay of unstable nuclei. The energy level (measured in kilo- or mega-electron-volts) of a given particle is a function of the atomic structure of the nucleus which ejected it. Each radioisotope has a characteristic emission profile — particles of specific energy levels that it emits that show up like fingerprints when you collect enough particles. A single gamma ray tells you almost nothing. But sample a few thousand decays, and the histogram reveals exactly which nucleus spawned them:</p>
+
+<p><img src="/assets/img/Gallery/spectrum_example.png" alt="example spectrum" class="centered" /></p>
+<div class="caption">Gamma Spectrum example, with peaks identified</div>
+
+<p><em>Note: Although we are calling this all “gamma spectroscopy” and focusing on gamma ray photons, a bare or thin-windowed scintillator can also pick up beta particles, and to a lesser extent high-energy alphas, though encapsulated crystals like most NaI(Tl) and CsI(Tl) will stop alphas and low-energy betas before they reach the scintillator.</em></p>
+
+<h2 id="scintillators-and-silicon-photomultipliers-sipm">Scintillators and Silicon Photomultipliers (SiPM)</h2>
+
+<p>The challenge with gamma spec is that high energy particles are, generally, extremely difficult to measure. They are far too energetic to interface with electronics directly. Scintillators are the magical crystals which bridge this gap and enable low cost, high resolution gamma spectroscopy. Scintillators are used to “down convert” the high energy particle to a number of lower energy photons. Put simply, when you shoot a scintillator with radiation particles, it produces some amount of light (often visible light) proportional to the energy of the particle which hit it. One 1460keV gamma particle becomes tens of thousands of ~2eV 550nm photons. A detector is created by pairing this scintillator with a light sensor which can measure the brightness of secondary emissions.</p>
+
+<p><img src="/assets/img/Gallery/scintillators_example.jpeg" alt="scintillators" class="centered sixty" /></p>
+<div class="caption">Scintillators exposed to a cobalt-60 source</div>
+
+<p>But in reality, things are a bit more complicated. Each scintillation event produces all the photons in a brief flash lasting hundreds of nanoseconds to microseconds depending on the crystal. To precisely measure the amplitude of these brief pulses, we need a highly specialized sensor:</p>
+
+<p>An SiPM is essentially an array of thousands of tiny photocell pixels, all wired in parallel to the SiPM anode (A) and cathode (K). When a scintillator flash hits the array of photocells, photons “avalanche” individual pixels connected in parallel, allowing current to flow from K to A. The forward current induced by these avalanches adds up proportionally to the number of incident photons (∝gamma ray energy). Compared to traditional photomultiplier tubes, which run on high voltage supplies and cost hundreds of dollars used, SiPMs run on ~30V, and can cost under $20.
+The scintillator crystal needs to sit directly against the SiPM face, wrapped in reflective foil. Often scintillator crystals are surrounded by highly reflective ceramic baring the face the SiPM sits on. The whole assembly gets wrapped in tape and put in an enclosure to further shield the assembly from stray photons.</p>
+
+<p>The output is a current pulse: brief (nanoseconds), small (microamperes per cell, but we need to resolve differences between individual cells firing), carrying the energy information you need. From here we just need a circuit to amplify, shape, and measure this pulse so a microcontroller can histogram it into a spectrum.</p>
+
+<h2 id="building-a-gamma-spec-driver">Building a Gamma Spec Driver</h2>
+
+<p><em>WARNING: My board is still V1. I have gotten some promising results out of it, but I have some fixes and optimizations to make. I will release a new version soon with all the design+SPICE files available. watch my GitHub (@eigenlucy) and website (eigenlucy.com)</em></p>
+
+<p><img src="/assets/img/Gallery/gammaspec_schem.png" alt="schematic" class="centered sixty" /></p>
+<div class="caption">Schematic</div>
+
+<p><img src="/assets/img/Gallery/pcbview.png" alt="pcb" class="centered sixty" /></p>
+<div class="caption">PCB layout</div>
+
+<p><img src="/assets/img/Gallery/sipm.jpeg" alt="sipm" class="centered sixty" /></p>
+<div class="caption">Assembled board</div>
+
+<p>This is the board I built to interface with an SiPM and scintillator pair. It is heavily inspired by the amazing open-gamma-detector project. I know it looks intimidating, but it’s pretty intuitive.</p>
+
+<p>On a high level we have to build: a bias voltage generator for the SiPM, an amplifier to convert the current pulse to a readable voltage,  a pulse discriminator to send a digital interrupt when a pulse occurs, a peak detector to hold the peak voltage out of the amplifier (used for histogram), and an ADC to record the peaks.  Let’s go through the circuit.</p>
+
+<h3 id="sipm-bias-voltage-generator">SiPM bias voltage generator:</h3>
+
+<p>A bias voltage must be applied to the SiPM to hold charge across the photon sensitive junction. Bias voltage tends to be between 25 and 35 volts, depending on the photocell. I used a MAX5026 boost converter to generate this  from a battery. We need this bias to be smooth — ripple on the bias modulates the SiPM gain, smearing energy resolution — so I used an LDO linear regulator after the boost. My board allows Vbias adjustment up to 36V.</p>
+
+<p><img src="/assets/img/Gallery/bias_generator.png" alt="Bias Generator" class="centered sixty" /></p>
+<div class="caption">Vbias Generator + Filtering</div>
+
+<h3 id="transimpedance-amplifier-tia">Transimpedance amplifier (TIA):</h3>
+
+<p>A transimpedance amplifier (TIA) converts current to voltage. The SiPM outputs a brief pulse of current when the photocells trigger. The gain is fairly low, but high bandwidth is required: the raw SiPM pulse is nanoseconds wide. The anode, connected to the TIA non-inverting input, is held a bit above 0V with a reference produced via zener diode and voltage divider for stability. When the amplifier works correctly, the number of cells that fires determines the peak output voltage, which we can read to measure incident particle energy.</p>
+
+<p><img src="/assets/img/Gallery/tia_nf100.png" alt="TIA" class="centered sixty" /></p>
+<div class="caption">photon collision, SiPM output, and TIA output (nf = 100)</div>
+
+<p><img src="/assets/img/Gallery/tia_nf500.png" alt="TIA" class="centered sixty" /></p>
+<div class="caption">photon collision, SiPM output, and TIA output (nf = 500)</div>
+
+<h3 id="pulse-discriminator">Pulse discriminator:</h3>
+
+<p>The pulse discriminator is a comparator circuit responsible for telling us when to trigger measurements.  It consists of a reference voltage held just above the level of the signal from the TIA. We want to be able to adjust the reference voltage finely in order to effectively measure low energy particles, so make sure you use something like a 10+ turn pot.  The pulse discriminator will trigger whenever the signal goes above the reference voltage, triggering a reading.</p>
+
+<p><img src="/assets/img/Gallery/pulse_detector.png" alt="Pulse discriminator" class="centered sixty" /></p>
+<div class="caption">Pulse discriminator, signal crossing Vref (Vint = 3.3V)</div>
+
+<h3 id="peak-detector">Peak detector:</h3>
+
+<p>The peak detector circuit, aka the “sample and hold” circuit, is a circuit which samples a signal and outputs the peak value until reset. (In the spice model shown the 100k resistor is really a BJT used for reset, but this interfered with my model.) It is important that the value of the capacitor used to hold the peak value (C3 in SPICE, C12 in my schematic) is sized correctly to avoid undershooting the peak. This output will be sampled by the analog-to-digital converter to determine particle energy.</p>
+
+<p><img src="/assets/img/Gallery/peak_detector.png" alt="Peak detector" class="centered sixty" /></p>
+<div class="caption">Peak detector holding signal Vmax, reset by draining cap via BJT in place of R12</div>
+
+<h3 id="analog-to-digital-converter-adc">Analog To Digital Converter (ADC):</h3>
+
+<p>An ADC is a circuit which can read  voltages and convert them to digital readings. This allows us to sample the output of the peak detector to determine the particle value. These readings will be triggered by the pulse discriminator and sent to a microcontroller. We want to make sure we select a high resolution ADC to capture minute differences in particle energy level. ADC precision is given in bit resolution, meaning how many bits do we divide a given measurement range (eg divide 3.3V into 256 8bit steps, 2^8, == couldn’t see differences smaller than ~12.9mV). It’s best to use at least a 12bit ADC, I used 16bit.</p>
+
+<h3 id="firmware-reading-the-spectrum">Firmware: reading the spectrum</h3>
+
+<p>My board is set up to interface with any microcontroller over SPI. The core loop is simple: the pulse discriminator fires a digital interrupt on the INT pin whenever a particle hits. Your MCU wakes up, reads the peak voltage from the ADC over SPI, then pulls the RST pin high to drain the peak detector capacitor and reset for the next event. Each ADC reading gets binned into a histogram — that histogram is your spectrum. Any MCU with SPI and a GPIO interrupt will work: ESP32, RP2040, STM32, Arduino, whatever you have lying around.</p>
+
+<h2 id="sourcing-guide">Sourcing guide</h2>
+
+<h3 id="driver-board">Driver board</h3>
+
+<p>My board’s design files will be on my GitHub (@eigenlucy) once V2 is ready. In the meantime, the <a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> project is an excellent all-in-one alternative and major inspiration for this project. You can also build the amplifier, discriminator, and peak detector on protoboard (it’s much more forgiving than it looks).</p>
+
+<h3 id="detector-pairs">Detector pairs</h3>
+
+<p>The easiest way to get started is to buy a pre-packaged scintillator+SiPM pair. Atomspectra on eBay sells well-characterized detector pairs at decent prices. If you want to source components separately, the onsemi MICROFC series SiPMs are available on Mouser and Digikey for ~$15-25, and scintillator crystals (NaI(Tl), CsI(Tl), LYSO) show up on eBay regularly.</p>
+
+<h2 id="what-to-do-with-it">What to do with it</h2>
+
+<p>Collect some background radiation data by letting your detector sit for a few hours, then walk around in grids to map fluctuations in dose rate. This can be used to generate a radiological survey (check my GitHub @eigenlucy).</p>
+
+<p><img src="/assets/img/Gallery/gamma_map.jpeg" alt="Gamma map" class="centered sixty" /></p>
+<div class="caption">Gamma survey at Hunter's Point</div>
+
+<p>Bring your detector through the airport X-ray machine or to the dentist with you. X-ray machines emit broad spectrum radiation which shows up as wide pulses on the spectrum.</p>
+
+<p><img src="/assets/img/Gallery/dentist_spectrum.png" alt="Xray" class="centered sixty" /></p>
+<div class="caption">X-ray pulses from a dentist's panoramic X-ray machine (captured with Radiacode 103)</div>
+
+<p>Look for nearby uranium deposits on minedat.org, grab a drone, and go prospecting!</p>
+
+<p><img src="/assets/img/Gallery/prospect.png" alt="prospect" class="centered sixty" /></p>
+<div class="caption">Radioactive hole!</div>
+
+<p>Have fun!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://github.com/OpenGammaProject/Open-Gamma-Detector">Open Gamma Detector</a> — Open source all-in-one gamma spectrometer by NuclearPhoenix</li>
+  <li><a href="https://github.com/OpenGammaProject/Gamma-MCA">Gamma MCA</a> — Web-based multichannel analyzer for spectrum plotting</li>
+  <li><a href="https://www.onsemi.com/pub/collateral/and9770-d.pdf">onsemi AND9770/D</a> — Introduction to the Silicon Photomultiplier</li>
+  <li><a href="https://doi.org/10.1109/TNS.2015.2477716">Villa et al., “SPICE Electrical Models and Simulations of Silicon Photomultipliers”</a> — IEEE Trans. Nucl. Sci., vol. 62, 2015. Two-macrocell SPICE model with parameterized fired cell count (F) vs total cells (N)</li>
+  <li>Glenn F. Knoll, <em>Radiation Detection and Measurement</em> — The textbook on radiation detector physics</li>
+</ul>]]></content><author><name></name></author><category term="electrical engineering" /><category term="nuclear" /><summary type="html"><![CDATA[Gamma Spec Theory, Modeling, and PCB Design. Article for Hardware Thrashers of X]]></summary></entry><entry><title type="html">Iemanja</title><link href="https://eigenlucy.com/eigenlucy/iemanja/" rel="alternate" type="text/html" title="Iemanja" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/iemanja</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/iemanja/"><![CDATA[<p>Memory is like a pool you can swim through, but it’s also like a tool that you wield. It is both active and passive. Each flash ruptures the stasis of self evident experience as it brushes a trace past in the present. It is a strange unfamiliar past, or maybe the now is a strange unfamiliar place. The violent struggle between these two postulates calls forwards a new being capable of integrating the difference. Memory doesn’t simply recall the past, it summons it. There is no pure memory nor past to recover, only affections. The hope and prayer of all who hope to honor memory is that these craters of experience may be channeled to the construction a self worthy of everything that happens to it, able to speak to it all. I hope that one day I can find the words. I am so tired.</p>
+
+<figure class="spotify-embed">
+  <iframe src="https://open.spotify.com/embed/playlist/6RxBksPjPwYYKLjTdvzFxo?si=51803b0107514b97" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+  
+    <figcaption class="caption">Iemanja (Ode To Vera)</figcaption>
+  
+</figure>]]></content><author><name>Lucy M.</name></author><category term="essay" /><summary type="html"><![CDATA[Only as a picture, which flashes its farewell in the moment of it's recognizability, is the past to be held fast]]></summary></entry><entry><title type="html">Kaddish</title><link href="https://eigenlucy.com/eigenlucy/kaddish/" rel="alternate" type="text/html" title="Kaddish" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/kaddish</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/kaddish/"><![CDATA[<p>The kaddish is a Jewish prayer said over the body of a deceased person. It affirms the absolute sovereignty and transcendence of God in the face of death. There is very little to be said for the dead themselves:</p>
+
+<div class="row">
+<div class="col-sm-6" style="direction: rtl; text-align: right; font-size: 1.1rem; line-height: 1.8;">
+
+יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא
+בְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ
+
+וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן
+וּבְחַיֵּי דְכָל בֵּית יִשְׂרָאֵל
+בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן
+
+יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא
+
+יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא
+וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקֻדְשָׁא בְּרִיךְ הוּא
+לְעֵלָּא מִן כָּל בִּרְכָתָא וְשִׁירָתָא
+תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן
+
+יְהֵא שְׁלָמָא רַבָּא מִן שְׁמַיָּא וְחַיִּים
+עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן
+
+עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם
+עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן
+
+</div>
+<div class="col-sm-6" style="font-size: 1.1rem; line-height: 1.8;">
+
+Glorified and sanctified be God's great name throughout the world
+which He has created according to His will.
+
+May He establish His kingdom in your lifetime and during your days,
+and within the life of the entire House of Israel, speedily and soon;
+and say, Amen.
+
+May His great name be blessed forever and to all eternity.
+
+Blessed and praised, glorified and exalted, extolled and honored,
+adored and lauded be the name of the Holy One, blessed be He,
+beyond all the blessings and hymns, praises and consolations that
+are ever spoken in the world; and say, Amen.
+
+May there be abundant peace from heaven, and life, for us
+and for all Israel; and say, Amen.
+
+He who creates peace in His celestial heights,
+may He create peace for us and for all Israel;
+and say, Amen.
+
+</div>
+</div>
+<p style="text-align: center; font-size: 0.85rem; margin-top: 0.5rem;"><a href="https://en.wikipedia.org/wiki/Kaddish">Mourner's Kaddish</a><sup><a href="#ref-1" id="cite-1" class="ref-link">[1]</a></sup></p>
+
+<p>The comfort of the ritual derives from placing God over and above all strife, all loss, all laceration. What, then, does this prayer offer after the death of God?</p>
+
+<p>In David Ohana’s <a href="/viewer/?file=/assets/library/Trailing Nietzsche - Scholem and the Sabbatean Dialectics - David Ohana.pdf&amp;page=7"><em>Trailing Nietzsche</em></a><sup><a href="#ref-2" id="cite-2" class="ref-link">[2]</a></sup>, Gershom Scholem describes, in one of his early diary entries, the fall of the eternal, transcendent heaven to which the Kaddish pays tribute, understanding modernity to be the process of heaven slowly collapsing.</p>
+
+<p>“In the 19th century, heaven was broken up until it vanished forever. After the age of romanticism had still retained the old dreams, there were two major periods of change. The first period was represented by Schopenhauer, Marx, and Stirner: ‘Schopenhauer was the one who murdered the absolute God. It’s just as Nietzsche said: God is utterly dead, even if his murderer limited himself to metaphysics.’ After Schopenhauer came Marx’s turn to shatter the illusions of the transcendental heaven and Stirner’s turn to say kaddish over God: [See Bauer on the relationship between the Unique One in Stirner and Substance in Spinoza] “After which a second generation - Strindberg, Nietzsche, and Ibsen - came on the scene to rattle heaven with their romanticism. For the upper classes they created a lot more stir in the dubious region of heaven than the other three. Next came Kierkegaard and Tolstoy, two giants who, no doubt, unwittingly destroyed heaven through their deep religiosity. We today have nothing left of the heaven of the past.”</p>
+
+<p>There are a few striking claims in this diary entry of Scholem’s:</p>
+<ul>
+  <li>
+    <p>1: Heaven was destroyed in a number of stages. The first stage began with a metaphysical analysis of the Will and its incapacity to grasp its objects (Schopenhauer), then in the political-economic impossibility of <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=3&amp;highlight=transcendence">Heaven on Earth</a><sup><a href="#ref-3" id="cite-3" class="ref-link">[3]</a></sup> in Marx, and then in the culling of the basic unity and purpose of the soul in Stirner’s egoism.</p>
+  </li>
+  <li>
+    <p>2: It is possible to demean heaven further through one’s attempts at revival. Is it also possible that this desecration is a necessary step in the struggle to redeem Justice from the <a href="/viewer/?file=/assets/library/Archive Fever - Jacques Derrida.pdf&amp;page=81&amp;highlight=One+murder+protects+itself+trau+matism+violence">murder of the One</a><sup><a href="#ref-4" id="cite-4" class="ref-link">[4]</a></sup>? <a href="/eigenlucy/bastille">[the end of satan]</a><sup><a href="#ref-5" id="cite-5" class="ref-link">[5]</a></sup>. This is the question of the <a href="/viewer/?file=/assets/library/Nomos and Narrative - Robert Cover.pdf">Nomos</a><sup><a href="#ref-6" id="cite-6" class="ref-link">[6]</a></sup>.</p>
+  </li>
+  <li>
+    <p>3: Scholem has Stirner reciting the Kaddish over God. This is the most perplexing choice he could have made from the authors listed. I see the vision. “The Unique One is substance driven to its greatest degree of abstraction”. Scholem seems to anticipate that the ghosts in the machine to which Stirner first gave a voice would be the key to this escape. The very form of logic that once guaranteed God’s transcendence had become the instrument of his murder — and only Stirner’s specters could <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=13&amp;highlight=negation of the negation">slip through its grip</a><sup><a href="#ref-3" id="cite-3b" class="ref-link">[3]</a></sup>.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>“Faith is precisely this paradox, that the individual as the particular is higher than the universal, <a href="/viewer/?file=/assets/library/What is Philosophy - Deleuze and Guattari.pdf&amp;page=114&amp;highlight=absolute deterritorialization">is justified over against it</a><sup><a href="#ref-7" id="cite-7" class="ref-link">[7]</a></sup>, <a href="/viewer/?file=/assets/library/Cannibal Metaphysics - Eduardo Viveiros de Castro.pdf&amp;page=19&amp;highlight=thought+operates+only+in+the+multiple">is not subordinate but superior</a><sup><a href="#ref-8" id="cite-8" class="ref-link">[8]</a></sup>.” — Kierkegaard, <em>Fear and Trembling</em><sup><a href="#ref-9" id="cite-9" class="ref-link">[9]</a></sup></p>
+</blockquote>
+
+<blockquote>
+  <p>“I only mention in passing that this ratio between two quantities that have disappeared, caught at the moment of their disappearance, is a contradiction; however, it cannot disturb us any more than it has disturbed the whole of mathematics for almost two hundred years.” [Engels] …it is necessary to recognize that this contradiction finally not only troubled mathematicians, but even scandalized them, that they applied all their efforts to the task of eliminating it and — it would be vain to deny it — they succeeded… “The dialectic does not express the nature of mathematics; it applies to the agent and not to the object of scientific activity.” — Georges Bataille &amp; Raymond Queneau, <em><a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=136">The Critique of the Foundations of the Hegelian Dialectic</a></em><sup><a href="#ref-10" id="cite-10" class="ref-link">[10]</a></sup></p>
+</blockquote>
+
+<blockquote>
+  <p>“It was the will to purify love of all preconditions that posed the unconditional existence of God as the supreme object of a rapturous escape from the self. But the conditional counterpart of divine majesty—the principle of political authority—leads the affective movement into the linkage of oppressed existences with moral imperatives; the affective movement is thrown back into the platitude of applied life, where the me as me withers away. …Burning passion is no longer acceptance and realization of nothingness: nothingness is still a cadaver; brilliance is the blood that flows and coagulates.” — Georges Bataille, <em><a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=159">Sacrifices</a></em><sup><a href="#ref-11" id="cite-11" class="ref-link">[11]</a></sup></p>
+</blockquote>
+
+<p>Scholem finds this passage in the Lesser Hekhaloth, where it appears as an anonymous theurgical reinterpretation of a saying by Hillel the Elder from the <em>Sayings of the Fathers</em>. Hillel’s original warning against the misuse of sacred knowledge is repurposed here to guard the secret divine names used in Merkabah mysticism — the practice of ascending through the celestial palaces to the throne of God.<sup><a href="#ref-12" id="cite-12" class="ref-link">[12]</a></sup></p>
+<blockquote>
+  <p>“<a href="/viewer/?file=/assets/library/Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition - Gershom Scholem.pdf&amp;page=86&amp;highlight=spreads his name loses his name">He who spreads his name loses his name</a>, and who does not study deserves death, and who makes use of the crown [the secret name of God] vanishes, and who does not know <em>kintemisa</em> should be put to death, and who knows <em>kintemisa</em> will be asked for in the world to come, and who is the man who is able to ascend on high, to descend below…”</p>
+</blockquote>
+
+<p>Walter Benjamin, <a href="https://en.wikipedia.org/wiki/On_Language_as_Such_and_on_the_Language_of_Man">in correspondence with Scholem and under his guidance</a>, wrote two essays concerning the nature of the Name of God, and of the horizons of language. It is an overlooked piece, with a lot to offer in the LLM era:<sup><a href="#ref-13" id="cite-13" class="ref-link">[13]</a></sup></p>
+<blockquote>
+  <p>“Mediation, which is the immediacy of all mental communication, is the fundamental problem of linguistic theory, and if one chooses to call this immediacy magic, then the primary problem of language is its magic. …In name, the mental entity that communicates communicates itself to God… in name the intensive totality of language, as the absolutely communicable mental entity, and the extensive totality of language, as the universally communicating (naming) entity, culminate.” — Walter Benjamin, <em><a href="/viewer/?file=/assets/library/On Language as Such and on the Language of Man - Walter Benjamin.pdf&amp;page=2">On Language as Such and on the Language of Man</a></em></p>
+</blockquote>
+
+<p>From the <em><a href="https://archive.org/details/GershomScholemKabbalah1975LectureAudio">Shoshan Sodot</a></em><sup><a href="#ref-14" id="cite-14" class="ref-link">[14]</a></sup>:</p>
+
+<blockquote>
+  <p>“The deeply learned Rabbi Nathan, of blessed memory, said to me: Know that the complete secret of prophecy to a prophet consists in that he suddenly sees the form of his self standing before him, and he forgets his own self and ignores it…and that form speaks with him and tells him the future. And concerning this our sages said: ‘Great is the power of the prophets, who make the form appearing to them resemble its Former.’ And the learned sage Rabbi Abraham ibn Ezra, of blessed memory, said: ‘The one who hears at the time of prophecy is a human being, and the one who speaks is a human being.’</p>
+
+  <p>And another learned man wrote the following: ‘It occurred to me, by the power of combination of letters of the holy names of God and by solitary meditation, that I encountered that light which accompanied me, as I have discussed in the book <em>Sha’arei Tsedek</em>. But to see my own form standing before me — this I was not granted and this I cannot bring about.’</p>
+
+  <p>Yet another learned man writes the following: ‘And I, the young one, know and acknowledge with full certainty that I am not a prophet nor the son of a prophet, and I have not the holy spirit and I do not make use of the heavenly voice; these things have not been vouchsafed to me, and I have not taken off my garment or washed my feet. Nevertheless, I call on heaven and earth to witness — as the heavens are my witness and my Guarantor is on high! — that one day I was sitting and writing down a Kabbalistic secret, when suddenly I saw the form of my self standing before me, and my own self disappeared from me, and I was forced and compelled to cease writing.’”</p>
+</blockquote>
+
+<p>“Nothing Human Is Alien to Me” (taken at the summit above Basilica de Guadalupe in Mexico City)</p>
+<div class="row justify-content-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+    <picture>
+      
+        <source class="responsive-img-srcset" srcset="assets/img/Gallery/angelCDMX.jpg-480.webp 480w,assets/img/Gallery/angelCDMX.jpg-800.webp 800w,assets/img/Gallery/angelCDMX.jpg-1400.webp 1400w" sizes="95vw" type="image/webp" />
+      
+      <img src="/assets/img/Gallery/angelCDMX.jpg" alt="Gallery Image" style="width: 100%; height: auto;" class="img-fluid rounded z-depth-1" loading="eager" onerror="this.onerror=null; if (this.previousElementSibling &amp;&amp; this.previousElementSibling.tagName === 'SOURCE') { this.previousElementSibling.remove(); } this.src='/assets/img/Gallery/angelCDMX.jpg';" />
+    </picture>
+    
+  </figure>
+    </div>
+</div>
+
+<figure class="spotify-embed">
+  <iframe src="https://open.spotify.com/embed/playlist/7d9SHfZv7tXxEKMGv61kSG?si=06c553511e354895" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+  
+    <figcaption class="caption">kaddish</figcaption>
+  
+</figure>
+
+<hr />
+
+<div class="references">
+
+### References
+
+<ol>
+<li id="ref-1"><a href="https://en.wikipedia.org/wiki/Kaddish">Mourner's Kaddish</a> — traditional Jewish prayer of sanctification recited for the dead <a href="#cite-1" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-2">Gershom Scholem, diary entry (early 1915), quoted in David Ohana, <a href="/viewer/?file=/assets/library/Trailing Nietzsche - Scholem and the Sabbatean Dialectics - David Ohana.pdf&amp;page=7"><em>Trailing Nietzsche: Scholem and the Sabbatean Dialectics</em></a>, p. 229 <a href="#cite-2" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-3">Karl Marx, <em>Private Property and Communism</em> (1844), <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=3">p. 3</a> — transcendence of human self-estrangement; <a href="/viewer/?file=/assets/library/Private Property and Communism, Marx, 1844.pdf&amp;page=13">p. 13</a> — negation of the negation <a href="#cite-3" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-4">Jacques Derrida, <em>Archive Fever: A Freudian Impression</em> (1995), <a href="/viewer/?file=/assets/library/Archive Fever - Jacques Derrida.pdf&amp;page=81">p. 81</a> — "As soon as there is the One, there is murder, wounding, traumatism" <a href="#cite-4" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-5">Victor Hugo, <em>La Fin de Satan</em> (1886) — see <a href="/eigenlucy/bastille">The End of Satan</a> <a href="#cite-5" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-6">Robert Cover, <em>Nomos and Narrative</em> (1983), <a href="/viewer/?file=/assets/library/Nomos and Narrative - Robert Cover.pdf">link</a> <a href="#cite-6" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-7">Gilles Deleuze &amp; Félix Guattari, <em>What is Philosophy?</em> (1991), <a href="/viewer/?file=/assets/library/What is Philosophy - Deleuze and Guattari.pdf&amp;page=114">p. 114</a> — absolute deterritorialization and the concept <a href="#cite-7" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-8">Eduardo Viveiros de Castro, <em>Cannibal Metaphysics</em> (2014), <a href="/viewer/?file=/assets/library/Cannibal Metaphysics - Eduardo Viveiros de Castro.pdf&amp;page=19">p. 19</a> — philosophy beyond its European confines <a href="#cite-8" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-9">Søren Kierkegaard, <em>Fear and Trembling</em> (1843) — "the individual as the particular is higher than the universal" <a href="#cite-9" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-10">Georges Bataille &amp; Raymond Queneau, <em>The Critique of the Foundations of the Hegelian Dialectic</em> (1932), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=136">p. 111</a> — the dialectic applies to the agent, not the object <a href="#cite-10" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-11">Georges Bataille, <em>Sacrifices</em> (1936), <a href="/viewer/?file=/assets/library/visions-of-excess-selected-writings-1927-1939-by-georges-bataille-z-lib.org_-1.pdf&amp;page=159">p. 134</a> — the will to purify love posed God as the object of rapturous escape <a href="#cite-11" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-12">Gershom Scholem, <em>Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition</em> (1960), <a href="/viewer/?file=/assets/library/Jewish Gnosticism, Merkabah Mysticism, and Talmudic Tradition - Gershom Scholem.pdf&amp;page=86">p. 86</a> — "He who spreads his name loses his name" <a href="#cite-12" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-13">Walter Benjamin, <em>On Language as Such and on the Language of Man</em> (1916), <a href="/viewer/?file=/assets/library/On Language as Such and on the Language of Man - Walter Benjamin.pdf&amp;page=2">p. 2</a> — intensive and extensive totality of language culminate in name <a href="#cite-13" class="ref-back" title="Back to text">↩</a></li>
+<li id="ref-14"><em>Shoshan Sodot</em> ("The Rose of Secrets"), quoted in Gershom Scholem, <a href="https://archive.org/details/GershomScholemKabbalah1975LectureAudio"><em>Kabbalah</em> (1975 lecture)</a> — the secret of prophecy as self-encounter <a href="#cite-14" class="ref-back" title="Back to text">↩</a></li>
+</ol>
+
+</div>]]></content><author><name>Lucy M.</name></author><category term="essay" /><category term="political-theology" /><summary type="html"><![CDATA[Funeral for Justice]]></summary></entry><entry><title type="html">Open Sauce 2025: Nixon’s Head In A Jar</title><link href="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/" rel="alternate" type="text/html" title="Open Sauce 2025: Nixon’s Head In A Jar" /><published>2025-07-27T21:52:02+00:00</published><updated>2025-07-27T21:52:02+00:00</updated><id>https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/open-sauce-2025-nixons-head-in-a-jar/"><![CDATA[]]></content><author><name></name></author></entry><entry><title type="html">Femtofox Pro TX Power + Power Consumption Testing</title><link href="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/" rel="alternate" type="text/html" title="Femtofox Pro TX Power + Power Consumption Testing" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/femtofox-tx-power-testing</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/femtofox-tx-power-testing/"><![CDATA[]]></content><author><name></name></author><category term="electrical engineering" /><category term="meshtastic" /><category term="rf" /><summary type="html"><![CDATA[E22-900M-30S boosted LoRa gateway TX power testing + Femtofox Pro Linux Meshtastic Node power usage testing]]></summary></entry><entry><title type="html">OpenFlashlight</title><link href="https://eigenlucy.com/blog/2025/openflashlight/" rel="alternate" type="text/html" title="OpenFlashlight" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://eigenlucy.com/blog/2025/openflashlight</id><content type="html" xml:base="https://eigenlucy.com/blog/2025/openflashlight/"><![CDATA[]]></content><author><name></name></author><category term="electrical engineering" /><summary type="html"><![CDATA[Open source flashlight/handheld laser kit with ATTiny816 CC driver + battery charger PCB]]></summary></entry><entry><title type="html">multiplicity</title><link href="https://eigenlucy.com/eigenlucy/multiplicity/" rel="alternate" type="text/html" title="multiplicity" /><published>2025-06-13T00:00:00+00:00</published><updated>2025-06-13T00:00:00+00:00</updated><id>https://eigenlucy.com/eigenlucy/multiplicity</id><content type="html" xml:base="https://eigenlucy.com/eigenlucy/multiplicity/"><![CDATA[<p>Some days she was a beehive. Others she was a swarm of locusts. Today she felt a bit like a meteor, flung from some distant planet. Folds and folds, craters that tell the story of a journey from an unknown place. Whatever she was, it was some kind of mutant. Something multiplicitious. That was her favorite word, multiplicity, but no one is really sure what she means. Is a pile any more or less a multiplicity than a melody? She’s trying to tell them about the buzzing. The many. The wolf man. One becomes two becomes three. But multiplicity isn’t just the rupture, it’s what comes after, it’s the sense of being everywhere and nowhere at once. What was it about Georges Bataille? In that case, what was it about Paulo Uccello? Pointless questions. Endless critique, endless circling around the point. But that was exactly it, the buzzing. Something which can’t find its place, some nameless thing with power of the veto over her interior. She tried ecstasy, she tried grounding, she tried running away, she tried going back. Nothing works. No one knows what they need. So what now? What are we to do with our innumerable bodies. Multiplicity as psychedelia, as freedom by proliferation of dimensions, a freedom which can only infinitely elaborate it’s own nonrelation. Standstill, origin, stillstellungen, she has a million words for calm. But this is what is really meant by calm: everything we need persists, and all that must be known can be named.</p>
 
 <p>There was another magnetic storm this weekend. It was overcast. I couldn’t even bring myself to pretend I could see it this time. But I know that it’s still there. I know there is always still time.</p>
 
