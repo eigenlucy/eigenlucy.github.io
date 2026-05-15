@@ -6,20 +6,20 @@ nav: false
 sitemap: false
 ---
 
-## August 15th, 2023
+## August 15th, 2023. Liberty, South Carolina.
 <ul>Sucessful xSIID chip implant self installation. I put it in my hand in my kitchen while my roomates watched on in horror.</ul>
 
-## June 11th, 2024
+## June 11th, 2024. San Francisco, California.
 <ul>Arrive in SF for the first time with Vera to present some stuff at Opensauce. We stay with her college Kat (who has since become a very, very dear friend). The first morning (June 12th) we walk to Venga and Vera tells me she is willing to set aside her cultural nationalism and admit that Argentianian empanada's are, all things considered, quite similar to Uruguayan empanadas.</ul>
 
-## September 27th, 2024
+## September 27th, 2024. Traveler's Rest, South Carolina.
 <ul>Hurricane Helene. Emergency turn off.</ul>
 
-## October 5th, 2024
-<ul>Vera and I's wedding. We had planned to have it at the house which was just destroyed, so we have it in a park next to a food court in Greenville, South Carolina. Izzy officiates. After an hour or so with family we bounce around friend's apartments well into the night. At some point someone gives us a set of swords and we nearly kill each other. Gleaming. </ul>
+## October 5th, 2024. Greenville, South Carolina.
+<ul>Vera and I's wedding. We had planned to have it at the house which was just destroyed, so we have it in a park next to a food court. Izzy officiates. After an hour or so with family we bounce around friend's apartments well into the night. At some point someone gives us a set of swords and we nearly kill each other. Gleaming. </ul>
 
-## October 7th, 2024
-<ul>Depart on our trans-continental drive to San Francisco.</ul>
+## October 7th, 2024. Anderson, South Carolina.
+<ul>We say goodbye to everyone before we leave on our trans-continental drive to San Francisco. I have to get rid of a bunch of old chemicals, mushroom spawn bags, cell cultures, explosives, and other items I can't let anyone else store or dispose of before we head out. The last thing we do before departing is blow up a hunk of sodium metal large enough to get the police called on us.</ul>
 
 ## Early morning, October 10th, 2024. The Grand Canyon.
 <ul>Vera pulls an all nighter so we I can watch the sun rise over the canyon. Visceral inner experience walking along the ridges. A new appreciation for deep time. Eons swirling on the cliff faces. Sils Maria, experience of the Eternal Return.</ul>
