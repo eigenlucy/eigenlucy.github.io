@@ -15,10 +15,10 @@ sitemap: false
 ## October 7th, 2024
 <ul>Depart on our trans-continental drive to San Francisco.</ul>
 
-## Early Morning, October 10th, 2024. The Grand Canyon.
+## Early morning, October 10th, 2024. The Grand Canyon.
 <ul>Vera pulls an all nighter so we I can watch the sun rise over the canyon. Visceral inner experience walking along the ridges. A new appreciation for deep time. Eons swirling on the cliff faces. Sils Maria, experience of the Eternal Return.</ul>
 
-## Early Morning, October 11th, 2024. Las Vegas, Nevada.
+## Early morning, October 11th, 2024. Las Vegas, Nevada.
 <ul>Vera has been driving for days.  She takes pride in having, just prior to this leg, driven longer continuously than was flown during the longest ever bombing mission (to fuck with Gaddafi, she adds). We decided to detour a bit to stay with a friend who lives on the Las Vegas strip. She sips a Red Bull on the floor of a Casino, deliriously tired but paradoxically manic. This has been her mood for days already, but walking under the eternal sun of the Venetian canals brings it to new levels.</ul>
 
 ## September 19th, 2025. Brooklyn, New York.
@@ -33,7 +33,7 @@ sitemap: false
 ## October 14th, 2025. Maldonado, Uruguay.
 <ul>Walking along an old bridge over the water. What does it mean "to see with all the eyes that one can hold"? Openness to the possibility of a subject which can hold it all at once.</ul>
 
-## Golden Hour, December 28th, 2025. Basilica de Guadalupe, CDMX.
+## Golden hour, December 28th, 2025. Basilica de Guadalupe, CDMX.
 <ul>Angels overlook the city from the site atop Tepeyac revealed to Juan Diego. It strikes me just how much weight this city is holding. Artaud in Paris, Benjamin in Mexico. Many heads of Queztzcoatl encircle the foundation. Love and holy terror. Mexican syncretism gives me so much hope. How many people are you? "Nothing human is alien to me"</ul>
 
 
