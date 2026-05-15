@@ -46,3 +46,5 @@ sitemap: false
 - [punishedfelix.com](https://punishedfelix.com) — *my friend felix's amazing theory/accessibility/guattari focused website*
 - [markhansen.com](https://markhansen.com) — *my cofounder at Mithras' website with lots of cool DIYBIO resources*
 - [garden.sophia-labs.com](https://garden.sophia-labs.com) — *Vera and Eschaton's agent memory, collaborative editing, and knowledge sharing platform*
+- [irisyaun.com](https://www.irisyaun.com) — *my friend Iris's photography and essays*
+-  [nixon.baby](https://nixon.baby) — *Vera's Nixon archives (See OpenSauce 2025 post)*

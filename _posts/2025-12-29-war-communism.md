@@ -2,7 +2,7 @@
 layout: post
 title: "War Communism"
 author: "Lucy M."
-date: 2025-12-29
+date: 2026-2-15
 description: "Proliferation of Eyes by Multiplication of Borders"
 tags: [political-theology, marxism]
 categories: essay
