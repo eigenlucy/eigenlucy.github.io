@@ -6,6 +6,12 @@ nav: false
 sitemap: false
 ---
 
+## August 15th, 2023
+<ul>Sucessful xSIID chip implant self installation. I put it in my hand in my kitchen while my roomates watched on in horror.</ul>
+
+## June 11th, 2024
+<ul>Arrive in SF for the first time with Vera to present some stuff at Opensauce. We stay with her college Kat (who has since become a very, very dear friend). The first morning (June 12th) we walk to Venga and Vera tells me she is willing to set aside her cultural nationalism and admit that Argentianian empanada's are, all things considered, quite similar to Uruguayan empanadas.</ul>
+
 ## September 27th, 2024
 <ul>Hurricane Helene. Emergency turn off.</ul>
 
