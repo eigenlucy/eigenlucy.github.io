@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(systemctl --user is-active*)",
+      "Bash(systemctl --user is-enabled*)",
+      "Bash(systemctl --user is-failed*)",
+      "Bash(systemctl --user status*)",
+      "Bash(pacman -Q*)",
+      "Bash(pacman -Si*)"
+    ]
+  }
+}

@@ -15,7 +15,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p>I am a 25 year old self taught engineer split between San Francisco and Mexico City</p>
+<p>I am a 25 year old engineer living between San Francisco and Mexico City</p>
 
 Projects/research:
 <ul>
@@ -29,6 +29,6 @@ Projects/research:
 
 Source code for this website <a href='https://github.com/eigenlucy/eigenlucy.github.io'>here</a>. Knowledge graph <a href='https://garden.sophia-labs.com/public/eigenlucy?public_token=0d04bb51-4a2a-4895-b67e-6b03090d2846'>here</a> 
 
-I keep myself too busy and am behind on documentation, please message me if you have any questions about my projects and I'll be glad to answer any questions.
+I keep myself too busy and am behind on documentation (it's gotten pretty bad over the last few months of country hopping), please message me if you have any questions about my projects and I'll be glad to answer any questions.
 
 If you are interested in contracting me for your hardware project, use one of the contact methods below.

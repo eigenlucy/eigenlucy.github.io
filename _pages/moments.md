@@ -45,3 +45,13 @@ sitemap: false
 
 ## Midnight, January 1st, 2026. Aigua, Uruguay.
 <ul>Dinner with abuela. She gets us very drunk but the sheer quantity of mate keeps me going. At midnight the fireworks all erupt at once scattered thinly for miles across the rolling hills. As soon as it begins, animals start escaping from their pens. Goats, cows, dogs, and chickens run loose in the street. The commotion drowns out the fireworks. dozens of people run around to collect them all. Every 20 minutes or so, another volley of fireworks, and another set of animals escape. This goes on until around 2am. The next morning, we went to meet up with the rest of the family at a large, ornate family home near Maldonado, including some of the aunts, uncles, and cousins whom we'd met in Geneva. They also get us quite drunk. We entertain ourselves with the cows and the palm trees scattered around the property. Vera's very elderly great aunt asks me about my work, and I explain we are mapping what's under the ground. She walks me around the property showing me all the wells they've dug and re-dug over the last 50 years while bragging about her success rate doing it 'the old fashion way' (ie, with a dowsing rod).</ul>
+
+## November 7th, 2026.
+<ul>Vera's going away party. <a href="https://www.youtube.com/watch?v=3yer6q44avY">welcome back mrs chambers</a></ul>
+
+Things to add:
+* Meeting with Vera to talk about the Ethics for the first time
+* Near fatal OD Christmas Eve 2017, wake up face to face with the Virgin
+* Cleo Bailey basil processing party
+* First dose of hormone replacement therapy
+* Grand Canyon on the drive to SF (sils maria, 6000ft above all human things)
