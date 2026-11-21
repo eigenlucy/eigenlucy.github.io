@@ -113,6 +113,18 @@ html.readable-fonts {
   min-height: 36px;
 }
 
+/* Collapsed (mobile) menu: right-align the gear with the other text-right links */
+@media (max-width: 575.98px) {
+  .settings-nav {
+    justify-content: flex-end;
+  }
+
+  .settings-toggle {
+    padding-right: 0;
+    justify-content: flex-end;
+  }
+}
+
 .settings-panel {
   display: none;
   position: fixed;
