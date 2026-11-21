@@ -11,7 +11,7 @@ giscus_comments: true
 ---
 
 <div>
-  <img src="/assets/img/Gallery/opensaucebooth.jpg" alt="opensauce 2025 booth" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+  <img src="/assets/img/Gallery/OpensauceBooth.jpg" alt="opensauce 2025 booth" style="width: 50%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </div>
 <p style="text-align: center;">Opensauce 2025 Booth</p>
 <div class="col-sm mt-3 mt-md-0">

@@ -40,6 +40,6 @@ Links:
 <ul>
     <li><a href="https://github.com/eigenlucy/nonhumanscent">Nonhumanscent Development Kit Repo</a></li>
     <li><a href="https://discord.gg/tbhCAQAkI">Scent Context Protocol Discord</a></li>
-    <li><a href="github.com/eigenlucy/spacebridgehabpcb">Our talk with Ekkolapto Institute</a>, +  <a href="https://www.canva.com/design/DAGnQGNMuGc/b8vL6VtUkKiBRz_qd41CMA/edit?utm_content=DAGnQGNMuGc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">my slides</a></li>
+    <li><a href="https://www.youtube.com/watch?v=jGN_bRmlDQo">Our talk with Ekkolapto Institute</a>, +  <a href="https://www.canva.com/design/DAGnQGNMuGc/b8vL6VtUkKiBRz_qd41CMA/edit?utm_content=DAGnQGNMuGc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">my slides</a></li>
     <li><a href="https://yoyo.cat/">Yoyo's Website</a></li>
 </ul>

@@ -12,4 +12,4 @@ In other news, Vera has made some incredible progress on her research platform/a
 
 Also check out this geophysical survey simulator we made for a company I've
 
-been working on, <a href="mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)
+been working on, <a href="https://mithrasindustrial.com">Mithras Industrial</a>! This project has become my full time gig and primary focus. We will have some exciting updates and hardware demos to show very soon :)

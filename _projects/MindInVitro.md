@@ -47,7 +47,7 @@ Acquisition boards (64-128ch each) containing analog front ends, simultaneous sa
 
 ## MEAs
 
-MEA fabrication is one of the major challenge for this project. This is something I've been [working on](eigenlucy.com/projects/mea_arrays) for a while, but working with living neurons and higher array density is proving quite challenging.
+MEA fabrication is one of the major challenge for this project. This is something I've been [working on](/projects/mea_arrays/) for a while, but working with living neurons and higher array density is proving quite challenging.
 
 There are a few components of MEA fabrication:
 * Biocompatibility of underlying materials and electrode surfaces
