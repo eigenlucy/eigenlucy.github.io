@@ -193,7 +193,7 @@ layout: default
     {% comment %} Projects with this tag {% endcomment %}
     {% assign tagged_projects = "" | split: "" %}
     {% for project in site.projects %}
-      {% if project.tags contains page.title %}
+      {% if project.tags contains page.title or project.category == page.title %}
         {% assign tagged_projects = tagged_projects | push: project %}
       {% endif %}
     {% endfor %}

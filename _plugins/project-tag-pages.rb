@@ -30,6 +30,9 @@ module Jekyll
       site.collections.each do |name, collection|
         next if name == "posts"
         collection.docs.each do |doc|
+          # Pages link their category to /blog/tag/<category>/ too
+          cat = doc.data["category"]
+          collection_tags.add(cat) if cat.is_a?(String) && !cat.empty?
           tags = doc.data["tags"]
           next unless tags.is_a?(Array)
           tags.each { |t| collection_tags.add(t) }
