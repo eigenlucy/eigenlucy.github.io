@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Generate the responsive WebP copies that _includes/figure.liquid expects:
+#   assets/img/foo/bar.jpg -> bar.jpg-480.webp, bar.jpg-800.webp, bar.jpg-1400.webp
+# Only creates missing copies; never touches originals. Widths match
+# `imagemagick.widths` in _config.yml.
+#
+# Usage: bin/make-variants [--dry-run] [path ...]   (default: assets/img)
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+WIDTHS=(480 800 1400)
+QUALITY=80
+DRY=0
+if [[ "${1:-}" == "--dry-run" ]]; then DRY=1; shift; fi
+(($#)) || set -- assets/img
+
+command -v magick >/dev/null || { echo "needs ImageMagick 7 (magick)" >&2; exit 1; }
+
+made=0
+while IFS= read -r -d '' img; do
+  for w in "${WIDTHS[@]}"; do
+    out="$img-$w.webp"
+    [[ -e "$out" ]] && continue
+    if ((DRY)); then
+      echo "would create $out"
+    else
+      # '>' only shrinks; small images are re-encoded at their own size
+      magick "$img" -auto-orient -strip -resize "${w}x>" -quality "$QUALITY" "$out"
+      echo "created $out"
+    fi
+    made=$((made + 1))
+  done
+done < <(find "$@" -type f \
+  \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.tiff' -o -iname '*.webp' \) \
+  ! -regex '.*-\(480\|800\|1400\)\.webp$' -print0)
+
+echo "$made variant(s) $( ((DRY)) && echo 'to create' || echo 'created')"
